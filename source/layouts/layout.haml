@@ -1,13 +1,8 @@
 = _partial "head"
+= _partial "navigation"
 %header{:role => "banner"}
-  = _partial "navigation"
-= _partial "breadcrumbs"
-
-/ <% if content_for?(:hero) %>
-/ %div#hero
-/   <%= yield_content :hero %>
-/ <% end %>
-
+  = _partial "hero"
 %main{:role => "document"}
   = yield
+= _partial "contact"
 = _partial "foot"
