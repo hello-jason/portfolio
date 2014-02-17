@@ -1,0 +1,34 @@
+---
+title:              Holy Name of Jesus Church
+meta_description:   This is where the meta description goes.
+section:            portfolio
+project_client:     Holy Name of Jesus Church
+project_year:       2011
+project_status:     Deployed
+project_url:        http://hnjchurch.org
+designer:           1
+frontend:           1
+project_manager:    1
+---
+
+// Extract Hero into content_for block
+%div#hero
+  = image_tag "project-hero-hnj-index.jpg"
+  <img data-src="img/project-hero-hnj-membership.jpg" class="lazyOwl">
+  <img data-src="img/project-hero-hnj-sacraments.jpg" class="lazyOwl">
+
+%div#hero-controls
+  %a.hero-prev
+    %i.fa.fa-arrow-left
+  %a.hero-toggle
+    Toggle larger view
+  %a.hero-next
+    %i.fa.fa-arrow-right
+
+%h1= current_page.data.title
+
+%section#project-intro
+  .container
+    .main
+      %a{:href => "img/moates1.jpg"} Moates 1
+      %a{:href => "img/moates2.jpg"} Moates 2

@@ -1,0 +1,65 @@
+---
+title:              Zorb-It
+meta_description:   This is where the meta description goes.
+section:            portfolio
+project_client:     Zorb-It
+project_year:       2012
+project_status:     No long active
+designer:           1
+frontend:           1
+project_manager:    1
+---
+
+// Extract Hero into content_for block
+%div#hero
+  = image_tag "project-hero-zorbit-index.jpg"
+  <img data-src="img/project-hero-zorbit-single.jpg" class="lazyOwl">
+
+%div#hero-controls
+  %a.hero-prev
+    %i.fa.fa-arrow-left
+  %a.hero-toggle
+    Toggle larger view
+  %a.hero-next
+    %i.fa.fa-arrow-right
+
+%h1= current_page.data.title
+
+%section#project-intro
+  .container
+    .main
+      :markdown
+        ## <span>Project Details</span>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+      .action-badges
+        %p.cta.cta-primary
+          %i.fa.fa-picture-o
+          Designer
+        %p.cta.cta-primary
+          %i.fa.fa-cog
+          Frontend
+        %p.cta.cta-primary
+          %i.fa.fa-users
+          Proj Mgr
+
+    %aside.aside
+      = project_info
+
+%hr
+%section#project-details
+  .container
+    %h1= details_title
+    .example
+      =image_tag "thumbnail-col6-mowtell-form.jpg"
+      .text
+        %p Users can select a restaurant location which determines which food and catering menu items and prices are presented when those pages are visited.
+    .example
+      =image_tag "thumbnail-col6-mowtell-header.jpg"
+      .text
+        %p Simple, but complementary styles tablular data

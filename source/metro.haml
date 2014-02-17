@@ -1,0 +1,57 @@
+---
+title:              Metro Mini Storage
+meta_description:   This is where the meta description goes.
+section:            portfolio
+project_client:     Metro Mini Storage
+project_year:       2011
+project_tech:       WordPress
+project_status:     Deployed
+designer:           1
+frontend:           1
+project_manager:    1
+---
+
+%div#hero.carousel
+  = image_tag "project-hero-metro-index.jpg"
+  <img data-src="img/project-hero-metro-why.jpg" class="lazyOwl">
+
+%div#hero-controls
+  %a.hero-prev
+    %i.fa.fa-arrow-left
+  %a.hero-toggle
+    Toggle larger view
+  %a.hero-next
+    %i.fa.fa-arrow-right
+
+%h1= current_page.data.title
+
+%section#project-intro
+  .container
+    .main
+      :markdown
+        ## <span>Project Details</span>
+        Metro Mini Storage
+
+      .action-badges
+        %p.cta.cta-primary
+          %i.fa.fa-picture-o
+          Designer
+        %p.cta.cta-primary
+          %i.fa.fa-cog
+          Frontend
+
+    %aside.aside
+      = project_info
+
+%hr
+%section#project-details
+  .container
+    %h1= details_title
+    .example
+      =image_tag "thumbnail-col6-mowtell-form.jpg"
+      .text
+        %p Users can select a restaurant location which determines which food and catering menu items and prices are presented when those pages are visited.
+    .example
+      =image_tag "thumbnail-col6-mowtell-header.jpg"
+      .text
+        %p Simple, but complementary styles tablular data

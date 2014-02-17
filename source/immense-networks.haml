@@ -1,0 +1,64 @@
+---
+title:              Immense Networks
+meta_description:   This is where the meta description goes.
+section:            portfolio
+project_client:     Immense Networks
+project_year:       2012
+project_status:     Deployed
+project_tech:       WordPress
+project_url:        http://www.immense.net
+designer:           1
+frontend:           1
+project_manager:    1
+---
+
+%div#hero.carousel
+  = image_tag "project-hero-immense-index.jpg"
+  <img data-src="img/project-hero-immense-migrations.jpg" class="lazyOwl">
+  <img data-src="img/project-hero-immense-hosting.jpg" class="lazyOwl">
+  <img data-src="img/project-hero-immense-values.jpg" class="lazyOwl">
+
+%div#hero-controls
+  %a.hero-prev
+    %i.fa.fa-arrow-left
+  %a.hero-toggle
+    Toggle larger view
+  %a.hero-next
+    %i.fa.fa-arrow-right
+
+%h1= current_page.data.title
+
+%section#project-intro
+  .container
+    .main
+      :markdown
+        ## <span>Project Details</span>
+
+
+      .action-badges
+        %p.cta.cta-primary
+          %i.fa.fa-picture-o
+          Designer
+        %p.cta.cta-primary
+          %i.fa.fa-cog
+          Developer
+
+    %aside.aside
+      = project_info
+
+%hr
+%section#project-details
+  .container
+    %h1= details_title
+    .example
+      =image_tag "thumbnail-col6-immense-bomgar.jpg"
+      .text
+        %p Online presence of helpdesk technicians give tech support clients a quick way to share a computer screen for remote support.
+    .example
+      =image_tag "thumbnail-col6-immense-rates.jpg"
+      .text
+        %p Hosting rates table
+    .example
+      =image_tag "thumbnail-col6-immense-promo.jpg"
+      .text
+        %p Promotional graphics

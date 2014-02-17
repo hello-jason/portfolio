@@ -1,0 +1,575 @@
+@charset "utf-8"
+
+/* ==========================================================================
+   Bootstrap Overrides
+   ========================================================================== */
+
+// Colors
+$brand-primary:     #507329
+$brand-secondary:   #C1D5BE
+
+$body-bg:           #1a1e2e
+$breadcrumb-bg:     none
+$green-highlight:   #5e8352
+
+$text-faded:        #848983
+$selection:         #20C24D
+
+// Text
+$line-height-base:  1.5
+
+// Thumbnails
+$thumbnail-bg:      none
+$thumbnail-padding: 0
+$thumbnail-border:  transparent
+
+// Container sizes
+$container-lg:      920px
+
+
+/* ==========================================================================
+   Imports / Includes
+   ========================================================================== */
+
+@import "bootstrap"
+@import "font-awesome"
+@import "mixins"
+@import "css3-mixins"
+@import "owl.carousel"
+@import "owl.theme"
+@import "owl.transitions"
+
+// @font-face declarations
++declare-font-face('Ostrich Webfont', 'ostrich-regular-webfont')
++declare-font-face('Fanwood Webfont', 'fanwood_italic-webfont')
+
+
+/* ==========================================================================
+   Custom Extends
+   ========================================================================== */
+
+.font-sans-custom
+    font:
+        family: "Ostrich Webfont", sans-serif
+        weight: normal
+        style: normal
+    text-transform: uppercase
+
+.font-serif-custom
+    font:
+        family: "Fanwood Webfont", serif
+        weight: normal
+        style: normal
+
+.font-serif
+    font-family: Georgia, serif
+
+.font-sans
+    font-family: sans-serif
+
+.active-nav
+    background: none
+    color: #fff
+
+.line-flank
+    &:before
+        content: "\2014\00a0"
+    &:after
+        content: "\00a0\2014"
+
+.bkg-transparent
+    +rgba-bg(#000000, 0.25)
+    border-bottom: 1px solid $green-highlight
+    border-bottom: 1px solid rgba(255,255,255,0.15)
+
+.bkg-hatch
+    background: image-url('bkg-hatch-38.png') repeat
+
+.vignette
+    &:after
+        -webkit-box-shadow: inset 0 0 17em rgba(0,0,0,0.7)
+        -moz-box-shadow: inset 0 0 17em rgba(0,0,0,0.7)
+        box-shadow: inset 0 0 17em rgba(0,0,0,0.7)
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        z-index: 2
+        content: ""
+
+
+/* ==========================================================================
+   Layout
+   ========================================================================== */
+
+body
+    background:
+        image: image-url('bkg-texture.jpg')
+        position: top
+        attachment: fixed
+    color: #fff
+    font-size: 17px
+
+#wrap
+    background:
+        color: #3c4a42
+        image: image-url('bkg-tree-blur.jpg')
+        position: top
+        attachment: fixed
+        repeat: no-repeat
+    max-width: 1400px
+    margin: 0 auto
+    overflow: hidden
+    border: 0 none
+
+main
+    &>h1
+        margin-top: 1em
+    section
+        @extend .row
+        @extend .clearfix
+        padding: 1em 0
+
+.main
+    @extend .col-sm-9
+
+.aside
+    @extend .col-sm-3
+    margin-top: 2em
+    img
+        @extend .img-responsive
+    dl
+        font-size: 13px
+        dt
+            text-transform: uppercase
+        dd
+            margin-bottom: 0.5em
+
+.content-info
+    border-top: 1px solid $green-highlight
+    border-top: 1px solid rgba(255,255,255,0.15)
+    padding: 3em 0
+    color: $brand-secondary
+    font-size: 11px
+    @extend .bkg-transparent
+
+
+/* ==========================================================================
+   Text
+   ========================================================================== */
+
+h1
+    text-align: center
+    @extend .line-flank
+    @extend .font-sans-custom
+    letter-spacing: 1px
+    &:before, &:after
+        color: #20C24D
+
+h2
+    margin-bottom: 0.25em
+    @extend .font-serif-custom
+    text-transform: capitalize
+    font:
+        weight: normal
+        size: 22px
+    &:first-child
+        margin-top: 0
+    span
+        background: $selection
+        padding: 0 0.25em
+
+h3
+    @extend .font-serif
+    font:
+        size: 17px
+        weight: bold
+    margin: 1.75em 0 0
+    color: $brand-secondary
+    .byline
+        font-weight: normal
+        font-size: 16px
+        color: #8AA586
+
+h2+h3
+    margin-top: 0.45em
+
+p
+    @extend .font-sans
+
+a, a:link
+    color: #fff
+    text-decoration: underline
+    &:hover, &:focus
+        color: #f3f3f3
+
+/* ==========================================================================
+   Header
+   ========================================================================== */
+
+header
+    @extend .bkg-transparent
+    text-align: center
+
+.brand
+    text-transform: uppercase
+    @extend .font-sans-custom
+    white-space: nowrap
+    &:link
+        text-decoration: none
+    &, &:focus, &:hover
+        color: #fff
+        text-decoration: none
+
+
+
+/* ==========================================================================
+   Primary Navigation (default)
+   ========================================================================== */
+
+#primary-navigation
+    padding-bottom: 2.1em
+    li
+        margin: 2em 0
+        a
+            color: $text-faded
+            +transition(all ease-out 0.15s)
+            text-decoration: none
+            padding-top: 0
+            padding-bottom: 0
+            .name, .graphic, .byline
+                display: block
+            .name
+                text-transform: uppercase
+                @extend .font-sans-custom
+                font-size: 26px
+                line-height: 1em
+            .graphic
+                @extend .line-flank
+                i
+                    font-size: 17px
+                    margin: 0.15em 0 0.4em
+            .byline
+                text-transform: uppercase
+            &:hover, &:focus, &.active
+                @extend .active-nav
+            &.active
+                color: #fff
+                .name
+                    border-color: #fff
+            &.brand
+                font-size: 36px
+                &:hover, &:focus
+                    color: #fff
+        .byline
+            font-size: 11px
+            @extend .font-serif
+        &.logo
+            vertical-align: middle
+            .brand
+                line-height: 0.75em
+                color: #fff
+            .byline
+                @extend .font-serif-custom
+                font-size: 14px
+                color: $text-faded
+                display: block
+                text-transform: lowercase
+
+
+/* ==========================================================================
+   Primary Navigation (home)
+   ========================================================================== */
+
+body.home
+    header
+        padding-top: 5em
+    .logo
+        background: image-url('nav-inset-shadow.png') no-repeat bottom
+        padding-top: 40px
+        margin: 0 0 2.5em 0
+        padding: 0 0 2.15em 0
+        min-height: 97px
+        line-height: 1.55em
+        @extend .col-sm-12
+        @extend .clearfix
+        .byline
+            @extend .font-serif-custom
+            font-size: 14px
+            color: $text-faded
+            display: block
+            text-transform: lowercase
+        .brand
+            font-size: 60px
+    #primary-navigation
+        padding-bottom: 2.15em
+
+
+/* ==========================================================================
+   Primary Navigation Highlighting
+   ========================================================================== */
+body.about
+    #primary-navigation
+        li.nav-about
+            a
+                @extend .active-nav
+body.portfolio
+    #primary-navigation
+        li.nav-portfolio
+            a
+                @extend .active-nav
+body.contact
+    #primary-navigation
+        li.nav-contact
+            a
+                @extend .active-nav
+
+
+/* ==========================================================================
+   Breadcrumbs
+   ========================================================================== */
+
+.breadcrumb
+    margin-bottom: 0
+    li
+        color: #fff
+        i, a
+            color: $brand-secondary
+        &, i, a
+            font-size: 13px
+        a:link
+            text-decoration: none
+
+
+/* ==========================================================================
+   Hero
+   ========================================================================== */
+
+#hero
+    text-align: center
+    position: relative
+    height: 408px
+    overflow: hidden
+    +transition(height ease-in-out 0.45s)
+    @extend .vignette
+    .btn
+        font-size: 12px
+    &.expanded
+        height: 900px
+    img
+        margin-left: -700px
+
+#hero-controls
+    @extend .btn-group-sm
+    text-align: center
+    a
+        @extend .btn
+        @extend .cta-primary
+        font-weight: bold
+        &.hero-toggle
+            i
+                content: ""
+                @extend .fa
+                @extend .fa-chevron-down
+
+#progressBar
+    width: 100%
+    border-top: 1px solid $green-highlight
+    @extend .bkg-hatch
+    #bar
+        width: 0
+        max-width: 100%
+        height: 4px
+        background: $selection
+
+
+/* ==========================================================================
+   Call to Action Badges
+   ========================================================================== */
+
+.cta
+    &, &:active
+        display: inline-block
+        font-size: 10px
+        +border-radius(70px)
+        @extend .clearfix
+        @extend .font-serif
+        margin: 0 auto
+        padding: 0
+        white-space: nowrap
+        text-decoration: none
+        &:hover, &:focus
+            text-decoration: none
+        i
+            font-size: 36px
+            display: block
+    &:link
+        text-decoration: none
+
+.cta-primary
+    @extend .bkg-hatch
+    border: 0 none
+    text-align: center
+    color: #283a2d
+    +transition(all ease-out 0.15s)
+    text-decoration: none
+    &:link
+        &, &:hover, &:focus
+            text-decoration: none
+
+a.cta-primary
+    &:hover, &:focus
+        color: #fff
+        @extend .bkg-hatch
+
+.action-badges
+    text-align: center
+    margin: 1em 0
+    @extend .clearfix
+    .cta
+        padding: 20px 20px 14px 20px
+        width: 8.75em
+
+
+/* ==========================================================================
+   Progress Bars
+   ========================================================================== */
+
+.progress-item
+    .progress-name
+        margin: 0
+        font-size: 13px
+    .progress
+        height: 8px
+        @extend .bkg-hatch
+        border: 0 none
+        +border-radius(0)
+        .progress-bar
+            background-color: $selection
+
+.js.csstransitions
+    .progress-item
+        .progress
+            @extend .active
+            .progress-bar
+                +transition(width ease-out 1s)
+                &.nobar
+                    width: 0 !important
+
+
+/* ==========================================================================
+   Portfolio Thumbnails
+   ========================================================================== */
+
+#portfolio
+    text-align: center
+    div
+        margin-top: 10px
+        margin-bottom: 10px
+        overflow: hidden
+    img
+        //@extend .img-responsive
+        +transition(opacity ease-out 0.15s)
+        opacity: 0.7
+        &:hover, &:focus
+            opacity: 1
+    .col-sm-12
+        text-align: center
+
+/* ==========================================================================
+   Projects
+   ========================================================================== */
+
+.example
+    @extend .row
+    padding: 1.5em 0
+    img
+        @extend .col-sm-6
+        @extend .img-responsive
+    .text
+        @extend .col-sm-6
+
+/* ==========================================================================
+   Globals
+   ========================================================================== */
+.btn
+    +border-radius(0)
+
+.see
+    @extend .btn
+    @extend .cta-primary
+    @extend .btn-xs
+
+.more-content
+    display: none
+    +transition(all ease-out 0.15s)
+
+.visible
+    display: block !important
+    opacity: 1
+    height: auto
+
+.cloak
+    display: none !important
+    opacity: 0
+    height: 0
+    
+::selection
+    color: #fff
+    background: $selection
+
+::-moz-selection
+    color: #fff
+    background: $selection
+
+hr
+    border-color: $green-highlight
+    border-color: rgba(255,255,255,0.15)
+
+.alignleft, .alignright
+    margin-bottom: 1em
+
+.alignleft
+    margin-right: 1em
+    float: left
+
+.alignright
+    margin-left: 1em
+    float: right
+
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+/* ==========================================================================
+   Small devices (tablets)
+   ========================================================================== */
+@media screen and (min-width: $screen-sm-min)
+    header
+        padding-top: 4.65em
+    #primary-navigation
+        li
+            margin: 0
+    #hero
+        img
+            margin-left: 0
+    main
+        &>h1
+            margin-top: 2.3em
+        section
+            padding: 1em 0
+    .aside
+        margin-top: 0
+
+
+/* ==========================================================================
+   Medium devices (desktops)
+   ========================================================================== */
+@media screen and (min-width: $screen-md-min)
+
+
+/* ==========================================================================
+   Large devices (large desktops)
+   ========================================================================== */
+@media screen and (min-width: $screen-lg-min)

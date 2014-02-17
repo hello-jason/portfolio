@@ -1,0 +1,63 @@
+---
+title:              Dorignac's
+meta_description:   This is where the meta description goes.
+section:            portfolio
+project_client:     Dorignac's
+project_year:       2014
+project_status:     Deployed
+project_tech:       WordPress, Roots, Grunt, Less
+project_url:        http://dorignacs.com
+designer:           1
+frontend:           1
+project_manager:    1
+---
+
+%div#hero.carousel
+  = image_tag "project-hero-dorignacs-index.jpg"
+  <img data-src="img/project-hero-dorignacs-prepared.jpg" class="lazyOwl">
+  <img data-src="img/project-hero-dorignacs-portal.jpg" class="lazyOwl">
+
+%div#hero-controls
+  %a.hero-prev
+    %i.fa.fa-arrow-left
+  %a.hero-toggle
+    Toggle larger view
+  %a.hero-next
+    %i.fa.fa-arrow-right
+
+%h1= current_page.data.title
+
+%section#project-intro
+  .container
+    .main
+      :markdown
+        ## <span>Project Details</span>
+        Dorignac's Food Center is a grocery store in Metairie, Louisiana. I worked collaboratively with Wright Feigley Communications to convert their design into a custom, responsive WordPress theme using the Roots framework.
+
+      .action-badges
+        %p.cta.cta-primary
+          %i.fa.fa-picture-o
+          Designer
+        %p.cta.cta-primary
+          %i.fa.fa-cog
+          Frontend
+
+    %aside.aside
+      = project_info
+
+%hr
+%section#project-details
+  .container
+    %h1= details_title
+    .example
+      =image_tag "thumbnail-col6-dorignacs-responsive.jpg"
+      .text
+        %p I leveraged the Roots framework and Bootstrap for solid, mobile-first responsiveness.
+    .example
+      =image_tag "thumbnail-col6-dorignacs-team.jpg"
+      .text
+        %p The Pods CMS plugin allowed me to create custom interfaces that allow the client to manage complex data, such as team members and weekly hot lunches.
+    .example
+      =image_tag "thumbnail-col6-dorignacs-carousel.jpg"
+      .text
+        %p The mobile-friendly Owl Carousel was integrated for greater device support, and a custom Pod allows the marketing team to manage images and their pages.

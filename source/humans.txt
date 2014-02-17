@@ -1,0 +1,19 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    Jason Cross -- Design, Development
+
+# THANKS
+
+    <name>
+
+# TECHNOLOGY COLOPHON
+
+    HTML5, CSS3
+    Sass, HAML
+    jQuery, Modernizr, Font Awesome, Bootstrap
+    Middleman, Ruby
+    The League of Moveable Type
+s
