@@ -3,6 +3,8 @@ title: Home &ndash; Jason Cross
 section: about
 ---
 
-= _partial "project-thumbnails"
+- content_for :header do
+  = _partial "hero"
 
+= _partial "project-thumbnails"
 = _partial "about"

@@ -1,44 +1,47 @@
+.red-arrows
 %section#about
-    %ul.nav.nav-tabs
+    %ul.nav.nav-tabs#myTab
         %li.active
-            %a{:href => "#tab-about", "data-toggle" => "tab"}
-                About Me
+            %a{:href => "#tab-about", "data-toggle" => "tab"} About Me
         %li
-            %a{:href => "#tab-experience", "data-toggle" => "tab"}
-                Work Experience
+            %a{:href => "#tab-experience", "data-toggle" => "tab"} Work Experience
         %li
-            %a{:href => "#tab-interests", "data-toggle" => "tab"}
-                Interests
+            %a{:href => "#tab-interests", "data-toggle" => "tab"} Interests
 
     .tab-content
         #tab-about.tab-pane.active
             = image_tag "israel-dead-sea.jpg", :class => "alignleft"
-            :markdown
-                My passion for design and typography has followed me all my life, back to when careful consideration of licensed cartoon pocket folders would provide classroom drawing inspiration for the entire school year.
+            .text
+                :markdown
+                    ## About Me
+                    My passion for design and typography has followed me all my life, back to when careful consideration of licensed cartoon pocket folders would provide classroom drawing inspiration for the entire school year.
 
-                Though having some formal training in programming, I became generally interested in the web and grew intrigued by how people explore the same content in different ways. Once I began to understand HTML, I found the niche where I belonged and developed a passion for bringing mockups to life with frontend markup and CSS.
+                    Though having some formal training in programming, I became generally interested in the web and grew intrigued by how people explore the same content in different ways. Once I began to understand HTML, I found the niche where I belonged and developed a passion for bringing mockups to life with frontend markup and CSS.
 
-            = progress "Photoshop", "95"
-            = progress "Illustrator", "70"
-            = progress "SEO", "80"
-            = progress "CSS3 (less, sass)", "95"
-            = progress "HTML5 (jade, haml)", "95"
-            = progress "Unix", "28"
-            = progress "Git", "60"
+                #skills
+                    = progress "Photoshop", "95"
+                    = progress "Illustrator", "70"
+                    = progress "SEO", "80"
+                    = progress "CSS3 (less, sass)", "95"
+                    = progress "HTML5 (jade, haml)", "95"
+                    = progress "Unix", "28"
+                    = progress "Git", "60"
         #tab-experience.tab-pane
-            :markdown
-                ## Immense Networks <span class="byline">(2008&ndash;Present)</span>
-                Being the first web employee at a startup IT company, I gravitated towards WordPress to give small businesses an affordable CMS solution. I learned ways to let clients manage more complex layouts with custom plugins, documentation, and ongoing consulting, ultimately trying to reduce their learning curve and eliminate as much human error as possible.
+            .text
+                :markdown
+                    ## Immense Networks <span class="byline">(2008&ndash;Present)</span>
+                    Being the first web employee at a startup IT company, I gravitated towards WordPress to give small businesses an affordable CMS solution. I learned ways to let clients manage more complex layouts with custom plugins, documentation, and ongoing consulting, ultimately trying to reduce their learning curve and eliminate as much human error as possible.
 
-                As experienced developers joined the team, we became equipped to build more powerful applications. I became exposed to frontend components of Symfony, Django, Rails, and Node including Haml, Jade, Less, and Sass. We began version control with Git and leveraged package managers and task runners, and I have grown comfortable with these tools.
+                    As experienced developers joined the team, we became equipped to build more powerful applications. I became exposed to frontend components of Symfony, Django, Rails, and Node including Haml, Jade, Less, and Sass. We began version control with Git and leveraged package managers and task runners, and I have grown comfortable with these tools.
 
-                I wear several hats at Immense Networks, including UI/UX design, frontend developer, project manager, creative director, account executive, and consultant. I generally orchestrate projects from the initial consultation, to deployment, to ongoing feature releases and maintenance.
+                    I wear several hats at Immense Networks, including UI/UX design, frontend developer, project manager, creative director, account executive, and consultant. I generally orchestrate projects from the initial consultation, to deployment, to ongoing feature releases and maintenance.
 
-                ## Gatorworks <span class="byline">(2007&ndash;2008)</span>
-                The transition from print ads to interactive user interfaces was difficult for me, but I learned a lot from my experience at Gatorworks. Working with talented individuals like David Link and Jason Evers encouraged me to learn new things and hone my skillset.
+                    ## Gatorworks <span class="byline">(2007&ndash;2008)</span>
+                    The transition from print ads to interactive user interfaces was difficult for me, but I learned a lot from my experience at Gatorworks. Working with talented individuals like David Link and Jason Evers encouraged me to learn new things and hone my skillset.
 
-                ## LSU Reveille / Tigerweekly <span class="byline">(2005&ndash;2007)</span>
-                Though different organizations, my responsibilities were similar, including magazines layouts and newspaper ad designs for local businesses. I was tasked with actual deadlines for clients with real dollars invested, making this a tedious yet beneficial learning experience for me.
+                    ## LSU Reveille / Tigerweekly <span class="byline">(2005&ndash;2007)</span>
+                    Though different organizations, my responsibilities were similar, including magazines layouts and newspaper ad designs for local businesses. I was tasked with actual deadlines for clients with real dollars invested, making this a tedious yet beneficial learning experience for me.
         #tab-interests.tab-pane
-            :markdown
-                I enjoy brewing beer, and I have built a kegerator of sorts to dispense the hobby. I also enjoy -----, and <a href="http://shitmywifedoes.com/" target="_blank">my wife, Katie</a>.
+            .text
+                :markdown
+                    I enjoy brewing beer, and I have built a kegerator of sorts to dispense the hobby. I also enjoy -----, and <a href="http://shitmywifedoes.com/" target="_blank">my wife, Katie</a>.

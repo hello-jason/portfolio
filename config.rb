@@ -4,7 +4,7 @@
 set :site_title, "Jason Cross"
 set :site_url, "http://hellojason.net"
 set :site_description, "Portfolio website of designer Jason Cross."
-
+require 'bootstrap-sass'
 ###
 # Compass
 ###

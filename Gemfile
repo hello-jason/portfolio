@@ -4,7 +4,7 @@ source 'http://rubygems.org'
 
 gem "middleman", "~>3.2.2"
 gem "redcarpet", "~> 3.0.0"
-gem "bootstrap-sass", "~>3.1.1.0", :require => false
+gem "bootstrap-sass", "~>3.1.1.0"
 gem "font-awesome-middleman", "~> 4.0.3"
 gem "middleman-favicon-maker", "~> 3.5.2"
 
