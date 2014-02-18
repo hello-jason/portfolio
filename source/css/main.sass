@@ -5,31 +5,36 @@
    ========================================================================== */
 
 // Colors
-$brand-primary:     #61b5ab
-$brand-secondary:   #C1D5BE
+$brand-primary:             #61b5ab
+$brand-primary-border:      #009d8e
+$brand-secondary:           #C1D5BE
 
-$body-bg:           #1a1e2e
-$breadcrumb-bg:     none
-$green-highlight:   #5e8352
+$body-bg:                   #1a1e2e
+$breadcrumb-bg:             none
+$green-highlight:           #5e8352
 
-$dark-gray:         #1d1d1d
-$border:            #444444
+$dark-gray:                 #1d1d1d
+$border:                    #444444
 
-$light-red:         #e31637
-$dark-red:          #b2001f
+$light-red:                 #e31637
+$dark-red:                  #b2001f
 
-$text-faded:        #848983
-$selection:         #20C24D
+$text-faded:                #848983
+$selection:                 #20C24D
 
 // Text
-$line-height-base:  1.5
+$line-height-base:          1.5
 
 // Thumbnails
-$thumbnail-bg:      none
-$thumbnail-padding: 0
-$thumbnail-border:  transparent
+$thumbnail-bg:              none
+$thumbnail-padding:         0
+$thumbnail-border:          transparent
 
-$grid-gutter-width: 30px
+$grid-gutter-width:         30px
+$nav-tabs-border-color:     transparent
+$nav-tabs-link-hover-border-color:     transparent
+$nav-tabs-active-link-hover-color:     transparent
+$nav-tabs-active-link-hover-border-color:     transparent
 
 
 /* ==========================================================================
@@ -46,23 +51,30 @@ $grid-gutter-width: 30px
 
 // @font-face declarations
 +declare-font-face('Ostrich Webfont', 'ostrich-regular-webfont')
-+declare-font-face('Fanwood Webfont', 'fanwood_italic-webfont')
++declare-font-face('Lato Regular', 'lato-regular-webfont')
++declare-font-face('Lato Italic', 'lato-italic-webfont')
 
 
 /* ==========================================================================
    Custom Extends
    ========================================================================== */
 
-.font-sans-custom
+.font-ostrich
     font:
         family: "Ostrich Webfont", sans-serif
         weight: normal
         style: normal
     text-transform: uppercase
 
-.font-serif-custom
+.font-lato-italic
     font:
-        family: "Fanwood Webfont", serif
+        family: "Lato Italic", serif
+        weight: normal
+        style: normal
+
+.font-lato-regular
+    font:
+        family: "Lato Regular", serif
         weight: normal
         style: normal
 
@@ -111,8 +123,9 @@ $grid-gutter-width: 30px
 body
     background-color: $dark-gray
     color: #fff
-    font-size: 17px
+    font-size: 14px
     padding-top: 60px
+    @extend .font-lato-regular
 
 #wrap
     margin: 0 auto
@@ -122,11 +135,17 @@ body
 main
     &>h1
         margin-top: 1em
-    section
-        @extend .row
-        @extend .clearfix
-        padding: 1em 0
 
+section
+    @extend .clearfix
+    h1
+        @extend .font-lato-italic
+        margin: 0
+        padding: 0.75em 1em
+        font-size: 26px
+        color: #fff
+        background: $brand-primary
+        border-top: 4px solid $brand-primary-border
 
 
 /* ==========================================================================
@@ -134,18 +153,17 @@ main
    ========================================================================== */
 
 h1
-    @extend .font-sans-custom
     letter-spacing: 1px
     span
         color: $brand-primary
 
 h2
     margin-bottom: 0.25em
-    @extend .font-serif-custom
+    @extend .font-lato-italic
     text-transform: capitalize
     font:
         weight: normal
-        size: 22px
+        size: 17px
     &:first-child
         margin-top: 0
     span
@@ -182,17 +200,6 @@ a, a:link
 
 header
     padding: 0
-    min-height: 720px
-    position: relative
-    background: $dark-gray image-url('bkg-slashes.jpg') repeat
-    .text
-        position: absolute
-        top: 201px
-        left: 426px
-        h1
-            font-size: 80px
-        .byline
-            @extend .font-serif-custom
 
 .navbar
     background: $dark-gray
@@ -201,20 +208,24 @@ header
     border-bottom: 1px solid $border
     a
         color: #aeaeae
-        @extend .font-sans-custom
+        @extend .font-ostrich
         text-transform: uppercase
         border-bottom: 1px solid transparent
         text-decoration: none
         font-size: 30px
         margin-bottom: -1px
-        padding: 1em 1.5em
+        padding: 0.75em 1.45em
         +transition(all ease-out 0.15s)
         &:hover, &:focus
             background: none
             color: #fff
+    .navbar-brand
+        span
+            color: $brand-primary
     .navbar-nav
         &>li
             &>a
+                padding: 0.75em
                 &:hover, &:focus
                     background: none
                     color: #fff
@@ -269,6 +280,42 @@ body.contact
         a:link
             text-decoration: none
 
+
+/* ==========================================================================
+   Hero
+   ========================================================================== */
+#hero
+    min-height: 720px
+    position: relative
+    background: $dark-gray image-url('bkg-slashes-black.jpg') repeat
+    .text
+        position: absolute
+        top: 201px
+        left: 426px
+        h1
+            font-size: 80px
+            margin: 0
+            line-height: 1em
+        .byline
+            @extend .font-lato-italic
+            color: #adb1bd
+            font-size: 18px
+            letter-spacing: 1px
+    h1
+        @extend .font-ostrich
+        padding: 0
+        background: none
+        border: 0 none
+    .cta-primary
+        +border-radius(0)
+        color: #252525
+        padding: 0.5em 0.75em
+        @extend .font-lato-italic
+        font-size: 14px
+        i
+            margin-right: 0.25em
+        &:hover, &:focus
+            color: #fff
 
 /* ==========================================================================
    Progress Bars
@@ -358,20 +405,45 @@ a.cta-primary
                     width: 0 !important
 
 
-/* ==========================================================================
+/* ==================-========================================================
    About Tabs
    ========================================================================== */
+
+.red-arrows
+    background: image-url('arrow-pattern-red.png') repeat-x top
+    height: 9px
+    margin-top: -9px
+    position: relative
+    z-index: 500
 #about
-    background: $dark-red
+    background: $dark-red image-url('bkg-slashes-red.jpg') repeat
     .nav-tabs
         background: $light-red
+        padding-left: 2.5em
+        border-bottom: 4px solid $dark-red
         li
             a
                 background: none
+                @extend .font-lato-italic
+                font-size: 20px
+                text-decoration: none
+                color: #fff
+                padding: 0.75em 1.45em
+                margin-top: 1.75em
+            &.active
+                a
+                    background: $dark-red
+    #skills
+        @extend .col-sm-3
+        padding: 0
+    .tab-pane
+        padding: 2.45em
+
 
 /* ==========================================================================
    Contact
    ========================================================================== */
+
 #contact
     background: #fff
     color: $dark-gray
@@ -382,10 +454,34 @@ a.cta-primary
 
 #portfolio
     background: $dark-gray
-    img
-        @extend .img-responsive
-        &:hover, &:focus
-            @extend .vignette
+    .piece
+        margin: 0
+        padding: 0
+        position: relative
+        float: left
+        a
+            display: block
+            .piece-name
+                background: $dark-gray
+                color: #fff
+                text-align: center
+                position: absolute
+                display: block
+                bottom: 0
+                width: 100%
+                line-height: 5em
+                opacity: 0.95
+                font-size: 17px
+                +transition(all ease-out 0.15s)
+            img
+                background-size: cover
+                @extend .img-responsive
+                &:hover, &:focus
+                    @extend .vignette
+            &:hover, &:focus
+                .piece-name
+                    line-height: 6em
+                    opacity: 0.98
     .col-sm-12
         text-align: center
 
