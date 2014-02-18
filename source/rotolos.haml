@@ -12,18 +12,8 @@ frontend:           1
 project_manager:    1
 ---
 
-%div#hero.carousel
+- content_for :header do
   = image_tag "project-hero-rotolos-index.jpg"
-  <img data-src="img/project-hero-rotolos-index2.jpg" class="lazyOwl">
-  <img data-src="img/project-hero-rotolos-menu.jpg" class="lazyOwl">
-
-%div#hero-controls
-  %a.hero-prev
-    %i.fa.fa-arrow-left
-  %a.hero-toggle
-    Toggle larger view
-  %a.hero-next
-    %i.fa.fa-arrow-right
 
 %h1= current_page.data.title
 
