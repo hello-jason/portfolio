@@ -201,11 +201,20 @@ a, a:link
 header
     padding: 0
 
+
+/* ==========================================================================
+   Primary Navigation (default)
+   ========================================================================== */
+
 .navbar
     background: $dark-gray
     margin: 0
     border-radius: 0
     border-bottom: 1px solid $border
+    .navbar-toggle
+        background: $brand-primary
+        .icon-bar
+            background: #fff
     a
         color: #aeaeae
         @extend .font-ostrich
@@ -233,16 +242,6 @@ header
                 &>a
                     color: #fff
                     border-bottom-color: $brand-primary
-
-
-/* ==========================================================================
-   Primary Navigation (default)
-   ========================================================================== */
-
-
-/* ==========================================================================
-   Primary Navigation (home)
-   ========================================================================== */
 
 
 /* ==========================================================================
@@ -285,15 +284,18 @@ body.contact
    Hero
    ========================================================================== */
 #hero
-    min-height: 720px
     position: relative
     background: $dark-gray image-url('bkg-slashes-black.jpg') repeat
+    img
+        @extend .img-responsive
     .text
         position: absolute
-        top: 201px
-        left: 426px
+        top: 20%
+        left: 0
+        padding: 0 15px
+        text-align: center
         h1
-            font-size: 80px
+            font-size: 46px
             margin: 0
             line-height: 1em
         .byline
@@ -433,11 +435,18 @@ a.cta-primary
             &.active
                 a
                     background: $dark-red
-    #skills
-        @extend .col-sm-3
-        padding: 0
     .tab-pane
         padding: 2.45em
+        @extend .clearfix
+    #tab-about
+        .text
+            @extend .col-sm-6
+        #skills
+            @extend .col-sm-5
+            padding: 0
+    #tab-contact
+        .text
+            padding: 2em
 
 
 /* ==========================================================================
@@ -469,9 +478,9 @@ a.cta-primary
                 display: block
                 bottom: 0
                 width: 100%
-                line-height: 5em
+                line-height: 3em
                 opacity: 0.95
-                font-size: 17px
+                font-size: 14px
                 +transition(all ease-out 0.15s)
             img
                 background-size: cover
@@ -480,7 +489,7 @@ a.cta-primary
                     @extend .vignette
             &:hover, &:focus
                 .piece-name
-                    line-height: 6em
+                    line-height: 4em
                     opacity: 0.98
     .col-sm-12
         text-align: center
@@ -497,6 +506,12 @@ a.cta-primary
         @extend .img-responsive
     .text
         @extend .col-sm-6
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+.content-info
+    padding: 2.45em
 
 /* ==========================================================================
    Globals
@@ -525,11 +540,11 @@ a.cta-primary
     
 ::selection
     color: #fff
-    background: $selection
+    background: $brand-secondary
 
 ::-moz-selection
     color: #fff
-    background: $selection
+    background: $brand-secondary
 
 hr
     border-color: $green-highlight
@@ -554,7 +569,24 @@ hr
    Small devices (tablets)
    ========================================================================== */
 @media screen and (min-width: $screen-sm-min)
-
+    #hero
+        min-height: 720px
+        .text
+            top: 201px
+            left: 426px
+            padding: 0
+            text-align: left
+            h1
+                font-size: 80px
+    #portfolio
+        .piece
+            a
+                .piece-name
+                    line-height: 5em
+                    font-size: 17px
+                &:hover, &:focus
+                    .piece-name
+                        line-height: 6em
 
 /* ==========================================================================
    Medium devices (desktops)
