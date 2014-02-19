@@ -123,7 +123,7 @@ $nav-tabs-active-link-hover-border-color:     transparent
 body
     background-color: $dark-gray
     color: #fff
-    font-size: 14px
+    font-size: 18px
     padding-top: 60px
     @extend .font-lato-regular
 
@@ -163,7 +163,7 @@ h2
     text-transform: capitalize
     font:
         weight: normal
-        size: 17px
+        size: 22px
     &:first-child
         margin-top: 0
     span
@@ -179,14 +179,11 @@ h3
     color: $brand-secondary
     .byline
         font-weight: normal
-        font-size: 16px
+        font-size: 13px
         color: #8AA586
 
 h2+h3
     margin-top: 0.45em
-
-p
-    @extend .font-sans
 
 a, a:link
     color: #fff
@@ -195,73 +192,58 @@ a, a:link
         color: #f3f3f3
 
 /* ==========================================================================
-   Header
+   Primary Navigation (default)
    ========================================================================== */
 
 header
     padding: 0
-
-
-/* ==========================================================================
-   Primary Navigation (default)
-   ========================================================================== */
-
-.navbar
-    background: $dark-gray
-    margin: 0
-    border-radius: 0
-    border-bottom: 1px solid $border
-    .navbar-toggle
-        background: $brand-primary
-        .icon-bar
-            background: #fff
-    a
-        color: #aeaeae
-        @extend .font-ostrich
-        text-transform: uppercase
-        border-bottom: 1px solid transparent
-        text-decoration: none
-        font-size: 30px
-        margin-bottom: -1px
-        padding: 0.75em 1.45em
-        +transition(all ease-out 0.15s)
-        &:hover, &:focus
-            background: none
-            color: #fff
-    .navbar-brand
-        span
+    .navbar
+        background: $dark-gray
+        background: rgba(0,0,0,0.85)
+        margin: 0
+        border-radius: 0
+        border-bottom: 1px solid $border
+        .navbar-toggle
+            background: $brand-primary
+            .icon-bar
+                background: #fff
+        a
+            color: #aeaeae
+            @extend .font-ostrich
+            text-transform: uppercase
+            border-bottom: 1px solid transparent
+            text-decoration: none
+            font-size: 30px
+            margin-bottom: -1px
+            padding: 0.55em
+            +transition(all ease-out 0.15s)
+            &:hover, &:focus
+                background: none
+                color: #fff
+        .navbar-brand
             color: $brand-primary
-    .navbar-nav
-        &>li
-            &>a
-                padding: 0.75em
-                &:hover, &:focus
-                    background: none
-                    color: #fff
-            &.active
+        .navbar-nav
+            &>li
                 &>a
-                    color: #fff
-                    border-bottom-color: $brand-primary
+                    padding: 0.75em
+                    &:hover, &:focus
+                        background: none
+                        color: #fff
+                &.active
+                    &>a
+                        color: #fff
+                        border-bottom-color: $brand-primary
 
 
 /* ==========================================================================
    Primary Navigation Highlighting
    ========================================================================== */
-body.about
-    #primary-navigation
-        li.nav-about
-            a
-                @extend .active-nav
 body.portfolio
     #primary-navigation
         li.nav-portfolio
             a
                 @extend .active-nav
-body.contact
-    #primary-navigation
-        li.nav-contact
-            a
-                @extend .active-nav
+                border-bottom-color: $brand-primary
 
 
 /* ==========================================================================
@@ -288,12 +270,13 @@ body.contact
     background: $dark-gray image-url('bkg-slashes-black.jpg') repeat
     img
         @extend .img-responsive
-    .text
+    .text, .main
         position: absolute
-        top: 20%
+        bottom: 15%
         left: 0
         padding: 0 15px
         text-align: center
+        width: 100%
         h1
             font-size: 46px
             margin: 0
@@ -301,7 +284,7 @@ body.contact
         .byline
             @extend .font-lato-italic
             color: #adb1bd
-            font-size: 18px
+            font-size: 13px
             letter-spacing: 1px
     h1
         @extend .font-ostrich
@@ -499,13 +482,13 @@ a.cta-primary
    ========================================================================== */
 
 .example
-    @extend .row
     padding: 1.5em 0
+    @extend .clearfix
     img
         @extend .col-sm-6
         @extend .img-responsive
     .text
-        @extend .col-sm-6
+        @extend .col-sm-4
 
 /* ==========================================================================
    Footer
@@ -561,7 +544,6 @@ hr
     margin-left: 1em
     float: right
 
-
 /* ==========================================================================
    Media Queries
    ========================================================================== */
@@ -569,13 +551,17 @@ hr
    Small devices (tablets)
    ========================================================================== */
 @media screen and (min-width: $screen-sm-min)
+    body.home
+        #hero
+            min-height: 720px
     #hero
-        min-height: 720px
         .text
             top: 201px
             left: 426px
+            bottom: 0
             padding: 0
             text-align: left
+            width: auto
             h1
                 font-size: 80px
     #portfolio
@@ -587,6 +573,10 @@ hr
                 &:hover, &:focus
                     .piece-name
                         line-height: 6em
+    header
+        .navbar
+            a
+                padding: 0.75em 1.45em
 
 /* ==========================================================================
    Medium devices (desktops)
