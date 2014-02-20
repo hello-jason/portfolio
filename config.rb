@@ -69,13 +69,13 @@ helpers do
   end
 
   # Progress bar with label (string, number)
-  def progress(string, integer)
+  def skill(skill_name, percentage, explanation)
     "
-    <div class='progress-item'>
-      <p class='progress-name'>#{string}</p>
+    <div class='progress-item' data-toggle='popover' data-placement='top' data-trigger='hover' data-content='#{explanation}'>
+      <p class='progress-name'>#{skill_name} <i class='fa fa-question-circle'></i></p>
       <div class='progress'>
-        <div class='progress-bar nobar' aria-valuemax='100' aria-valuemin='0' aria-valuenow='#{integer}' role='progressbar' style='width: #{integer}%;'>
-          <span class='sr-only'>#{integer}%</span>
+        <div class='progress-bar nobar' aria-valuemax='100' aria-valuemin='0' aria-valuenow='#{percentage}' role='progressbar' style='width: #{percentage}%;'>
+          <span class='sr-only'>#{percentage}%</span>
         </div>
       </div>
     </div>
@@ -138,7 +138,6 @@ set :sass, line_comments: false, style: :nested
 ###
 # Assets
 ###
-
 set :css_dir, 'css'
 set :js_dir, 'js'
 set :images_dir, 'img'

@@ -96,8 +96,6 @@ $nav-tabs-active-link-hover-border-color:     transparent
 
 .bkg-transparent
     +rgba-bg(#000000, 0.25)
-    border-bottom: 1px solid $green-highlight
-    border-bottom: 1px solid rgba(255,255,255,0.15)
 
 .bkg-hatch
     background: image-url('bkg-hatch-38.png') repeat
@@ -167,7 +165,7 @@ h2
     &:first-child
         margin-top: 0
     span
-        background: $selection
+        background: $brand-primary
         padding: 0 0.25em
 
 h3
@@ -263,9 +261,9 @@ body.portfolio
 
 
 /* ==========================================================================
-   Hero
+   Hello Section
    ========================================================================== */
-#hero
+#hello
     position: relative
     background: $dark-gray image-url('bkg-slashes-black.jpg') repeat
     img
@@ -301,19 +299,6 @@ body.portfolio
             margin-right: 0.25em
         &:hover, &:focus
             color: #fff
-
-/* ==========================================================================
-   Progress Bars
-   ========================================================================== */
-
-#progressBar
-    width: 100%
-    @extend .bkg-hatch
-    #bar
-        width: 0
-        max-width: 100%
-        height: 4px
-        background: $brand-primary
 
 
 /* ==========================================================================
@@ -368,10 +353,33 @@ a.cta-primary
    Progress Bars
    ========================================================================== */
 
+#progressBar
+    width: 100%
+    @extend .bkg-hatch
+    #bar
+        width: 0
+        max-width: 100%
+        height: 4px
+        background: $brand-primary
+
 .progress-item
+    margin: 0.25em 0
+    padding: 0.5em 1em 0.25em 1em
+    +border-radius(6px)
+    +transition(background ease-out 0.2s)
+    @extend .col-sm-6
+    &:hover
+        +rgba-bg(#000000, 0.07)
+        i
+            &:hover
+                opacity: 1
     .progress-name
         margin: 0
-        font-size: 13px
+    i
+        opacity: 0.7
+        line-height: 1.2em
+        margin-left: 0.25em
+        +transition(opacity ease-out 0.15s)
     .progress
         height: 8px
         @extend .bkg-hatch
@@ -411,10 +419,13 @@ a.cta-primary
                 background: none
                 @extend .font-lato-italic
                 font-size: 20px
+                color: #FCCDCD
                 text-decoration: none
-                color: #fff
                 padding: 0.75em 1.45em
-                margin-top: 1.75em
+                margin-top: 0.75em
+                +transition(color ease-out 0.15s)
+                &:hover
+                    color: #fff
             &.active
                 a
                     background: $dark-red
@@ -424,8 +435,8 @@ a.cta-primary
     #tab-about
         .text
             @extend .col-sm-6
-        #skills
-            @extend .col-sm-5
+        // #skills
+        //     @extend .col-sm-5
             padding: 0
     #tab-contact
         .text
@@ -439,6 +450,21 @@ a.cta-primary
 #contact
     background: #fff
     color: $dark-gray
+    h1
+        background: none
+        color: #252525
+        border-bottom: 1px solid #e1e1e1
+        border-top: 0
+    .text
+        @extend .col-sm-8
+        padding: 1em
+        .action-badges
+            text-align: left
+            .cta-primary
+                color: $text-faded
+                &:hover, &:focus
+                    color: #000
+
 
 /* ==========================================================================
    Portfolio Thumbnails
@@ -502,6 +528,14 @@ a.cta-primary
 .btn
     +border-radius(0)
 
+.tooltip
+    font-size: 13px
+    line-height: 1.25em
+
+.popover
+    color: #000
+    line-height: 1.25em
+
 .see
     @extend .btn
     @extend .cta-primary
@@ -552,9 +586,9 @@ hr
    ========================================================================== */
 @media screen and (min-width: $screen-sm-min)
     body.home
-        #hero
+        #hello
             min-height: 720px
-    #hero
+    #hello
         .text
             top: 201px
             left: 426px
