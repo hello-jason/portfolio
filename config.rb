@@ -41,6 +41,7 @@ helpers do
     project_status    = current_page.data.project_status
     project_tech      = current_page.data.project_tech
     project_url       = current_page.data.project_url
+
     "
     <div class='client-info'>
       <dl>
@@ -84,7 +85,6 @@ activate :directory_indexes
 activate :i18n
 set :markdown_engine, :redcarpet
 set :markdown, :fenced_code_blocks => true, :smartypants => true
-
 set :haml, { :ugly => false, :format => :html5 }
 set :sass, line_comments: false, style: :nested
 
