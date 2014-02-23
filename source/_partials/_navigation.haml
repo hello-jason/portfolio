@@ -12,15 +12,15 @@
     .collapse.navbar-collapse#primary-navigation
       %ul.nav.navbar-nav
         %li.nav-hello
-          %a{:href => "#{site_url}#top"} Hello
+          %a{:href => "#{site_url}/#top"} Hello
         %li.nav-portfolio
-          %a{:href => "#{site_url}#portfolio"} Portfolio
+          %a{:href => "#{site_url}/#portfolio"} Portfolio
         %li.nav-about
-          %a{:href => "#{site_url}#about"} About
+          %a{:href => "#{site_url}/#about"} About
         %li.nav-contact
-          %a{:href => "#{site_url}#contact"} Contact
+          %a{:href => "#{site_url}/#contact"} Contact
         - if current_page.data.section == "portfolio"
           %li.pull-right
-            %a{:href => "#{site_url}#portfolio"}
+            %a{:href => "#{site_url}/#portfolio"}
               %i.fa.fa-arrow-circle-left
               Back to Portfolio

@@ -127,7 +127,7 @@ body
     background-color: $dark-gray
     color: #fff
     font-size: 18px
-    padding-top: 4.15em
+    padding-top: 3.75em
     @extend .font-lato-regular
 
 #wrap
@@ -220,9 +220,16 @@ header
             margin-bottom: -1px
             padding: 0.55em
             +transition(all ease-out 0.15s)
+            i
+                line-height: 0.5em
+                font-size: 25px
+                +transition(all ease-out 0.15s)
             &:hover, &:focus
                 background: none
-                color: #fff
+                i
+                    margin-right: 0.15em
+                &, i
+                    color: #fff
         .navbar-brand
             color: $brand-primary
         .navbar-nav
@@ -247,9 +254,6 @@ body.portfolio
             a
                 @extend .active-nav
                 border-bottom-color: $brand-primary
-        .fa
-            line-height: 0.5em
-            font-size: 25px
 
 
 /* ==========================================================================
@@ -276,6 +280,8 @@ body.portfolio
     @extend .slashes-black
     img
         @extend .img-responsive
+        background: #fff
+        padding-top: 1em
 
 /* ==========================================================================
    Hello Section
