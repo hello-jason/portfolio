@@ -11,8 +11,10 @@
 
     <title><%= current_page.data.title || "Hello Jason" %> | Hello Jason</title>
 
-    <%= stylesheet_link_tag "normalize", "main" %>
+    <%= stylesheet_link_tag "normalize" %>
+    <%= stylesheet_link_tag "main" %>
     <%= javascript_include_tag "vendor/modernizr-2.6.1.min.js" %>
+    <link rel="canonical" href="<%= site_url+current_page.url %>"/>
 </head>
 <!--
  __  __     ______     __         __         ______   
@@ -32,6 +34,6 @@ Hello, you. This website was an exploration for me. I built it with Middleman an
 <body class="<%= page_classes %> <%= current_page.data.layout || "default" %> <%= current_page.data.section %>" data-spy="scroll" data-target="#primary-navigation">
 
     <!--[if lte IE 8]>
-        <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
+        <p class="chromeframe alert alert-warning">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site better.</p>
     <![endif]-->
   <div id="wrap">
