@@ -88,9 +88,7 @@ set :markdown, :fenced_code_blocks => true, :smartypants => true
 set :haml, { :ugly => false, :format => :html5 }
 set :sass, line_comments: false, style: :nested
 
-###
 # Assets
-###
 set :css_dir, 'css'
 set :js_dir, 'js'
 set :images_dir, 'img'
@@ -104,12 +102,13 @@ end
 
 # Build-specific configuration
 configure :build do
-  set :sass, style: :compressed
   set :site_url, "http://hellojason.net"
+  set :sass, style: :compressed
   activate :minify_css
   #activate :minify_html
   activate :minify_javascript
   activate :gzip
+  # Create favicon and device-specific icons
   activate :favicon_maker, :icons => {
     "favicon_template.png" => [
       { icon: "apple-touch-icon-152x152-precomposed.png" },
