@@ -12,45 +12,37 @@ frontend:           1
 project_manager:    1
 ---
 
-- content_for :header do
-  = image_tag "project-hero-rotolos-index.jpg"
-
-%h1= current_page.data.title
+%section#hero
+  = image_tag "monitor-front-rotolos.jpg"
 
 %section#project-intro
-  .container
-    .main
-      :markdown
-        ## <span>Project Details</span>
-        The growing Rotolo's Pizzeria corporation wanted to provide menu and catering information to customers while simultaneously guiding entrepreneurs to franchising details. I worked closely with designer Mandy Portal to create a WordPress website that allows Rotolo’s marketing team to update news posts, menu items, and other content as needed while the brand continues to grow across the Gulf South.
+  %h1= current_page.data.title
+  .main
+    :markdown
+      ## <span>Project Details</span>
+      The growing Rotolo's Pizzeria corporation wanted to provide menu and catering information to customers while simultaneously guiding entrepreneurs to franchising details. I worked closely with designer Mandy Portal to create a WordPress website that allows Rotolo’s marketing team to update news posts, menu items, and other content as needed while the brand continues to grow across the Gulf South.
 
-        The site was developed onto the Roots framework, offering a responsive layout and manageable codebase. Ongoing maintenance and consulting help their team keep the website updated.
+      The site was developed onto the Roots framework, offering a responsive layout and manageable codebase. Ongoing maintenance and consulting help their team keep the website updated.
 
-      .action-badges
-        %p.cta.cta-primary
-          %i.fa.fa-cog
-          Frontend
-        %p.cta.cta-primary
-          %i.fa.fa-users
-          Proj Mgr
+    .action-badges
+      %p.cta.cta-primary
+        %i.fa.fa-cog
+        Frontend
+      %p.cta.cta-primary
+        %i.fa.fa-users
+        Proj Mgr
 
-    %aside.aside
-      = project_info
+  %aside.aside
+    = project_info
 
-%hr
 %section#project-details
-  .container
-    %h1= details_title
-    .example
-      =image_tag "thumbnail-col6-rotolos-map.jpg"
-      .text
-        %p Users can select a restaurant location which determines which food and catering menu items and prices are presented when those pages are visited.
-    .example
-      =image_tag "responsive-rotolos.jpg"
-      .text
-        %p Alternative layout for small devices for easier navigation.
-    .example
-      =image_tag "thumbnail-col6-rotolos-footer.jpg"
-      .text
-        %p Close attention to content stacking for various screen sizes.
-    
+  %h1= details_title
+  .example
+    =image_tag "monitor-right-rotolos-menu.jpg"
+    .text
+      %p Users can select a restaurant location which determines which food and catering menu items and prices are presented when those pages are visited.
+  .example
+    =image_tag "responsive-rotolos.jpg"
+    .text
+      %p Alternative layout for small devices for easier navigation.
+      

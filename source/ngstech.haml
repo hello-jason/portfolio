@@ -1,70 +1,52 @@
 ---
-title:              NGSTech
+title:              NGSTech Conference
 meta_description:   This is where the meta description goes.
 section:            portfolio
 project_client:     Natural Gas Sampling Technology Conference
 project_year:       2013
 project_status:     Deployed
-project_tech:     WordPress, Node, Less
+project_tech:       WordPress, Node, Less
 project_url:        http://ngstech.org
 designer:           1
 frontend:           1
 project_manager:    1
 ---
 
-%div#hero.carousel
-  = image_tag "project-hero-ngstech-index.jpg"
-  <img data-src="img/project-hero-ngstech-gallery.jpg" class="lazyOwl">
-
-%div#hero-controls
-  %a.hero-prev
-    %i.fa.fa-arrow-left
-  %a.hero-toggle
-    Toggle larger view
-  %a.hero-next
-    %i.fa.fa-arrow-right
-
-%h1= current_page.data.title
+%div#hero
+  = image_tag "monitor-front-ngstech.jpg"
 
 %section#project-intro
-  .container
-    .main
-      :markdown
-        ## <span>Project Details</span>
-        The biannual NGSTech Conference required an updatable, informative website as well as a proper online registration and payment system.
-        
-        After designing the 2 interfaces, I developed the site into a custom, responsive WordPress theme while a Chris McKnight developed the registration component onto Node with PayPal API integration.
-        
-        The project's inaugural use was very successful, and they intend to continue feature development for the next conference.
+  %h1= current_page.data.title
+  .main
+    :markdown
+      ## <span>Project Details</span>
+      The biannual NGSTech Conference required an updatable, informative website as well as a proper online registration and payment system.
+      
+      After designing the 2 interfaces, I developed the site into a custom, responsive WordPress theme while Chris McKnight developed the registration component onto Node with PayPal API integration.
+      
+      The project's inaugural use was very successful, and they intend to continue feature development for the next conference.
 
+    .action-badges
+      %p.cta.cta-primary
+        %i.fa.fa-picture-o
+        Designer
+      %p.cta.cta-primary
+        %i.fa.fa-cog
+        Frontend
+      %p.cta.cta-primary
+        %i.fa.fa-users
+        Proj Mgr
 
-      .action-badges
-        %p.cta.cta-primary
-          %i.fa.fa-picture-o
-          Designer
-        %p.cta.cta-primary
-          %i.fa.fa-cog
-          Frontend
-        %p.cta.cta-primary
-          %i.fa.fa-users
-          Proj Mgr
+  %aside.aside
+    = project_info
 
-    %aside.aside
-      = project_info
-
-%hr
 %section#project-details
-  .container
-    %h1= details_title
-    .example
-      =image_tag "thumbnail-col6-mowtell-form.jpg"
-      .text
-        %p Users can select a restaurant location which determines which food and catering menu items and prices are presented when those pages are visited.
-    .example
-      =image_tag "thumbnail-col6-mowtell-header.jpg"
-      .text
-        %p Simple, but complementary styles tablular data
-    .example
-      =image_tag "responsive-ngstech.jpg"
-      .text
-        %p Responsive
+  %h1= details_title
+  .example
+    =image_tag "monitor-right-ngstech-gallery.jpg"
+    .text
+      %p Us
+  .example
+    =image_tag "responsive-ngstech.jpg"
+    .text
+      %p Responsive

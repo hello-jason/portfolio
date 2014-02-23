@@ -12,57 +12,44 @@ frontend:           1
 project_manager:    1
 ---
 
-%div#hero.carousel
-  = image_tag "project-hero-pssurgery-index.jpg"
-  <img data-src="img/project-hero-pssurgery-footer.jpg" class="lazyOwl">
-
-%div#hero-controls
-  %a.hero-prev
-    %i.fa.fa-arrow-left
-  %a.hero-toggle
-    Toggle larger view
-  %a.hero-next
-    %i.fa.fa-arrow-right
-
-%h1= current_page.data.title
+%div#hero
+  = image_tag "monitor-front-pssurgery.jpg"
 
 %section#project-intro
-  .container
-    .main
-      :markdown
-        ## <span>Project Details</span>
-        The P&amp;S Surgical Hospital of Monroe needed a new public website to represent their evolving organization. The previous website and company representatives provided helpful feedback and content structure, allowing for a pleasant design and development process.
+  %h1= current_page.data.title
+  .main
+    :markdown
+      ## <span>Project Details</span>
+      The P&amp;S Surgical Hospital of Monroe needed a new public website to represent their evolving organization. The previous website and company representatives provided helpful feedback and content structure, allowing for a pleasant design and development process.
 
-        The client requested a WordPress website, which would provide a comfortable platform for managing content. I designed and helped develop a responsive theme on the Roots framework, utilizing Pods (and other tools) to present the team with a small learning curve for managing their new website.
+      The client requested a WordPress website, which would provide a comfortable platform for managing content. I designed and helped develop a responsive theme on the Roots framework, utilizing Pods (and other tools) to present the team with a small learning curve for managing their new website.
 
-      .action-badges
-        %p.cta.cta-primary
-          %i.fa.fa-picture-o
-          Designer
-        %p.cta.cta-primary
-          %i.fa.fa-cog
-          Developer
-        %p.cta.cta-primary
-          %i.fa.fa-users
-          Proj Mgr
+    .action-badges
+      %p.cta.cta-primary
+        %i.fa.fa-picture-o
+        Designer
+      %p.cta.cta-primary
+        %i.fa.fa-cog
+        Developer
+      %p.cta.cta-primary
+        %i.fa.fa-users
+        Proj Mgr
 
-    %aside.aside
-      = project_info
+  %aside.aside
+    = project_info
 
-%hr
 %section#project-details
-  .container
-    %h1= details_title
-    .example
-      =image_tag "thumbnail-col6-pssurgery-search.jpg"
-      .text
-        %p Search results highlight text matching the user's query.
-    .example
-      =image_tag "thumbnail-col6-pssurgery-tables.jpg"
-      .text
-        %p Simple, but complementary styles tablular data.
-    .example
-      =image_tag "responsive-pssurgery.jpg"
-      .text
-        %p Responsive styles and close attention to content stacking for various screen sizes.
-    
+  %h1= details_title
+  .example
+    =image_tag "monitor-right-pssurgery-search.jpg"
+    .text
+      %p Search results highlight text matching the user's query.
+  .example
+    =image_tag "responsive-pssurgery.jpg"
+    .text
+      %p Responsive styles and close attention to content stacking for various screen sizes.
+  .example
+    =image_tag "monitor-right-pssurgery-tables.jpg"
+    .text
+      %p Simple, but complementary styles tablular data.
+      

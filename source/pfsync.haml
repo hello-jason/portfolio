@@ -1,8 +1,8 @@
 ---
-title:              pfSync
+title:              pfsync
 meta_description:   This is where the meta description goes.
 section:            portfolio
-project_client:     pfSync
+project_client:     pfsync
 project_year:       2013
 project_status:     Development
 designer:           1
@@ -11,39 +11,26 @@ project_manager:    0
 ---
 
 %div#hero.carousel
-  = image_tag "project-hero-pfsync-demo.jpg"
-  <img data-src="img/project-hero-pfsync-features.jpg" class="lazyOwl">
-
-%div#hero-controls
-  %a.hero-prev
-    %i.fa.fa-arrow-left
-  %a.hero-toggle
-    Toggle larger view
-  %a.hero-next
-    %i.fa.fa-arrow-right
-
-%h1= current_page.data.title
+  = image_tag "monitor-front-pfsync.jpg"
 
 %section#project-intro
-  .container
-    .main
-      :markdown
-        ## <span>Project Details</span>
-        pfsync is a web-based application that allows Microsoft Exchange public folders natively on mobile devices. It sits between the phone and Exchange server, acting as a gateway to data that a phone cannot natively access.
+  %h1= current_page.data.title
+  .main
+    :markdown
+      ## <span>Project Details</span>
+      pfsync is a web-based application that allows Microsoft Exchange public folders natively on mobile devices. It sits between the phone and Exchange server, acting as a gateway to data that a phone cannot natively access.
 
-      .action-badges
-        %p.cta.cta-primary
-          %i.fa.fa-picture-o
-          Designer
+    .action-badges
+      %p.cta.cta-primary
+        %i.fa.fa-picture-o
+        Designer
 
-    %aside.aside
-      = project_info
+  %aside.aside
+    = project_info
 
-%hr
 %section#project-details
-  .container
-    %h1= details_title
-    .example
-      =image_tag "thumbnail-col6-pfsync-autodiscover.jpg"
-      .text
-        %p Users authenticate using their own Exchange email address and password, leveraging autodiscover, allowing for a quick demo of the app.
+  %h1= details_title
+  .example
+    =image_tag "monitor-right-pfsync-howitworks.jpg"
+    .text
+      %p Users authenticate using their own Exchange email address and password, leveraging autodiscover, allowing for a quick demo of the app.

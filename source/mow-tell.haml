@@ -12,50 +12,38 @@ frontend:           1
 project_manager:    1
 ---
 
-%div#hero.carousel
-  = image_tag "project-hero-mowtell-index.jpg"
+%div#hero
+  = image_tag "monitor-front-mowtell.jpg"
   <img data-src="img/project-hero-mowtell-about.jpg" class="lazyOwl">
   <img data-src="img/project-hero-mowtell-services.jpg" class="lazyOwl">
 
-%div#hero-controls
-  %a.hero-prev
-    %i.fa.fa-arrow-left
-  %a.hero-toggle
-    Toggle larger view
-  %a.hero-next
-    %i.fa.fa-arrow-right
-
-%h1= current_page.data.title
-
 %section#project-intro
-  .container
-    .main
-      :markdown
-        ## <span>Project Details</span>
-        Mow & Tell had a successful local company with the desire to grow through the web and other marketing means. I provided ongoing consulting during the logo creation process, then worked with Dartanyon closely to design and develop a fitting web presence.
+  %h1= current_page.data.title
+  .main
+    :markdown
+      ## <span>Project Details</span>
+      Mow & Tell had a successful local company with the desire to grow through the web and other marketing means. I provided ongoing consulting during the logo creation process, then worked with Dartanyon closely to design and develop a fitting web presence.
 
-        The site is built onto WordPress with the Roots framework, allowing for a beautifully responsive and simple to manage website.
+      The site is built onto WordPress with the Roots framework, allowing for a beautifully responsive and simple to manage website.
 
-      .action-badges
-        %p.cta.cta-primary
-          %i.fa.fa-picture-o
-          Designer
-        %p.cta.cta-primary
-          %i.fa.fa-cog
-          Developer
+    .action-badges
+      %p.cta.cta-primary
+        %i.fa.fa-picture-o
+        Designer
+      %p.cta.cta-primary
+        %i.fa.fa-cog
+        Developer
 
-    %aside.aside
-      = project_info
+  %aside.aside
+    = project_info
 
-%hr
 %section#project-details
-  .container
-    %h1= details_title
-    .example
-      =image_tag "thumbnail-col6-mowtell-form.jpg"
-      .text
-        %p Clean contact form for potential to request services.
-    .example
-      =image_tag "responsive-mowtell.jpg"
-      .text
-        %p Collapsed primary navigation with helpful label for user aid.
+  %h1= details_title
+  .example
+    =image_tag "monitor-right-mowtell-about.jpg"
+    .text
+      %p Clean contact form for potential to request services.
+  .example
+    =image_tag "responsive-mowtell.jpg"
+    .text
+      %p Collapsed primary navigation with helpful label for user aid.

@@ -13,49 +13,32 @@ project_manager:    1
 ---
 
 // Extract Hero into content_for block
-%div#hero.carousel
-  = image_tag "project-hero-lsuclub-index.jpg"
-  <img data-src="img/project-hero-lsuclub-menus.jpg" class="lazyOwl">
-
-%div#hero-controls
-  %a.hero-prev
-    %i.fa.fa-arrow-left
-  %a.hero-toggle
-    Toggle larger view
-  %a.hero-next
-    %i.fa.fa-arrow-right
-
-%h1= current_page.data.title
+%div#hero
+  = image_tag "monitor-front-lsuclub.jpg"
 
 %section#project-intro
-  .container
-    .main
-      :markdown
-        ## <span>Project Details</span>
-        The Club at LSU Union Square is a fine dining restaurant on Louisiana State University’s campus. I was provided with a beautiful photograph of the building’s exterior at sunset, which inspired a simplistic, left aligned and semitransparent site that spotlights the building and the food.
-        
-        A custom WordPress theme and plugins helps staff keep the website updated with new menu items and specials on a weekly basis.
+  %h1= current_page.data.title
+  .main
+    :markdown
+      ## <span>Project Details</span>
+      The Club at LSU Union Square is a fine dining restaurant on Louisiana State University’s campus. I was provided with a beautiful photograph of the building’s exterior at sunset, which inspired a simplistic, left aligned and semitransparent site that spotlights the building and the food.
+      
+      A custom WordPress theme and plugins helps staff keep the website updated with new menu items and specials on a weekly basis.
 
-      .action-badges
-        %p.cta.cta-primary
-          %i.fa.fa-picture-o
-          Designer
-        %p.cta.cta-primary
-          %i.fa.fa-cog
-          Developer
+    .action-badges
+      %p.cta.cta-primary
+        %i.fa.fa-picture-o
+        Designer
+      %p.cta.cta-primary
+        %i.fa.fa-cog
+        Developer
 
-    %aside.aside
-      = project_info
+  %aside.aside
+    = project_info
 
-%hr
 %section#project-details
-  .container
-    %h1= details_title
-    .example
-      =image_tag "thumbnail-col6-lsuclub-specials.jpg"
-      .text
-        %p asdfafs
-    .example
-      =image_tag "thumbnail-col6-lsuclub-reservation.jpg"
-      .text
-        %p adsfasdf
+  %h1= details_title
+  .example
+    =image_tag "monitor-right-lsuclub-reservation.jpg"
+    .text
+      %p Food menu

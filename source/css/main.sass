@@ -113,6 +113,11 @@ $nav-tabs-active-link-hover-border-color:     transparent
         z-index: 2
         content: ""
 
+.slashes-red
+    background: $dark-red image-url('bkg-slashes-red.jpg') repeat
+
+.slashes-black
+    background: $dark-gray image-url('bkg-slashes-black.jpg') repeat
 
 /* ==========================================================================
    Layout
@@ -265,7 +270,7 @@ body.portfolio
    ========================================================================== */
 
 #hero
-    background: $dark-gray image-url('bkg-slashes-black.jpg') repeat
+    @extend .slashes-black
     img
         @extend .img-responsive
 
@@ -275,7 +280,7 @@ body.portfolio
 
 #hello
     position: relative
-    background: $dark-gray image-url('bkg-slashes-black.jpg') repeat
+    @extend .slashes-black
     .text, .main
         position: absolute
         bottom: 15%
@@ -349,7 +354,6 @@ a.cta-primary
         @extend .bkg-hatch
 
 .action-badges
-    text-align: center
     margin: 1em 0
     @extend .clearfix
     .cta
@@ -417,7 +421,7 @@ a.cta-primary
     position: relative
     z-index: 500
 #about
-    background: $dark-red image-url('bkg-slashes-red.jpg') repeat
+    @extend .slashes-red
     .nav-tabs
         background: $light-red
         padding-left: 2.5em
@@ -449,6 +453,8 @@ a.cta-primary
     #tab-contact
         .text
             padding: 2em
+    #tab-interests
+        @extend .col-sm-7
 
 
 /* ==========================================================================
@@ -515,6 +521,22 @@ a.cta-primary
    Projects
    ========================================================================== */
 
+#project-intro
+    @extend .slashes-red
+    padding: 0.75em
+    h1
+        background: none
+        border: 0 none
+        padding-left: 0
+    .main
+        @extend .col-sm-6
+    .aside
+        @extend .col-sm-3
+    .client-info
+        font-size: 14px
+        dl
+            @extend .dl-horizontal
+
 .example
     padding: 1.5em 0
     @extend .clearfix
@@ -522,13 +544,16 @@ a.cta-primary
         @extend .col-sm-6
         @extend .img-responsive
     .text
-        @extend .col-sm-4
+        @extend .col-sm-2
 
 /* ==========================================================================
    Footer
    ========================================================================== */
 .content-info
     padding: 2.45em
+    @extend .slashes-black
+    font-size: 14px
+    color: #808080
 
 /* ==========================================================================
    Globals
