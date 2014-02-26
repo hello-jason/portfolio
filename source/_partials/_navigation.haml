@@ -1,4 +1,7 @@
-%nav.navbar{role: "navigation"}
+- if current_page.data.section == "portfolio"
+  - fixed = " navbar-fixed-top"
+
+%nav.navbar{role: "navigation", class: "#{fixed}"}
   .container-fluid
     .navbar-header
       %button.navbar-toggle{"data-target" => "#primary-navigation", "data-toggle" => "collapse", type: "button"}
@@ -10,13 +13,12 @@
       %a.navbar-brand{href: "#{site_url}"} Jason Cross
 
     .collapse.navbar-collapse#primary-navigation
-      // #{site_url} for canonical links
       %ul.nav.navbar-nav
         - if current_page.data.section == "portfolio"
           %li
             %a{href: "#{site_url}#portfolio"}
               %i.fa.fa-arrow-circle-left
-              Back
+              Back to portfolio
         - else
           %li.nav-hello
             %a{href: "#top", rel: "nofollow"} Hello

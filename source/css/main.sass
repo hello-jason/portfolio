@@ -150,6 +150,8 @@ section
         color: #fff
         background: $brand-primary
         border-top: 4px solid $brand-primary-border
+    .text
+        padding: 1em 2em !important
 
 
 /* ==========================================================================
@@ -242,6 +244,7 @@ header
    Primary Navigation Highlighting
    ========================================================================== */
 body.portfolio
+    padding-top: 3.5em
     #primary-navigation
         li.nav-portfolio
             a
@@ -437,16 +440,17 @@ a.cta-primary
     @extend .slashes-red
     .nav-tabs
         background: $light-red
-        padding-left: 2.5em
         border-bottom: 4px solid $dark-red
+        padding-left: 15px
+        padding-right: 15px
         li
             a
                 background: none
                 @extend .font-lato-italic
-                font-size: 20px
+                font-size: 15px
                 color: #FCCDCD
                 text-decoration: none
-                padding: 0.75em 1.45em
+                padding: 0.35em 0.5em
                 margin-top: 0.75em
                 +transition(color ease-out 0.15s)
                 &:hover
@@ -455,13 +459,13 @@ a.cta-primary
                 a
                     background: $dark-red
     .tab-pane
-        padding: 2.45em
         @extend .clearfix
+        img
+            display: block
+            margin: 1em auto 0.25em
     #tab-about
         .text
             @extend .col-sm-6
-        // #skills
-        //     @extend .col-sm-5
             padding: 0
     #tab-contact
         .text
@@ -484,7 +488,6 @@ a.cta-primary
         border-top: 0
     .text
         @extend .col-sm-8
-        padding: 1em 2em
         .action-badges
             text-align: left
             .cta-primary
@@ -671,6 +674,18 @@ hr
                 &:hover, &:focus
                     .piece-name
                         line-height: 6em
+    #about
+        .nav-tabs
+            padding-left: 2.5em
+            padding-right: 0
+            li
+                a
+                    font-size: 20px
+                    padding: 0.75em 1.45em
+        .tab-pane
+            padding: 2.45em
+            img
+                @extend .alignleft
     header
         .navbar
             a

@@ -2,15 +2,15 @@
 %section#about
     %ul.nav.nav-tabs
         %li.active
-            %a{:href => "#tab-about", "data-toggle" => "tab"} About Me
+            %a{href: "#tab-about", "data-toggle" => "tab"} About Me
         %li
-            %a{:href => "#tab-experience", "data-toggle" => "tab"} Work Experience
+            %a{href: "#tab-experience", "data-toggle" => "tab"} Work Experience
         %li
-            %a{:href => "#tab-interests", "data-toggle" => "tab"} Interests
+            %a{href: "#tab-interests", "data-toggle" => "tab"} Interests
 
     .tab-content
         #tab-about.tab-pane.active
-            = image_tag "israel-dead-sea.jpg", :class => "alignleft"
+            = image_tag "israel-dead-sea.jpg"
             .text
                 :markdown
                     ## About Me
