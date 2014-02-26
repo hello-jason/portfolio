@@ -17,20 +17,20 @@ $(document).ready(function() {
     $('html, body').animate({scrollTop:target_top}, 560);
   };
 
-  $('#primary-navigation a').click(jump);
+  $('body.home').scrollspy({
+    target: '#primary-navigation',
+  });
+  
+  $('body.home #primary-navigation a').click(jump);
+  $('a.totop').click(jump);
 
   $(function () {
+    setInterval(function() {
+      $('.progress-bar, .totop')
+        .filter(':onScreen')
+          .removeClass('cloak')
+      }, 800)
     $("[data-toggle='popover']").popover();
   });
-
-  $('body').scrollspy({target: '#primary-navigation'});
-
-  $(function() {
-    setInterval(function() {
-      $('.progress-bar')
-        .filter(':onScreen')
-          .removeClass('nobar')
-    }, 800)
-  })
 
 });

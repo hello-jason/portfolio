@@ -115,6 +115,8 @@ $nav-tabs-active-link-hover-border-color:     transparent
 
 .slashes-red
     background: $dark-red image-url('bkg-slashes-red.jpg') repeat
+    a, a:link
+        color: #fff
 
 .slashes-black
     background: $dark-gray image-url('bkg-slashes-black.jpg') repeat
@@ -127,7 +129,6 @@ body
     background-color: $dark-gray
     color: #fff
     font-size: 18px
-    padding-top: 3.75em
     @extend .font-lato-regular
 
 #wrap
@@ -189,10 +190,10 @@ h2+h3
     margin-top: 0.45em
 
 a, a:link
-    color: #fff
+    color: $brand-primary
     text-decoration: underline
     &:hover, &:focus
-        color: #f3f3f3
+        color: $brand-primary
 
 /* ==========================================================================
    Primary Navigation (default)
@@ -205,7 +206,7 @@ header
         background: rgba(0,0,0,0.85)
         margin: 0
         border-radius: 0
-        border-bottom: 1px solid $border
+        border-bottom: 1px solid $brand-primary
         .navbar-toggle
             background: $brand-primary
             .icon-bar
@@ -214,20 +215,16 @@ header
             color: #aeaeae
             @extend .font-ostrich
             text-transform: uppercase
-            border-bottom: 1px solid transparent
             text-decoration: none
             font-size: 30px
             margin-bottom: -1px
-            padding: 0.55em
             +transition(all ease-out 0.15s)
+            padding: 0.55em
             i
                 line-height: 0.5em
                 font-size: 25px
-                +transition(all ease-out 0.15s)
             &:hover, &:focus
                 background: none
-                i
-                    margin-right: 0.15em
                 &, i
                     color: #fff
         .navbar-brand
@@ -239,10 +236,6 @@ header
                     &:hover, &:focus
                         background: none
                         color: #fff
-                &.active
-                    &>a
-                        color: #fff
-                        border-bottom-color: $brand-primary
 
 
 /* ==========================================================================
@@ -254,6 +247,16 @@ body.portfolio
             a
                 @extend .active-nav
                 border-bottom-color: $brand-primary
+
+body.home
+    header
+        .navbar
+            .navbar-nav
+                &>li
+                    &.active
+                        a
+                            color: #fff
+                            background: $brand-primary
 
 
 /* ==========================================================================
@@ -311,6 +314,8 @@ body.portfolio
         padding: 0
         background: none
         border: 0 none
+    img
+        @extend .img-responsive
     .cta-primary
         +border-radius(0)
         color: #252525
@@ -562,6 +567,16 @@ a.cta-primary
     @extend .slashes-black
     font-size: 14px
     color: #808080
+    border-top: 1px solid $border
+    .totop
+        font-size: 14px
+        background: rgba(0,0,0,0.5)
+        padding: 0.5em 0.75em
+        text-decoration: none
+        @extend .pull-right
+        +transition(color ease-out 0.15s)
+        &:hover, &:focus
+            color: #fff
 
 /* ==========================================================================
    Globals

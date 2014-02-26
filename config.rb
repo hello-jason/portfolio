@@ -27,7 +27,7 @@ helpers do
     <div class='progress-item' data-toggle='popover' data-placement='top' data-trigger='hover' data-content='#{explanation}'>
       <p class='progress-name'>#{skill_name} <i class='fa fa-question-circle'></i></p>
       <div class='progress'>
-        <div class='progress-bar nobar' aria-valuemax='100' aria-valuemin='0' aria-valuenow='#{percentage}' role='progressbar' style='width: #{percentage}%;'>
+        <div class='progress-bar cloak' aria-valuemax='100' aria-valuemin='0' aria-valuenow='#{percentage}' role='progressbar' style='width: #{percentage}%;'>
           <span class='sr-only'>#{percentage}%</span>
         </div>
       </div>
