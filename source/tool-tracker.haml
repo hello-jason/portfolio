@@ -12,83 +12,58 @@ frontend:           1
 project_manager:    1
 ---
 
-%div#hero.carousel
-  = image_tag "project-hero-tooltracker-login.jpg"
-  <img data-src="img/project-hero-tooltracker-request.jpg" class="lazyOwl">
-  <img data-src="img/project-hero-tooltracker-approval.jpg" class="lazyOwl">
-  <img data-src="img/project-hero-tooltracker-hud.jpg" class="lazyOwl">
-  <img data-src="img/project-hero-tooltracker-notification.jpg" class="lazyOwl">
-
-%div#hero-controls
-  %a.hero-prev
-    %i.fa.fa-arrow-left
-  %a.hero-toggle
-    Toggle larger view
-  %a.hero-next
-    %i.fa.fa-arrow-right
-
-%h1= current_page.data.title
+%div#hero
+  = image_tag "monitor-front-tooltracker.jpg"
 
 %section#project-intro
-  .container
-    .main
-      :markdown
-        ## <span>Project Details</span>
-        After investing heavily into Viewpoint software for project management, ISC Constructors discovered a missing feature that did not allow tracking and billing tools between job sites.
+  %h1= current_page.data.title
+  .main
+    :markdown
+      ## <span>Project Details</span>
+      After investing heavily into Viewpoint software for project management, ISC Constructors discovered a missing feature that did not allow tracking and billing tools between job sites.
 
-        The Tool Tracker project leverages company-owned iPhone 5s devices with Linea Pro cases from Infinite Peripherals with 2D laser barcode scanning capabilities.
+      The Tool Tracker project leverages company-owned iPhone 5s devices with Linea Pro cases from Infinite Peripherals with 2D laser barcode scanning capabilities.
 
-        Our web-based Node software allows users to formally request and transfer tools betwen various job sites and company locations, tracking tool locations and handlers throughout each lifecycle.
+      Our web-based Node software allows users to formally request and transfer tools betwen various job sites and company locations, tracking tool locations and handlers throughout each lifecycle.
 
-        MobileIron was also utilized for iOS device control and ongoing application deployment.
+      MobileIron was also utilized for iOS device control and ongoing application deployment.
 
-      .action-badges
-        %p.cta.cta-primary
-          %i.fa.fa-picture-o
-          Designer
-        %p.cta.cta-primary
-          %i.fa.fa-cog
-          Frontend
-        %p.cta.cta-primary
-          %i.fa.fa-users
-          Proj Mgr
+    .action-badges
+      %p.cta.cta-primary
+        %i.fa.fa-picture-o
+        Designer
+      %p.cta.cta-primary
+        %i.fa.fa-cog
+        Frontend
+      %p.cta.cta-primary
+        %i.fa.fa-users
+        Proj Mgr
 
-    %aside.aside
-      = project_info
+  %aside.aside
+    = project_info
 
-%hr
 %section#project-ios
-  .container
-    %h1 iOS Component
-    .example
-      =image_tag "thumbnail-col6-tooltracker-fluidui.jpg"
-      .text
-        %p FluidUI prototyping allowed me to create a demonstrable workflow on the iOS devices. This crucial step established expected application functionality and how various pages would coexist.
-    .example
-      =image_tag "thumbnail-col6-tooltracker-addtools.jpg"
-      .text
-        %p System permissions were reduced to checkboxes for ease of use.
+  %h1 iOS Component
+  .example
+    =image_tag "monitor-right-tooltracker-fluidui.jpg"
+    .text
+      %p FluidUI prototyping allowed me to create a demonstrable workflow on the iOS devices. This crucial step established expected application functionality and how various pages would coexist.
+  .example
+    =image_tag "monitor-right-tooltracker-addtools.jpg"
+    .text
+      %p Scan tools
 
 %section#project-web
-  .container
-    %h1 Web Component
-    .example
-      =image_tag "thumbnail-col6-tooltracker-login.jpg"
-      .text
-        %p Account registration queries Viewpoint, an internal management application. All users must have an active employee ID to register. Integration with LDAP allows single sign on for applicable users, and non LDAP employees are welcomed to create an account.
-    .example
-      =image_tag "thumbnail-col6-tooltracker-hud.jpg"
-      .text
-        %p The heads up display (HUD) page was designed to be visible on a large monitor all day, and web sockets allow real-time updates as tools transition between column states.
-    .example
-      =image_tag "thumbnail-col6-tooltracker-permissions.jpg"
-      .text
-        %p Permissions were reduced to checkboxes, offering a straight-forward permissions management area for system administrators.
-
-%section#project-booklet
-  .container
-    %h1 Documentation Booklet
-    .example
-      =image_tag "http://placehold.it/460x206"
-      .text
-        %p Lorem ipsdum dolor
+  %h1 Web Component
+  .example
+    =image_tag "monitor-right-tooltracker-permissions.jpg"
+    .text
+      %p Permissions were reduced to checkboxes, offering a straight-forward permissions management area for system administrators.
+  .example
+    =image_tag "monitor-right-tooltracker-login.jpg"
+    .text
+      %p Account registration queries Viewpoint, an internal management application. All users must have an active employee ID to register. Integration with LDAP allows single sign on for applicable users, and non LDAP employees are welcomed to create an account.
+  .example
+    =image_tag "monitor-right-tooltracker-hud.jpg"
+    .text
+      %p The heads up display (HUD) page was designed to be visible on a large monitor all day, and web sockets allow real-time updates as tools transition between column states.

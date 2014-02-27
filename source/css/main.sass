@@ -463,16 +463,9 @@ a.cta-primary
         img
             display: block
             margin: 1em auto 0.25em
-    #tab-about
         .text
-            @extend .col-sm-6
             padding: 0
-    #tab-contact
-        .text
-            padding: 2em
-    #tab-interests
-        @extend .col-sm-7
-
+            @extend .col-sm-6
 
 /* ==========================================================================
    Contact
@@ -573,13 +566,15 @@ a.cta-primary
     border-top: 1px solid $border
     .totop
         font-size: 14px
-        background: rgba(0,0,0,0.5)
+        background: #61B5AB
+        background: rgba(97,181,171,0.5)
         padding: 0.5em 0.75em
         text-decoration: none
         @extend .pull-right
-        +transition(color ease-out 0.15s)
+        +transition(all ease-out 0.15s)
         &:hover, &:focus
             color: #fff
+            background: rgba(97,181,171,1)
 
 /* ==========================================================================
    Globals
@@ -685,7 +680,7 @@ hr
         .tab-pane
             padding: 2.45em
             img
-                @extend .alignleft
+                display: inline
     header
         .navbar
             a

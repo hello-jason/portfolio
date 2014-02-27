@@ -26,9 +26,9 @@ $(document).ready(function() {
 
   $(function () {
     setInterval(function() {
-      $('.progress-bar, .totop')
+      $('.progress-bar')
         .filter(':onScreen')
-          .removeClass('cloak')
+          .removeClass('nobar')
       }, 800)
     $("[data-toggle='popover']").popover();
   });
