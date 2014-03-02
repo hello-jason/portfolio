@@ -100,7 +100,7 @@ set :images_dir, 'img'
 
 # Development-specific configuration
 configure :development do
-  set :site_url, "http://leonardo.dev:4567"
+  set :site_url, "http://hellojason.no-ip.biz:4567"
 end
 
 
