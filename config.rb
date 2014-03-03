@@ -12,6 +12,14 @@ helpers do
     partial "_partials/#{partial_filename}"
   end
 
+  def mustang_image(image_name)
+    "
+    <a rel='car_mustang' href='/#{images_dir}/cars/mustang_#{image_name}.jpg'>
+      <img src='/#{images_dir}/cars/thumbs/thumbs_mustang_#{image_name}.jpg'>
+    </a>
+    "
+  end
+
   ###
   # Markup Helpers
   ###
@@ -53,7 +61,7 @@ helpers do
         <dd>#{project_client}</dd>
         <dt>Year</dt>
         <dd>#{project_year}</dd>
-        <dt>Tools</dt>
+        <dt>Tech</dt>
         <dd>#{project_tech || "n/a"}</dd>
         <dt>Status</dt>
         <dd>#{project_status || "n/a"}</dd>

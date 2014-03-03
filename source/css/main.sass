@@ -45,9 +45,6 @@ $nav-tabs-active-link-hover-border-color:     transparent
 @import "font-awesome"
 @import "mixins"
 @import "css3-mixins"
-@import "owl.carousel"
-@import "owl.theme"
-@import "owl.transitions"
 
 // @font-face declarations
 +declare-font-face('Ostrich Webfont', 'ostrich-regular-webfont')
@@ -150,9 +147,6 @@ section
         color: #fff
         background: $brand-primary
         border-top: 4px solid $brand-primary-border
-    .text
-        padding: 1em 2em !important
-
 
 /* ==========================================================================
    Text
@@ -526,6 +520,7 @@ a.cta-primary
     .col-sm-12
         text-align: center
 
+
 /* ==========================================================================
    Projects
    ========================================================================== */
@@ -539,6 +534,7 @@ a.cta-primary
         padding-left: 0
     .main
         @extend .col-sm-6
+        padding: 0
     .aside
         @extend .col-sm-3
     .client-info
@@ -555,9 +551,20 @@ a.cta-primary
     .text
         @extend .col-sm-2
 
+
+/* ==========================================================================
+   Mustang
+   ========================================================================== */
+
+.thumbnails
+    @extend .col-sm-6
+    @extend .clearfix
+
+
 /* ==========================================================================
    Footer
    ========================================================================== */
+
 .content-info
     padding: 2.45em
     @extend .slashes-black
@@ -575,6 +582,7 @@ a.cta-primary
         &:hover, &:focus
             color: #fff
             background: rgba(97,181,171,1)
+
 
 /* ==========================================================================
    Globals

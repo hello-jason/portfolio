@@ -19,6 +19,11 @@
             %a{href: "#{site_url}#portfolio"}
               %i.fa.fa-arrow-circle-left
               Back to portfolio
+        - elsif current_page.data.section == "cars"
+          %li
+            %a{href: "#{site_url}#about"}
+              %i.fa.fa-arrow-circle-left
+              Back to about
         - else
           %li.nav-hello
             %a{href: "#top", rel: "nofollow"} Hello
