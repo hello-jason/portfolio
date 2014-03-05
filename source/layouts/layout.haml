@@ -11,7 +11,7 @@
     %meta{content: current_page.data.meta_description, name: "description"}
     %meta{content: "width=device-width", name: "viewport"}
     %meta{content: current_page.data.robots || "index,follow", name: "robots"}
-    %title= "Hello Jason | "+current_page.data.title || "Hello Jason"
+    %title= "Hello Jason | #{current_page.data.title}" || "Hello Jason"
     = stylesheet_link_tag "normalize", "main"
     = javascript_include_tag "vendor/modernizr-2.6.1.min.js"
     %link{href: site_url+current_page.url, rel: "canonical"}
