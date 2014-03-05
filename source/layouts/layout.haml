@@ -10,6 +10,7 @@
     %meta{content: "IE=edge,chrome=1", "http-equiv" => "X-UA-Compatible"}
     %meta{content: current_page.data.meta_description, name: "description"}
     %meta{content: "width=device-width", name: "viewport"}
+    %meta{content: current_page.data.robots || "index,follow", name: "robots"}
     %title= "Hello Jason | "+current_page.data.title || "Hello Jason"
     = stylesheet_link_tag "normalize", "main"
     = javascript_include_tag "vendor/modernizr-2.6.1.min.js"
@@ -28,7 +29,7 @@
                /\_____\  \ \_\ \_\  \/\_____\  \ \_____\  \ \_\\"\_\ 
                \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/ \/_/ 
 
-        Hello, you. This website was an exploration for me. I built it with Middleman and learned some things in the process.
+        Hello, you. This website was an exploration for me. I built it with Middleman, a Ruby static site generator, and learned some things in the process.
       -->
 
   %body{class: "#{page_classes} #{current_page.data.layout || "default"} #{current_page.data.section}", "data-spy" => "scroll", "data-target" => "#primary-navigation"}
@@ -48,4 +49,4 @@
         %a.totop{:href => "#top"}
           %i.fa.fa-chevron-up
           Top
-    = javascript_include_tag "vendor/jquery-2.1.0.min.js", "jquery.onscreen.min.js", "bootstrap.js", "main.js"
+    = javascript_include_tag "vendor/jquery-2.1.0.min.js", "vendor/jquery.onscreen.min.js", "bootstrap.js", "main.js"

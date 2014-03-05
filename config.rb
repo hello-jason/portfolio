@@ -12,6 +12,17 @@ helpers do
     partial "_partials/#{partial_filename}"
   end
 
+  def portfolio_piece(company_name, link_to_url, image)
+    "
+    <div class='piece'>
+      <a href='#{site_url}/#{link_to_url}'>
+        <span class='piece-name'>#{company_name}</span>
+        <img src='/#{images_dir}/#{image}' alt='#{company_name}'>
+      </a>
+    </div>
+    "
+  end
+
   def mustang_image(image_name)
     "
     <a rel='car_mustang' href='/#{images_dir}/cars/mustang_#{image_name}.jpg'>
@@ -20,9 +31,6 @@ helpers do
     "
   end
 
-  ###
-  # Markup Helpers
-  ###
 
   # Sets name of the thumbnails section on single project pages
   def details_title

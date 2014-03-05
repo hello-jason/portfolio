@@ -1,62 +1,16 @@
 %section#portfolio
   %h1 Portfolio
-  .piece
-    = link_to site_url+"/rotolos/" do
-      %span.piece-name Rotolo's Pizzeria
-      = image_tag "thumbnail-rotolos.jpg"
-  .piece
-    = link_to site_url+"/ps-surgery/" do
-      %span.piece-name P&S Surgical Hospital
-      = image_tag "thumbnail-ps-surgery.jpg"
-  .piece
-    = link_to site_url+"/gtrax/" do
-      %span.piece-name Gatortrax
-      = image_tag "thumbnail-gtrax.jpg"
-  .piece
-    = link_to site_url+"/contact-mover/" do
-      %span.piece-name Contact Mover
-      = image_tag "thumbnail-contact-mover.jpg"
-  .piece
-    = link_to site_url+"/dorignacs/" do
-      %span.piece-name Dorignac's Food Store
-      = image_tag "thumbnail-dorignacs.jpg"
-  .piece
-    = link_to site_url+"/isc/" do
-      %span.piece-name ISC Constructors
-      = image_tag "thumbnail-isc.jpg"
-  .piece
-    = link_to site_url+"/zorbit/" do
-      %span.piece-name Zorb-IT
-      = image_tag "thumbnail-zorb-it.jpg"
-  .piece
-    = link_to site_url+"/ngstech/" do
-      %span.piece-name NGSTech Conference
-      = image_tag "thumbnail-ngs-tech.jpg"
-  .piece
-    = link_to site_url+"/immense-networks/" do
-      %span.piece-name Immense Networks
-      = image_tag "thumbnail-immense-networks.jpg"
-  .piece
-    = link_to site_url+"/mow-tell/" do
-      %span.piece-name Mow & Tell
-      = image_tag "thumbnail-mow-tell.jpg"
-  .piece
-    = link_to site_url+"/lsu-union-club/" do
-      %span.piece-name The Club at LSU Union Square
-      = image_tag "thumbnail-lsu-club.jpg"
-  .piece
-    = link_to site_url+"/hnj/" do
-      %span.piece-name Holy Name of Jesus Church
-      = image_tag "thumbnail-hnj-church.jpg"
-  .piece
-    = link_to site_url+"/simple-simon/" do
-      %span.piece-name Simple Simon Tire
-      = image_tag "thumbnail-simple-simon.jpg"
-  .piece
-    = link_to site_url+"/pfsync/" do
-      %span.piece-name pfsync
-      = image_tag "thumbnail-pfsync.jpg"
-  .piece
-    = link_to site_url+"/tool-tracker/" do
-      %span.piece-name Tool Tracker
-      = image_tag "thumbnail-tool-tracker.jpg"
+  = portfolio_piece "Rotolo's Pizzeria", "rotolos", "thumbnail-rotolos.jpg"
+  = portfolio_piece "P&S Surgical Hospital", "ps-surgery", "thumbnail-ps-surgery.jpg"
+  = portfolio_piece "Gatortrax/Instagator", "gtrax", "thumbnail-gtrax.jpg"
+  = portfolio_piece "Contact Mover", "contact-mover", "thumbnail-contact-mover.jpg"
+  = portfolio_piece "Dorignac's Food Center", "dorignacs", "thumbnail-dorignacs.jpg"
+  = portfolio_piece "ISC Constructors", "isc", "thumbnail-isc.jpg"
+  = portfolio_piece "Zorb-IT", "zorb-it", "thumbnail-zorb-it.jpg"
+  = portfolio_piece "NGSTech Conference", "ngstech", "thumbnail-ngs-tech.jpg"
+  = portfolio_piece "Immense Networks", "immense-networks", "thumbnail-immense-networks.jpg"
+  = portfolio_piece "Mow & Tell", "mow-tell", "thumbnail-mow-tell.jpg"
+  = portfolio_piece "The Club at LSU Union Square", "lsu-union-club", "thumbnail-lsu-club.jpg"
+  = portfolio_piece "Holy Name of Jesus Parish", "hnj", "thumbnail-hnj-church.jpg"
+  = portfolio_piece "Simple Simon Tire", "simple-simon", "thumbnail-simple-simon.jpg"
+  = portfolio_piece "pfsync", "pfsync", "thumbnail-pfsync.jpg"

@@ -1,7 +1,4 @@
 $(document).ready(function() {
-  //
-  // Functions
-  //
   var jump = function(event){
     //prevent the default action for the click event
     event.preventDefault();
