@@ -508,6 +508,7 @@ a.cta-primary
                 opacity: 0.95
                 font-size: 14px
                 +transition(all ease-out 0.15s)
+                transition-delay: 0.15s
             img
                 background-size: cover
                 @extend .img-responsive
@@ -516,7 +517,9 @@ a.cta-primary
             &:hover, &:focus
                 .piece-name
                     line-height: 4em
-                    opacity: 0.98
+                    opacity: 1
+                    background: $brand-primary
+                    background: rgba(97,181,171,0.8)
     .col-sm-12
         text-align: center
 
@@ -676,7 +679,8 @@ hr
                     font-size: 17px
                 &:hover, &:focus
                     .piece-name
-                        line-height: 6em
+                        line-height: 500px
+                        font-size: 26px
     #about
         .nav-tabs
             padding-left: 2.5em
