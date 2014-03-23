@@ -101,7 +101,6 @@ helpers do
 end
 
 # Remove .html extension from pages
-activate :directory_indexes
 activate :i18n
 set :markdown_engine, :redcarpet
 set :markdown, :fenced_code_blocks => true, :smartypants => true
@@ -116,6 +115,7 @@ set :images_dir, 'img'
 
 # Development-specific configuration
 configure :development do
+  activate :directory_indexes
   set :site_url, "http://hellojason.no-ip.biz:4567"
 end
 

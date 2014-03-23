@@ -24,6 +24,11 @@
             %a{href: "#{site_url}#about"}
               %i.fa.fa-arrow-circle-left
               Back to about
+        - elsif current_page.data.section == "notfound"
+          %li
+            %a{href: "#{site_url}"}
+              %i.fa.fa-arrow-circle-left
+              Back to homepage
         - else
           %li.nav-hello
             %a{href: "#top", rel: "nofollow"} Hello
