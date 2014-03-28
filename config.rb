@@ -116,7 +116,7 @@ set :images_dir, 'img'
 # Development-specific configuration
 configure :development do
   activate :directory_indexes
-  set :site_url, "http://hellojason.no-ip.biz:4567"
+  set :site_url, "http://leonardo.hellojason.net:4567"
 end
 
 
