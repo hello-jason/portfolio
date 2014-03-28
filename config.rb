@@ -17,7 +17,7 @@ helpers do
     <div class='piece'>
       <a href='#{site_url}/#{link_to_url}'>
         <span class='piece-name'>#{company_name}</span>
-        <img src='/#{images_dir}/#{image}' alt='#{company_name}'>
+        <img src='/#{images_dir}/#{image}' alt='#{company_name}' width='500' height='500'>
       </a>
     </div>
     "
