@@ -1,0 +1,896 @@
+@charset "utf-8";
+
+/* ==========================================================================
+ * Bootstrap Overrides
+ * ========================================================================== */
+
+// Colors
+$brand-primary: #61b5ab;
+$brand-primary-border: #009d8e;
+$brand-secondary: #c1d5be;
+
+$body-bg: #1a1e2e;
+$breadcrumb-bg: none;
+$green-highlight: #5e8352;
+
+$dark-gray: #1d1d1d;
+$border: #444444;
+
+$light-red: #e31637;
+$dark-red: #b2001f;
+
+$text-faded: #848983;
+$selection: #20c24d;
+
+// Text
+$line-height-base: 1.5;
+
+// Thumbnails
+$thumbnail-bg: none;
+$thumbnail-padding: 0;
+$thumbnail-border: transparent;
+
+$grid-gutter-width: 30px;
+$nav-tabs-border-color: transparent;
+$nav-tabs-link-hover-border-color: transparent;
+$nav-tabs-active-link-hover-color: transparent;
+$nav-tabs-active-link-hover-border-color: transparent;
+
+/* ==========================================================================
+ * Imports / Includes
+ * ========================================================================== */
+
+@import "bootstrap";
+@import "font-awesome";
+@import "mixins";
+@import "css3-mixins";
+
+// @font-face declarations
+@include declare-font-face("Ostrich Webfont", "ostrich-regular-webfont");
+
+@include declare-font-face("Lato Regular", "lato-regular-webfont");
+
+@include declare-font-face("Lato Italic", "lato-italic-webfont");
+
+/* ==========================================================================
+ * Custom Extends
+ * ========================================================================== */
+
+.font-ostrich {
+  font: {
+    family: "Ostrich Webfont", sans-serif;
+    weight: normal;
+    style: normal;
+  };
+  text-transform: uppercase;
+}
+
+.font-lato-italic {
+  font: {
+    family: "Lato Italic", serif;
+    weight: normal;
+    style: normal;
+  };
+}
+
+.font-lato-regular {
+  font: {
+    family: "Lato Regular", serif;
+    weight: normal;
+    style: normal;
+  };
+}
+
+.font-serif {
+  font-family: Georgia, serif;
+}
+
+.font-sans {
+  font-family: sans-serif;
+}
+
+.active-nav {
+  background: none;
+  color: white;
+}
+
+.line-flank {
+  &:before {
+    content: "\2014\00a0";
+  }
+  &:after {
+    content: "\00a0\2014";
+  }
+}
+
+.bkg-transparent {
+  @include rgba-bg(black, 0.25);
+}
+
+.bkg-hatch {
+  background: image-url("bkg-hatch-38.png") repeat;
+}
+
+.vignette {
+  &:after {
+    -webkit-box-shadow: inset 0 0 17em rgba(0, 0, 0, 0.7);
+    -moz-box-shadow: inset 0 0 17em rgba(0, 0, 0, 0.7);
+    box-shadow: inset 0 0 17em rgba(0, 0, 0, 0.7);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    content: "";
+  }
+}
+
+.slashes-red {
+  background: $dark-red image-url("bkg-slashes-red.jpg") repeat;
+  a, a:link {
+    color: white;
+  }
+}
+
+.slashes-black {
+  background: $dark-gray image-url("bkg-slashes-black.jpg") repeat;
+}
+
+/* ==========================================================================
+ * Layout
+ * ========================================================================== */
+
+body {
+  background-color: $dark-gray;
+  color: white;
+  font-size: 18px;
+  @extend .font-lato-regular;
+}
+
+#wrap {
+  margin: 0 auto;
+  overflow: hidden;
+  border: 0 none;
+}
+
+main {
+  &>h1 {
+    margin-top: 1em;
+  }
+}
+
+section {
+  @extend .clearfix;
+  h1 {
+    @extend .font-lato-italic;
+    margin: 0;
+    padding: 0.75em 1em;
+    font-size: 26px;
+    color: white;
+    background: $brand-primary;
+    border-top: 4px solid $brand-primary-border;
+  }
+}
+
+/* ==========================================================================
+ * Text
+ * ========================================================================== */
+
+h1 {
+  letter-spacing: 1px;
+  span {
+    color: $brand-primary;
+  }
+}
+
+h2 {
+  margin-bottom: 0.25em;
+  @extend .font-lato-italic;
+  text-transform: capitalize;
+  font: {
+    weight: normal;
+    size: 22px;
+  };
+  &:first-child {
+    margin-top: 0;
+  }
+  span {
+    background: $brand-primary;
+    padding: 0 0.25em;
+  }
+}
+
+h3 {
+  @extend .font-serif;
+  font: {
+    size: 17px;
+    weight: bold;
+  };
+  margin: 1.75em 0 0;
+  color: $brand-secondary;
+  .byline {
+    font-weight: normal;
+    font-size: 13px;
+    color: #8aa586;
+  }
+}
+
+h2+h3 {
+  margin-top: 0.45em;
+}
+
+a, a:link {
+  color: $brand-primary;
+  text-decoration: underline;
+  &:hover, &:focus {
+    color: $brand-primary;
+  }
+}
+
+/* ==========================================================================
+ * Primary Navigation (default)
+ * ========================================================================== */
+
+header {
+  padding: 0;
+  .navbar {
+    background: $dark-gray;
+    background: rgba(0, 0, 0, 0.85);
+    margin: 0;
+    border-radius: 0;
+    border-bottom: 1px solid $brand-primary;
+    .navbar-toggle {
+      background: $brand-primary;
+      .icon-bar {
+        background: white;
+      }
+    }
+    a {
+      color: #aeaeae;
+      @extend .font-ostrich;
+      text-transform: uppercase;
+      text-decoration: none;
+      font-size: 30px;
+      margin-bottom: -1px;
+      @include transition(all ease-out 0.15s);
+      padding: 0.55em;
+      i {
+        line-height: 0.5em;
+        font-size: 25px;
+      }
+      &:hover, &:focus {
+        background: none;
+        &, i {
+          color: white;
+        }
+      }
+    }
+    .navbar-brand {
+      color: $brand-primary;
+    }
+    .navbar-nav {
+      &>li {
+        &>a {
+          padding: 0.75em;
+          &:hover, &:focus {
+            background: none;
+            color: white;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* ==========================================================================
+ * Primary Navigation Highlighting
+ * ========================================================================== */
+body.portfolio {
+  padding-top: 3.5em;
+  #primary-navigation {
+    li.nav-portfolio {
+      a {
+        @extend .active-nav;
+        border-bottom-color: $brand-primary;
+      }
+    }
+  }
+}
+
+body.home {
+  header {
+    .navbar {
+      .navbar-nav {
+        &>li {
+          &.active {
+            a {
+              color: white;
+              background: $brand-primary;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* ==========================================================================
+ * Breadcrumbs
+ * ========================================================================== */
+
+.breadcrumb {
+  margin-bottom: 0;
+  li {
+    color: white;
+    i, a {
+      color: $brand-secondary;
+    }
+    &, i, a {
+      font-size: 13px;
+    }
+    a:link {
+      text-decoration: none;
+    }
+  }
+}
+
+/* ==========================================================================
+ * Hello Section
+ * ========================================================================== */
+
+#hero {
+  @extend .slashes-black;
+  img {
+    @extend .img-responsive;
+    background: white;
+    padding-top: 1em;
+  }
+}
+
+/* ==========================================================================
+ * Hello Section
+ * ========================================================================== */
+
+#hello {
+  position: relative;
+  @extend .slashes-black;
+  .text, .main {
+    position: absolute;
+    bottom: 15%;
+    left: 0;
+    padding: 0 15px;
+    text-align: center;
+    width: 100%;
+    h1 {
+      font-size: 46px;
+      margin: 0;
+      line-height: 1em;
+    }
+    .byline {
+      @extend .font-lato-italic;
+      color: #adb1bd;
+      font-size: 13px;
+      letter-spacing: 1px;
+    }
+  }
+  h1 {
+    @extend .font-ostrich;
+    padding: 0;
+    background: none;
+    border: 0 none;
+  }
+  img {
+    @extend .img-responsive;
+  }
+  .cta-primary {
+    @include border-radius(0);
+    color: #252525;
+    padding: 0.5em 0.75em;
+    @extend .font-lato-italic;
+    font-size: 14px;
+    i {
+      margin-right: 0.25em;
+    }
+    &:hover, &:focus {
+      color: white;
+    }
+  }
+}
+
+/* ==========================================================================
+ * Call to Action Badges
+ * ========================================================================== */
+
+.cta {
+  &, &:active {
+    display: inline-block;
+    font-size: 10px;
+    @include border-radius(70px);
+    @extend .clearfix;
+    @extend .font-serif;
+    margin: 0 auto;
+    padding: 0;
+    white-space: nowrap;
+    text-decoration: none;
+    &:hover, &:focus {
+      text-decoration: none;
+    }
+    i {
+      font-size: 36px;
+      display: block;
+    }
+  }
+  &:link {
+    text-decoration: none;
+  }
+}
+
+.cta-primary {
+  @extend .bkg-hatch;
+  border: 0 none;
+  text-align: center;
+  color: #283a2d;
+  @include transition(all ease-out 0.15s);
+  text-decoration: none;
+  &:link {
+    &, &:hover, &:focus {
+      text-decoration: none;
+    }
+  }
+}
+
+a.cta-primary {
+  &:hover, &:focus {
+    color: white;
+    @extend .bkg-hatch;
+  }
+}
+
+.action-badges {
+  margin: 1em 0;
+  @extend .clearfix;
+  .cta {
+    padding: 20px 20px 14px 20px;
+    width: 8.75em;
+  }
+}
+
+/* ==========================================================================
+ * Progress Bars
+ * ========================================================================== */
+
+#progressBar {
+  width: 100%;
+  @extend .bkg-hatch;
+  #bar {
+    width: 0;
+    max-width: 100%;
+    height: 4px;
+    background: $brand-primary;
+  }
+}
+
+.progress-item {
+  margin: 0.25em 0;
+  padding: 0.5em 1em 0.25em 1em;
+  @include border-radius(6px);
+  @include transition(background ease-out 0.2s);
+  @extend .col-sm-6;
+  &:hover {
+    @include rgba-bg(black, 0.07);
+    i {
+      opacity: 1;
+    }
+  }
+  .progress-name {
+    margin: 0;
+  }
+  i {
+    opacity: 0.7;
+    line-height: 1.2em;
+    margin-left: 0.25em;
+    @include transition(opacity ease-out 0.15s);
+  }
+  .progress {
+    height: 8px;
+    @extend .bkg-hatch;
+    border: 0 none;
+    @include border-radius(0);
+    .progress-bar {
+      background-color: $brand-primary;
+    }
+  }
+}
+
+.js.csstransitions {
+  .progress-item {
+    .progress {
+      @extend .active;
+      .progress-bar {
+        @include transition(width ease-out 1s);
+        &.nobar {
+          width: 0 !important;
+        }
+      }
+    }
+  }
+}
+
+/* ==================-========================================================
+ * About Tabs
+ * ========================================================================== */
+
+.red-arrows {
+  background: image-url("arrow-pattern-red.png") repeat-x top;
+  height: 9px;
+  margin-top: -9px;
+  position: relative;
+  z-index: 500;
+}
+
+#about {
+  @extend .slashes-red;
+  .nav-tabs {
+    background: $light-red;
+    border-bottom: 4px solid $dark-red;
+    padding-left: 15px;
+    padding-right: 15px;
+    li {
+      a {
+        background: none;
+        @extend .font-lato-italic;
+        font-size: 15px;
+        color: #fccdcd;
+        text-decoration: none;
+        padding: 0.35em 0.5em;
+        margin-top: 0.75em;
+        @include transition(color ease-out 0.15s);
+        &:hover {
+          color: white;
+        }
+      }
+      &.active {
+        a {
+          background: $dark-red;
+        }
+      }
+    }
+  }
+  .tab-pane {
+    @extend .clearfix;
+    padding: 20px;
+    img {
+      display: block;
+      margin: 1em auto 0.25em;
+    }
+    .text {
+      padding: 0;
+      @extend .col-sm-6;
+    }
+  }
+}
+
+/* ==========================================================================
+ * Contact
+ * ========================================================================== */
+
+#contact {
+  background: white;
+  color: $dark-gray;
+  h1 {
+    background: none;
+    color: #252525;
+    border-bottom: 1px solid #e1e1e1;
+    border-top: 0;
+  }
+  .text {
+    @extend .col-sm-8;
+    .action-badges {
+      text-align: left;
+      .cta-primary {
+        color: $text-faded;
+        &:hover, &:focus {
+          color: black;
+        }
+      }
+    }
+  }
+}
+
+/* ==========================================================================
+ * Portfolio Thumbnails
+ * ========================================================================== */
+
+#portfolio {
+  background: $dark-gray;
+  .piece {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    float: left;
+    a {
+      display: block;
+      .piece-name {
+        background: $dark-gray;
+        color: white;
+        text-align: center;
+        position: absolute;
+        display: block;
+        bottom: 0;
+        width: 100%;
+        line-height: 3em;
+        opacity: 0.95;
+        font-size: 14px;
+        @include transition(all ease-out 0.15s);
+        transition-delay: 0.15s;
+      }
+      img {
+        background-size: cover;
+        @extend .img-responsive;
+        &:hover, &:focus {
+          @extend .vignette;
+        }
+      }
+      &:hover, &:focus {
+        .piece-name {
+          line-height: 4em;
+          opacity: 1;
+          background: $brand-primary;
+          background: rgba(97, 181, 171, 0.8);
+        }
+      }
+    }
+  }
+  .col-sm-12 {
+    text-align: center;
+  }
+}
+
+/* ==========================================================================
+ * Projects
+ * ========================================================================== */
+
+#project-intro {
+  @extend .slashes-red;
+  padding: 0.75em;
+  h1 {
+    background: none;
+    border: 0 none;
+    padding-left: 0;
+  }
+  .main {
+    @extend .col-sm-6;
+    padding: 0;
+  }
+  .aside {
+    @extend .col-sm-3;
+  }
+  .client-info {
+    font-size: 14px;
+    dl {
+      @extend .dl-horizontal;
+    }
+  }
+}
+
+.example {
+  padding: 1.5em 0;
+  @extend .clearfix;
+  img {
+    @extend .col-sm-6;
+    @extend .img-responsive;
+  }
+  .text {
+    @extend .col-sm-2;
+  }
+}
+
+/* ==========================================================================
+ * Mustang
+ * ========================================================================== */
+
+.thumbnails {
+  @extend .col-sm-6;
+  @extend .clearfix;
+}
+
+/* ==========================================================================
+ * Footer
+ * ========================================================================== */
+
+.content-info {
+  padding: 2.45em;
+  @extend .slashes-black;
+  font-size: 14px;
+  color: gray;
+  border-top: 1px solid $border;
+  .totop {
+    font-size: 14px;
+    background: #61b5ab;
+    background: rgba(97, 181, 171, 0.5);
+    padding: 0.5em 0.75em;
+    text-decoration: none;
+    @extend .pull-right;
+    @include transition(all ease-out 0.15s);
+    &:hover, &:focus {
+      color: white;
+      background: rgba(97, 181, 171, 1);
+    }
+  }
+}
+
+/* ==========================================================================
+ * Globals
+ * ========================================================================== */
+.btn {
+  @include border-radius(0);
+}
+
+.tooltip {
+  font-size: 13px;
+  line-height: 1.25em;
+}
+
+.popover {
+  color: black;
+  line-height: 1.25em;
+}
+
+.see {
+  @extend .btn;
+  @extend .cta-primary;
+  @extend .btn-xs;
+}
+
+.more-content {
+  display: none;
+  @include transition(all ease-out 0.15s);
+}
+
+.visible {
+  display: block !important;
+  opacity: 1;
+  height: auto;
+}
+
+.cloak {
+  display: none !important;
+  opacity: 0;
+  height: 0;
+}
+
+::selection {
+  color: white;
+  background: $brand-secondary;
+}
+
+::-moz-selection {
+  color: white;
+  background: $brand-secondary;
+}
+
+hr {
+  border-color: $green-highlight;
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+.alignleft, .alignright {
+  margin-bottom: 1em;
+}
+
+.alignleft {
+  margin-right: 1em;
+  float: left;
+}
+
+.alignright {
+  margin-left: 1em;
+  float: right;
+}
+
+.alert {
+  @include border-radius(0);
+}
+
+.alert-warning {
+  a {
+    &, &:hover, &:focus {
+      color: #8a6d3b;
+    }
+  }
+}
+
+/* ==========================================================================
+ * Page Not Found (404)
+ * ========================================================================== */
+
+#notfound {
+  img {
+    @extend .col-md-4;
+    padding-left: 0;
+  }
+}
+
+/* ==========================================================================
+ * Media Queries
+ * ========================================================================== */
+/* ==========================================================================
+ * Small devices (tablets)
+ * ========================================================================== */
+@media screen and (min-width: $screen-sm-min) {
+  body.home {
+    #hello {
+      min-height: 720px;
+    }
+  }
+  #hello {
+    .text {
+      top: 201px;
+      left: 426px;
+      bottom: 0;
+      padding: 0;
+      text-align: left;
+      width: auto;
+      h1 {
+        font-size: 80px;
+      }
+    }
+  }
+  #portfolio {
+    .piece {
+      a {
+        .piece-name {
+          line-height: 5em;
+          font-size: 17px;
+        }
+        &:hover, &:focus {
+          .piece-name {
+            line-height: 500px;
+            font-size: 26px;
+          }
+        }
+      }
+    }
+  }
+  #about {
+    .nav-tabs {
+      padding-left: 2.5em;
+      padding-right: 0;
+      li {
+        a {
+          font-size: 20px;
+          padding: 0.75em 1.45em;
+        }
+      }
+    }
+    .tab-pane {
+      padding: 2.45em;
+      img {
+        display: inline;
+      }
+    }
+  }
+  header {
+    .navbar {
+      a {
+        padding: 0.75em 1.45em;
+      }
+    }
+  }
+  #primary-navigation {
+    .navbar-nav {
+      float: none;
+    }
+  }
+}
+
+/* ==========================================================================
+ * Medium devices (desktops)
+ * ========================================================================== */
+@media screen and (min-width: $screen-md-min) {}
+
+/* ==========================================================================
+ * Large devices (large desktops)
+ * ========================================================================== */
+@media screen and (min-width: $screen-lg-min) {}
