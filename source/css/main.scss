@@ -620,7 +620,7 @@ a.cta-primary {
         bottom: 0;
         width: 100%;
         line-height: 3em;
-        opacity: 0.95;
+        opacity: 0.85;
         font-size: 14px;
         @include transition(all ease-out 0.15s);
         transition-delay: 0.15s;
@@ -840,10 +840,6 @@ hr {
   #portfolio {
     .piece {
       a {
-        .piece-name {
-          line-height: 5em;
-          font-size: 17px;
-        }
         &:hover, &:focus {
           .piece-name {
             line-height: 500px;
