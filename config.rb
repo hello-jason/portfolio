@@ -3,8 +3,12 @@
 ###
 set :site_title, "Jason Cross"
 set :site_description, "Portfolio website of designer Jason Cross."
+set :site_url_development,  "http://leonardo.hellojason.net:4567"
+set :site_url_production,   "http://hellojason.net"
 
-
+###
+# Helpers
+###
 helpers do
 
     # Gets partials from the _partials directory
@@ -116,13 +120,13 @@ set :images_dir, 'img'
 # Development-specific configuration
 configure :development do
   activate :directory_indexes
-  set :site_url, "http://leonardo.hellojason.net:4567"
+  set :site_url, "#{site_url_development}"
 end
 
 
 # Build-specific configuration
 configure :build do
-  set :site_url, "http://hellojason.net"
+  set :site_url, "#{site_url_production}"
   set :sass, style: :compressed
   activate :minify_css
   #activate :minify_html
