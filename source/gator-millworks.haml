@@ -1,0 +1,49 @@
+---
+title:              Gator Millworks, Inc.
+meta_description:   This is where the meta description goes.
+section:            portfolio
+project_client:     Gator Millworks, Inc.
+project_year:       2014
+project_status:     Under Development
+project_tech:       Sinatra, Haml, Sass
+---
+
+%div#hero
+  = image_tag "monitor-front-gatormillworks.jpg"
+
+%section#project-intro
+  %h1= current_page.data.title
+  .main
+    :markdown
+      ## <span>Project Details</span>
+
+      Gator Millworks fabricates incredible cabinets and woodcases, but their existing web presence does not reflect this tastefully. I have proposed and designed a large format website with beautiful photography from [Chad Chenier](http://www.chadchenierphotography.com/) that showcases the quality and craftsmanship Gator Millworks has strived to achieve since 1995. This project is currently under development.
+
+    .action-badges
+      %p.cta.cta-primary
+        %i.fa.fa-picture-o
+        Designer
+      %p.cta.cta-primary
+        %i.fa.fa-cog
+        Frontend
+      %p.cta.cta-primary
+        %i.fa.fa-users
+        Proj Mgr
+
+  %aside.aside
+    = project_info
+
+%section#project-details
+  %h1= details_title
+  .example
+    = image_tag "monitor-right-gatormillworks-about.jpg"
+    .text
+      %p 3 buckets serve as a more concise visual depiction of the company's core values.
+  .example
+    = image_tag "monitor-right-gatormillworks-equipment.jpg"
+    .text
+      %p The company has invested heavily in high-end equipment, allowing greater volumes of precision work on schedule. I feel these operational components are important to residential and commercial customers alike.
+  .example
+    = image_tag "monitor-right-gatormillworks-portfolio.jpg"
+    .text
+      %p Specific case studies are used to demonstrate workmanship and diversity. They are tiled and large for emphasis.

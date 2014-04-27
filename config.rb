@@ -73,7 +73,7 @@ helpers do
         <dd>#{project_client}</dd>
         <dt>Year</dt>
         <dd>#{project_year}</dd>
-        <dt>Tech</dt>
+        <dt>Software</dt>
         <dd>#{project_tech || "n/a"}</dd>
         <dt>Status</dt>
         <dd>#{project_status || "n/a"}</dd>
