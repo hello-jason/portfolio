@@ -106,6 +106,7 @@ end
 
 # Remove .html extension from pages
 activate :i18n
+activate :directory_indexes
 set :markdown_engine, :redcarpet
 set :markdown, :fenced_code_blocks => true, :smartypants => true
 set :haml, { :ugly => false, :format => :html5 }
@@ -119,7 +120,6 @@ set :images_dir, 'img'
 
 # Development-specific configuration
 configure :development do
-  activate :directory_indexes
   set :site_url, "#{site_url_development}"
 end
 
