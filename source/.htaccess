@@ -1,3 +1,8 @@
+# Redirect .html to non .html
+RewriteCond %{THE_REQUEST} \.html
+RewriteRule ^(.*)\.html$ /$1 [R=301,L]
+
+
 # Apache configuration file
 # httpd.apache.org/docs/2.2/mod/quickreference.html
 

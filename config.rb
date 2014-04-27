@@ -5,6 +5,10 @@ set :site_title, "Jason Cross"
 set :site_description, "Portfolio website of designer Jason Cross."
 set :site_url_development,  "http://leonardo.hellojason.net:4567"
 set :site_url_production,   "http://hellojason.net"
+# Use builder gem to generate XML sitemap
+require 'builder'
+# Remove default layout for sitemap page
+page "/sitemap.xml", :layout => false
 
 ###
 # Helpers
