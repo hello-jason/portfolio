@@ -454,6 +454,20 @@ a.cta-primary {
     padding: 20px 20px 14px 20px;
     width: 8.75em;
   }
+  .icon-behance {
+    max-width: 37px;
+    display: block;
+    margin: 0 auto;
+    opacity: 0.5;
+    @include transition(all ease-out 0.15s);
+  }
+  a {
+    &:hover, &:focus {
+      img {
+        opacity: 1;
+      }
+    }
+  }
 }
 
 /* ==========================================================================
