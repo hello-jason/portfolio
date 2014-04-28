@@ -25,7 +25,7 @@ project_manager:    1
 
       The Tool Tracker project leverages company-owned iPhone 5s devices with Linea Pro cases from Infinite Peripherals with 2D laser barcode scanning capabilities.
 
-      Our web-based Node software allows users to formally request and transfer tools betwen various job sites and company locations, tracking tool locations and handlers throughout each lifecycle.
+      Our web-based Node software allows users to formally request and transfer tools between various job sites and company locations, tracking tool locations and handlers throughout each lifecycle.
 
       MobileIron was also utilized for iOS device control and ongoing application deployment.
 
@@ -46,25 +46,25 @@ project_manager:    1
 %section#project-ios
   %h1 iOS Component
   .example
-    =image_tag "monitor-right-tooltracker-fluidui.jpg"
+    = image_tag "full-tooltracker-fluidui.jpg"
     .text
-      %p FluidUI prototyping allowed me to create a demonstrable workflow on the iOS devices. This crucial step established expected application functionality and how various pages would coexist.
+      %p FluidUI prototyping allowed me to create a demonstrable workflow on iOS devices. This crucial step established functionality, coexistence between pages, and preliminary design decisions.
   .example
-    =image_tag "monitor-right-tooltracker-addtools.jpg"
+    = image_tag "ios-tooltracker-screens.jpg"
     .text
-      %p Scan tools
+      %p iOS interface layouts are minimalistic and functional.
 
 %section#project-web
   %h1 Web Component
   .example
-    =image_tag "monitor-right-tooltracker-permissions.jpg"
+    = image_tag "monitor-right-tooltracker-permissions.jpg"
     .text
       %p Permissions were reduced to checkboxes, offering a straight-forward permissions management area for system administrators.
   .example
-    =image_tag "monitor-right-tooltracker-login.jpg"
+    = image_tag "monitor-right-tooltracker-login.jpg"
     .text
       %p Account registration queries Viewpoint, an internal management application. All users must have an active employee ID to register. Integration with LDAP allows single sign on for applicable users, and non LDAP employees are welcomed to create an account.
   .example
-    =image_tag "monitor-right-tooltracker-hud.jpg"
+    = image_tag "monitor-right-tooltracker-hud.jpg"
     .text
       %p The heads up display (HUD) page was designed to be visible on a large monitor all day, and web sockets allow real-time updates as tools transition between column states.
