@@ -6,7 +6,7 @@ set :site_description, "Portfolio website of designer Jason Cross."
 set :site_url_development,  "http://leonardo.hellojason.net:4567"
 set :site_url_production,   "http://hellojason.net"
 # Use builder gem to generate XML sitemap
-require 'builder'
+require "builder"
 # Remove default layout for sitemap page
 page "/sitemap.xml", :layout => false
 
@@ -117,9 +117,9 @@ set :haml, { :ugly => false, :format => :html5 }
 set :sass, line_comments: false, style: :nested
 
 # Assets
-set :css_dir, 'css'
-set :js_dir, 'js'
-set :images_dir, 'img'
+set :css_dir, "css"
+set :js_dir, "js"
+set :images_dir, "img"
 
 
 # Development-specific configuration
@@ -170,3 +170,5 @@ configure :build do
   # Or use a different image path
   # set :http_prefix, "/Content/images/"
 end
+
+set :site_url, "http://google.com"
