@@ -8,7 +8,6 @@ gem "bootstrap-sass", "~>3.1.1.0", require: false
 gem "font-awesome-middleman", "~> 4.0.3"
 gem "middleman-favicon-maker", "~> 3.5.2"
 gem "builder", "~> 3.2.2"
-gem "thin"
 
 # file optimization & minification
 gem "middleman-minify-html", "~> 3.1.1"
