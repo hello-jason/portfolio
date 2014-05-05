@@ -8,14 +8,11 @@
 $brand-primary: #61b5ab;
 $brand-primary-border: #009d8e;
 $brand-secondary: #c1d5be;
-
 $body-bg: #1a1e2e;
 $breadcrumb-bg: none;
 $green-highlight: #5e8352;
-
 $dark-gray: #1d1d1d;
 $border: #444444;
-
 $light-red: #e31637;
 $dark-red: #b2001f;
 
@@ -548,17 +545,15 @@ a.cta-primary {
   .nav-tabs {
     background: $light-red;
     border-bottom: 4px solid $dark-red;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding: 0.75em 7px 0;
     li {
       a {
         background: none;
         @extend .font-lato-italic;
-        font-size: 15px;
+        font-size: 14px;
         color: #fccdcd;
         text-decoration: none;
-        padding: 0.35em 0.5em;
-        margin-top: 0.75em;
+        padding: 0.35em 0.45em;
         @include transition(color ease-out 0.15s);
         &:hover {
           color: white;
@@ -576,7 +571,7 @@ a.cta-primary {
     padding: 20px;
     img {
       display: block;
-      margin: 1em auto 0.25em;
+      margin: 0.25em auto 1em;
     }
     .text {
       padding: 0;
@@ -618,8 +613,11 @@ a.cta-primary {
 
 #portfolio {
   background: $dark-gray;
+  h1 {
+    margin-bottom: 4px;
+  }
   .piece {
-    margin: 0;
+    margin: 4px;
     padding: 0;
     position: relative;
     float: left;
@@ -879,6 +877,10 @@ hr {
       padding: 2.45em;
       img {
         display: inline;
+        margin: 1em auto 0.25em;
+      }
+      .text {
+        padding: 0 2em 0 0;
       }
     }
   }
@@ -893,6 +895,9 @@ hr {
     .navbar-nav {
       float: none;
     }
+  }
+  .red-arrows {
+    margin-top: -13px;
   }
 }
 
