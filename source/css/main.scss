@@ -613,11 +613,8 @@ a.cta-primary {
 
 #portfolio {
   background: $dark-gray;
-  h1 {
-    margin-bottom: 4px;
-  }
   .piece {
-    margin: 4px;
+    margin: 0;
     padding: 0;
     position: relative;
     float: left;
@@ -851,7 +848,11 @@ hr {
     }
   }
   #portfolio {
+    h1 {
+      margin-bottom: 4px;
+    }
     .piece {
+      margin: 4px;
       a {
         &:hover, &:focus {
           .piece-name {
