@@ -17,17 +17,17 @@
         - if current_page.data.section == "portfolio"
           %li
             %a{href: "#{site_url}#portfolio"}
-              %i.fa.fa-arrow-circle-left
+              %i.icon-left-open-big
               Back to portfolio
         - elsif current_page.data.section == "cars"
           %li
             %a{href: "#{site_url}#about"}
-              %i.fa.fa-arrow-circle-left
+              %i.icon-left-open-big
               Back to about
         - elsif current_page.data.section == "notfound"
           %li
             %a{href: "#{site_url}"}
-              %i.fa.fa-arrow-circle-left
+              %i.icon-left-open-big
               Back to homepage
         - else
           %li.nav-hello

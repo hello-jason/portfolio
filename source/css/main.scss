@@ -38,15 +38,12 @@ $nav-tabs-active-link-hover-border-color: transparent;
  * ========================================================================== */
 
 @import "bootstrap";
-@import "font-awesome";
 @import "mixins";
 @import "css3-mixins";
 
 // @font-face declarations
 @include declare-font-face("Ostrich Webfont", "ostrich-regular-webfont");
-
 @include declare-font-face("Lato Regular", "lato-regular-webfont");
-
 @include declare-font-face("Lato Italic", "lato-italic-webfont");
 
 /* ==========================================================================
@@ -448,8 +445,8 @@ a.cta-primary {
   margin: 1em 0;
   @extend .clearfix;
   .cta {
-    padding: 20px 20px 14px 20px;
-    width: 8.75em;
+    padding: 15px 18px;
+    line-height: 1.75em;
   }
   .icon-behance {
     max-width: 37px;

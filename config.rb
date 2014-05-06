@@ -2,7 +2,7 @@
 # Settings
 ###
 set :site_title, "Jason Cross"
-set :site_description, "Portfolio website of designer Jason Cross."
+set :site_description, "Portfolio website of graphic designer & UI developer Jason Cross."
 set :site_url_development,  "http://leonardo.hellojason.net:4567"
 set :site_url_production,   "http://hellojason.net"
 # Use builder gem to generate XML sitemap
@@ -49,7 +49,7 @@ helpers do
   def skill(skill_name, percentage, explanation)
     "
     <div class='progress-item' data-toggle='popover' data-placement='top' data-trigger='hover' data-content='#{explanation}'>
-      <p class='progress-name'>#{skill_name} <i class='fa fa-question-circle'></i></p>
+      <p class='progress-name'>#{skill_name} <i class='icon-help-circled'></i></p>
       <div class='progress'>
         <div class='progress-bar nobar' aria-valuemax='100' aria-valuemin='0' aria-valuenow='#{percentage}' role='progressbar' style='width: #{percentage}%;'>
           <span class='sr-only'>#{percentage}%</span>
@@ -67,7 +67,7 @@ helpers do
     project_url       = current_page.data.project_url
 
     unless project_url.nil? or project_url.empty?
-      project_link      = "<a href='#{project_url}'>Visit website</a> <i class='fa fa-external-link'></i>"
+      project_link      = "<a href='#{project_url}'>Visit website</a> <i class='icon-link-ext'></i>"
     end
 
     "

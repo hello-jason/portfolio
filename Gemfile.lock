@@ -1,7 +1,7 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    activesupport (3.2.17)
+    activesupport (3.2.18)
       i18n (~> 0.6, >= 0.6.4)
       multi_json (~> 1.0)
     bootstrap-sass (3.1.1.1)
@@ -24,8 +24,6 @@ GEM
       docile (~> 1.1.3)
       mini_magick (~> 3.7)
     ffi (1.9.3)
-    font-awesome-middleman (4.0.3)
-      middleman (>= 3.0.0)
     fspath (2.0.6)
     fssm (0.2.10)
     haml (4.0.5)
@@ -80,7 +78,7 @@ GEM
       sprockets-sass (~> 1.1.0)
     mini_magick (3.7.0)
       subexec (~> 0.2.1)
-    multi_json (1.9.3)
+    multi_json (1.10.0)
     oj (2.5.5)
     progress (3.0.0)
     rack (1.5.2)
@@ -116,7 +114,6 @@ PLATFORMS
 DEPENDENCIES
   bootstrap-sass (~> 3.1.1.0)
   builder (~> 3.2.2)
-  font-awesome-middleman (~> 4.0.3)
   middleman (~> 3.2.2)
   middleman-favicon-maker (~> 3.5.2)
   middleman-imageoptim (~> 0.1.4)
