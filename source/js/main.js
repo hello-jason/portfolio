@@ -30,4 +30,28 @@ $(document).ready(function() {
     $("[data-toggle='popover']").popover();
   });
 
+  // Context-specific image technique.
+  // Offers smaller images to mobile devices and larger images to desktops
+  var queries = [
+    {
+      context: 'xsmall',
+      callback: function() {
+          $('img').each(function(index) {
+              var small = $(this).attr('src');
+              $(this).attr('src',small);
+          });
+      }
+    },
+    {
+      context: 'small',
+      callback: function() {
+          $('img').each(function(index) {
+              var medium = $(this).data('medium');
+              $(this).attr('src',medium);
+          });
+      }
+    }
+  ];
+  MQ.init(queries);
+
 });

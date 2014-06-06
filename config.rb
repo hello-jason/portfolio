@@ -15,15 +15,16 @@ page "/sitemap.xml", :layout => false
 ###
 helpers do
 
-    # Gets partials from the _partials directory
+  # Gets partials from the _partials directory
   def _partial(partial_filename)
     partial "_partials/#{partial_filename}"
   end
 
-  def portfolio_piece(company_name, link_to_url, image)
+  # Usage: portfolio_piece "Company Name", "slug", "thumbnail.jpg"
+  def portfolio_piece(company_name, slug, image)
     "
     <div class='piece'>
-      <a href='#{site_url}/#{link_to_url}'>
+      <a href='#{site_url}/#{slug}'>
         <span class='piece-name'>#{company_name}</span>
         <img src='/#{images_dir}/#{image}' alt='#{company_name}' width='500' height='500'>
       </a>
@@ -31,6 +32,15 @@ helpers do
     "
   end
 
+  # Display responsive images.
+  # Usage: img_responsive "small_image.jpg", "medium_image.jpg"
+  def img_responsive(image_small, image_medium)
+    "
+    <img src='/#{images_dir}/#{image_small}' data-medium='#{images_dir}/#{image_medium}'>
+    "
+  end
+  
+  # Mustang photo gallery
   def mustang_image(image_name)
     "
     <a rel='car_mustang' href='/#{images_dir}/cars/mustang_#{image_name}.jpg'>
@@ -38,7 +48,6 @@ helpers do
     </a>
     "
   end
-
 
   # Sets name of the thumbnails section on single project pages
   def details_title
@@ -67,7 +76,7 @@ helpers do
     project_url       = current_page.data.project_url
 
     unless project_url.nil? or project_url.empty?
-      project_link      = "<a href='#{project_url}'>Visit website</a> <i class='icon-link-ext'></i>"
+      project_link    = "<a target='_blank' href='#{project_url}'>Visit website</a> <i class='icon-link-ext'></i>"
     end
 
     "

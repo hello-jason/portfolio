@@ -140,6 +140,10 @@ body {
   color: white;
   font-size: 18px;
   @extend .font-lato-regular;
+  &:after {
+    content: 'xsmall';
+    display: none;
+  }
 }
 
 #wrap {
@@ -820,9 +824,14 @@ hr {
  * Small devices (tablets)
  * ========================================================================== */
 @media screen and (min-width: $screen-sm-min) {
-  body.home {
-    #hello {
-      min-height: 720px;
+  body {
+    &.home {
+      #hello {
+        min-height: 720px;
+      }
+    }
+    &:after {
+      content: 'small';
     }
   }
   #hello {
