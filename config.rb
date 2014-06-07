@@ -171,7 +171,8 @@ configure :build do
   }
 
   # Enable cache buster
-  activate :asset_hash, :exts => ['.css', '.png', '.jpg', '.gif']
+  #activate :asset_hash, :exts => ['.css', '.png', '.jpg', '.gif']
+  activate :asset_hash, :exts => ['.css']
 
   # Use relative URLs
   activate :relative_assets
