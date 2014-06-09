@@ -7,13 +7,13 @@
 
 # THANKS
 
-    <name>
+    [Chris McKnight](https://github.com/cmckni3)
+    [Christian Bankester](https://github.com/cbankester)
 
 # TECHNOLOGY COLOPHON
 
     HTML5, CSS3
-    Sass, HAML
+    SCSS, HAML
     jQuery, Modernizr, Font Awesome, Bootstrap
     Middleman, Ruby
     The League of Moveable Type
-s
