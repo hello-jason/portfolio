@@ -3,7 +3,8 @@
 source 'https://rubygems.org'
 
 # core
-gem "middleman", "~>3.3.4"
+gem "middleman", "~> 3.3.4"
+gem "thin", "~> 1.6.2"
 
 # layout
 gem "slim", "~> 2.0.3"
@@ -19,3 +20,8 @@ gem "middleman-minify-html", "~> 3.4.0"
 gem "middleman-favicon-maker", "~> 3.7"
 gem "oj", "~> 2.10.0"
 gem "middleman-imageoptim", "~> 0.1.4"
+
+group :development do
+  gem "middleman-livereload"
+  gem "wdm", "~> 0.1.0", :platforms => [:mswin, :mingw]
+end

@@ -17,9 +17,10 @@ set :site_url_development,  ENV['site_url_development']
 set :css_dir,               'css'
 set :js_dir,                'js'
 set :images_dir,            'img'
+set :server,                'thin'
 
+# CSS preprocessor
 set :sass, line_comments: false, style: :nested
-
 # Internationalization
 activate :i18n
 # Use relative URLs
@@ -115,6 +116,7 @@ end
 # ========================================================================
 configure :development do
   set :site_url, "#{site_url_development}"
+  activate :livereload
 end
 
 # ========================================================================
