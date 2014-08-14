@@ -9,23 +9,32 @@ require "./source/environment_variables.rb"
 
 # ========================================================================
 # Compass
-# ====================cd ../====================================================
+# ========================================================================
 # Change Compass configuration
-# compass_config do |config|
-#   config.output_style = :compact
-# end
+compass_config do |config|
+  config.output_style = :compact
+  # Require any additional compass plugins here.
+  config.add_import_path "bower_components/foundation/scss"
+  # Set this to the root of your project when deployed:
+  config.http_path = "/"
+  config.css_dir = "stylesheets"
+  config.sass_dir = "stylesheets"
+  config.images_dir = "images"
+  config.javascripts_dir = "javascripts"
+end
+
 
 # ========================================================================
 # Site settings
-# ====================cd ../====================================================
-set :site_title,                         "Middleman Site"
-set :site_description,             "This is an example meta description."
-set :site_url_production,        ENV['site_url_production']
-set :site_url_development,    ENV['site_url_development']
-set :css_dir,                           "css"
-set :js_dir,                              "js"
-set :images_dir,                     "img"
-set :server,                            "thin"
+# ========================================================================
+set :site_title,           "Middleman Site"
+set :site_description,     "This is an example meta description."
+set :site_url_production,  ENV['site_url_production']
+set :site_url_development, ENV['site_url_development']
+set :css_dir,              "stylesheets"
+set :js_dir,               "javascripts"
+set :images_dir,           "images"
+set :server,               "thin"
 
 # CSS preprocessor
 set :sass, line_comments: false, style: :nested
