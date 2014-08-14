@@ -30,6 +30,7 @@ rbenv local 2.1.1
 
 ```
 gem install bundler && bundle install
+npm install -g bower && bower install
 ```
 
 * Copy `source/environment_variables.sample.rb` to `source/environment_variables.rb`

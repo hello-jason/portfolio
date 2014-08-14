@@ -8,16 +8,24 @@
 require "./source/environment_variables.rb"
 
 # ========================================================================
-# Site settings
+# Compass
+# ====================cd ../====================================================
+# Change Compass configuration
+# compass_config do |config|
+#   config.output_style = :compact
+# end
+
 # ========================================================================
-set :site_title,            "Middleman Site"
-set :site_description,      "This is an example meta description."
-set :site_url_production,   ENV['site_url_production']
-set :site_url_development,  ENV['site_url_development']
-set :css_dir,               'css'
-set :js_dir,                'js'
-set :images_dir,            'img'
-set :server,                'thin'
+# Site settings
+# ====================cd ../====================================================
+set :site_title,                         "Middleman Site"
+set :site_description,             "This is an example meta description."
+set :site_url_production,        ENV['site_url_production']
+set :site_url_development,    ENV['site_url_development']
+set :css_dir,                           "css"
+set :js_dir,                              "js"
+set :images_dir,                     "img"
+set :server,                            "thin"
 
 # CSS preprocessor
 set :sass, line_comments: false, style: :nested
@@ -28,12 +36,11 @@ activate :relative_assets
 # Pretty URLs
 activate :directory_indexes
 # Enable Bourbon
-activate :bourbon
+#activate :bourbon
 
 # Sitemap URLs (use trailing slashes). Create additional variables here
 # for referenceing your pages.
-set :url_home,              "/"
-
+set :url_home,                       "/"
 
 # ========================================================================
 # Page options, layouts, aliases and proxies
@@ -109,7 +116,6 @@ helpers do
   end
 
 end
-
 
 # ========================================================================
 # Development-specific configuration

@@ -8,13 +8,16 @@
 /.bundle
 
 # Ignore the build directory
-/build
+./build
 
 # Ignore Sass' cache
 /.sass-cache
 
 # Env variables
-/source/environment_variables.rb
+source/environment_variables.rb
+
+# Ignore bower components
+bower_components
 
 # OS Specific
 .DS_Store

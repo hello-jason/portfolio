@@ -13,7 +13,6 @@ gem "slim", "~> 2.0.3"
 gem "redcarpet", "~> 3.0.0"
 gem "execjs", "~> 2.0.2"
 gem "therubyracer", "~> 0.12.1"
-gem "middleman-bourbon", "~> 0.0.2"
 
 # file optimization & minification
 gem "middleman-minify-html", "~> 3.4.0"
