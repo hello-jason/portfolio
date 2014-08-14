@@ -13,17 +13,7 @@ html.no-js
 
     markdown:
       <!--
-         __  __     ______     __         __         ______   
-        /\ \_\ \   /\  ___\   /\ \       /\ \       /\  __ \  
-        \ \  __ \  \ \  __\   \ \ \____  \ \ \____  \ \ \/\ \ 
-         \ \_\ \_\  \ \_____\  \ \_____\  \ \_____\  \ \_____\
-          \/_/\/_/   \/_____/   \/_____/   \/_____/   \/_____/
-                  __     ______     ______     ______     __   __    
-                 /\ \   /\  __ \   /\  ___\   /\  __ \   /\ "-.\ \   
-                _\_\ \  \ \  __ \  \ \___  \  \ \ \/\ \  \ \ \-.  \  
-               /\_____\  \ \_\ \_\  \/\_____\  \ \_____\  \ \_\\"\_\ 
-               \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/ \/_/ 
-
+      Hello Jason
       -->
 
     // Check to see if page is overriding title in frontmatter, otherwise use default set in config.rb
@@ -47,7 +37,7 @@ html.no-js
         |You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site better.
     #wrap
       header role="banner"
-        //= _partial "navigation"
+        = partial "partials/navigation"
         = yield_content :header
       main role="document"
         = yield
