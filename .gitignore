@@ -3,3 +3,5 @@
 /build
 /.sass-cache
 /source/img
+bower_components
+source/environment_variables.rb
