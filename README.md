@@ -73,24 +73,3 @@ bundle exec middleman build
 * HTML5 layout
 * Image compression
 * Asset minification
-
-## How to Run Cucumber Tests
-
-1. Checkout Repository: `git clone https://github.com/middleman/middleman.git`
-2. Install Bundler: `gem install bundler`
-3. Run `bundle install` inside the project root to install the gem dependencies.
-4. Run test cases: `bundle exec rake test`
-
-## License
-
-Copyright (c) 2010-2013 Thomas Reynolds. MIT Licensed, see [LICENSE] for details.
-
-[middleman]: http://middlemanapp.com
-[gem]: https://rubygems.org/gems/middleman
-[travis]: http://travis-ci.org/middleman/middleman
-[coveralls]: https://coveralls.io/r/middleman/middleman
-[gemnasium]: https://gemnasium.com/middleman/middleman
-[codeclimate]: https://codeclimate.com/github/middleman/middleman
-[rubyinstaller]: http://rubyinstaller.org/
-[rubydoc]: http://rubydoc.info/github/middleman/middleman
-[LICENSE]: https://github.com/middleman/middleman/blob/master/LICENSE.md
