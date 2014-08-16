@@ -20,7 +20,5 @@ gem "middleman-favicon-maker", "~> 3.7"
 gem "oj", "~> 2.10.0"
 gem "middleman-imageoptim", "~> 0.1.4"
 
-group :development do
-  gem "middleman-livereload"
-  gem "wdm", "~> 0.1.0", :platforms => [:mswin, :mingw]
-end
+gem "middleman-livereload"
+gem "wdm", "~> 0.1.0", :platforms => [:mswin, :mingw]

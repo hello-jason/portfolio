@@ -1,4 +1,4 @@
-# Hello Jason Website
+# Hello Jason Portfolio
 
 Written with [Ruby](https://www.ruby-lang.org/en/)+[Middleman](http://middlemanapp.com)
 
@@ -9,8 +9,8 @@ Written with [Ruby](https://www.ruby-lang.org/en/)+[Middleman](http://middlemana
 * Clone project
 
 ```bash
-git clone git@gitlab.immense.net:pfsync/pfsync-com-website.git
-cd pfsync-com-website
+git clone git@github.com:hello-jason/portfolio.git
+cd hello-jason-portfolio
 ```
 
 * Install Ruby version set in `.ruby-version`
@@ -19,13 +19,13 @@ cd pfsync-com-website
 rbenv install && rbenv rehash
 ```
 
-* Setup local ruby
+* Setup local ruby (change number below to version that was just installed)
 
 ```
-# Change number to version that was just installed
-rbenv local 2.1.1
+rbenv local 2.1.2
 ```
 
+* Install [node](http://nodejs.org/) and [npm](https://github.com/npm/npm)
 * Install dependencies
 
 ```
@@ -58,7 +58,7 @@ bundle exec middleman build
 * [HTML5 Boilerplate](http://html5boilerplate.com/)
 * [Slim](http://slim-lang.com/)
 * [Sass](http://sass-lang.com/)
-* [Bootstrap 3 Sass](https://github.com/twbs/bootstrap-sass)
+* [Zurb Foundation](https://github.com/zurb/foundation)
 * [Font Awesome](http://fontawesome.io)
 * [Tilt](https://github.com/rtomayko/tilt)
 * [jQuery](http://jquery.com/)

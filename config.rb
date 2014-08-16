@@ -27,7 +27,7 @@ end
 # ========================================================================
 # Site settings
 # ========================================================================
-set :site_title,           "Middleman Site"
+set :site_title,           "Hello Jason Portfolio"
 set :site_description,     "This is an example meta description."
 set :site_url_production,  ENV['site_url_production']
 set :site_url_development, ENV['site_url_development']
@@ -80,9 +80,6 @@ set :url_home,                       "/"
 # Automatic image dimensions on image_tag helper
 # activate :automatic_image_sizes
 
-# Reload the browser automatically whenever files change
-#activate :livereload
-
 # Methods defined in the helpers block are available in templates
 # helpers do
 #   def some_helper
@@ -131,6 +128,7 @@ end
 # ========================================================================
 configure :development do
   set :site_url, "#{site_url_development}"
+  # Reload the browser automatically whenever files change
   activate :livereload
 end
 
