@@ -1,1 +1,19 @@
-$topbar-bg:  none;
+//=======================================================================
+// Bootstrap Overrides
+//=======================================================================
+// Colors
+$brand-primary:           #ffad2b;
+$black:                   #2f3021;
+$body-bg:                 #fff;
+
+// Layout
+$border-radius-base:      0;
+
+// Typograpy
+$font-family-serif:       "egfont", Georgia, serif;
+$font-family-base:        $font-family-serif;
+
+// Thumbnails
+$thumbnail-padding:       0;
+$thumbnail-bg:            none;
+$thumbnail-border:        none;

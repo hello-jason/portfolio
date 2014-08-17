@@ -58,7 +58,7 @@ bundle exec middleman build
 * [HTML5 Boilerplate](http://html5boilerplate.com/)
 * [Slim](http://slim-lang.com/)
 * [Sass](http://sass-lang.com/)
-* [Zurb Foundation](https://github.com/zurb/foundation)
+* [Bootstrap Sass](https://github.com/twbs/bootstrap-sass)
 * [Font Awesome](http://fontawesome.io)
 * [Tilt](https://github.com/rtomayko/tilt)
 * [jQuery](http://jquery.com/)

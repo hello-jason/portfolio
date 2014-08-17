@@ -1,7 +1,16 @@
-nav.top-bar
-  ul.title-area
-    li.name
-      a href="#" = image_tag "hello-jason-logo.png"
-    li.toggle-topbar.menu-icon
-      a href="#"
-        span Menu
+#primary-navigation role="navigation"
+  .navbar-header
+    button type="button" data-toggle="collapse" data-target="#primary-collapse"
+      span.sr-only Toggle navigation
+      span.icon-bar
+      span.icon-bar
+      span.icon-bar
+    a.logo href="/"
+      = image_tag "hello-jason-logo.png"
+      span.tagline Hello, I'm Jason.
+  #primary-collapse
+    ul.nav
+      = nav_li "Work", "#{url_work}"
+      = nav_li "About", "#{url_about}"
+      = nav_li "Blog", "#{url_blog}"
+      = nav_li "Contact", "#{url_contact}"

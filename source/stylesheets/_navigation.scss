@@ -1,0 +1,45 @@
+#primary-navigation {
+  margin-bottom: 0;
+  padding: 2.5em 3em;
+  @extend .navbar;
+  button {
+    @extend .navbar-toggle;
+  }
+  a {
+    color: $black;
+    padding: 0.95em 0.775em;
+    line-height: 2.85em;
+    &.logo {
+      @extend .navbar-brand;
+      padding: .85em 0 0;
+      font-weight: bold;
+      font-size: $font-size-base;
+      color: $brand-primary;
+      img {
+        padding-right: 0.75em;
+      }
+    }
+  }
+  li {
+    a {
+      &:hover, &:focus {
+        background: none;
+        text-decoration: underline;
+      }
+    }
+    &.active {
+      a {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+#primary-collapse {
+  @extend .navbar-collapse;
+  @extend .collapse;
+  .nav {
+    padding-left: 1.4em;
+    padding-top: .5em;
+    @extend .navbar-nav;
+  }
+}

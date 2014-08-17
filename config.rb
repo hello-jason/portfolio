@@ -27,7 +27,7 @@ end
 # ========================================================================
 # Site settings
 # ========================================================================
-set :site_title,           "Hello Jason Portfolio"
+set :site_title,           "Hello Jason"
 set :site_description,     "This is an example meta description."
 set :site_url_production,  ENV['site_url_production']
 set :site_url_development, ENV['site_url_development']
@@ -50,6 +50,10 @@ activate :directory_indexes
 # Sitemap URLs (use trailing slashes). Create additional variables here
 # for referenceing your pages.
 set :url_home,                       "/"
+set :url_work,                       "/"
+set :url_about,                      "/about/"
+set :url_blog,                       "/blog/"
+set :url_contact,                    "/contact/"
 
 # ========================================================================
 # Page options, layouts, aliases and proxies
@@ -95,15 +99,13 @@ helpers do
   end
 
   # Formats li item, and determines when to put class=active on li element
-  # (according to Bootstrap 3.1.1 spec)
+  # (according to Bootstrap 3.2 spec)
   def nav_li(label, url, css_class="", icon="")
-
     # Determine if icon is specified
     nav_icon = ""
     unless icon.nil? or icon.empty?
       nav_icon = " <i class='fa #{icon}'></i>"
     end
-
     # Normalize name string for use as HTML class
     li_classes = ""
     unless css_class.nil? or css_class.empty?
@@ -113,12 +115,26 @@ helpers do
       label_formatted = label.downcase.tr(" ", "-")
       li_classes = "nav-item-#{label_formatted}"
     end
-
     if current_page.url == url
       li_classes += " active"
     end
 
     "<li class='#{li_classes}'><a href='#{url}'>#{label}#{nav_icon}</a></li>"
+  end
+
+  # Project thumbnails
+  def project_thumb(title, slug, thumb_img)
+    # thumb_url = "http://placehold.it/500x500"
+    thumb_url = "#{images_dir}/thumbnails/#{thumb_img}"
+    "<figure>
+      <a href='#{slug}'>
+        <figcaption>
+          <h3>#{title}</h3>
+          <span class='view'>&mdash;view&mdash;
+        </figcaption>
+        <img src='#{thumb_url}' alt='#{title}'>
+      </a>
+    </figure>"
   end
 
 end

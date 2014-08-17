@@ -3,7 +3,7 @@ doctype html
 /[if IE 7] <html class="no-js lt-ie9 lt-ie8">
 /[if IE 8] <html class="no-js lt-ie9">
 / [if gt IE 8]><!
-html.no-js
+html
   / <![endif]
   head
     meta charset="UTF-8"
@@ -13,7 +13,16 @@ html.no-js
 
     markdown:
       <!--
-      Hello Jason
+       __  __     ______     __         __         ______   
+      /\ \_\ \   /\  ___\   /\ \       /\ \       /\  __ \  
+      \ \  __ \  \ \  __\   \ \ \____  \ \ \____  \ \ \/\ \ 
+       \ \_\ \_\  \ \_____\  \ \_____\  \ \_____\  \ \_____\
+        \/_/\/_/   \/_____/   \/_____/   \/_____/   \/_____/
+                __     ______     ______     ______     __   __    
+               /\ \   /\  __ \   /\  ___\   /\  __ \   /\ "-.\ \   
+              _\_\ \  \ \  __ \  \ \___  \  \ \ \/\ \  \ \ \-.  \  
+             /\_____\  \ \_\ \_\  \/\_____\  \ \_____\  \ \_\\"\_\ 
+             \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/ \/_/ 
       -->
 
     // Check to see if page is overriding title in frontmatter, otherwise use default set in config.rb
@@ -27,7 +36,7 @@ html.no-js
       meta content="#{current_page.data.meta_description}" name="description"
     - else
       meta content="#{site_description}" name="description"
-
+    // Stylesheet
     = stylesheet_link_tag "main"
     link href="#{site_url+current_page.url}" rel="canonical"
 
@@ -44,4 +53,4 @@ html.no-js
         = yield
       footer#footer.content-info role="content-info"
         |&copy; #{Time.now.year} Jason Cross
-    = javascript_include_tag "vendor/jquery-2.1.0.min.js", "main.js"
+    = javascript_include_tag "main"
