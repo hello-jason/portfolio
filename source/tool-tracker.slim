@@ -1,0 +1,38 @@
+---
+title: Tool Tracker
+---
+
+section#project-single
+  aside
+    markdown:
+      After investing heavily into Viewpoint software for project management, ISC Constructors discovered a missing feature that did not allow tracking and billing tools between job sites.
+
+      The Tool Tracker project leverages company-owned iPhone 5s devices with Linea Pro cases from Infinite Peripherals with 2D laser barcode scanning capabilities.
+
+      This web-based Node software allows users to formally request and transfer tools between various job sites and company locations, tracking tool locations and handlers throughout each lifecycle.
+
+      MobileIron was also utilized for iOS device control and ongoing application deployment.
+
+      ---
+
+      FluidUI prototyping allowed me to create a demonstrable workflow on iOS devices. This crucial step established functionality, coexistence between pages, and preliminary design decisions.
+
+      ---
+
+      Account registration queries Viewpoint, an internal management application. All users must have an active employee ID to register. Integration with LDAP allows single sign on for applicable users, and non LDAP employees are welcomed to create an account.
+
+      ---
+
+      The heads up display (HUD) page was designed to be visible on a large monitor all day, and web sockets allow real-time updates as tools transition between column states.
+
+      [http://ngstech.org/](http://ngstech.org/)
+
+  main role="document"
+    = image_tag "projects/monitor-front-tooltracker.jpg", :alt => "Tool Tracker homepage"
+
+    = image_tag "projects/full-tooltracker-fluidui.jpg", :alt => "Tool Tracker workflow prototype"
+    = image_tag "projects/ios-tooltracker-screens.jpg", :alt => "Tool Tracker iOS application"
+
+    = image_tag "projects/monitor-right-tooltracker-permissions.jpg", :alt => "Tool Tracker permissions"
+    = image_tag "projects/monitor-right-tooltracker-login.jpg", :alt => "Tool Tracker login"
+    = image_tag "projects/monitor-right-tooltracker-hud.jpg", :alt => "Tool Tracker heads up display"

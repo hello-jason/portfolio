@@ -57,9 +57,10 @@
   padding: 0 2em;
   main {
     @extend .col-md-10;
-  }
-  img {
-    @extend .img-responsive;
+    img {
+      @extend .img-responsive;
+      margin: 0 auto;
+    }
   }
   aside {
     @extend .col-md-2;
