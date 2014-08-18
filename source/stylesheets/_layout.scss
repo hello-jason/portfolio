@@ -1,3 +1,9 @@
+#wrap {
+  @extend .container-fluid;
+}
 section {
+  @extend .row;
+}
+.content-info {
   @extend .row;
 }

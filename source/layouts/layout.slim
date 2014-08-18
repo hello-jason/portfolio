@@ -25,13 +25,13 @@ html
              \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/ \/_/ 
       -->
 
-    // Check to see if page is overriding title in frontmatter, otherwise use default set in config.rb
+    // Check if page is overriding title in frontmatter, otherwise use default set in config.rb
     - if current_page.data.title
-      title #{site_title} : #{current_page.data.title}
+      title #{site_title} / #{current_page.data.title}
     - else
       title #{site_title}
 
-    // Check to see if page is overriding meta description in frontmatter, otherwise use default set in config.rb
+    // Check if page is overriding meta description in frontmatter, otherwise use default set in config.rb
     - if current_page.data.meta_description
       meta content="#{current_page.data.meta_description}" name="description"
     - else
@@ -40,17 +40,20 @@ html
     = stylesheet_link_tag "main"
     link href="#{site_url+current_page.url}" rel="canonical"
 
-
-  body class="#{page_classes}"
-    /[if lte IE 8]
-      p.chromeframe.alert.alert-warning
-        |You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site better.
-    #wrap
-      header role="banner"
-        = partial "partials/navigation"
-        = yield_content :header
-      main role="document"
-        = yield
-      footer#footer.content-info role="content-info"
-        |&copy; #{Time.now.year} Jason Cross
-    = javascript_include_tag "main"
+  // Check if page is passing class for body
+  - if current_page.data.body_class
+    body class="#{page_classes} #{current_page.data.body_class}"
+  - else
+    body class="#{page_classes}"
+    
+  /[if lte IE 8]
+    p.chromeframe.alert.alert-warning
+      |You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site better.
+  #wrap
+    header role="banner"
+      = partial "partials/navigation"
+      = yield_content :header
+    = yield
+    footer#footer.content-info role="content-info"
+      |&copy; #{Time.now.year} Jason Cross
+  = javascript_include_tag "main"
