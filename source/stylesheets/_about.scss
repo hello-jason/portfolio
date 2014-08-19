@@ -1,0 +1,12 @@
+#about {
+  padding: 0 2em;
+  aside {
+    @extend .col-md-4;
+    img {
+      @extend .img-responsive;
+    }
+  }
+  main {
+    @extend .col-md-6;
+  }
+}

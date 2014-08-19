@@ -12,3 +12,20 @@
 p {
   margin-bottom: 2em;
 }
+
+h2, .h2 {
+  margin-top: 2em;
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+h3, .h3 {
+  color: #7b7b7b;
+}
+
+aside, main {
+  a:link {
+    text-decoration: underline;
+  }
+}
