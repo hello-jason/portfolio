@@ -2,9 +2,9 @@
 #proj-thumbnails {
   @extend .row;
   figure {
-    @extend .col-sm-2;
-    @extend .col-md-4;
-    @extend .col-lg-6;
+    @extend .col-sm-4;
+    @extend .col-md-3;
+    @extend .col-lg-2;
     position: relative;
     text-align: center;
     padding-left: 0;
@@ -21,7 +21,7 @@
       font-style: italic;
     }
     img {
-      // @extend .img-responsive;
+      @extend .img-responsive;
       position: relative;
       display: block;
       top: 0;

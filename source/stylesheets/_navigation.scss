@@ -2,16 +2,26 @@
   margin-bottom: 0;
   padding: 2.5em 2.05em;
   @extend .navbar;
+  text-align: center;
+  @media (min-width: $screen-sm-min) {
+    text-align: left;
+  }
   button {
     @extend .navbar-toggle;
   }
   a {
     color: $black;
-    padding: 0.95em 0.775em;
+    padding-left: 5px;
+    padding-right: 5px;
+    @media (min-width: $screen-sm-min) {
+      padding: 0.95em 0.775em;
+    }
     line-height: 2.85em;
     &.logo {
       @extend .navbar-brand;
-      padding: .85em 0 0;
+      @media (min-width: $screen-sm-min) {
+        padding: .85em 0 0;
+      }
       font-weight: bold;
       font-size: $font-size-base;
       color: $brand-primary;
@@ -34,12 +44,13 @@
     }
   }
 }
-#primary-collapse {
-  @extend .navbar-collapse;
-  @extend .collapse;
+#primary-container {
   .nav {
-    padding-left: 1.4em;
+    @media (min-width: $screen-sm-min) {
+      padding-left: 1.4em;
+    }
     padding-top: .5em;
     @extend .navbar-nav;
+    @extend .list-inline;
   }
 }

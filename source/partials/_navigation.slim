@@ -1,14 +1,9 @@
 #primary-navigation role="navigation"
   .navbar-header
-    button type="button" data-toggle="collapse" data-target="#primary-collapse"
-      span.sr-only Toggle navigation
-      span.icon-bar
-      span.icon-bar
-      span.icon-bar
     a.logo href="/"
       = image_tag "hello-jason-logo.png"
       span.tagline Hello, I'm Jason.
-  #primary-collapse
+  #primary-container
     ul.nav
       = nav_li "Work", "#{url_work}"
       = nav_li "About", "#{url_about}"
