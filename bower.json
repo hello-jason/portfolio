@@ -3,7 +3,6 @@
   "version": "2.0",
   "private": "true",
   "dependencies": {
-    "bootstrap": "twbs/bootstrap-sass",
-    "fontawesome": "FortAwesome/Font-Awesome"
+    "bootstrap": "twbs/bootstrap-sass"
   }
 }

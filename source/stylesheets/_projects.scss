@@ -2,24 +2,26 @@
 #proj-thumbnails {
   @extend .row;
   figure {
-    @extend .col-sm-6;
-    @extend .col-md-2;
+    @extend .col-sm-2;
+    @extend .col-md-4;
+    @extend .col-lg-6;
     position: relative;
     text-align: center;
     padding-left: 0;
     padding-right: 0;
     overflow: hidden;
     h3 {
-      font-size: 16px;
+      font-size: 20px;
       margin-bottom: 0;
+      color: #fff;
     }
     .view {
-      color: darken(#fff, 35%);
-      font-size: 12px;
+      color: darken(#fff, 25%);
+      font-size: 15px;
       font-style: italic;
     }
     img {
-      @extend .img-responsive;
+      // @extend .img-responsive;
       position: relative;
       display: block;
       top: 0;
@@ -37,7 +39,7 @@
         figcaption {
           color: #fff;
           opacity: 1;
-          background: rgba(0,0,0,0.4);
+          background: rgba(0,0,0,0.5);
         }
       }
     }
@@ -45,9 +47,12 @@
       position: absolute;
       width: 100%;
       height: 100%;
-      padding-top: 40%;
+      padding-top: 30%;
+      padding-left: 15px;
+      padding-right: 15px;
       opacity: 0;
       z-index: 2;
+      @include transition(opacity .5s);
     }
   }
 }
