@@ -68,8 +68,9 @@ bundle exec middleman build
 **Included features:**
 
 * Image optimization
+* CSS normalize
 * CSS3 mixins
-* CSS reset
 * HTML5 layout
 * Image compression
 * Asset minification
+* Favicon generator
