@@ -1,0 +1,6 @@
+footer#footer {
+  margin-top: ($jason-space / 2);
+  padding: ($jason-space / 2) ($jason-space + 1.15em);
+  border-top: 1px solid $input-border;
+  color: darken($body-bg, 35%);
+}

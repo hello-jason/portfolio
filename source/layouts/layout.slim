@@ -54,6 +54,6 @@ html
       = partial "partials/navigation"
       = yield_content :header
     = yield
-    footer#footer.content-info role="content-info"
-      |&copy; #{Time.now.year} Jason Cross
+    footer#footer.content-info role="contentinfo"
+      small &copy; #{Time.now.year} Jason Cross
   = javascript_include_tag "main"

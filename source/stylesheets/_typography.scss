@@ -10,11 +10,11 @@
 }
 
 p {
-  margin-bottom: 2em;
+  margin-bottom: $jason-space;
 }
 
 h2, .h2 {
-  margin-top: 2em;
+  margin-top: $jason-space;
   &:first-child {
     margin-top: 0;
   }

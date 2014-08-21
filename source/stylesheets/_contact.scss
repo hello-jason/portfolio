@@ -1,0 +1,6 @@
+#contact {
+  padding: 0 $jason-space;
+  main {
+    @extend .col-md-4;
+  }
+}
