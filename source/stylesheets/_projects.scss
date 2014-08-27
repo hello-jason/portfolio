@@ -2,23 +2,24 @@
 #proj-thumbnails {
   @extend .row;
   figure {
-    @extend .col-sm-4;
-    @extend .col-md-3;
-    @extend .col-lg-2;
+    @extend .col-sm-5;
+    @extend .col-md-4;
+    @extend .col-lg-3;
     position: relative;
     text-align: center;
     padding-left: 0;
     padding-right: 0;
     overflow: hidden;
+    border: 2px solid #fff;
     h3 {
-      font-size: 20px;
+      font-size: 29px;
       margin-top: 0;
       margin-bottom: 0;
       color: #fff;
     }
     .view {
-      color: darken(#fff, 25%);
-      font-size: 15px;
+      color: darken(#fff, 5%);
+      font-size: 17px;
       font-style: italic;
     }
     img {
@@ -32,12 +33,13 @@
       @extend .thumbnail;
       color: #fff;
       background: rgba(0,0,0,0);
+      background: rgba(red($brand-primary), green($brand-primary), blue($brand-primary), 0);
       margin: 0;
       &:hover, &:focus {
         figcaption {
           color: #fff;
           opacity: 1;
-          background: rgba(0,0,0,0.5);
+          background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAEElEQVQImWNgoAP4f2/1fwAJVAOILWUmIAAAAABJRU5ErkJggg==) rgba(red($brand-primary), green($brand-primary), blue($brand-primary), 0.85);
         }
       }
     }
