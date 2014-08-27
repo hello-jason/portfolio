@@ -15,6 +15,7 @@ build
 
 # Env variables
 source/environment_variables.rb
+environment_variables.rb
 
 # Ignore bower components
 bower_components
