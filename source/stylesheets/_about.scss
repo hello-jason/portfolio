@@ -1,12 +1,12 @@
 #about {
   padding: 0 $jason-space;
   aside {
-    @extend .col-md-4;
+    @extend .col-md-2;
     img {
       @extend .img-responsive;
     }
   }
   main {
-    @extend .col-md-6;
+    @extend .col-md-10;
   }
 }
