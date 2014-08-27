@@ -42,12 +42,20 @@ npm install -g bower && bower install
 bundle exec middleman
 ```
 
-## Deploying
+## Deploying to Github Pages
 
-* Build the project, then copy the contents of `build` to your web server.
+* Merge changes into `gh-pages` branch
+
+```bash
+git checkout gh-pages
+git merge master
+```
+
+* Build the project, then copy the contents of `build` to public root
 
 ```bash
 bundle exec middleman build
+cp -r build/* .
 ```
 
 ## Additional info

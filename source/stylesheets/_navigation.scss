@@ -19,8 +19,10 @@
     line-height: 2.85em;
     &.logo {
       @extend .navbar-brand;
+      float: none;
       @media (min-width: $screen-sm-min) {
         padding: .85em 0 0;
+        float: left;
       }
       font-weight: bold;
       font-size: $font-size-base;
