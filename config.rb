@@ -28,7 +28,7 @@ end
 # Site settings
 # ========================================================================
 set :site_title,           "Hello Jason"
-set :site_description,     "This is an example meta description."
+set :site_description,     "Design and development portfolio of Jason Cross"
 set :site_url_production,  ENV['site_url_production']
 set :site_url_development, ENV['site_url_development']
 set :css_dir,              "stylesheets"
@@ -93,11 +93,6 @@ set :url_contact,                    "/contact/"
 
 helpers do
 
-  # Gets partials from the _partials directory
-  def _partial(partial_filename)
-    partial "_partials/#{partial_filename}"
-  end
-
   # Formats li item, and determines when to put class=active on li element
   # (according to Bootstrap 3.2 spec)
   def nav_li(label, url, css_class="", icon="")
@@ -135,6 +130,21 @@ helpers do
         <img src='#{thumb_url}' alt='#{title}'>
       </a>
     </figure>"
+  end
+
+  # Project details
+  def project_details(year, software, roles)
+    "<dl>
+      <dt>Client</dt>
+      <dd>#{current_page.data.title}</dd>
+      <dt>Year</dt>
+      <dd>#{year}</dd>
+      <dt>Software</dt>
+      <dd>#{software}</dd>
+      <dt>Roles</dt>
+      <dd>#{roles}</dd>
+    </dl>
+    <hr>"
   end
 
 end
