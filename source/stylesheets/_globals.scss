@@ -12,12 +12,12 @@
 
 ::selection {
   color: white;
-  background: green;
+  background: $brand-primary;
 }
 
 ::-moz-selection {
   color: white;
-  background: green;
+  background: $brand-primary;
 }
 
 .alignleft, .alignright {
@@ -32,4 +32,12 @@
 .alignright {
   margin-left: 1em;
   float: right;
+}
+
+hr {
+  margin-top: 2em;
+  margin-bottom: 2em;
+  &+h1, &+.h1, &+h2, &+.h2, &+h3, &+.h3 {
+    margin-top: 0;
+  }
 }

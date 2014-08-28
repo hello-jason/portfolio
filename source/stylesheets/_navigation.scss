@@ -28,7 +28,15 @@
       font-size: $font-size-base;
       color: $brand-primary;
       img {
-        padding-right: 0.75em;
+        margin-right: 0.75em;
+        transition: all .5s;
+      }
+      &:hover, &:focus {
+        img {
+          -ms-transform: rotate(-45deg);
+          -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+        }
       }
     }
   }
