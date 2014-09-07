@@ -10,3 +10,16 @@
     @extend .col-md-8;
   }
 }
+
+.about-me {
+  .about-text {
+    @extend .col-md-7;
+  }
+  .self-image {
+    @extend .col-md-5;
+    img {
+      @extend .pull-left;
+      @extend .img-responsive;
+    }
+  }
+}

@@ -4,18 +4,24 @@ title: About Me
 
 section#about
   main role="main"
+    .about-me
+      figure.self-image
+        = image_tag 'hello-jason-self.jpg', :alt => 'Jason'
+      .about-text
+        markdown:
+          # About me
+
+          My passion for design and typography has followed me all my life, back to when careful consideration of licensed cartoon pocket folders would provide classroom drawing inspiration for the entire school year.
+
+          Though having some formal training in C++ programming, I became generally interested in the web and grew intrigued by how people explore the same content in different ways. Once I began to understand HTML, I found the niche where I belonged and developed a passion for bringing mockups to life with frontend development and CSS.
+
+          I strive to consider how people will interact with my sites, and I often duplicate important pieces of content in multiple formats, such as hierarchical text, bulleted lists, and graphical elements. Then, I reconsider how that entire experience will change depending on the device being used to access it.
+
+          I brew beer and have built a kegerator of sorts to dispense the hobby. I also like working on cars and enjoying life with [my wife, Katie](http://shitmywifedoes.com/).
+
+    hr.clear
+
     markdown:
-      # About me
-
-      My passion for design and typography has followed me all my life, back to when careful consideration of licensed cartoon pocket folders would provide classroom drawing inspiration for the entire school year.
-
-      Though having some formal training in C++ programming, I became generally interested in the web and grew intrigued by how people explore the same content in different ways. Once I began to understand HTML, I found the niche where I belonged and developed a passion for bringing mockups to life with frontend development and CSS.
-
-      I strive to consider how people will interact with my sites, and I often duplicate important pieces of content in multiple formats, such as hierarchical text, bulleted lists, and graphical elements. Then, I reconsider how that entire experience will change depending on the device being used to access it.
-
-      I brew beer and have built a kegerator of sorts to dispense the hobby. I also like working on cars and enjoying life with [my wife, Katie](http://shitmywifedoes.com/).
-
-      ---
 
       ## Work experience
 
@@ -55,10 +61,12 @@ section#about
       dd Proficient and aware of browser nuances. I like Bootstrap and preprocessors, including less and scss.
       dt HTML5
       dd Proficient and comfortable with evolving web standards. I like templating engines, including slim and jade.
+      dt JavaScript
+      dd Experience with DOM manipulation (typically via jQuery), implementing libraries (like carousels, tooltips), and so forth. Not a guru with the language, but I am motiviated to learn it.
       dt SEO
-      dd Good understanding of SEO, including per-page optimization and best practices.
+      dd Not as up-to-date as Yoast, but I have a good understanding of SEO, including per-page optimization and best practices.
       dt &#42;nix
-      dd Setup a CentOS box at home and am generally comfortable with the command line, including vim and bash scripting.
+      dd Setup a CentOS box at home and am generally comfortable with the command line, including vim, repos, package managers, and bash scripting.
       dt Version Control
       dd Comfortable with pulling and committing git repos. Not a pro at merging feature branches, but getting better.
       dt Articulate

@@ -20,24 +20,28 @@
   background: $brand-primary;
 }
 
-.alignleft, .alignright {
-  margin-bottom: 1em;
+.alignleft, .alignright, .pull-left, .pull-right {
+  margin-bottom: $jason-space;
 }
 
-.alignleft {
-  margin-right: 1em;
+.alignleft, .pull-left {
+  margin-right: $jason-space;
   float: left;
 }
 
-.alignright {
-  margin-left: 1em;
+.alignright, .pull-right {
+  margin-left: $jason-space;
   float: right;
 }
 
 hr {
-  margin-top: 2em;
+  margin-top: $jason-space;
   margin-bottom: 2em;
   &+h1, &+.h1, &+h2, &+.h2, &+h3, &+.h3 {
     margin-top: 0;
   }
+}
+
+.clear {
+  clear: both;
 }
