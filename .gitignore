@@ -23,3 +23,6 @@ bower_components
 # OS Specific
 .DS_Store
 Thumbs.db
+
+# Ignore logs
+*.log
