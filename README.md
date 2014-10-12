@@ -33,7 +33,7 @@ gem install bundler && bundle install
 npm install -g bower && bower install
 ```
 
-* Copy `source/environment_variables.sample.rb` to `source/environment_variables.rb`
+* Copy `source/environment_variables.sample` to `source/environment_variables.rb`
 * Set `site_url_production` and `site_url_development` in `source/environment_variables.rb`
 
 * Start Middleman server
@@ -44,6 +44,12 @@ bundle exec middleman
 
 ## Deploying to Github Pages
 
+* Build the project on `master` branch, then commit and push
+
+```
+bundle exec middleman build
+```
+
 * Merge changes into `gh-pages` branch
 
 ```bash
@@ -51,11 +57,17 @@ git checkout gh-pages
 git merge master
 ```
 
-* Build the project, then copy the contents of `build` to public root
+* Copy the contents of `build` to public root
 
 ```bash
-bundle exec middleman build
 cp -r build/* .
+```
+
+* Add new files, then push on `gh-pages` branch
+
+```
+git add --all
+git push origin gh-pages
 ```
 
 ## Additional info
