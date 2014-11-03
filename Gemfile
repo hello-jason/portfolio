@@ -23,3 +23,6 @@ gem "middleman-imageoptim", "~> 0.1.4"
 # development
 gem "middleman-livereload", "~> 3.3.4"
 gem "wdm", "~> 0.1.0", :platforms => [:mswin, :mingw]
+
+# deployment
+gem 'middleman-deploy', '~> 0.3.0'
