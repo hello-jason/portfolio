@@ -11,8 +11,6 @@ gem "slim", "~> 2.1.0"
 
 # assets
 gem "redcarpet", "~> 3.2.0"
-gem "execjs", "~> 2.2.2"
-gem "therubyracer", "~> 0.12.1"
 
 # file optimization & minification
 gem "middleman-minify-html", "~> 3.4.0"

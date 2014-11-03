@@ -58,7 +58,6 @@ GEM
     in_threads (1.2.2)
     json (1.8.1)
     kramdown (1.5.0)
-    libv8 (3.16.14.7)
     listen (2.7.11)
       celluloid (>= 0.15.2)
       rb-fsevent (>= 0.9.3)
@@ -131,7 +130,6 @@ GEM
     rb-inotify (0.9.5)
       ffi (>= 0.5.0)
     redcarpet (3.2.0)
-    ref (1.0.5)
     sass (3.4.7)
     slim (2.1.0)
       temple (~> 0.6.9)
@@ -147,9 +145,6 @@ GEM
       sprockets (~> 2.0)
       tilt (~> 1.1)
     temple (0.6.10)
-    therubyracer (0.12.1)
-      libv8 (~> 3.16.14.0)
-      ref
     thin (1.6.3)
       daemons (~> 1.0, >= 1.0.9)
       eventmachine (~> 1.0)
@@ -170,7 +165,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  execjs (~> 2.2.2)
   middleman (~> 3.3.6)
   middleman-deploy (~> 0.3.0)
   middleman-favicon-maker (~> 3.7)
@@ -180,6 +174,5 @@ DEPENDENCIES
   oj (~> 2.10.4)
   redcarpet (~> 3.2.0)
   slim (~> 2.1.0)
-  therubyracer (~> 0.12.1)
   thin (~> 1.6.3)
   wdm (~> 0.1.0)
