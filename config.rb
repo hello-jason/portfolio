@@ -47,6 +47,14 @@ activate :directory_indexes
 # Enable Bourbon
 #activate :bourbon
 
+# Autoprevixer
+activate :autoprefixer do |config|
+  config.browsers = ['last 2 versions', 'Explorer >= 9']
+  config.cascade  = false
+  config.inline   = true
+  config.ignore   = ['hacks.css']
+end
+
 # Sitemap URLs (use trailing slashes). Create additional variables here
 # for referenceing your pages.
 set :url_home,                       "/"
