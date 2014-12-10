@@ -1,8 +1,0 @@
-{
-  "name": "hello-jason-portfolio",
-  "version": "2.0",
-  "private": "true",
-  "dependencies": {
-    "bootstrap": "twbs/bootstrap-sass"
-  }
-}
