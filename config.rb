@@ -8,52 +8,16 @@
 require "./source/environment_variables.rb"
 
 # ========================================================================
-# Compass
-# ========================================================================
-# Change Compass configuration
-compass_config do |config|
-  config.output_style = :compact
-  # Require any additional compass plugins here.
-  config.add_import_path "bower_components/foundation/scss"
-  # Set this to the root of your project when deployed:
-  config.http_path = "/"
-  config.css_dir = "stylesheets"
-  config.sass_dir = "stylesheets"
-  config.images_dir = "images"
-  config.javascripts_dir = "javascripts"
-end
-
-
-# ========================================================================
 # Site settings
 # ========================================================================
 set :site_title,           "Hello Jason"
 set :site_description,     "Design and development portfolio of Jason Cross"
 set :site_url_production,  ENV['site_url_production']
 set :site_url_development, ENV['site_url_development']
-set :css_dir,              "stylesheets"
-set :js_dir,               "javascripts"
-set :images_dir,           "images"
-set :server,               "thin"
-
-# CSS preprocessor
+set :css_dir,              "css"
+set :js_dir,               "js"
+set :images_dir,           "img"
 set :sass, line_comments: false, style: :nested
-# Internationalization
-activate :i18n
-# Use relative URLs
-activate :relative_assets
-# Pretty URLs
-activate :directory_indexes
-# Enable Bourbon
-#activate :bourbon
-
-# Autoprevixer
-activate :autoprefixer do |config|
-  config.browsers = ['last 2 versions', 'Explorer >= 9']
-  config.cascade  = false
-  config.inline   = true
-  config.ignore   = ['hacks.css']
-end
 
 # Sitemap URLs (use trailing slashes). Create additional variables here
 # for referenceing your pages.
@@ -62,6 +26,19 @@ set :url_work,                       "/"
 set :url_about,                      "/about/"
 set :url_blog,                       "/blog/"
 set :url_contact,                    "/contact/"
+
+# Use relative URLs
+activate :relative_assets
+
+# Pretty URLs
+activate :directory_indexes
+
+# Autoprevixer
+activate :autoprefixer do |config|
+  config.browsers = ['last 2 versions', 'Explorer >= 9']
+  config.cascade  = false
+  config.inline   = false
+end
 
 # ========================================================================
 # Page options, layouts, aliases and proxies
@@ -164,6 +141,7 @@ configure :development do
   set :site_url, "#{site_url_development}"
   # Reload the browser automatically whenever files change
   activate :livereload
+  #set :server, "thin"
 end
 
 # ========================================================================
