@@ -166,6 +166,7 @@ configure :build do
   activate :asset_hash, :exts => ['.css', '.png', '.jpg', '.gif']
 
   # Ignore files/dir during build process
+  ignore ".git"
   ignore "environment_variables.rb"
   ignore "environment_variables.rb.sample"
   ignore "favicon_template.png"
