@@ -9,7 +9,7 @@ gem "font-awesome-middleman", "~> 4.2.3"
 gem "middleman-favicon-maker", "~> 3.7"
 
 # Templating
-gem "slim", "~> 2.1.0"
+gem "slim", "~> 3.0.1"
 gem "middleman-autoprefixer", "~> 2.3.0"
 
 # Optimization & minification
@@ -17,6 +17,11 @@ gem "middleman-jquery", "~> 2.1.1"
 gem "middleman-minify-html", "~> 3.4.0"
 gem "middleman-imageoptim", "~> 0.1.4"
 
+# Setemaps
+gem "builder", "~> 3.2.2"
+gem "middleman-sitemap", "~> 0.0.13"
+
+# Development
 gem "middleman-livereload", "~> 3.3.4"
 gem "oj", "~> 2.11.1"
 gem "thin", "~> 1.6.3"
