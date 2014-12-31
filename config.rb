@@ -17,7 +17,6 @@ set :site_url_development, ENV['site_url_development']
 set :css_dir,              "css"
 set :js_dir,               "js"
 set :images_dir,           "img"
-set :sass, line_comments: false, style: :nested
 
 # Sitemap URLs (use trailing slashes). Create additional variables here
 # for referenceing your pages.
@@ -26,6 +25,13 @@ set :url_work,                       "/"
 set :url_about,                      "/about/"
 set :url_blog,                       "/blog/"
 set :url_contact,                    "/contact/"
+
+# Sitemap XML
+require "builder"
+page "/sitemap.xml", :layout => false
+
+# Slim template engine
+require "slim"
 
 # Use relative URLs
 activate :relative_assets
@@ -149,13 +155,23 @@ end
 # ========================================================================
 configure :build do
   set :site_url, "#{site_url_production}"
-  set :sass, style: :compressed
+  set :sass, line_comments: false, style: :compressed
+
   activate :minify_css
   activate :minify_html
   activate :minify_javascript
   activate :gzip
+
   # Enable cache buster
   activate :asset_hash, :exts => ['.css', '.png', '.jpg', '.gif']
+
+  # Ignore files/dir during build process
+  ignore "environment_variables.rb"
+  ignore "environment_variables.rb.sample"
+  ignore "favicon_template.png"
+  ignore "sitemap.yml"
+  ignore "sitemap.xml.builder"
+
   # Create favicon and device-specific icons
   activate :favicon_maker, :icons => {
     "favicon_template.png" => [
