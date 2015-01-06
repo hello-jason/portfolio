@@ -15,6 +15,7 @@ gem "middleman-autoprefixer", "~> 2.3.0"
 # Optimization & minification
 gem "middleman-jquery", "~> 2.1.1"
 gem "middleman-imageoptim", "~> 0.2.0"
+gem "image_optim_pack", "~> 0.2.1"
 
 # Setemaps
 gem "builder", "~> 3.2.2"
