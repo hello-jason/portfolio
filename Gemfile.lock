@@ -181,6 +181,7 @@ DEPENDENCIES
   bootstrap-sass (~> 3.3.1.0)
   builder (~> 3.2.2)
   font-awesome-middleman (~> 4.2.3)
+  image_optim_pack (~> 0.2.1)
   middleman (= 3.3.7)
   middleman-autoprefixer (~> 2.3.0)
   middleman-deploy (~> 0.3.0)
