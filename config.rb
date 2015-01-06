@@ -173,6 +173,15 @@ configure :build do
   ignore "sitemap.yml"
   ignore "sitemap.xml.builder"
 
+  # Compress and optimise images during build
+  # Documentation: https://github.com/plasticine/middleman-imageoptim
+  activate :imageoptim do |options|
+    # Image extensions to attempt to compress
+    options.image_extensions = %w(.png .jpg .gif .svg)
+    # Cause image_optim to be in shouty-mode
+    options.verbose = false
+  end
+
   # Create favicon and device-specific icons
   activate :favicon_maker, :icons => {
     "favicon_template.png" => [
