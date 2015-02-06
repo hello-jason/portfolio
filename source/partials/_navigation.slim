@@ -1,11 +1,10 @@
 #primary-navigation role="navigation"
   .navbar-header
-    a.logo href="/" title="#{site_title} Homepage"
+    a.logo href="#{url_home}" title="#{site_title} Homepage"
       = image_tag "hello-jason-logo.png", :alt => 'Hello Jason'
       span.tagline Hello, I'm Jason.
   #primary-container
     ul.nav
-      = nav_li "Work", "#{url_work}"
+      = nav_li "Portfolio", "#{url_portfolio}"
       = nav_li "About", "#{url_about}"
-      //= nav_li "Journal", "#{url_journal}"
       = nav_li "Contact", "#{url_contact}"
