@@ -21,7 +21,7 @@ set :images_dir,           "img"
 # Sitemap URLs (use trailing slashes). Create additional variables here
 # for referenceing your pages.
 set :url_home,                       "/"
-set :url_work,                       "/"
+set :url_portfolio,                  "/"
 set :url_about,                      "/about/"
 set :url_blog,                       "/blog/"
 set :url_contact,                    "/contact/"
