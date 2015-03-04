@@ -109,13 +109,14 @@ helpers do
   end
 
   # Project thumbnails
-  def project_thumb(title, slug, thumb_img)
+  def project_thumb(title, slug, thumb_img, year)
     # thumb_url = "http://placehold.it/500x500"
     thumb_url = "#{images_dir}/thumbnails/#{thumb_img}"
     "<figure>
       <a href='#{slug}'>
         <figcaption>
           <h3>#{title}</h3>
+          <span class='year'>#{year}</span>
           <span class='view'>&mdash;view&mdash;
         </figcaption>
         <img src='#{thumb_url}' alt='#{title}'>
