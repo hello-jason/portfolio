@@ -41,7 +41,7 @@ rbenv install && rbenv rehash
 
 * Set local ruby (this number should reflect the ruby version that was just installed)
 ```
-rbenv local 2.1.5
+rbenv local 2.2.0
 ```
 
 * Install JavaScript runtime
