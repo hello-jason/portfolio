@@ -1,5 +1,9 @@
 #about {
   padding: 0 $jason-space;
+  h2 {
+    font-size: $font-size-h1;
+    text-transform: uppercase;
+  }
   aside {
     @extend .col-md-2;
     img {
@@ -12,14 +16,11 @@
 }
 
 .about-me {
-  .about-text {
-    @extend .col-md-7;
-  }
   .self-image {
-    @extend .col-md-5;
-    img {
-      @extend .pull-left;
-      @extend .img-responsive;
-    }
+    @extend .pull-left;
+    @extend .img-responsive;
+    max-width: 293px;
+    padding: 1px;
+    border: 1px solid $gray-lighter;
   }
 }

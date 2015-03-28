@@ -1,20 +1,38 @@
 @font-face {
-  font-family: 'egfont';
-  src: url('../fonts/egfont.eot');
-  src: url('../fonts/egfont.eot?#iefix') format('embedded-opentype'),
-  url('../fonts/egfont.svg#egfont') format('svg'),
-  url('../fonts/egfont.woff') format('woff'),
-  url('../fonts/egfont.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
+    font-family: 'kb-font';
+    src: url('../fonts/KB-webfont.eot');
+    src: url('../fonts/KB-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/KB-webfont.woff2') format('woff2'),
+         url('../fonts/KB-webfont.woff') format('woff'),
+         url('../fonts/KB-webfont.ttf') format('truetype'),
+         url('../fonts/KB-webfont.svg#kb-font') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'kr-font';
+    src: url('../fonts/KR-webfont.eot');
+    src: url('../fonts/KR-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/KR-webfont.woff2') format('woff2'),
+         url('../fonts/KR-webfont.woff') format('woff'),
+         url('../fonts/KR-webfont.ttf') format('truetype'),
+         url('../fonts/KR-webfont.svg#kr-font') format('svg');
+    font-weight: normal;
+    font-style: normal;
 }
 
 p {
   margin-bottom: ($jason-space / 2);
 }
 
+h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
+  font-weight: normal;
+  text-transform: capitalize;
+}
 h1, .h1 {
   margin-top: 0;
+  text-transform: uppercase;
 }
 
 h2, .h2 {
@@ -25,7 +43,11 @@ h2, .h2 {
 }
 
 h3, .h3 {
-  color: #7b7b7b;
+  margin-bottom: 0;
+  span {
+    font-family: $font-family-serif;
+    font-style: italic;
+  }
 }
 
 aside, main {
