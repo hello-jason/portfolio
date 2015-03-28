@@ -1,5 +1,5 @@
 ---
-title: How to install latest ImageMagick on CentOS
+title: How to install latest ImageMagick version on CentOS
 date: 2015-03-28 18:43 UTC
 tags:
 ---
