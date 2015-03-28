@@ -17,7 +17,7 @@ gem "middleman-jquery", "~> 2.1.1"
 gem "middleman-imageoptim", "~> 0.2.0"
 gem "image_optim_pack", "~> 0.2.1.20150310"
 
-# Setemaps
+# Sitemaps
 gem "builder", "~> 3.2.2"
 gem "middleman-sitemap", "~> 0.0.13"
 
