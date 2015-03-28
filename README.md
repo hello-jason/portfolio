@@ -2,7 +2,7 @@
 
 # Hello Jason Portfolio
 
-Written with [Ruby](https://www.ruby-lang.org/en/)+[Middleman](http://middlemanapp.com)
+Written with [Ruby](https://www.ruby-lang.org/en/)+[Middleman](http://middlemanapp.com) and based on the [middleman-bss starter theme](https://github.com/hello-jason/middleman-bss)
 
 **Included packages:**
 
@@ -10,8 +10,6 @@ Written with [Ruby](https://www.ruby-lang.org/en/)+[Middleman](http://middlemana
 * [Slim](http://slim-lang.com/)
 * [Sass](http://sass-lang.com/)
 * [Bootstrap 3 Sass](https://github.com/twbs/bootstrap-sass)
-* [Font Awesome](http://fontawesome.io)
-* [Tilt](https://github.com/rtomayko/tilt)
 * [jQuery](http://jquery.com/)
 * [Livereload](https://github.com/middleman/middleman-livereload)
 * [Favicon Maker](https://github.com/follmann/middleman-favicon-maker)
@@ -62,7 +60,7 @@ bundle exec middleman
 
 ## Deploying to Github Pages
 
-Simplified deployments courtesy of [middleman-deploy](https://github.com/hello-jason/middleman-deploy)
+Simplified deployments courtesy of [middleman-deploy](https://github.com/middleman-contrib/middleman-deploy)
 * Commit and push the project on `master` branch
 * Run deploy command
 ```
