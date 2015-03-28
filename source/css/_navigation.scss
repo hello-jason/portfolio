@@ -10,7 +10,7 @@
     @extend .navbar-toggle;
   }
   a {
-    color: $black;
+    color: $text-color;
     padding-left: 5px;
     padding-right: 5px;
     @media (min-width: $screen-sm-min) {
@@ -31,11 +31,6 @@
         margin-right: 0.75em;
         transition: all .5s;
         display: inline-block;
-      }
-      &:hover, &:focus {
-        img {
-          transform: rotate(-45deg);
-        }
       }
     }
   }

@@ -2,8 +2,8 @@
 // Bootstrap Overrides
 //=======================================================================
 // Colors
-$brand-primary:           #ffad2b;
-$black:                   #2f3021;
+$brand-primary:           #FAAC2C;
+$text-color:              #2f3021;
 $body-bg:                 #fff;
 
 // Layout
@@ -11,10 +11,13 @@ $border-radius-base:      0;
 $jason-space:             2em;
 
 // Typograpy
-$font-size-base:          14px;
+$font-size-base:          16px;
 $font-family-serif:       "kr-font", Georgia, serif;
 $font-family-base:        $font-family-serif;
 $headings-font-family:    "kb-font", Georgia, serif;
+
+$font-size-h1:            ceil($font-size-base * 1.95);
+$font-size-h2:            ceil($font-size-base * 1.65);
 $font-size-h3:            ceil($font-size-base * 1.15);
 
 // Thumbnails
