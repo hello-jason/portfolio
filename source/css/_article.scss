@@ -1,0 +1,17 @@
+#article-single {
+  @extend .container;
+  article {
+    font-size: 18px;
+    h1 {
+      text-transform: capitalize;
+    }
+    time {
+      display: block;
+    }
+    @media screen and (max-width: $screen-sm-min) {
+      h1, time {
+        text-align: center;
+      }
+    }
+  }
+}

@@ -36,15 +36,33 @@ require "slim"
 # Use relative URLs
 activate :relative_assets
 
-# Pretty URLs
-activate :directory_indexes
-
 # Autoprevixer
 activate :autoprefixer do |config|
   config.browsers = ['last 2 versions', 'Explorer >= 9']
   config.cascade  = false
   config.inline   = false
 end
+
+# Markdown rendering
+set :markdown_engine, :redcarpet
+set :markdown, :fenced_code_blocks => true, :smartypants => true
+
+# Syntax highlighting
+# Documentation: https://github.com/jneen/rouge
+activate :rouge_syntax
+
+# Weblog extension
+# Documentatin: http://middlemanapp.com/basics/blogging/
+activate :blog do |blog|
+  blog.default_extension  = ".md"
+  blog.permalink          = "{title}"
+  blog.prefix             = "blog"
+  blog.layout             = "layout-article"
+end
+
+# Pretty URLs
+# This must be activated AFTER the blog extension
+activate :directory_indexes
 
 # ========================================================================
 # Helpers
@@ -115,7 +133,6 @@ configure :development do
   set :site_url, "#{site_url_development}"
   # Reload the browser automatically whenever files change
   activate :livereload
-  #set :server, "thin"
 end
 
 # ========================================================================
@@ -133,13 +150,14 @@ configure :build do
   # Enable cache buster
   activate :asset_hash, :exts => ['.css', '.png', '.jpg', '.gif']
 
-  # Ignore files/dir during build process
+  # Ignore file/dir during build process
   ignore ".git"
   ignore "environment_variables.rb"
   ignore "environment_variables.rb.sample"
   ignore "favicon_template.png"
   ignore "sitemap.yml"
   ignore "sitemap.xml.builder"
+  ignore "css/pygments-css/*"
 
   # Compress and optimise images during build
   # Documentation: https://github.com/plasticine/middleman-imageoptim
