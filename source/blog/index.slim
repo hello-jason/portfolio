@@ -1,0 +1,17 @@
+---
+title: Blog
+---
+
+main role="main"
+  h1 Blog
+  // Loop through articles
+  - blog.articles.each do |article|
+    article
+      h1
+        a href="#{article.url}" #{article.title}
+      time #{article.date}
+      
+      div.summary
+        p #{article.summary}
+
+      a href="#{article.url}" Read more

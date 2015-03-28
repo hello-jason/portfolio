@@ -36,15 +36,33 @@ require "slim"
 # Use relative URLs
 activate :relative_assets
 
-# Pretty URLs
-activate :directory_indexes
-
 # Autoprevixer
 activate :autoprefixer do |config|
   config.browsers = ['last 2 versions', 'Explorer >= 9']
   config.cascade  = false
   config.inline   = false
 end
+
+# Markdown rendering
+set :markdown_engine, :redcarpet
+set :markdown, :fenced_code_blocks => true, :smartypants => true
+
+# Syntax highlighting
+# Documentation: https://github.com/jneen/rouge
+activate :rouge_syntax
+
+# Weblog extension
+# Documentatin: http://middlemanapp.com/basics/blogging/
+activate :blog do |blog|
+  blog.default_extension  = ".md"
+  blog.permalink          = "{title}"
+  blog.prefix             = "blog"
+  blog.layout             = "layout"
+end
+
+# Pretty URLs
+# This must be activated AFTER the blog extension
+activate :directory_indexes
 
 # ========================================================================
 # Helpers
