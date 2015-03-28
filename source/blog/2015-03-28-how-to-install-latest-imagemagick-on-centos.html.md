@@ -12,14 +12,14 @@ This site is currently on Middleman, and the `middleman-favicon-maker` that I us
 
 ## Install REMI repository
 
-Visit this resource for [installing REMI](http://www.unixmen.com/install-remi-repository-rhel-centos-scientific-linux-76-x5-x-fedora-201918/) on additional distros.
-
 **For CentOS 6.x**
 
 ```bash
 wget http://rpms.famillecollet.com/enterprise/remi-release-6.rpm
 rpm -Uvh remi-release-6.rpm
 ```
+
+Visit this resource for [installing REMI](http://www.unixmen.com/install-remi-repository-rhel-centos-scientific-linux-76-x5-x-fedora-201918/) on additional distros.
 
 **For CentOS 7.x**
 
@@ -30,8 +30,8 @@ rpm -Uvh remi-release-7.rpm
 
 ## Install latest ImageMagick
 
-* Thanks to [toracat](https://www.centos.org/forums/viewtopic.php?t=6490#p30311) on centos.org for this
-
 ```bash
 yum --enablerepo=remi install ImageMagick2
 ```
+
+Thanks to [toracat](https://www.centos.org/forums/viewtopic.php?t=6490#p30311) on centos.org for this

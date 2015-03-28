@@ -133,7 +133,6 @@ configure :development do
   set :site_url, "#{site_url_development}"
   # Reload the browser automatically whenever files change
   activate :livereload
-  #set :server, "thin"
 end
 
 # ========================================================================
@@ -151,13 +150,14 @@ configure :build do
   # Enable cache buster
   activate :asset_hash, :exts => ['.css', '.png', '.jpg', '.gif']
 
-  # Ignore files/dir during build process
+  # Ignore file/dir during build process
   ignore ".git"
   ignore "environment_variables.rb"
   ignore "environment_variables.rb.sample"
   ignore "favicon_template.png"
   ignore "sitemap.yml"
   ignore "sitemap.xml.builder"
+  ignore "css/pygments-css/*"
 
   # Compress and optimise images during build
   # Documentation: https://github.com/plasticine/middleman-imageoptim

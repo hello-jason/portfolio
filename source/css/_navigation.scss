@@ -1,3 +1,7 @@
+.nav-link-active {
+  text-decoration: underline;
+}
+
 #primary-navigation {
   margin-bottom: 0;
   padding: 2.5em 2.05em;
@@ -38,12 +42,12 @@
     a {
       &:hover, &:focus {
         background: none;
-        text-decoration: underline;
+        @extend .nav-link-active;
       }
     }
     &.active {
       a {
-        text-decoration: underline;
+        @extend .nav-link-active;
       }
     }
   }
@@ -60,10 +64,25 @@
   }
 }
 
+// Manual active styles
+body.portfolio {
+  li.nav-item-portfolio {
+    a {
+      @extend .nav-link-active;
+    }
+  }
+}
+body.about {
+  li.nav-item-about {
+    a {
+      @extend .nav-link-active;
+    }
+  }
+}
 body.blog {
   li.nav-item-blog {
     a {
-      text-decoration: underline;
+      @extend .nav-link-active;
     }
   }
 }

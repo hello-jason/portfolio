@@ -62,10 +62,11 @@ html
     body class="#{page_classes} #{current_page.data.body_class}"
   - else
     body class="#{page_classes}"
-      /[if lte IE 8]
-        p.alert.alert-warning
-          | You are using an outdated browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.
-      #wrap
-        header role="banner"
-          = partial "partials/navigation"
-          = yield_content :header
+
+  /[if lte IE 8]
+    p.alert.alert-warning
+      | You are using an outdated browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.
+  #wrap
+    header role="banner"
+      = partial "partials/navigation"
+      = yield_content :header
