@@ -1,7 +1,10 @@
 #article-single {
   @extend .container;
   article {
-    @extend .col-md-9;
+    font-size: 18px;
+    h1 {
+      text-transform: capitalize;
+    }
     time {
       display: block;
     }
@@ -10,8 +13,5 @@
         text-align: center;
       }
     }
-  }
-  aside {
-    @extend .col-md-3;
   }
 }

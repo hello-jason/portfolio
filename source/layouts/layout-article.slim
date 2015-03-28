@@ -7,7 +7,7 @@ section#article-single
       time pubdate="pubdate" datetime="#{current_page.data.date}" Posted #{current_page.data.date}
     hr
     = yield
-  aside
-    |Stuff for the sidebar
+  hr
+  a href="#{url_blog}" &#8617; All articles
 
 = partial "partials/footer"

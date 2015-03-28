@@ -9,9 +9,7 @@ main role="main"
     article
       h1
         a href="#{article.url}" #{article.title}
-      time #{article.date}
-      
-      div.summary
-        p #{article.summary}
+      time pubdate="#{article.date}" datetime="#{article.date}"
+      p #{article.summary}
 
-      a href="#{article.url}" Read more
+      a.more href="#{article.url}" Read more
