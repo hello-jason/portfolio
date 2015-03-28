@@ -45,3 +45,7 @@ hr {
 .clear {
   clear: both;
 }
+
+a:focus {
+  outline: 0;
+}
