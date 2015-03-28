@@ -1,3 +1,9 @@
+body.index {
+  h1 {
+    position: absolute;
+    left: -9999em;
+  }
+}
 // Thumbnail gallery of projects
 #proj-thumbnails {
   @extend .row;
