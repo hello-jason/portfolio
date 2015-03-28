@@ -8,8 +8,6 @@ Yum does not have the latest ImageMagick in its repository; thankfully, the REMI
 
 READMORE
 
-# How to install latest ImageMagick on CentOS
-
 ## Install REMI repository
 
 Visit this resource for [installing REMI](http://www.unixmen.com/install-remi-repository-rhel-centos-scientific-linux-76-x5-x-fedora-201918/) on additional distros.

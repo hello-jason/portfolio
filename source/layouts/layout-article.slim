@@ -1,0 +1,13 @@
+= partial "partials/head"
+
+section#article-single
+  article role="main"
+    h1 #{current_page.data.title}
+    - if current_page.data.date
+      time pubdate="pubdate" datetime="#{current_page.data.date}" Posted #{current_page.data.date}
+    hr
+    = yield
+  aside
+    |Stuff for the sidebar
+
+= partial "partials/footer"

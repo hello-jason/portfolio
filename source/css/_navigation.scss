@@ -48,6 +48,7 @@
     }
   }
 }
+
 #primary-container {
   .nav {
     @media (min-width: $screen-sm-min) {
@@ -56,5 +57,13 @@
     padding-top: .5em;
     @extend .navbar-nav;
     @extend .list-inline;
+  }
+}
+
+body.blog {
+  li.nav-item-blog {
+    a {
+      text-decoration: underline;
+    }
   }
 }

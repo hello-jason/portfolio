@@ -57,7 +57,7 @@ activate :blog do |blog|
   blog.default_extension  = ".md"
   blog.permalink          = "{title}"
   blog.prefix             = "blog"
-  blog.layout             = "layout"
+  blog.layout             = "layout-article"
 end
 
 # Pretty URLs
