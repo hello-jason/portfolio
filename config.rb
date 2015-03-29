@@ -134,8 +134,17 @@ end
 # ========================================================================
 configure :development do
   set :site_url, "#{site_url_development}"
+
   # Reload the browser automatically whenever files change
   activate :livereload
+
+  # Disqus comments
+  activate :disqus do |d|
+    # using a special shortname
+    d.shortname = "hello-jason-dev"
+    # or setting to `nil` will stop Disqus loading
+    # d.shortname = nil
+  end
 end
 
 # ========================================================================
@@ -171,6 +180,12 @@ configure :build do
     options.image_extensions = %w(.png .jpg .gif .svg)
     # Cause image_optim to be in shouty-mode
     options.verbose = false
+  end
+
+  # Disqus comments
+  activate :disqus do |d|
+    # using a different shortname for production builds
+    d.shortname = "hellojason"
   end
 
   # Create favicon and device-specific icons

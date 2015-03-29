@@ -16,6 +16,7 @@ gem "middleman-autoprefixer", "~> 2.4.3"
 gem "middleman-blog"
 gem "redcarpet"
 gem "middleman-rouge"
+gem "middleman-disqus"
 
 # Optimization & minification
 gem "middleman-jquery", "~> 2.1.1"
