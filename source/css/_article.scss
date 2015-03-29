@@ -1,3 +1,8 @@
+time {
+  color: $text-muted;
+  font-size: $font-size-small;
+}
+
 #article-single {
   @extend .container;
   article {
@@ -28,10 +33,6 @@
     }
     .post-summary {
       margin-bottom: 0;
-    }
-    time {
-      color: $text-muted;
-      font-size: $font-size-small;
     }
   }
 }
