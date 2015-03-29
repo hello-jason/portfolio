@@ -1,8 +1,5 @@
-#wrap {
-  @extend .container-fluid;
-}
 section {
-  @extend .row;
+  @extend .clearfix;
 }
 dd {
   margin-bottom: 1.5em;
