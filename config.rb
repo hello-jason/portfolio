@@ -21,7 +21,7 @@ set :images_dir,           "img"
 # Sitemap URLs (use trailing slashes). Create additional variables here
 # for referenceing your pages.
 set :url_home,                       "/"
-set :url_portfolio,                  "/"
+set :url_portfolio,                  "/portfolio/"
 set :url_about,                      "/about/"
 set :url_blog,                       "/blog/"
 set :url_contact,                    "/contact/"
@@ -36,15 +36,36 @@ require "slim"
 # Use relative URLs
 activate :relative_assets
 
-# Pretty URLs
-activate :directory_indexes
-
 # Autoprevixer
 activate :autoprefixer do |config|
   config.browsers = ['last 2 versions', 'Explorer >= 9']
   config.cascade  = false
   config.inline   = false
 end
+
+# Markdown rendering
+set :markdown_engine, :redcarpet
+set :markdown, :fenced_code_blocks => true, :smartypants => true
+
+# Syntax highlighting
+# Documentation: https://github.com/jneen/rouge
+activate :rouge_syntax
+
+# Weblog extension
+# Documentatin: http://middlemanapp.com/basics/blogging/
+Time.zone = "America/Chicago"
+activate :blog do |blog|
+  blog.default_extension    = ".md"
+  blog.permalink            = "{title}"
+  blog.prefix               = "blog"
+  blog.layout               = "layout-article"
+  # Custom template when running `middleman article "Article name"`
+  blog.new_article_template = "source/layouts/article.tt"
+end
+
+# Pretty URLs
+# This must be activated AFTER the blog extension
+activate :directory_indexes
 
 # ========================================================================
 # Helpers
@@ -80,7 +101,7 @@ helpers do
     # thumb_url = "http://placehold.it/500x500"
     thumb_url = "#{images_dir}/thumbnails/#{thumb_img}"
     "<figure>
-      <a href='#{slug}'>
+      <a href='#{url_portfolio}#{slug}'>
         <figcaption>
           <h3>#{title}</h3>
           <span class='year'>#{year}</span>
@@ -115,7 +136,6 @@ configure :development do
   set :site_url, "#{site_url_development}"
   # Reload the browser automatically whenever files change
   activate :livereload
-  #set :server, "thin"
 end
 
 # ========================================================================
@@ -133,13 +153,14 @@ configure :build do
   # Enable cache buster
   activate :asset_hash, :exts => ['.css', '.png', '.jpg', '.gif']
 
-  # Ignore files/dir during build process
+  # Ignore file/dir during build process
   ignore ".git"
   ignore "environment_variables.rb"
   ignore "environment_variables.rb.sample"
   ignore "favicon_template.png"
   ignore "sitemap.yml"
   ignore "sitemap.xml.builder"
+  ignore "article.tt"
 
   # Compress and optimise images during build
   # Documentation: https://github.com/plasticine/middleman-imageoptim

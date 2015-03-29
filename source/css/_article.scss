@@ -1,0 +1,38 @@
+time {
+  color: $text-muted;
+  font-size: $font-size-small;
+}
+
+#article-single {
+  @extend .container;
+  article {
+    font-size: 18px;
+    h1 {
+      text-transform: capitalize;
+    }
+    time {
+      display: block;
+    }
+    @media screen and (max-width: $screen-sm-min) {
+      h1, time {
+        text-align: center;
+      }
+    }
+  }
+}
+
+#article-list {
+  padding: 0 $jason-space;
+  article {
+    margin-top: ($jason-space * 1.5);
+    &:first-child {
+      margin-top: 0;
+    }
+    .post-title {
+      font-size: $font-size-h2;
+    }
+    .post-summary {
+      margin-bottom: 0;
+    }
+  }
+}

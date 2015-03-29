@@ -6,7 +6,6 @@ body.index {
 }
 // Thumbnail gallery of projects
 #proj-thumbnails {
-  @extend .row;
   figure {
     @extend .col-sm-6;
     @extend .col-md-4;
@@ -76,8 +75,8 @@ body.index {
       @extend .img-responsive;
       margin: 0 auto;
     }
-    h2 {
-      
+    h1 {
+      text-transform: uppercase;
     }
   }
   aside {

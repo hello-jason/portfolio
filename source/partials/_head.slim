@@ -1,0 +1,74 @@
+doctype html
+/[if lt IE 7] <html class="no-js lt-ie9 lt-ie8 lt-ie7">
+/[if IE 7] <html class="no-js lt-ie9 lt-ie8">
+/[if IE 8] <html class="no-js lt-ie9">
+/ [if gt IE 8]><!
+html
+  / <![endif]
+  head
+    meta charset="UTF-8"
+    meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible"
+    meta content="width=device-width" name="viewport"
+    meta content="index,follow" name="robots"
+    - if current_page.data.redirect
+      meta http-equiv="refresh" content="0;URL='#{site_url}#{current_page.data.redirect}'"
+    // Favicons
+    link href="apple-touch-icon-152x152-precomposed.png" rel="apple-touch-icon-precomposed" sizes="152x152"
+    link href="apple-touch-icon-144x144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144"
+    link href="apple-touch-icon-114x114-precomposed.png" rel="apple-touch-icon-precomposed" sizes="114x114"
+    link href="apple-touch-icon-72x72-precomposed.png" rel="apple-touch-icon-precomposed" sizes="72x72"
+    link href="apple-touch-icon-precomposed.png" rel="apple-touch-icon-precomposed"
+    link href="favicon.png" rel="shortcut icon"
+    link href="favicon.ico" rel="icon" type="image/ico"
+
+    markdown:
+      <!--
+       __  __     ______     __         __         ______   
+      /\ \_\ \   /\  ___\   /\ \       /\ \       /\  __ \  
+      \ \  __ \  \ \  __\   \ \ \____  \ \ \____  \ \ \/\ \ 
+       \ \_\ \_\  \ \_____\  \ \_____\  \ \_____\  \ \_____\
+        \/_/\/_/   \/_____/   \/_____/   \/_____/   \/_____/
+                __     ______     ______     ______     __   __    
+               /\ \   /\  __ \   /\  ___\   /\  __ \   /\ "-.\ \   
+              _\_\ \  \ \  __ \  \ \___  \  \ \ \/\ \  \ \ \-.  \  
+             /\_____\  \ \_\ \_\  \/\_____\  \ \_____\  \ \_\\"\_\ 
+             \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/ \/_/ 
+      -->
+
+    // Check if page is overriding title in frontmatter, otherwise use default set in config.rb
+    - if current_page.data.title
+      title #{site_title} / #{current_page.data.title}
+    - else
+      title #{site_title}
+
+    // Check if page is overriding meta description in frontmatter, otherwise use default set in config.rb
+    - if current_page.data.meta_description
+      meta content="#{current_page.data.meta_description}" name="description"
+    - else
+      meta content="#{site_description}" name="description"
+    // Stylesheet
+    = stylesheet_link_tag "main"
+    link href="#{site_url+current_page.url}" rel="canonical"
+    // Google Analytics
+    javascript:
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-48926813-1', 'auto');
+      ga('send', 'pageview');
+
+  // Check if page is passing class for body
+  - if current_page.data.body_class
+    body class="#{page_classes} #{current_page.data.body_class}"
+  - else
+    body class="#{page_classes}"
+
+  /[if lte IE 8]
+    p.alert.alert-warning
+      | You are using an outdated browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.
+  #wrap
+    header role="banner"
+      = partial "partials/navigation"
+      = yield_content :header

@@ -12,6 +12,11 @@ gem "middleman-favicon-maker", "~> 3.7"
 gem "slim", "~> 3.0.3"
 gem "middleman-autoprefixer", "~> 2.4.3"
 
+# Blogging
+gem "middleman-blog"
+gem "redcarpet"
+gem "middleman-rouge"
+
 # Optimization & minification
 gem "middleman-jquery", "~> 2.1.1"
 gem "middleman-imageoptim", "~> 0.2.0"
