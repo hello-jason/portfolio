@@ -21,7 +21,7 @@ set :images_dir,           "img"
 # Sitemap URLs (use trailing slashes). Create additional variables here
 # for referenceing your pages.
 set :url_home,                       "/"
-set :url_portfolio,                  "/"
+set :url_portfolio,                  "/portfolio/"
 set :url_about,                      "/about/"
 set :url_blog,                       "/blog/"
 set :url_contact,                    "/contact/"
@@ -53,11 +53,14 @@ activate :rouge_syntax
 
 # Weblog extension
 # Documentatin: http://middlemanapp.com/basics/blogging/
+Time.zone = "America/Chicago"
 activate :blog do |blog|
-  blog.default_extension  = ".md"
-  blog.permalink          = "{title}"
-  blog.prefix             = "blog"
-  blog.layout             = "layout-article"
+  blog.default_extension    = ".md"
+  blog.permalink            = "{title}"
+  blog.prefix               = "blog"
+  blog.layout               = "layout-article"
+  # Custom template when running `middleman article "Article name"`
+  blog.new_article_template = "source/layouts/article.tt"
 end
 
 # Pretty URLs
@@ -98,7 +101,7 @@ helpers do
     # thumb_url = "http://placehold.it/500x500"
     thumb_url = "#{images_dir}/thumbnails/#{thumb_img}"
     "<figure>
-      <a href='#{slug}'>
+      <a href='#{url_portfolio}#{slug}'>
         <figcaption>
           <h3>#{title}</h3>
           <span class='year'>#{year}</span>
@@ -157,7 +160,7 @@ configure :build do
   ignore "favicon_template.png"
   ignore "sitemap.yml"
   ignore "sitemap.xml.builder"
-  ignore "css/pygments-css/*"
+  ignore "article.tt"
 
   # Compress and optimise images during build
   # Documentation: https://github.com/plasticine/middleman-imageoptim

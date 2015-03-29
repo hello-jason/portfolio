@@ -1,15 +1,15 @@
 ---
-title: Blog
+title: Blog Archive
 ---
 
 main role="main"
-  h1 Blog
-  // Loop through articles
-  - blog.articles.each do |article|
-    article
-      h1
-        a href="#{article.url}" #{article.title}
-      time pubdate="#{article.date}" datetime="#{article.date}"
-      p #{article.summary}
-
-      a.more href="#{article.url}" Read more
+  section#article-list
+    h1 Blog Archive
+    // Loop through articles
+    - blog.articles.each do |article|
+      article
+        h1.post-title
+          a href="#{article.url}" #{article.title}
+        - if article.data.article_summary
+          p.post-summary #{article.data.article_summary}
+        time pubdate="pubdate" datetime="#{article.date}" Posted #{article.date}
