@@ -14,9 +14,12 @@ set :site_title,           "Hello Jason"
 set :site_description,     "Design and development portfolio of Jason Cross"
 set :site_url_production,  ENV['site_url_production']
 set :site_url_development, ENV['site_url_development']
-set :css_dir,              "css"
-set :js_dir,               "js"
-set :images_dir,           "img"
+
+# Set asset directories
+set :css_dir,              "assets/css"
+set :js_dir,               "assets/js"
+set :images_dir,           "assets/img"
+set :fonts_dir,            "assets/fonts"
 
 # Sitemap URLs (use trailing slashes). Create additional variables here
 # for referenceing your pages.
