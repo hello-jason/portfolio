@@ -163,11 +163,11 @@ configure :build do
   ignore "sitemap.xml.builder"
   ignore "article.tt"
 
-
+  
   set :site_url, "#{site_url_production}"
-  set :sass, line_comments: false, style: :compressed
 
   # Optimization
+  set :sass, line_comments: false, style: :compressed
   activate :minify_css
   # activate :minify_html
   activate :minify_javascript
