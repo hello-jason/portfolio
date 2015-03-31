@@ -9,9 +9,17 @@ html
     meta charset="UTF-8"
     meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible"
     meta content="width=device-width" name="viewport"
-    meta content="index,follow" name="robots"
+
+    // Check if page specifies noindex in frontmatter
+    - if current_page.data.noindex
+      meta content="noindex,follow" name="robots"
+    - else
+      meta content="index,follow" name="robots"
+
+    // Check if page should redirect in frontmatter
     - if current_page.data.redirect
       meta http-equiv="refresh" content="0;URL='#{site_url}#{current_page.data.redirect}'"
+
     // Favicons
     link href="apple-touch-icon-152x152-precomposed.png" rel="apple-touch-icon-precomposed" sizes="152x152"
     link href="apple-touch-icon-144x144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144"
