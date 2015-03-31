@@ -30,7 +30,6 @@ set :url_blog,                       "/blog/"
 set :url_contact,                    "/contact/"
 
 # Sitemap XML
-require "builder"
 page "/sitemap.xml", :layout => false
 
 # Slim template engine
