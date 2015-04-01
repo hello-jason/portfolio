@@ -1,5 +1,5 @@
 ---
 title: <%= @title %>
-date: <%= @date.strftime('%F %R %Z') %>
+date: <%= @date.strftime('%Y-%m-%d') %>
 article_summary: 
 ---

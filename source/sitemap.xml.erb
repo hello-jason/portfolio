@@ -9,7 +9,7 @@
       <% # We are using directory indexes, so let's remove index.html from every page %>
       <loc><%= site_url %>/<%= p.destination_path.gsub('/index.html','') %></loc>
       <% # Show last modified date, if set in frontmatter %>
-      <%= p.data.date ? '<lastmod>' + p.data.date + '</lastmod>' : '' %>
+      <%= p.data.date ? '<lastmod>' + p.date.strftime('%Y-%m-%d') + '</lastmod>' : '' %>
       <% # Override change frequency, if set in frontmatter %>
       <changefreq><%= p.data.changefreq ? p.data.changefreq : 'monthly' %></changefreq>
       <% # Override priority, if set in frontmatter %>
