@@ -21,7 +21,7 @@ gem "middleman-disqus"
 # Optimization & minification
 gem "middleman-jquery", "~> 2.1.1"
 gem "middleman-imageoptim", "~> 0.2.0"
-gem "image_optim_pack", "~> 0.2.1.20150310"
+gem "image_optim_pack", "~> 0.2.1.20150327"
 
 # Development
 gem "middleman-livereload", "~> 3.4.2"
