@@ -22,7 +22,7 @@ set :images_dir,           "assets/img"
 set :fonts_dir,            "assets/fonts"
 
 # Sitemap URLs (use trailing slashes). Create additional variables here
-# for referenceing your pages.
+# for referencing your pages.
 set :url_home,                       "/"
 set :url_portfolio,                  "/portfolio/"
 set :url_about,                      "/about/"
@@ -38,7 +38,7 @@ require "slim"
 # Use relative URLs
 activate :relative_assets
 
-# Autoprevixer
+# Autoprefixer
 activate :autoprefixer do |config|
   config.browsers = ['last 2 versions', 'Explorer >= 9']
   config.cascade  = false
@@ -100,7 +100,6 @@ helpers do
 
   # Project thumbnails
   def project_thumb(title, slug, thumb_img, year)
-    # thumb_url = "http://placehold.it/500x500"
     thumb_url = "#{images_dir}/thumbnails/#{thumb_img}"
     "<figure>
       <a href='#{url_portfolio}#{slug}'>
@@ -224,13 +223,31 @@ end
 
 # ========================================================================
 # Deploy-specific configuration
-# Documentation: https://github.com/hello-jason/middleman-deploy#git-eg-github-pages
+# Documentation: https://github.com/middleman-contrib/middleman-deploy
 # ========================================================================
-activate :deploy do |deploy|
-  deploy.build_before = true
-  deploy.method = :git
-  deploy.remote   = 'origin'
-  deploy.branch   = 'gh-pages'
-  deploy.strategy = :force_push
-  # deploy.commit_message = 'custom-message'      # commit message (can be empty), default: Automated commit at `timestamp` by middleman-deploy `version`
-end
+case ENV['TARGET'].to_s.downcase
+  #
+  # rake deploy:production
+  #
+  when 'production'
+    activate :deploy do |deploy|
+      deploy.build_before = false
+      deploy.method = :git
+      deploy.remote   = 'origin'
+      deploy.branch   = 'gh-pages'
+      deploy.strategy = :force_push
+      deploy.commit_message = Automated commit at `timestamp`
+    end
+  #
+  # rake deploy:staging
+  #
+  when 'staging'
+    activate :deploy do |deploy|
+      deploy.build_before = false
+      deploy.method = :git
+      deploy.remote   = 'origin'
+      deploy.branch   = 'staging'
+      deploy.strategy = :force_push
+      deploy.commit_message = Automated commit at `timestamp`
+    end
+  end
