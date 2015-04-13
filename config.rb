@@ -230,7 +230,7 @@ activate :deploy do |deploy|
   deploy.build_before = true
   deploy.method = :git
   deploy.remote   = 'origin'
-  deploy.branch   = 'gh-pages'
+  deploy.branch   = 'test-gh-pages'
   deploy.strategy = :force_push
   # deploy.commit_message = 'custom-message'      # commit message (can be empty), default: Automated commit at `timestamp` by middleman-deploy `version`
 end
