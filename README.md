@@ -46,12 +46,18 @@ rbenv local 2.2.0
 ```
 
 * Install JavaScript runtime
-You need a JS runtime. For [Nodejs](http://nodejs.org/), I suggest installing via [nvm](https://github.com/creationix/nvm). For [therubyracer](https://github.com/cowboyd/therubyracer), add `gem "therubyracer": "x.x.x"` to your Gemfile, then run `bundle install`
+You need a JS runtime. I suggest installing [Nodejs](http://nodejs.org/) via [node version manager (nvm)](https://github.com/creationix/nvm).
 
-* Install dependencies
+* Install gems
 
 ```
 gem install bundler && bundle install
+```
+
+* Install node packages
+
+```
+npm install
 ```
 
 * Copy `source/environment_variables.rb.sample` to `source/environment_variables.rb`
@@ -86,10 +92,26 @@ The following options are available in frontmatter:
 
 ## Deploying to Github Pages
 
-Simplified deployments courtesy of [middleman-deploy](https://github.com/middleman-contrib/middleman-deploy)
-* Commit and push the project on `master` branch
-* Run deploy command
+Simplified deployments courtesy of [middleman-deploy](https://github.com/middleman-contrib/middleman-deploy) and called via `rake tasks`
+* Run the appropriate rake task, which will deploy the `current branch`
+
+**Local**
+Builds project and runs uncss. Stays local.
 
 ```
-bundle exec middleman deploy
+rake deploy:local
+```
+
+**Staging**
+Builds project, runs uncss, then pushes to branch `staging`.
+
+```
+rake deploy:staging
+```
+
+**Production**
+Builds project, runs uncss, then pushes to branch `gh-pages`
+
+```
+rake deploy:production
 ```

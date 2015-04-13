@@ -1,7 +1,25 @@
-require "rake"
+namespace :deploy do
+  
+  def deploy(env)
+    puts "Deploying to #{env}"
+    system "TARGET=#{env} bundle exec middleman deploy"
+  end
 
-task :deploy do
-  sh "middleman build"
-  sh "gulp"
-  sh "bundle exec middleman deploy"
+  task :local do
+    sh "middleman build"
+    sh "gulp buildcss"
+  end
+
+  task :staging do
+    sh "middleman build"
+    sh "gulp buildcss"
+    deploy :staging
+  end
+
+  task :production do
+    sh "middleman build"
+    sh "gulp buildcss"
+    deploy :production
+  end
+
 end

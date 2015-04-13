@@ -23,5 +23,5 @@ gulp.task('gzip', function() {
 });
 
 // Default task
-// run `gulp` in CLI
-gulp.task('default', ['uncss', 'gzip']);
+// run `gulp buildcss` in CLI
+gulp.task('buildcss', ['uncss', 'gzip']);
