@@ -1,7 +1,7 @@
-var gulp   = require('gulp');
-var uncss  = require('gulp-uncss');
-var csso   = require('gulp-csso');
-var gzip   = require('gulp-gzip');
+var gulp   = require('gulp'); // core gulp
+var uncss  = require('gulp-uncss'); // removes unused css
+var csso   = require('gulp-csso'); // minify css
+var gzip   = require('gulp-gzip'); // gzip compression
 
 gulp.task('uncss', function() {
   return gulp.src('build/assets/css/**/*.css')
@@ -23,4 +23,5 @@ gulp.task('gzip', function() {
 });
 
 // Default task
+// run `gulp` in CLI
 gulp.task('default', ['uncss', 'gzip']);
