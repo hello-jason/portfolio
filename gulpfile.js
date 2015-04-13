@@ -1,16 +1,26 @@
 var gulp   = require('gulp');
 var uncss  = require('gulp-uncss');
-var sass   = require('gulp-sass');
-var concat = require('gulp-concat');
 var csso   = require('gulp-csso');
+var gzip   = require('gulp-gzip');
 
-gulp.task('default', function() {
+gulp.task('uncss', function() {
   return gulp.src('build/assets/css/**/*.css')
-    .pipe(sass())
-    .pipe(concat('main.css'))
     .pipe(uncss({
         html: ['build/**/*.html']
     }))
     .pipe(csso())
-    .pipe(gulp.dest('./out'));
+    .pipe(gulp.dest('./build/assets/css'));
 });
+
+gulp.task('gzip', function() {
+  return gulp.src('build/assets/css/**/*.css')
+    .pipe(uncss({
+        html: ['build/**/*.html']
+    }))
+    .pipe(csso())
+    .pipe(gzip())
+    .pipe(gulp.dest('./build/assets/css'));
+});
+
+// Default task
+gulp.task('default', ['uncss', 'gzip']);
