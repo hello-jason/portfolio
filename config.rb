@@ -108,7 +108,8 @@ helpers do
           <span class='year'>#{year}</span>
           <span class='view'>&mdash;view&mdash;
         </figcaption>
-        <img src='#{thumb_url}' alt='#{title}'>
+        <img data-layzr='#{thumb_url}' alt='#{title}'>
+        <noscript><img src='#{thumb_url}' alt='#{title}'></noscript>
       </a>
     </figure>"
   end
