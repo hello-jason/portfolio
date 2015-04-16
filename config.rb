@@ -99,8 +99,8 @@ helpers do
   end
 
   # Project thumbnails
-  def project_thumb(title, slug, thumb_img, year)
-    thumb_url = "#{images_dir}/thumbnails/#{thumb_img}"
+  def project_thumb(title, slug, image, year)
+    image_url = "/#{images_dir}/thumbnails/#{image}"
     "<figure>
       <a href='#{url_portfolio}#{slug}'>
         <figcaption>
@@ -108,10 +108,17 @@ helpers do
           <span class='year'>#{year}</span>
           <span class='view'>&mdash;view&mdash;
         </figcaption>
-        <img data-layzr='#{thumb_url}' alt='#{title}'>
-        <noscript><img src='#{thumb_url}' alt='#{title}'></noscript>
+        <img data-layzr='#{image_url}' alt='#{title}'>
+        <noscript><img src='#{image_url}' alt='#{title}'></noscript>
       </a>
     </figure>"
+  end
+
+  # Single project images
+  def project_image(title, image)
+    image_url = "/#{images_dir}/projects/#{image}"
+    "<img data-layzr='#{image_url}' alt='#{title}'>
+    <noscript><img src='#{image_url}' alt='#{title}'></noscript>"
   end
 
   # Project details
