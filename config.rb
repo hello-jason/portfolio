@@ -236,7 +236,6 @@ case ENV['TARGET'].to_s.downcase
       deploy.remote   = 'origin'
       deploy.branch   = 'gh-pages'
       deploy.strategy = :force_push
-      deploy.commit_message = Automated commit at `timestamp`
     end
   #
   # rake deploy:staging
@@ -248,6 +247,5 @@ case ENV['TARGET'].to_s.downcase
       deploy.remote   = 'origin'
       deploy.branch   = 'staging'
       deploy.strategy = :force_push
-      deploy.commit_message = Automated commit at `timestamp`
     end
   end
