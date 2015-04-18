@@ -141,6 +141,18 @@ end
 # ========================================================================
 # Development-specific configuration
 # ========================================================================
+
+# Add layzr's directory to sprockets asset path
+after_configuration do
+
+  @layzr_config = JSON.parse(IO.read("#{root}/node_modules/layzr.js"))
+  sprockets.append_path File.join "#{root}", @layzr_config["directory"]
+
+end
+
+# ========================================================================
+# Development-specific configuration
+# ========================================================================
 configure :development do
   set :site_url, "#{site_url_development}"
 
