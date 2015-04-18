@@ -192,7 +192,7 @@ PLATFORMS
 DEPENDENCIES
   bootstrap-sass (~> 3.3.3)
   font-awesome-middleman (~> 4.2.3)
-  image_optim_pack (~> 0.2.1.20150327)
+  image_optim_pack (~> 0.2.1.20150411)
   middleman (= 3.3.10)
   middleman-autoprefixer (~> 2.4.3)
   middleman-blog
