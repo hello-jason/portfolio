@@ -171,8 +171,8 @@ configure :build do
   activate :minify_javascript
   activate :gzip
 
-  # Enable cache buster
-  activate :asset_hash, :exts => ['.css', '.png', '.jpg', '.gif']
+  # Cache buster
+  # activate :asset_hash, :exts => ['.css', '.png', '.jpg', '.gif']
 
 
   # Compress and optimise images during build
