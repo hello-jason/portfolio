@@ -38,6 +38,9 @@ require "slim"
 # Use relative URLs
 activate :relative_assets
 
+# Add layzr to sprockets asset path
+sprockets.append_path File.join root, 'node_modules'
+
 # Autoprefixer
 activate :autoprefixer do |config|
   config.browsers = ['last 2 versions', 'Explorer >= 9']
@@ -53,8 +56,10 @@ set :markdown, :fenced_code_blocks => true, :smartypants => true
 # Documentation: https://github.com/jneen/rouge
 activate :rouge_syntax
 
+# ========================================================================
 # Weblog extension
 # Documentatin: http://middlemanapp.com/basics/blogging/
+# ========================================================================
 Time.zone = "America/Chicago"
 activate :blog do |blog|
   blog.default_extension    = ".md"
@@ -99,8 +104,8 @@ helpers do
   end
 
   # Project thumbnails
-  def project_thumb(title, slug, thumb_img, year)
-    thumb_url = "#{images_dir}/thumbnails/#{thumb_img}"
+  def project_thumb(title, slug, image, year)
+    image_url = "/#{images_dir}/thumbnails/#{image}"
     "<figure>
       <a href='#{url_portfolio}#{slug}'>
         <figcaption>
@@ -108,9 +113,17 @@ helpers do
           <span class='year'>#{year}</span>
           <span class='view'>&mdash;view&mdash;
         </figcaption>
-        <img src='#{thumb_url}' alt='#{title}'>
+        <img data-layzr='#{image_url}' alt='#{title}'>
+        <noscript><img src='#{image_url}' alt='#{title}'></noscript>
       </a>
     </figure>"
+  end
+
+  # Single project images
+  def project_image(title, image)
+    image_url = "/#{images_dir}/projects/#{image}"
+    "<img data-layzr='#{image_url}' alt='#{title}'>
+    <noscript><img src='#{image_url}' alt='#{title}'></noscript>"
   end
 
   # Project details
@@ -161,7 +174,6 @@ configure :build do
   ignore "sitemap.xml.builder"
   ignore "article.tt"
 
-  
   set :site_url, "#{site_url_production}"
 
   # Optimization
@@ -171,9 +183,8 @@ configure :build do
   activate :minify_javascript
   activate :gzip
 
-  # Enable cache buster
-  activate :asset_hash, :exts => ['.css', '.png', '.jpg', '.gif']
-
+  # Cache buster
+  # activate :asset_hash, :exts => ['.css', '.png', '.jpg', '.gif']
 
   # Compress and optimise images during build
   # Documentation: https://github.com/plasticine/middleman-imageoptim
@@ -236,7 +247,6 @@ case ENV['TARGET'].to_s.downcase
       deploy.remote   = 'origin'
       deploy.branch   = 'gh-pages'
       deploy.strategy = :force_push
-      deploy.commit_message = Automated commit at `timestamp`
     end
   #
   # rake deploy:staging
@@ -248,6 +258,5 @@ case ENV['TARGET'].to_s.downcase
       deploy.remote   = 'origin'
       deploy.branch   = 'staging'
       deploy.strategy = :force_push
-      deploy.commit_message = Automated commit at `timestamp`
     end
   end
