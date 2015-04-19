@@ -1,3 +1,5 @@
+//= require layzr.js/dist/layzr
+
 var layzr = new Layzr({
   attr: 'data-layzr',
   retinaAttr: 'data-layzr-retina',

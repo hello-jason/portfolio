@@ -38,6 +38,9 @@ require "slim"
 # Use relative URLs
 activate :relative_assets
 
+# Add layzr to sprockets asset path
+sprockets.append_path File.join root, 'node_modules'
+
 # Autoprefixer
 activate :autoprefixer do |config|
   config.browsers = ['last 2 versions', 'Explorer >= 9']
@@ -53,8 +56,10 @@ set :markdown, :fenced_code_blocks => true, :smartypants => true
 # Documentation: https://github.com/jneen/rouge
 activate :rouge_syntax
 
+# ========================================================================
 # Weblog extension
 # Documentatin: http://middlemanapp.com/basics/blogging/
+# ========================================================================
 Time.zone = "America/Chicago"
 activate :blog do |blog|
   blog.default_extension    = ".md"
@@ -169,7 +174,6 @@ configure :build do
   ignore "sitemap.xml.builder"
   ignore "article.tt"
 
-  
   set :site_url, "#{site_url_production}"
 
   # Optimization
@@ -181,7 +185,6 @@ configure :build do
 
   # Cache buster
   # activate :asset_hash, :exts => ['.css', '.png', '.jpg', '.gif']
-
 
   # Compress and optimise images during build
   # Documentation: https://github.com/plasticine/middleman-imageoptim

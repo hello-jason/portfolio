@@ -20,6 +20,7 @@
     "gulp": "",
     "gulp-uncss": "",
     "gulp-csso": "",
-    "gulp-gzip": ""
+    "gulp-gzip": "",
+    "layzr.js": ""
   }
 }
