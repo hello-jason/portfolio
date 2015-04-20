@@ -93,6 +93,7 @@ The following options are available in frontmatter:
 ## Deploying to Github Pages
 
 Simplified deployments courtesy of [middleman-deploy](https://github.com/middleman-contrib/middleman-deploy) and called via `rake tasks`
+
 * Run the appropriate rake task, which will deploy the `current branch`
 
 **Local**

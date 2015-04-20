@@ -9,19 +9,10 @@ gulp.task('uncss', function() {
         html: ['build/**/*.html']
     }))
     .pipe(csso())
-    .pipe(gulp.dest('./build/assets/css'));
-});
-
-gulp.task('gzip', function() {
-  return gulp.src('build/assets/css/**/*.css')
-    .pipe(uncss({
-        html: ['build/**/*.html']
-    }))
-    .pipe(csso())
+    .pipe(gulp.dest('./build/assets/css'))
     .pipe(gzip())
     .pipe(gulp.dest('./build/assets/css'));
 });
 
-// Default task
-// run `gulp buildcss` in CLI
-gulp.task('buildcss', ['uncss', 'gzip']);
+// Scan site, remove unused css, minifiy css, gzip css
+gulp.task('buildcss', ['uncss']);
