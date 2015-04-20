@@ -71,7 +71,9 @@ Once complete, run `npm install` in your project's **root directory**, which wil
 
 Create a file named `gulpfile.js` in the project's **root directory** with the following code.
 
-These gulp tasks will grab the stylesheet built by Middleman, scan all html pages available, remove all unused CSS selectors, minify the CSS, then save the CSS with the same file name. 
+These gulp tasks will grab the stylesheet built by Middleman, scan all html pages available, remove all unused CSS selectors, minify the CSS, then save the CSS with the same file name.
+
+**Note**, you may need to change some paths below so gulp can find your build's css directory.
 
 ```javascript
 // gulpfile.js
@@ -104,7 +106,7 @@ gulp.task('buildcss', ['uncss']);
 
 ### 3. Deployments
 
-I use the [`middleman-deploy`](https://github.com/middleman-contrib/middleman-deploy) gem to deploy to Github (it also supports rsync, ftp). If you use this, or want to add it, add the gem to your Gemfile and configure it in `config.rb` with your own staging and production locations.
+I use the [middleman-deploy](https://github.com/middleman-contrib/middleman-deploy) gem to deploy to Github (it also supports rsync, ftp). If you use this, or want to add it, add the gem to your Gemfile and configure it in `config.rb` with your own staging and production locations. If you don't use this, skip this step.
 
 **Note**, keep the setting `deploy.build_before = false`. Will build the project in a rake task, run uncss on that, then let middleman-deploy push the site out; letting middleman-deploy build the site again will overwrite our optimized stylesheet.
 
@@ -181,9 +183,16 @@ end
 
 ```
 
+---
+
+## How to use all this
+
+### 1. Use the rake tasks
+
 Run the appropriate rake task, which will deploy the `current branch`
 
 **Local**
+
 Builds project and runs uncss. Stays local.
 
 ```
@@ -191,18 +200,36 @@ rake deploy:local
 ```
 
 **Staging**
-Builds project, runs uncss, then deployes to `staging`.
+
+Builds project, runs uncss, then deploys to `staging`.
 
 ```
 rake deploy:staging
 ```
 
 **Production**
+
 Builds project, runs uncss, then deploys to `production`
 
 ```
 rake deploy:production
 ```
+
+### 2. No middleman-deploy
+
+If you don't use the middleman-deploy gem, you can skip the Rakefile and build your project as normal...
+
+```bash
+middleman build
+```
+
+...then run uncss gulp task
+
+```bash
+gulp buildcss
+```
+
+---
 
 ## Results
 
