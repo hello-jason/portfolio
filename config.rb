@@ -141,6 +141,17 @@ helpers do
     <hr>"
   end
 
+  # Image gallery
+  def image_gallery(image, section, title="")
+    # = image_gallery "car.jpg" "cars" "Nice car!"
+    full_image_url = "/#{images_dir}/#{section}/#{image}"
+    thumb_image_url = "/#{images_dir}/#{section}/thumbs/thumbs_#{image}"
+    "<a href='#{full_image_url}'>
+      <img src='#{thumb_image_url}' alt='#{title}' class='img-thumbnail' />
+    </a>
+    "
+  end
+
 end
 
 # ========================================================================
