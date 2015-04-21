@@ -1,5 +1,5 @@
 ---
-title: Remove unused CSS during Middleman build
+title: Remove unused CSS from Middleman before deploying
 date: 2015-04-19 15:24 CDT
 article_summary: Remove all unused CSS from your stylesheets, during the build process, before deploying your Middleman site.
 ---
@@ -8,17 +8,15 @@ article_summary: Remove all unused CSS from your stylesheets, during the build p
 
 ## Why remove unused CSS?
 
-My craving stems from using the Bootstrap framework. It's a great tool that I trust for client projects, and it makes ongoing maintenance easier when switching between those projects. But, not every project needs everything Bootstrap offers.
+My craving stems from using the Bootstrap framework. It's a great package that I trust for client projects, and it makes ongoing maintenance easier when switching between those projects. But Bootstrap is very robust, and I often don't need all of its components.
+
+This article explains how to inject a CSS optimization before a Middleman project is deployed.
 
 ## Integrating with Middleman
 
-I decided to use [uncss](https://github.com/giakki/uncss) for automated unused CSS removal, but the title of this article is somewhat misleading. Middleman's included **build** function does exactly that&mdash;it builds your project. This article explains how to inject an optimization process after building and before deploying.
+Rather than mucking with my already-working build and deploy processes, I opted to use [gulp-uncss](https://github.com/ben-eb/gulp-uncss) for automatic removal of unused CSS. This introduces a node/npm dependency to my project and adds a gulp step to my deployment process, but the extra steps are circumvented with simple rake tasks. The benefits of setting this up are completely worth it to me.
 
-There may be a way to squeeze [Deadweight](https://github.com/imedo/deadweight) into Middleman's asset pipeline (sprockets) and have it remove unused CSS, but that's deeper than I wanted to go. Plus, uncss is already awesome and I can integrate that without mucking with my build and deploy processes.
-
-I decided the simplest way to integrate uncss was with the [gulp-uncss](https://github.com/ben-eb/gulp-uncss) package. This introduces a node/npm dependency to my project and adds a gulp step to my deployment process. However, the extra steps are easily circumvented with a rake task and the benefits are completely worth it to me.
-
-This guide will cover 4 key components. Click to jump to that section.
+This guide will cover 4 basic steps, and you'll need to create 3 files. Click a link to jump to that section.
 
 1. [npm packages](#section-npm) - manages dependencies
 1. [gulp tasks](#section-gulp) - scans site and removes unused css
@@ -33,7 +31,7 @@ This guide will cover 4 key components. Click to jump to that section.
 
 If you **already have a package.json** with other packages, add the **devDependencies** items from the example below.
 
-If you **do not have a package.json**, run `npm init` (requires [node](https://nodejs.org/download/)) in the **root directory** of your project. The walk-through will generate a package.json file, then you can add the **devDependencies** section from the example below.
+If you **do not have a package.json**, run `npm init` (requires [nodejs](https://nodejs.org/download/)) in the **root directory** of your project. The walk-through will generate a package.json file, then you can add the **devDependencies** section from the example below.
 
 ```json
 {
@@ -71,7 +69,7 @@ Once complete, run `npm install` in your project's **root directory**, which wil
 
 Create a file named `gulpfile.js` in the project's **root directory** with the following code.
 
-These gulp tasks will grab the stylesheet built by Middleman, scan all html pages available, remove all unused CSS selectors, minify the CSS, then save the CSS with the same file name.
+These gulp tasks will grab the stylesheet built by Middleman, scan all html pages, remove all unused CSS selectors, minify the CSS, then save the CSS with its original file name.
 
 **Note**, you may need to change some paths below so gulp can find your build's css directory.
 
@@ -106,9 +104,9 @@ gulp.task('buildcss', ['uncss']);
 
 ### 3. Deployments
 
-I use the [middleman-deploy](https://github.com/middleman-contrib/middleman-deploy) gem to deploy to Github (it also supports rsync, ftp). If you use this, or want to add it, add the gem to your Gemfile and configure it in `config.rb` with your own staging and production locations. If you don't use this, skip this step.
+I use the [middleman-deploy](https://github.com/middleman-contrib/middleman-deploy) gem to deploy to Github (it also supports rsync, ftp, and sftp). Add this gem to your Gemfile and/or configure it in `config.rb` with your own staging and production locations. If you don't use this, skip this step.
 
-**Note**, keep the setting `deploy.build_before = false`. Will build the project in a rake task, run uncss on that, then let middleman-deploy push the site out; letting middleman-deploy build the site again will overwrite our optimized stylesheet.
+**Note**, keep the setting `deploy.build_before = false`, which tells middleman-deploy to not build the site before running its deploy sequence. Instead, we will let Middleman itself build the project, then run uncss on that, then use middleman-deploy just to push the site out; letting middleman-deploy build the site again will overwrite our optimized stylesheet.
 
 ```ruby
 # config.rb
@@ -146,11 +144,11 @@ case ENV['TARGET'].to_s.downcase
 
 ### 4. Rake tasks
 
-A few rake commands will let us add uncss to the deployment cycle, specifically **after** building and **before** deploying.
+This is where everything comes together. A few rake commands will let us add uncss to the deployment cycle, specifically **after** building and **before** deploying. Create a file named `Rakefile` in the project's **root directory** with the code below.
 
-Create a file named `Rakefile` in the project's **root directory** with the code.
+Our rake tasks will just run a few cli commands for us; nothing fancy here. We want Middleman to build the site, uncss to optimize and minify the CSS, then middleman-deploy to deploy to the web server.
 
-These rake tasks simply run shell commands on your behalf, which 
+**Note**, skip the Rakefile if you are not using middleman-deploy (or some other automated deployment method).
 
 ```rakefile
 # Rakefile
@@ -187,9 +185,9 @@ end
 
 ## How to use all this
 
-### 1. Use the rake tasks
+### Option 1. Use the rake tasks
 
-Run the appropriate rake task, which will deploy the `current branch`
+Run the appropriate rake task, which will deploy the `current branch` to the appropriate place (using middleman-deploy configuration in config.rb).
 
 **Local**
 
@@ -215,7 +213,7 @@ Builds project, runs uncss, then deploys to `production`
 rake deploy:production
 ```
 
-### 2. No middleman-deploy
+### Option 2. No middleman-deploy
 
 If you don't use the middleman-deploy gem, you can skip the Rakefile and build your project as normal...
 
@@ -223,7 +221,7 @@ If you don't use the middleman-deploy gem, you can skip the Rakefile and build y
 middleman build
 ```
 
-...then run uncss gulp task
+...then run the uncss gulp task
 
 ```bash
 gulp buildcss
@@ -233,8 +231,8 @@ gulp buildcss
 
 ## Results
 
+![Before uncss](assets/img/articles/portfolio-after-uncss.jpg)
+
 Before, the stylesheet on this site measured **190.71 kb**.
 
-Adding uncss to the build process shaved 181.5 kb off the stylesheet a tad over, shrinking that file to **9.21 kb** (a 95.15% decrease in file size). Gzipping reduces the size to a mere **3 kb**, which is absolutely insane.
-
-![Before uncss](assets/img/articles/portfolio-after-uncss.jpg)
+Adding uncss to the build process shaved off 181.5 kb, shrinking that file to **9.21 kb** (a 95.15% decrease in file size). Gzipping reduces it to a mere **3 kb**, which is absolutely insane.
