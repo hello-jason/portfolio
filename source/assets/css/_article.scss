@@ -13,6 +13,12 @@ time {
     time {
       display: block;
     }
+    a:link {
+      text-decoration: underline;
+    }
+    img {
+       @extend .img-responsive;
+    }
     @media screen and (max-width: $screen-sm-min) {
       h1, time {
         text-align: center;
