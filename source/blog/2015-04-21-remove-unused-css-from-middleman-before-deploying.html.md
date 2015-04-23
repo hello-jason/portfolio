@@ -1,6 +1,6 @@
 ---
 title: Remove unused CSS from Middleman before deploying
-date: 2015-04-19 15:24 CDT
+date: 2015-04-21 15:24 CDT
 article_summary: Remove all unused CSS from your stylesheets, during the build process, before deploying your Middleman site.
 ---
 
