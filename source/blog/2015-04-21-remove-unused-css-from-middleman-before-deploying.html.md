@@ -6,7 +6,7 @@ article_summary: Remove all unused CSS from your stylesheets, during the build p
 
 ![Before uncss](assets/img/articles/portfolio-before-uncss.jpg)
 
-This guides gives you the ability to build your site, remove unused CSS, minify the CSS, then deploy to a server&mdash;**all with a single command**.
+This guide gives you the ability to build your site, remove unused CSS, minify the CSS, then deploy to a server&mdash;**all with a single command**.
 
 ## Why remove unused CSS?
 
