@@ -142,11 +142,11 @@ helpers do
   end
 
   # Image gallery
-  def image_gallery(image, section, title="")
+  def image_gallery(image, collection, title="")
     # = image_gallery "car.jpg" "cars" "Nice car!"
-    full_image_url = "/#{images_dir}/#{section}/#{image}"
-    thumb_image_url = "/#{images_dir}/#{section}/thumbs/thumbs_#{image}"
-    "<a href='#{full_image_url}'>
+    full_image_url = "/#{images_dir}/#{collection}/#{image}"
+    thumb_image_url = "/#{images_dir}/#{collection}/thumbs/thumbs_#{image}"
+    "<a href='#{full_image_url}' data-rel='lightcase:#{collection}'>
       <img src='#{thumb_image_url}' alt='#{title}' class='img-thumbnail' />
     </a>
     "
