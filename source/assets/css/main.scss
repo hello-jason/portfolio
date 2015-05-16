@@ -11,8 +11,8 @@
  * Imports / Includes
  * ========================================================================== */
 
-@import "variables";             // Bootstrap overrides and variables
-@import "bootstrap-includes";    // Bootstrap core
+@import "variables"; // Bootstrap overrides and variables
+@import "bootstrap-includes"; // Bootstrap core
 @import "layout";
 @import "projects";
 @import "about";
@@ -22,7 +22,7 @@
 @import "navigation";
 @import "globals";
 @import "article";
-@import "gallery";
+@import "lightcase"; // Lightbox-like JavaScript image gallery
 @import "pygments-css-default";  // Themes http://richleland.github.io/pygments-css/
 
 
