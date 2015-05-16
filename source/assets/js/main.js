@@ -10,5 +10,7 @@ var layzr = new Layzr({
 });
 
 jQuery(document).ready(function($) {
-  $('a[data-rel^=lightcase]').lightcase();
+  $('a[data-rel^=lightcase]').lightcase({
+    showTitle: false
+  });
 });
