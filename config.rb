@@ -195,7 +195,7 @@ configure :build do
   activate :gzip
 
   # Cache buster
-  # activate :asset_hash, :exts => ['.css', '.png', '.jpg', '.gif']
+  activate :asset_hash, :exts => ['.css', '.js']
 
   # Compress and optimise images during build
   # Documentation: https://github.com/plasticine/middleman-imageoptim
