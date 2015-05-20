@@ -7,4 +7,5 @@
 }
 .img-thumbnail {
   margin-bottom: ($grid-gutter-width / 6);
+  display: inline-block !important;
 }
