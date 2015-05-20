@@ -21,6 +21,8 @@
     "gulp-uncss": "",
     "gulp-csso": "",
     "gulp-gzip": "",
+    "jquery": "",
+    "lightcase": "",
     "layzr.js": ""
   }
 }

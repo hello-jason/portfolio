@@ -1,0 +1,11 @@
+// Override next/prev/close icons
+[class*="lightcase-icon-"] {
+  font-size: 66px;
+  &:hover, &:focus {
+    text-decoration: none;
+  }
+}
+.img-thumbnail {
+  margin-bottom: ($grid-gutter-width / 6);
+  display: inline-block !important;
+}
