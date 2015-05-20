@@ -6,7 +6,8 @@ var gzip   = require('gulp-gzip'); // gzip compression
 gulp.task('uncss', function() {
   return gulp.src('build/assets/css/**/*.css')
     .pipe(uncss({
-        html: ['build/**/*.html']
+        html: ['build/**/*.html'],
+        ignore: ['^(#lightcase).*']
     }))
     .pipe(csso())
     .pipe(gulp.dest('./build/assets/css'))
