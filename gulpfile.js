@@ -7,7 +7,8 @@ gulp.task('uncss', function() {
   return gulp.src('build/assets/css/**/*.css')
     .pipe(uncss({
         html: ['build/**/*.html'],
-        ignore: ['^(#lightcase).*']
+        ignore: ['/(\.|#)lightcase-[^\s\\]*/g'],
+        timeout: 5
     }))
     .pipe(csso())
     .pipe(gulp.dest('./build/assets/css'))
