@@ -18,7 +18,7 @@ namespace :deploy do
 
   task :production do
     sh "bundle exec middleman build"
-    sh "gulp buildcss"
+    #sh "gulp buildcss"
     deploy :production
   end
 
