@@ -80,6 +80,8 @@ Use [middleman-blog](https://middlemanapp.com/basics/blogging/) for blogging fea
 middleman article "Some title for the article"
 ```
 
+* Set `date_updated` variable in frontmatter to indicate an article has been updated since being published
+
 ## Frontmatter
 
 The following options are available in frontmatter:
@@ -88,6 +90,7 @@ The following options are available in frontmatter:
 * priority: 0.0 to 1.0 (default 0.5)
 * changefreq: always/hourly/daily/weekly/monthly/yearly/never (default: monthly)
 * date: 2015-03-28 19:29 CDT
+* date_updated: 2015-03-28 19:29 CDT
 * article_summary: String, summary of blog article used in blog archive list
 
 ## Deploying to Github Pages

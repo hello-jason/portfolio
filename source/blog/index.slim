@@ -14,4 +14,4 @@ main role="main"
           a href="#{article.url}" #{article.title}
         - if article.data.article_summary
           p.post-summary #{article.data.article_summary}
-        time pubdate="pubdate" datetime="#{article.date}" Posted #{article.date.strftime('%Y-%m-%d')}
+        time.time pubdate="pubdate" datetime="#{article.date}" Posted #{article.date.strftime('%Y-%m-%d')}
