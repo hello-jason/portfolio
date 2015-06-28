@@ -100,13 +100,15 @@ Simplified deployments courtesy of [middleman-deploy](https://github.com/middlem
 * Run the appropriate rake task, which will deploy the `current branch`
 
 **Local**
-Builds project and runs uncss. Stays local.
+
+Builds project and runs uncss. Useful to `cd` into `build` and run `http-server` for local testing.
 
 ```
 rake deploy:local
 ```
 
 **Staging**
+
 Builds project, runs uncss, then pushes to branch `staging`.
 
 ```
@@ -114,6 +116,7 @@ rake deploy:staging
 ```
 
 **Production**
+
 Builds project, runs uncss, then pushes to branch `gh-pages`
 
 ```
