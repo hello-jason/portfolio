@@ -23,13 +23,13 @@ set :fonts_dir,            "assets/fonts"
 
 # Sitemap URLs (use trailing slashes). Create additional variables here
 # for referencing your pages.
-set :url_home,                       "/"
-set :url_portfolio,                  "/portfolio/"
-set :url_about,                      "/about/"
-set :url_blog,                       "/blog/"
-set :url_contact,                    "/contact/"
+set :url_home,             "/"
+set :url_portfolio,        "/portfolio/"
+set :url_about,            "/about/"
+set :url_blog,             "/blog/"
+set :url_contact,          "/contact/"
 
-# Sitemap XML
+# Remove layout template from sitemap.xml page
 page "/sitemap.xml", :layout => false
 
 # Slim template engine
