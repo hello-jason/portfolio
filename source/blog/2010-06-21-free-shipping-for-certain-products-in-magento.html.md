@@ -134,11 +134,15 @@ As we already know, Magento's core free shipping option only works for a minimum
 ### Using a shipping provider (UPS, USPS, FedEx, DHL)
 
 1. In my case, I use UPS for my shipping calculator. The other providers offer similar fields, so you should be able to follow along.
+
 2. Fill in all appropriate fields, such as Gateway URL, allowed methods, etc. This data can be found on your shipping provider's website. (This information must be correct for Magento to reach the 3rd party calculator. Also, your shipping account must be in production mode)
+
 3. We're most interested in the Free Method option. In my case, I want my products to receive Free Ground Shipping. Free shipping with minimum order amount is set to disabled. I still set my Minimum order amount to some outrageous number like 9999999999.99 just in case. This lets us enable free shipping without having to worry about false positives.
 ![UPS free shipping settings](http://d2bnit2m51n5r5.cloudfront.net/wp-content/uploads/2010/06/7-9-2010-6-11-42-PMn.png)
+
 4. Enable the provider.
 ![External shipping enabled](http://d2bnit2m51n5r5.cloudfront.net/wp-content/uploads/2010/06/7-9-2010-6-17-21-PMn.png)
+
 5. Test the free shipping rule by editing a product, select Yes for free shipping, add it to the cart, and run the Estimate shipping and tax quote. I chose Free Ground Shipping, so this is reflected by the quote generator.
 ![Test free shipping](http://d2bnit2m51n5r5.cloudfront.net/wp-content/uploads/2010/06/7-9-2010-6-57-04-PMn.png)
 
@@ -156,18 +160,20 @@ As we already know, Magento's core free shipping option only works for a minimum
 ![Free shipping on front-end](http://d2bnit2m51n5r5.cloudfront.net/wp-content/uploads/2010/06/7-9-2010-6-30-40-PMn.png)
 
 1. Locate the template file you want to add the Free Shipping text to, a product page, for instance. Finding specific template files is outside the scope of this tutorial.
+
 2. Assuming you named your rule the same attribute code I did (`free_shipping_discount`) in step 3 of the first section, paste the following code wherever you want the free shipping text to show. The first line checks if the item has free shipping, second line displays the text, then end the if statement.
 
-  ```php
-  <?php if ($_product->getFreeShippingDiscount()) : ?>
-      <span class="freeShip"><?php echo $_product->getAttributeText('free_shipping_discount'); ?></span>
-  <?php endif; ?>
-  ```
+    ```php
+    <?php if ($_product->getFreeShippingDiscount()) : ?>
+        <span class="freeShip"><?php echo $_product->getAttributeText('free_shipping_discount'); ?></span>
+    <?php endif; ?>
+    ```
 3. Notice I put the text to a p tag with a class. You can alter this however you wish. This lets me style the text and assign a background image to complete the effect.
+
 4. It is best practice to also include this code on the shopping cart page since free shipping only applies to specific items. This will let users know which items in their cart receive free shipping.
 ![My shopping cart](http://d2bnit2m51n5r5.cloudfront.net/wp-content/uploads/2010/06/7-9-2010-6-54-27-PMn.png)
 
-The cart.phtml page requires a different call. Use the code below in your `template/checkout/cart/item/default.phtml`:
+The `cart.phtml` page requires a different call. Use the code below in your `template/checkout/cart/item/default.phtml`:
 
 ```php
 <!-- if item has free shipping -->
