@@ -26,6 +26,6 @@ On the other hand, a developer can be tasked with some arbitrary feature that th
 
 ## Be Smarter
 
-This is not to say that I am stagnant; I love playing with new frameworks just as much as the next person. But, when it comes to building something that my team can maintain for a paying client who only cares about getting something useful, Bootstrap delivers. This methodology has allowed me to focus more on efficiently solving a client's actual problems, rather than wasting time haflway-learning new frameworks all the time.
+This is not to say that I am stagnant; I love playing with new frameworks just as much as the next person. But, when it comes to building something that my team can maintain for a paying client who only cares about getting something useful, Bootstrap delivers. This methodology has allowed me to focus more on efficiently solving a client's actual problems, rather than wasting time halfway-learning new frameworks all the time.
 
-And sure, you can replace every instance of the word `Bootstrap` with `Foundation`, and we are still on the same page.
+And sure, you can replace every instance of the word `Bootstrap` with `Foundation` (or something else, of course), and we are still on the same page. The most important takeaway is that your entire team can build and maintain applications more sanely and confidently.
