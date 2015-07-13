@@ -17,7 +17,7 @@ But then, more advanced developers joined the team; guys with backgrounds in Rub
 
 ## New tools for WordPress development
 
-Thankfully, a lot has changed in the WordPress developer community. Specifically, the fantastic team behind [Roots](https://roots.io) is dragging WordPress into sane development land by bolting on modern web stack tools. Their projects offer solutions for my pain points when dealing with WordPress, and they are broken down into 3 separate ones:
+Thankfully, a lot has changed in the WordPress developer community. Specifically, the fantastic team behind [Roots](https://roots.io) is dragging WordPress into sane development land by bolting on modern web stack tools. Their projects offer solutions for my pain points when dealing with WordPress, and they are broken down into 3 spaces:
 
 ### Bedrock
 
@@ -33,7 +33,7 @@ Bedrock is a modern WordPress stack that gets you started with the best developm
 Sage is a WordPress starter theme based on HTML5 Boilerplate, gulp, Bower, and Bootstrap, that will help you make better themes.
 
 * Bootstrap-opinionated starter theme with [Sage](https://roots.io/sage/) (or [Gromf](https://github.com/schikulski/gromf), a 3<sup>rd</sup> party fork of Sage for those who prefer Foundation)
-* Theme dependency management with Bower](http://bower.io/)
+* Theme dependency management with [Bower](http://bower.io/)
 * [Gulp](http://gulpjs.com/) tasks, bringing CSS generation, image compression, linting, file watching, BrowserSync, autoprefixer, yadda, yadda
 
 ### Trellis
@@ -45,5 +45,7 @@ Trellis is a set of Ansible playbooks to automatically configure servers and dep
 Our legacy sites were migrated into the Bedrock stack over time, and all newer sites are built onto Sage. We can now tie WordPress core and plugin updates to git commits, deploy over the command line, and optimize assets for production.
 
 Roots has been monumental in the way I approach and maintain WordPress projects. It brings all the tools I'm already using in other frameworks, and it has brought efficient consistency to all the WordPress projects I help create and maintain at my job.
+
+When I combine the Roots stack with the glorious [Advanced Custom Fields](http://www.advancedcustomfields.com/) plugin, I can build a website which even non-tech-savy clients can manage, and that's what it's all about.
 
 Thank you, [Roots team](https://roots.io/about/).
