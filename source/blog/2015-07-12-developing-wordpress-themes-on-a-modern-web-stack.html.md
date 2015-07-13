@@ -46,6 +46,6 @@ Our legacy sites were migrated into the Bedrock stack over time, and all newer s
 
 Roots has been monumental in the way I approach and maintain WordPress projects. It brings all the tools I'm already using in other frameworks, and it has brought efficient consistency to all the WordPress projects I help create and maintain at my job.
 
-When I combine the Roots stack with the glorious [Advanced Custom Fields](http://www.advancedcustomfields.com/) plugin, I can build a website which even non-tech-savy clients can manage, and that's what it's all about.
+When I combine the Roots stack with the glorious [Advanced Custom Fields](http://www.advancedcustomfields.com/) plugin, I can build a website that respects design mockups and that non-tech-savy clients can manage, and that's what it's all about.
 
 Thank you, [Roots team](https://roots.io/about/).
