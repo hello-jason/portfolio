@@ -33,6 +33,13 @@
   padding: 0 $jason-space;
   article {
     margin-top: ($jason-space * 1.5);
+    @extend .col-md-6;
+    margin-top: 2.5em;
+    padding-top: 2.5em;
+    border-top: 1px solid $table-border-color;
+    &:nth-child(4n+2) {
+      clear: both;
+    }
     &:first-child {
       margin-top: 0;
     }
