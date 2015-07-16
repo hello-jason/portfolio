@@ -1,11 +1,11 @@
 ---
-title: Automatically launch a headless VirtualBox VM at bootup
+title: Automatically launch a headless VirtualBox VM on Windows bootup
 date: 2015-07-14 21:49 CDT
 date_updated:
 article_summary: Since I mostly develop on a CentOS VM on a Windows box, so this is how to launch it automatically and silently.
 ---
 
-![placeholder](http://placehold.it/1140x334)
+![Headless VirtualBox vm bat file](assets/img/articles/headless-virtualbox-vm.jpg)
 
 ## Virtual machine for development
 
@@ -34,3 +34,7 @@ Open the file in `Notepad` and put this inside:
 ```
 
 Note, put the name of your virtual machine in the double quotes.
+
+## What happens?
+
+If this is done correctly, a command prompt window will display for a few moments during the initial startup sequence. Then, it will go away and you can SSH into you virtual machine as normal.
