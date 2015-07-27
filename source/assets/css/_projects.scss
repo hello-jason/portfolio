@@ -84,3 +84,91 @@ body.index {
     @extend .col-md-2;
   }
 }
+
+#project-case-study {
+  text-align: center;
+  color: #2f3021;
+  font-size: 24px;
+  line-height: 34px;
+  .content {
+    max-width: 790px;
+    margin: 0 auto;
+    padding-top: 12rem;
+    padding-bottom: 12rem;
+  }
+  .hero {
+    h1 {
+      font-size: 72px;
+      line-height: 91px;
+      font-weight: normal;
+    }
+    .categories {
+      font-weight: bold;
+      font-size: 20px;
+      display: block;
+      span {
+        background: rgba(255,255,255,0.6);
+      }
+    }
+  }
+  img {
+    margin: 0 auto;
+  }
+  .vcard {
+    img, .name, .role {
+      display: block;
+    }
+    .name, .role {
+      font-size: 18px;
+      line-height: 21px;
+      font-style: italic;
+    }
+    .name {
+      font-weight: bold;
+    }
+    img {
+      border-radius: 70px;
+    }
+  }
+  blockquote {
+    border: 0 none;
+    font-size: 24px;
+    &.section-quote {
+      font-size: 48px;
+      line-height: 52px;
+      font-style: italic;
+      em {
+        color: #5949aa;
+        font-style: normal;
+      }
+    }
+  }
+  h2 {
+    font-size: 50px;
+    margin-bottom: 6rem;
+  }
+}
+
+.case-study-contact-mover {
+  .hero {
+    background: #6083bb url(../img/projects/contact-mover/hero-bkg-skytrees.jpg) no-repeat;
+    background-size: cover;
+    h1 {
+      color: #fff;
+      span {
+        background: rgba(90,73,169,0.7);
+      }
+    }
+  }
+  .first-to-market {
+    background: linear-gradient(#6e4f7d, #5949aa);
+    color: #fff;
+  }
+  .workflow-help {
+    background: #7d74bd;
+    color: #fff;
+  }
+  .redesign-contact-mover {
+    background: #e5e5e5;
+  }
+}

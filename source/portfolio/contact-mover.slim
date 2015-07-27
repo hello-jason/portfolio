@@ -3,35 +3,99 @@ title: Contact Mover
 meta_description: Contact Mover is an iOS application that helps users move contacts between nearly any 2 accounts.
 ---
 
-section#project-single
-  aside
-    = project_details "2013", "iOS", "Designer, Frontend Developer"
-    markdown:
-      **iOS App**
+main#project-case-study.case-study-contact-mover role="main"
+  section.hero
+    .content
+      img src="http://placehold.it/200x200" alt="Apple App Store logo"
+      p.categories <span>iOS, Web</span>
+      h1 <span>The simplest way to <br>move contacts</span>
+  section.scratch-the-itch
+    .content
+      h2 An Itch Worth Scratching?
 
-      Contact Mover for iOS offers a very simplistic interface to transfer contacts from one account to another, including Microsoft Exchange, iCloud, Gmail, Yahoo!, and the local address book.
+      p The story of Contact Mover revolves around Immense Networks, whose business is to become the outsourced IT company for their clients. They identified a recurring pain point&ndash;moving new employees’ contacts from another Exchange server to their own; the steps involved were ridiculous.
 
-      Users can choose which contacts to copy to the new account, then initiate the transfer once satisfied. The app will verify that each contact is valid before transferring.
+      p People loved their BlackBerrys back then, iPhone was gaining traction, Windows Mobile was still acceptable, and few in the corporate world cared about Android. The problem was that Active Sync was implemented differently, so moving contacts was a nightmare.
 
-      I designed the app's logo and complete user experience, deciding that a simple step-by-step wizard would adequately guide users through the process.
+      blockquote.alignright “Build a tool that quickly and reliably transfers Exchange contacts.”
 
-      [iTunes link](https://itunes.apple.com/us/app/contact-mover/id456984826)
+      p Surely, other IT firms were experiencing this problem and wasting just as much time. While future sales was a pipe dream, the initial goal became clear.
 
-      ---
+  section.first-to-market
+    .content
+      h2 First to Market
 
-      **Public Website**
+      .vcard
+        img src="http://placehold.it/114x114" alt="Andrew Frederick"
+        span.name Andrew Frederick
+        span.role Developer, v1.0
 
-      The primary goal of the public site is to clearly indicate what the app does and does not do. Secondary goals are to provide honest details about the app's development and to act as a knowledge base of articles that can help users in niche situations.
+      p I worked with developer Andrew Frederick on the first version of Contact Mover. We made it utilitarian and focused on tech industry professionals.
 
-      I designed and developed the public site onto Middleman and captured an animated gif of the app being used to move real contacts.
+      img src="http://placehold.it/200x200" alt="Apple App Store logo"
 
-      [http://contactmover.net](http://contactmover.net)
+      p We decided that iOS had the best compatibility for syncing with various Active Sync implementations (even better than Windows Mobile); bonus points for the fact that Immense could sell it to their own clients through the App Store.
 
-  main role="main"
-    = project_image "Contact Mover logo", "logo-contact-mover.jpg"
-    hr
-    = project_image "Contact Mover iOS app", "ios-front-cmover.jpg"
-    hr
-    = project_image "Contact Mover ready to copy contacts", "contact-mover-app-workflow.jpg"
-    hr
-    = project_image "Contact Mover public website home page", "contact-mover-public-site-home.jpg"
+  section.functional-design
+    .content
+      h2 Fast, Functional Design
+
+      p As with any app icon, I wanted it to scream what the app did without text. I created a moving truck carrying the current iOS Contacts App icon (the silhouette is developer Andrew).
+
+      img src="http://placehold.it/200x200" alt="Contact Mover app v1.0 logo"
+
+      p Most of the interface is a background image, reducing development time. Andrew positioned how many contacts were in each account (Exchange and Local), and he slapped 2 arrow buttons for the user to decide which way to move the contacts. This interface did not require any textual instructions, which was nice because that iPhone 3G screen was the size of a Tamogotchi.
+
+      blockquote.section-quote It wouldn’t be the prettiest thing in the App Store, but <em>utilitarian functionality</em> was paramount for v1.0.
+
+  section.workflow-help
+    .content
+      h2 Workflow in Need
+
+      p When feedback became less about bugs and more about improving the workflow, I knew the app was going somewhere. And they were right; version 1 required users to toggle between Settings and Contact Mover a few times.
+
+      p The workflow went like this:
+
+      ol
+        li Ensure only the old Exchange account is enabled
+        li Open Contact Mover and transfer contacts upwards into local Contacts
+        li Disable the old Exchange account and enable the new one
+        li Back in Contact Mover, transfer contacts downwards into the new Exchange account
+
+      p Contact Mover had been available for 2 years at this point, so we decided to expand who it could benefit. This would require a simplistic interface and support more account types (Gmail, Hotmail, iCloud, and so forth).
+
+      p Forget Active Sync support&ndash;it should allow the average user to move contacts between nearly any 2 accounts.
+
+  section.version-2
+    .content
+      h2 Making Contact Mover Better
+
+      .vcard
+        img src="http://placehold.it/114x114" alt="Christopher McKnight"
+        span.name Christopher McKnight
+        span.role Developer, v2.0
+
+      p I worked with developer Christopher McKnight on version 2 of Contact Mover. I envisioned giving users the most helpful interface possible with the fewest number of choices.
+
+      p The new workflow would go like this:
+
+      ol
+        li Choose which accounts to move contacts from and to
+        li Scan for potential errors and notify user if there are problems
+        li Allow user to perform the transfer
+
+      blockquote.section-quote Now, most users can transfer contacts without leaving the application.
+
+  section.redesign-contact-mover
+    .content
+      h2 Redesigning Contact Mover
+
+      p I believe my original icon concept was successful, and that legacy should simply be updated for version 2. The new icon would follow stylistic trends inspired by iOS 7 and reference the updated Contacts app, of course. And I’ll finally give Contact Mover an identity, complete with its own sexy purple color scheme.
+
+      p Version 2 requires the user to choose source and detination address books. Instructions are large and concise, select fields are practically big enough to hit with elbows, and clicking the Next button is the obvious goal on the page.
+
+      img src="http://placehold.it/200x200" alt="Contact Mover app v2.0 logo"
+
+      p Version 2 requires the user to choose source and detination address books. Instructions are large and concise, select fields are practically big enough to hit with elbows, and clicking the Next button is the obvious goal on the page.
+
+      img src="http://placehold.it/358x666"
