@@ -152,6 +152,17 @@ helpers do
     "
   end
 
+  # iPhone 6 canvas
+  def iphone6(image, caption)
+    # = iphone6 "image.gif", "Something about the image"
+    "
+    <figure class='iphone6'>
+      <img src='/#{images_dir}/#{image}'>
+      <figcaption>#{caption}</figcaption>
+    </figure>
+    "
+  end
+
 end
 
 # ========================================================================

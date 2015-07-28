@@ -4,6 +4,26 @@ body.index {
     left: -9999em;
   }
 }
+
+figure.iphone6 {
+  background: url(../img/iphone-6-shape.svg) no-repeat center;
+  @media (max-width: $screen-md-min) {
+    width: 243px;
+  }
+  margin: 0 auto;
+  img {
+    margin-top: 121px !important;
+    max-width: 214px;
+    @media (min-width: $screen-md-min) {
+      margin-top: 106px !important;
+      max-width: 378px;
+    }
+  }
+  figcaption {
+    margin-top: 18px;
+  }
+}
+
 // Thumbnail gallery of projects
 #proj-thumbnails {
   figure {
@@ -85,7 +105,7 @@ body.index {
   }
 }
 
-#project-case-study {
+.project-case-study {
   text-align: center;
   color: #2f3021;
   font-size: 24px;
@@ -93,15 +113,32 @@ body.index {
   .content {
     max-width: 790px;
     margin: 0 auto;
-    padding-top: 12rem;
-    padding-bottom: 12rem;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: $casestudy-section-padding;
+    padding-bottom: ($casestudy-section-padding / 2);
+  }
+  figcaption {
+    font-size: 18px;
+    line-height: 21px;
+    font-style: italic;
+  }
+  img {
+    margin-top: ($casestudy-section-padding / 2);
+    margin-bottom: ($casestudy-section-padding / 2);
+    margin-left: auto;
+    margin-right: auto;
   }
   .hero {
     h1 {
-      font-size: 72px;
+      font-size: 48px;
+      line-height: 1.35em;
       font-weight: normal;
       text-transform: none;
       font-family: $font-family-serif;
+      @media (min-width: $screen-md-min) {
+        font-size: 72px;
+      }
     }
     .categories {
       font-weight: bold;
@@ -111,36 +148,34 @@ body.index {
         background: rgba(255,255,255,0.6);
       }
     }
-  }
-  img {
-    margin: 0 auto;
+    img {
+      margin-bottom: 1.25em;
+    }
   }
   .vcard {
+    margin-bottom: ($casestudy-section-padding / 2);
     img, .name, .role {
       display: block;
-    }
-    .name, .role {
-      font-size: 18px;
-      line-height: 21px;
-      font-style: italic;
     }
     .name {
       font-weight: bold;
     }
     img {
       border-radius: 70px;
+      margin-bottom: 1rem;
     }
   }
   blockquote {
     border: 0 none;
     font-size: 24px;
     &.section-quote {
-      font-size: 48px;
-      line-height: 52px;
       font-style: italic;
+      @media (min-width: $screen-md-min) {
+        font-size: 47px;
+        line-height: 52px;
+      }
       em {
         color: #5949aa;
-        font-style: normal;
       }
     }
   }
@@ -150,7 +185,46 @@ body.index {
   }
 }
 
+// Contact Mover case study
 .case-study-contact-mover {
+  .big-list {
+    text-align: left;
+    list-style: none;
+    padding: 0;
+    margin-bottom: ($casestudy-section-padding / 2);
+    li, .number {
+      background: #b1b1b1;
+    }
+    li {
+      display: flex;
+      flex-flow: row wrap;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+    em {
+      font-style: normal;
+      text-decoration: underline;
+    }
+    .number, .text {
+      padding: 30px 21px;
+    }
+    .number {
+      text-align: center;
+      flex: 1 1 auto;
+      order: 1;
+      max-width: 67px;
+    }
+    .text {
+      background: #d5d5d5;
+      flex: 15 1 0px;
+      order: 2;
+    }
+  }
+  .contact-mover-v1-ui {
+    display: block;
+    width: 100%;
+    max-width: 496px;
+  }
   .hero {
     background: #6083bb url(../img/projects/contact-mover/hero-bkg-skytrees.jpg) no-repeat;
     background-size: cover;
@@ -160,20 +234,86 @@ body.index {
         background: rgba(90,73,169,0.7);
       }
     }
+  }
+  .scratch-the-itch {
+    text-align: left;
+    #logo-immense-networks {
+      width: 240px;
+      color: #2f3021;
+      display: block;
+      clear: both;
+      margin: 0 auto;
+    }
     blockquote {
-      @extend .alignright;
-      font-size: 36px;
+      float: right;
+      font-size: 42px;
+      line-height: 1em;
+      width: 50%;
+      font-style: italic;
     }
   }
   .first-to-market {
     background: linear-gradient(#6e4f7d, #5949aa);
     color: #fff;
+    .vcard {
+      color: #dbd1f8;
+    }
   }
   .workflow-help {
     background: #7d74bd;
     color: #fff;
+    ol.big-list {
+      li, .number {
+        background: #443588;
+      }
+      .text {
+        background: #5a49a9;
+      }
+    }
+  }
+  .version-2 {
+    .vcard {
+      color: #b3b3b3;
+    }
+    .version-2-wireframes {
+      @media (max-width: $screen-md-min) {
+        display: block;
+        width: 100%;
+      }
+      @media (min-width: $screen-md-min) {
+        margin-left: -97px !important;
+      }
+    }
   }
   .redesign-contact-mover {
     background: #e5e5e5;
+  }
+  .public-site {
+    img {
+      @media (max-width: $screen-md-min) {
+        display: block;
+        width: 100%;
+      }
+      @media (min-width: $screen-md-min) {
+        margin-left: -94px !important;
+        max-width: 900px;
+      }
+    }
+  }
+  .what-i-learned {
+    background: #CFD7BB;
+  }
+  .check-it-out {
+    .content {
+      padding-top: ($casestudy-section-padding / 2);
+    }
+    .btn {
+      @extend .btn-primary;
+      @extend .btn-lg;
+      @extend .btn-block;
+      @media (max-width: $screen-md-min) {
+        margin-bottom: 15px;
+      }
+    }
   }
 }
