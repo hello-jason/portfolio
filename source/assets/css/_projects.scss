@@ -236,7 +236,9 @@ figure.iphone6 {
     }
   }
   .scratch-the-itch {
-    text-align: left;
+    @media (min-width: $screen-md-min) {
+      text-align: left;
+    }
     #logo-immense-networks {
       width: 240px;
       color: #2f3021;
@@ -245,11 +247,13 @@ figure.iphone6 {
       margin: 0 auto;
     }
     blockquote {
-      float: right;
       font-size: 42px;
       line-height: 1em;
-      width: 50%;
       font-style: italic;
+      @media (min-width: $screen-md-min) {
+        float: right;
+        width: 50%;
+      }
     }
   }
   .first-to-market {
