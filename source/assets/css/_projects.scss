@@ -99,8 +99,9 @@ body.index {
   .hero {
     h1 {
       font-size: 72px;
-      line-height: 91px;
       font-weight: normal;
+      text-transform: none;
+      font-family: $font-family-serif;
     }
     .categories {
       font-weight: bold;
@@ -158,6 +159,10 @@ body.index {
       span {
         background: rgba(90,73,169,0.7);
       }
+    }
+    blockquote {
+      @extend .alignright;
+      font-size: 36px;
     }
   }
   .first-to-market {
