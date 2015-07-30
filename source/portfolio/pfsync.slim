@@ -14,7 +14,7 @@ main.project-case-study.case-study-pfsync role="main"
 
       p Microsoft Exchange offers a lovely feature called Public Folders, which allows companies to create a single pool of contacts, calendar events, etc. and share them amongst employees. Outlook natively supports these features, and it integrates nicely. Even better, access to these shares is managed via Active Directory, so IT has full control.
 
-      p A client approached the IT team at Immense Networks wanting to access this data on their mobile devices. While a user’s contacts, emails, and calendars sync flawlessly with nearly any device, Public Folder synchronization is a lacking feature of ActiveSync.
+      p A client approached the IT team at Immense Networks wanting to access this data on their mobile devices. While a user's contacts, emails, and calendars sync flawlessly with nearly any device, Public Folder synchronization is a lacking feature of ActiveSync.
 
       p So, we looked for solutions.
 
@@ -73,37 +73,47 @@ main.project-case-study.case-study-pfsync role="main"
     .content
       h2 Building a SaSS
 
-      p Other companies have developed solutions to this problem; most require users to download a 3rd party app on their device, then it forces them to use that app rather than the device’s native Contacts and Calendar apps. This was cumbersome and unacceptable.
+      p Other companies have developed solutions to this problem; most require users to download a 3rd party app on their device, then it forces them to use that app rather than the device's native Contacts and Calendar apps. This was cumbersome and unacceptable.
 
-      blockquote.section-quote We wanted to integrate Public Folders natively into a device’s core experience.
+      blockquote.section-quote We wanted to integrate Public Folders natively into a device's core experience.
 
-      p We only found a single product on the market which worked natively on a user’s device, called SmartaFone. This initially seemed great, but further inspection revealed 2 terrible things:
+      p We only found a single product on the market which worked natively on a user's device, called SmartaFone. This initially seemed great, but further inspection revealed 2 terrible things:
 
-      ul
-        li A program must be installed onto the company’s Exchange server.
-        li Information is replicated into each user’s Personal Mailbox.
+      .smartafone-bad
+        .smartafone-reason
+          span.number 1
+          h3 A program must be installed onto the Exchange server.
+          p This is terrible for so many reasons. What if a company is using Office 365? What if they don't have their own Exchange server? What if an IT company has a server with 200 separate  company Exchange accounts on it?
+        .smartafone-reason
+          span.number 2
+          h3 Information is replicated into each user's Personal Mailbox.
+          p So, Outlook hits Public Folders natively, other devices hit a subfolder with duplicates of Public Folder data, and we're supposed to trust that SmartaFone will sync it all with no issues. This seemed overengineered.
 
-      p Our search continued for an acceptable solution to recommend to our clients, but the inevitable conclusion was clear: the only way to give our clients the experience they deserved was to extend ActiveSync’s functionality with a dedicated web service. Immense was in a unique position to test the service with select IT clients, eventually get them on a monthly retainer for it, then ultimately offer it to the masses.
+      p Our search continued for an acceptable solution to recommend to our clients, but the inevitable conclusion was clear: <strong>the only way to give our clients the experience they deserved was to build it ourselves</strong>.
 
       = image_tag "projects/pfsync/feature-how-it-works.png", :alt => "How pfsync works"
+
+      p The idea was simple. We would build a dedicated web service to extend ActiveSync's functionality to include Public Folder data. We would then authenticate against Exchange servers as individual users, which would limit access to Public Folders based on that user's permissions. We then wrap everything in a subscription-based SaaS and start promoting it.
+
+      p Immense was in a unique position to test the service with select IT clients, eventually get them on a monthly retainer for it, then ultimately offer it to the masses.
 
   section.marketing-pfsync
     .content
       h2 Making pfsync Marketable
 
-      p While backend developers were building a functional prototype, I persued selling a magnificent product. The name pfsync came so naturally, and the remaining discovery snowballed from there.
+      p While backend developers were building a functional prototype, I pursued selling a magnificent product. The name pfsync came so naturally, and the remaining discovery snowballed from there.
 
-      p pfsync would be an extension of the ActiveSync protocol, filling in the gaps to offer the user a truely native experience regardless of device. This bond with ActiveSync served as inspiration for pfsync’s identity, right down to the green color scheme.
+      p pfsync would be an extension of the ActiveSync protocol, filling in the gaps to offer the user a truly native experience regardless of device. This bond with ActiveSync served as inspiration for pfsync's identity, right down to the green color scheme.
 
       = image_tag "projects/pfsync/pfsync-brand-breakdown.jpg"
 
-      p I created something reminiscent of the ActiveSync logo from the Windows XP era, which I felt would resonate with this product’s primary userbase&mdash;passionate IT professionals who have likely been in this game for a long time.
+      p I created something reminiscent of the ActiveSync logo from the Windows XP era, which I felt would resonate with this product's primary userbase &ndash; passionate IT professionals who have likely been in this game for while.
 
   section.identifying-audience
     .content
       h2 Identifying the Audience
 
-      p It was obvious to me that the only people searching for this product would be IT professionals who manage corporate networks for lots of users. I interviewed numerous potential customers in this space and prioritized their most frequent concerns for the website’s primary goals:
+      p It was obvious to me that the only people searching for this product would be IT professionals who manage corporate networks for lots of users. I interviewed numerous potential customers in this space and prioritized their most frequent concerns for the website's primary goals:
 
       ol.big-list
         li <span class="number">1</span> <span class="text">Is it secure?</span>
@@ -111,7 +121,7 @@ main.project-case-study.case-study-pfsync role="main"
         li <span class="number">3</span> <span class="text">How can I manage it?</span>
         li <span class="number">4</span> <span class="text">How can I test it (like, right now)?</span>
 
-      p I designed an effective website that resonates with the target audience. I must stress that this project is still under active development.
+      p I designed an effective website that resonates with the target audience. This project is still under active development, but much of the foundation is complete.
 
       = image_tag "projects/pfsync/pfsync-public-site-overview.jpg"
 
@@ -119,7 +129,12 @@ main.project-case-study.case-study-pfsync role="main"
     .content
       h2 Making Decisions
 
-      p There is no point in denying that I was inspired by GoDaddy’s sign in flydown. I wanted this single container to allow existing customers to sign in, to give new customers who clicked the button out of pure exploration a chance to register an account, and to condense the product’s 15 second elevator pitch in case anyone forgot why they were here in the first place.
+      p There is no point in denying that I was inspired by GoDaddy's sign in flydown. I wanted this single container to accomplish 3 specific goals:
+
+      ol.big-list
+        li <span class="number">1</span> <span class="text">Allow existing customers to sign in</span>
+        li <span class="number">2</span> <span class="text">Give new customers who clicked the button out of pure exploration a chance to register an account</span>
+        li <span class="number">3</span> <span class="text">Promote the product's 15 second elevator pitch, in case anyone forgot why they were here in the first place</span>
 
       = image_tag "projects/pfsync/sign-in-flydown.gif", :class => "animated-flydown"
 
@@ -131,7 +146,9 @@ main.project-case-study.case-study-pfsync role="main"
     .content
       h2 What I Learned
 
-      p Building a subscription-based web application is complicated, requiring everything from branding, to scalability, to credit card processing. This project is still being ironed out, but it's been an educational ride so far.
+      p Building a subscription-based web application is complicated, requiring everything from branding, to scalability, to credit card processing, to testing, to tech support, to&hellip;
+
+      p This project is still being ironed out, but it's been an educational ride so far.
 
   section.check-it-out
     .content
