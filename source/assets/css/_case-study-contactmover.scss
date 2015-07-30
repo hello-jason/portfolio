@@ -1,0 +1,136 @@
+// Contact Mover case study
+.case-study-contact-mover {
+  .big-list {
+    text-align: left;
+    list-style: none;
+    padding: 0;
+    margin-bottom: ($casestudy-section-padding / 2);
+    li, .number {
+      background: #b1b1b1;
+    }
+    li {
+      display: flex;
+      flex-flow: row wrap;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+    em {
+      font-style: normal;
+      text-decoration: underline;
+    }
+    .number, .text {
+      padding: 30px 21px;
+    }
+    .number {
+      text-align: center;
+      flex: 1 1 auto;
+      order: 1;
+      max-width: 67px;
+    }
+    .text {
+      background: #d5d5d5;
+      flex: 15 1 0px;
+      order: 2;
+    }
+  }
+  .contact-mover-v1-ui {
+    display: block;
+    width: 100%;
+    max-width: 496px;
+  }
+  .hero {
+    background: #6083bb url(../img/projects/contact-mover/hero-bkg-skytrees.jpg) no-repeat;
+    background-size: cover;
+    h1 {
+      color: #fff;
+      span {
+        background: rgba(90,73,169,0.7);
+      }
+    }
+  }
+  .scratch-the-itch {
+    @media (min-width: $screen-md-min) {
+      text-align: left;
+    }
+    #logo-immense-networks {
+      width: 240px;
+      color: #2f3021;
+      display: block;
+      clear: both;
+      margin: 0 auto;
+    }
+    blockquote {
+      font-size: 42px;
+      line-height: 1em;
+      font-style: italic;
+      @media (min-width: $screen-md-min) {
+        float: right;
+        width: 50%;
+      }
+    }
+  }
+  .first-to-market {
+    background: linear-gradient(#6e4f7d, #5949aa);
+    color: #fff;
+    .vcard {
+      color: #dbd1f8;
+    }
+  }
+  .workflow-help {
+    background: #7d74bd;
+    color: #fff;
+    ol.big-list {
+      li, .number {
+        background: #443588;
+      }
+      .text {
+        background: #5a49a9;
+      }
+    }
+  }
+  .version-2 {
+    .vcard {
+      color: #b3b3b3;
+    }
+    .version-2-wireframes {
+      @media (max-width: $screen-md-min) {
+        display: block;
+        width: 100%;
+      }
+      @media (min-width: $screen-md-min) {
+        margin-left: -97px !important;
+      }
+    }
+  }
+  .redesign-contact-mover {
+    background: #e5e5e5;
+  }
+  .public-site {
+    img {
+      @media (max-width: $screen-md-min) {
+        display: block;
+        width: 100%;
+      }
+      @media (min-width: $screen-md-min) {
+        margin-left: -94px !important;
+        max-width: 900px;
+      }
+    }
+  }
+  .what-i-learned {
+    background: #CFD7BB;
+  }
+  .check-it-out {
+    .content {
+      padding-top: ($casestudy-section-padding / 2);
+    }
+    .btn {
+      @extend .btn-primary;
+      @extend .btn-lg;
+      @extend .btn-block;
+      @media (max-width: $screen-md-min) {
+        margin-bottom: 15px;
+      }
+    }
+  }
+}
