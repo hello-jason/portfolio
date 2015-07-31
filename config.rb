@@ -163,6 +163,11 @@ helpers do
     "
   end
 
+  # Big list <li> items
+  def big_list_li(number, text)
+    "<li><span class='number'>#{number}</span> <span class='text'>#{text}</span></li>"
+  end
+
 end
 
 # ========================================================================
