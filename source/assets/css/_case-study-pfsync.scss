@@ -1,0 +1,76 @@
+.case-study-pfsync {
+  .hero {
+    background: #7fc346 url(../img/projects/pfsync/pfsync-hero.png) no-repeat center top;
+    h1 {
+      color: #fff;
+    }
+    span {
+      background: rgba(102,162,52,0.75);
+    }
+  }
+  .content {
+    img {
+      @media (max-width: $screen-lg-min) {
+        display: block;
+        width: 100%;
+        margin: 0 auto;
+      }
+    }
+  }
+  #logo-immense-networks {
+    width: 240px;
+    color: #2f3021;
+    display: block;
+    clear: both;
+    margin: 0 auto;
+  }
+  .building-a-sass {
+    background: #f2ffe3;
+  }
+  .identifying-audience {
+    background: #66a234;
+    color: #fff;
+    .content {
+      padding-bottom: 0;
+    }
+    img {
+      margin-bottom: 0;
+    }
+    .big-list {
+      li, .number {
+        background: #528925;
+      }
+      .text {
+        background: #7fc346;
+      }
+    }
+  }
+  .animated-flydown {
+    @media (min-width: $screen-md-min) {
+      margin-left: -245px;
+    }
+  }
+  .what-i-learned {
+    background: #CFD7BB;
+  }
+  .smartafone-bad {
+    font-size: $font-size-small;
+    line-height: 2.5rem;
+    .smartafone-reason {
+      position: relative;
+      @extend .col-md-6;
+      h3, p {
+        position: relative;
+        z-index: 5;
+      }
+    }
+    .number {
+      font-size: 147px;
+      color: #c9d4bd;
+      position: absolute;
+      z-index: 1;
+      bottom: 6rem;
+      left: 0;
+    }
+  }
+}
