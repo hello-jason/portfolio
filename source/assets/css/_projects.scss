@@ -113,10 +113,7 @@ figure.iphone6 {
   .content {
     max-width: 790px;
     margin: 0 auto;
-    padding-left: 15px;
-    padding-right: 15px;
-    padding-top: $casestudy-section-padding;
-    padding-bottom: ($casestudy-section-padding / 2);
+    padding: $casestudy-section-padding 15px;
   }
   figcaption {
     font-size: 18px;
@@ -128,8 +125,16 @@ figure.iphone6 {
     margin-bottom: ($casestudy-section-padding / 2);
     margin-left: auto;
     margin-right: auto;
+    &.media-responsive {
+      max-width: $screen-lg-min;
+      @media (max-width: $screen-lg-min) {
+        display: block;
+        width: 100%;
+      }
+    }
   }
   .hero {
+    background-size: cover;
     h1 {
       font-size: 48px;
       line-height: 1.35em;
@@ -228,5 +233,28 @@ figure.iphone6 {
         margin-bottom: 15px;
       }
     }
+  }
+}
+
+.numbered-reasoning {
+  font-size: 16px;
+  line-height: 2.5rem;
+  margin-bottom: $grid-gutter-width;
+  @extend .clearfix;
+  .numbered-reason {
+    position: relative;
+    @extend .col-md-6;
+    h3, p {
+      position: relative;
+      z-index: 5;
+    }
+  }
+  .number {
+    font-size: 147px;
+    color: #c9d4bd;
+    position: absolute;
+    z-index: 1;
+    bottom: 6rem;
+    left: 0;
   }
 }
