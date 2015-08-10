@@ -1,6 +1,9 @@
 .case-study-pfsync {
   .hero {
-    background: #7fc346 url(../img/projects/pfsync/pfsync-hero.png) no-repeat center top;
+    background-color: #7fc346;
+    background-image: url(../img/projects/pfsync/pfsync-hero.png);
+    background-repeat: no-repeat;
+    background-position: center top;
     h1 {
       color: #fff;
     }

@@ -2,7 +2,7 @@
 title: Automatically launch a headless VirtualBox VM on Windows bootup
 date: 2015-07-14 21:49 CDT
 date_updated:
-article_summary: Since I mostly develop on a CentOS VM on a Windows box, so this is how to launch it automatically and silently.
+article_summary: I mostly develop on a CentOS VM on a Windows box, so this is how to launch it automatically and silently.
 ---
 
 ![Headless VirtualBox vm bat file](assets/img/articles/headless-virtualbox-vm.jpg)
