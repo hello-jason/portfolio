@@ -10,9 +10,10 @@ require "./source/environment_variables.rb"
 # ========================================================================
 # Site settings
 # ========================================================================
+# URL when building for deployment to production
 set :site_title,           "Hello Jason"
 set :site_description,     "Design and development portfolio of Jason Cross"
-set :site_url_production,  ENV['site_url_production']
+set :site_url_production,  "https://hellojason.net"
 set :site_url_development, ENV['site_url_development']
 
 # Set asset directories
