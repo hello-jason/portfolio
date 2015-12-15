@@ -1,6 +1,6 @@
 //= require layzr.js/dist/layzr
 //= require jquery/dist/jquery
-//= require lightcase/src/js/lightcase
+//= require lightcase/lightcase
 
 var layzr = new Layzr({
   attr: 'data-layzr',
