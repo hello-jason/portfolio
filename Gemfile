@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 
 # Core
-gem "middleman", "~> 3.4.0"
+gem "middleman", "~> 3.4.1"
 
 # Assets
 gem "bootstrap-sass", require: false
