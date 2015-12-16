@@ -218,7 +218,7 @@ configure :build do
   # Documentation: https://github.com/plasticine/middleman-imageoptim
   activate :imageoptim do |options|
     # Use a build manifest to prevent re-compressing images between builds
-    options.manifest = false
+    options.manifest = true
     # Image extensions to attempt to compress
     options.image_extensions = %w(.png .jpg .gif .svg)
     # Cause image_optim to be in shouty-mode
