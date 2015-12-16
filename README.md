@@ -11,7 +11,6 @@ Written with [Ruby](https://www.ruby-lang.org/en/)+[Middleman](http://middlemana
 * [Sass](http://sass-lang.com/)
 * [Bootstrap 3 Sass](https://github.com/twbs/bootstrap-sass)
 * [jQuery](http://jquery.com/)
-* [Livereload](https://github.com/middleman/middleman-livereload)
 * [Favicon Maker](https://github.com/follmann/middleman-favicon-maker)
 
 **Included features:**
@@ -42,7 +41,7 @@ rbenv install && rbenv rehash
 * Set local ruby (this number should reflect the ruby version that was just installed)
 
 ```
-rbenv local 2.2.0
+rbenv local 2.2.3
 ```
 
 * Install JavaScript runtime
@@ -62,7 +61,7 @@ npm install
 
 * Copy `source/environment_variables.rb.sample` to `source/environment_variables.rb`
 
-* Set `site_url_production` and `site_url_development` in `source/environment_variables.rb`
+* Set `site_url_development` in `source/environment_variables.rb`
 
 * Start Middleman server
 
