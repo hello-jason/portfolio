@@ -24,14 +24,16 @@
     &.logo {
       @extend .navbar-brand;
       float: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       @media (min-width: $screen-sm-min) {
         padding: .85em 0 0;
-        float: left;
       }
       font-weight: bold;
       font-size: $font-size-base;
       color: $brand-primary;
-      img {
+      .brand {
         margin-right: 0.75em;
         transition: all .5s;
         display: inline-block;
