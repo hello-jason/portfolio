@@ -37,8 +37,8 @@ page "/sitemap.xml", :layout => false
 require "slim"
 
  # Sitemap builder
- require "builder"
- page "/sitemap.xml", :layout => false
+ #require "builder"
+ #page "/sitemap.xml", :layout => false
 
 # Use relative URLs
 activate :relative_assets
