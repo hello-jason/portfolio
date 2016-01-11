@@ -13,13 +13,13 @@ This bash script prepares a WordPress project built on Root's [Bedrock](https://
 
 WP Engine expects to see a standard WordPress project in the document root of your account. Since Bedrock shifts things around a bit, this script moves your files &amp; directories back to their default locations so WP Engine knows how to serve your Bedrock+Sage site.
 
-This script performs all actions on a separate branch, which it deletes upon completion.
+This script performs all actions on a separate branch, pushes to WP Engine using their `git push` feature, then cleans up after itself and puts you back where you were before you ran it.
 
 ## Installation &amp; Setup
 
 ### 1. Grab the script
 
-Source code is available at [https://github.com/hello-jason/bedrock-sage-deploy-to-wpengine](https://github.com/hello-jason/bedrock-sage-deploy-to-wpengine). This repo is not meant to be cloned into your project. Rather, just grab the `wpedeploy.sh` file and place it in the top-level directory of your Bedrock project. Add it to your `.gitignore` and keep it with your project's repo.
+Source code is available at [https://github.com/hello-jason/bedrock-sage-deploy-to-wpengine](https://github.com/hello-jason/bedrock-sage-deploy-to-wpengine). This repo is not meant to be cloned into your project. Rather, just grab the `wpedeploy.sh` file and place it in the top-level directory of your Bedrock project, and keep it with your project's repo.
 
 ### 2. Setup git push
 
