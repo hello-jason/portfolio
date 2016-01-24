@@ -11,7 +11,7 @@ gem "middleman-favicon-maker"
 # Templating
 gem "slim"
 gem "middleman-autoprefixer"
-gem "builder"
+# gem "builder"
 
 # Blogging
 gem "middleman-blog"

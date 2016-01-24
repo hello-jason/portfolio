@@ -31,7 +31,7 @@ set :url_blog,             "/blog/"
 set :url_contact,          "/contact/"
 
 # Remove layout template from sitemap.xml page
-page "/sitemap.xml", :layout => false
+# page "/sitemap.xml", :layout => false
 
 # Slim template engine
 require "slim"
