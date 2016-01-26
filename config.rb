@@ -198,8 +198,6 @@ configure :build do
   ignore "environment_variables.rb"
   ignore "environment_variables.rb.sample"
   ignore "favicon_template.png"
-  ignore "sitemap.yml"
-  ignore "sitemap.xml.builder"
   ignore "article.tt"
 
   set :site_url, "#{site_url_production}"
