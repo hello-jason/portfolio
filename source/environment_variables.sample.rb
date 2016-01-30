@@ -2,5 +2,3 @@
 
 # URL when developing locally
 ENV['site_url_development'] = "http://localhost:4567"
-# URL when building for deployment to production
-ENV['site_url_production'] = "http://change.this"
