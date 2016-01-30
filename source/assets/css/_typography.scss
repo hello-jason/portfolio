@@ -1,23 +1,11 @@
+// Overpass
 @font-face {
-  font-family: 'source_sans_probold';
-  src: url('../fonts/sourcesanspro-bold-webfont.eot');
-  src: url('../fonts/sourcesanspro-bold-webfont.eot?#iefix') format('embedded-opentype'),
-       url('../fonts/sourcesanspro-bold-webfont.woff2') format('woff2'),
-       url('../fonts/sourcesanspro-bold-webfont.woff') format('woff'),
-       url('../fonts/sourcesanspro-bold-webfont.ttf') format('truetype'),
-       url('../fonts/sourcesanspro-bold-webfont.svg#source_sans_probold') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'source_sans_proregular';
-  src: url('../fonts/sourcesanspro-regular-webfont.eot');
-  src: url('../fonts/sourcesanspro-regular-webfont.eot?#iefix') format('embedded-opentype'),
-       url('../fonts/sourcesanspro-regular-webfont.woff2') format('woff2'),
-       url('../fonts/sourcesanspro-regular-webfont.woff') format('woff'),
-       url('../fonts/sourcesanspro-regular-webfont.ttf') format('truetype'),
-       url('../fonts/sourcesanspro-regular-webfont.svg#source_sans_proregular') format('svg');
+  font-family: 'Overpass Light';
+  src: url('../fonts/Overpass-Light.eot');
+  src: url('../fonts/Overpass-Light.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/Overpass-Light.woff') format('woff'),
+       url('../fonts/Overpass-Light.ttf') format('truetype'),
+       url('../fonts/Overpass-Light.svg#overpass_light') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -27,7 +15,7 @@ p {
 }
 
 h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
-  font-weight: normal;
+  font-weight: bold;
   text-transform: capitalize;
 }
 h1, .h1 {
