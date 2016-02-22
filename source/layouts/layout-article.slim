@@ -4,9 +4,7 @@ section#article-single
   article role="main"
     h1 #{current_page.data.title}
     - if current_page.data.date
-      time.time pubdate="pubdate" datetime="#{current_page.data.date}" Posted #{current_page.date.strftime('%Y-%m-%d')}
-    - if current_page.data.date_updated
-      p.time Last Updated #{current_page.data.date_updated.strftime('%Y-%m-%d')}
+      time.time pubdate="pubdate" datetime="#{current_page.data.date}" Last updated #{current_page.date.strftime('%Y-%m-%d')}
     hr
     = yield
   hr
