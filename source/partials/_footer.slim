@@ -1,6 +1,10 @@
 footer#footer.content-info role="contentinfo"
   .content
     small
-      |&copy; #{Time.now.year} Jason Cross. 
+      |&copy; #{Time.now.year} Jason Cross.
       a href="https://github.com/hello-jason" GitHub
 = javascript_include_tag "main.js"
+javascript:
+  rasterize = {};
+  rasterize.api_key = "1131ea9f5d06708d78e5cfb5ef8396921f0a5f0d";
+script src="https://static.rasterize.io/rasterize.js"
