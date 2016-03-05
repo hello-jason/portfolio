@@ -1,11 +1,11 @@
 ---
 title: Developing WordPress themes on a modern web stack
+hero_image: wordpress-roots-stack.jpg
+hero_alt: Roots stack for WordPress
 date: 2015-07-12 21:13 CDT
 date_updated:
 article_summary: Thanks to the Roots team, WordPress projects finally match my development workflow.
 ---
-
-![Roots stack for WordPress](assets/img/articles/wordpress-roots-stack.jpg)
 
 ## Ignorance is not bliss
 

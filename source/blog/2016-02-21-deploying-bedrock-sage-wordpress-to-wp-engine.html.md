@@ -1,10 +1,10 @@
 ---
 title: Deploying Bedrock+Sage WordPress projects to WP Engine
+hero_image: bedrock-wordpress-deploy-to-wp-engine.jpg
+hero_alt: Deploy a Bedrock+Sage WordPress project to the WP Engine hosting platform
 date: 2016-02-21 18:40 CST
 article_summary: Here's how you can develop WordPress sites onto Bedrock and deploy to the WP Engine hosting platform.
 ---
-
-![Deploy a Bedrock+Sage WordPress project to the WP Engine hosting platform](assets/img/articles/bedrock-wordpress-deploy-to-wp-engine.jpg)
 
 ## Brief
 

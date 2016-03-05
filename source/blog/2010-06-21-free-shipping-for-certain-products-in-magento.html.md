@@ -1,11 +1,11 @@
 ---
 title: Free shipping for certain products in Magento
+hero_image: hero-magento-free-shipping-specific-products.jpg
+hero_alt: Add a free shipping attribute per product in Magento
 date: 2010-06-21 16:38 CDT
 date_updated:
 article_summary: Magento does not natively give us the option to assign free shipping to specific items. This write-up details how to add this feature without editing any core code.
 ---
-
-![Add a free shipping attribute per product in Magento](assets/img/articles/hero-magento-free-shipping-specific-products.jpg)
 
 > Note, I originally wrote and published this article for Immense Networks [on their website](http://www.immense.net/magento-free-shipping-certain-products/). There are great comments with solutions to apply this technique in newer versions of Magento on that site.
 
