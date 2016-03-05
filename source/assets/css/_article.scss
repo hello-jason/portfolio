@@ -34,15 +34,25 @@
 #article-list {
   padding: 0 $jason-space;
   article {
-    margin-top: ($jason-space * 1.5);
-    margin-top: 2.5em;
-    padding-top: 2.5em;
-    border-top: 1px solid $table-border-color;
-    &:first-child {
-      margin-top: 0;
+    @extend .col-md-4;
+    border: 1px solid $table-border-color;
+    text-align: center;
+    &>a {
+      display: block;
+      color: $text-color;
+      text-decoration: none;
+    }
+    .content {
+      padding: ($jason-space / 2);
+    }
+    .blog-hero {
+      @extend .img-responsive;
     }
     .post-title {
       font-size: $font-size-h2;
+      font-weight: normal;
+      color: $brand-primary;
+      text-decoration: underline;
     }
     .post-summary {
       margin-bottom: 0;

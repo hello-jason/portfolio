@@ -10,8 +10,11 @@ main role="main"
     // Loop through articles
     - blog.articles.each do |article|
       article
-        h1.post-title
-          a href="#{article.url}" #{article.title}
-        - if article.data.article_summary
-          p.post-summary #{article.data.article_summary}
-        time.time pubdate="pubdate" datetime="#{article.date}" Last updated #{article.date.strftime('%Y-%m-%d')}
+        a href="#{article.url}" title="#{article.title}"
+          - if article.data.hero_image
+            = image_tag "articles/#{article.data.hero_image}", :alt => "#{article.data.hero_alt}", :class => "blog-hero"
+          .content
+            h1.post-title #{article.title}
+            - if article.data.article_summary
+              p.post-summary #{article.data.article_summary}
+            time.time pubdate="pubdate" datetime="#{article.date}" Last updated #{article.date.strftime('%Y-%m-%d')}
