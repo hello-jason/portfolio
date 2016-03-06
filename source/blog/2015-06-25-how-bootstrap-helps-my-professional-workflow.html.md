@@ -1,10 +1,10 @@
 ---
 title: How Bootstrap helps my professional workflow
+hero_image: bootstrap-purple-field.gif
+hero_alt: Bootstrap logo
 date: 2015-06-25 17:53 CDT
 article_summary: Bootstrap has proven to be a very useful framework for the applications and websites I help build for clients at my job.
 ---
-
-![Bootstrap logo](assets/img/articles/bootstrap-purple-field.gif)
 
 [Bootstrap](http://getbootstrap.com/) has proven to be a very useful framework for the applications and websites I help build for clients at my job. It is actively maintained, I trust it, and I rely on it to make building websites easier. We have implemented it onto Symfony, WordPress, Magento, Nodejs with Express, Ruby on Rails, and Middleman. It blends with html templating, css preprocessors, or just plain html and css. I have yet to face a situation where Bootstrap could be a considered a bad choice. From prototyping, to production-ready projects for paying clients, to [my own website](http://hellojason.net/) (at the time of this writing), it just works.
 

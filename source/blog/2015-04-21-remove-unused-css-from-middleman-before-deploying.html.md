@@ -1,10 +1,10 @@
 ---
 title: Remove unused CSS from Middleman before deploying
+hero_image: portfolio-before-uncss.jpg
+hero_alt: Before uncss
 date: 2015-04-21 15:24 CDT
 article_summary: Remove all unused CSS from your stylesheets, during the build process, before deploying your Middleman site.
 ---
-
-![Before uncss](assets/img/articles/portfolio-before-uncss.jpg)
 
 This guide gives you the ability to build your site, remove unused CSS, minify the CSS, then deploy to a server&mdash;**all with a single command**.
 
@@ -173,7 +173,7 @@ Our rake tasks will just run a few shell commands for us; nothing fancy here, bu
 # Rakefile
 
 namespace :deploy do
-  
+
   def deploy(env)
     puts "Deploying to #{env}"
     system "TARGET=#{env} bundle exec middleman deploy"

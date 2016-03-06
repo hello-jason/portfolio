@@ -5,13 +5,15 @@ changefreq: weekly
 ---
 
 main role="main"
+  h1 Blog Archive
   section#article-list
-    h1 Blog Archive
     // Loop through articles
     - blog.articles.each do |article|
       article
-        h1.post-title
-          a href="#{article.url}" #{article.title}
-        - if article.data.article_summary
-          p.post-summary #{article.data.article_summary}
-        time.time pubdate="pubdate" datetime="#{article.date}" Last updated #{article.date.strftime('%Y-%m-%d')}
+        a href="#{article.url}" title="#{article.title}"
+          = image_tag (article.data.hero_image ? "articles/#{article.data.hero_image}" : "http://placehold.it/1140x334"),:alt => (article.data.hero_alt ? "#{article.data.hero_alt}" : "#{article.data.title}"), :class => "blog-hero"
+          .content
+            h1.post-title #{article.title}
+            - if article.data.article_summary
+              p.post-summary #{article.data.article_summary}
+            time.time pubdate="pubdate" datetime="#{article.date}" Last updated #{article.date.strftime('%Y-%m-%d')}

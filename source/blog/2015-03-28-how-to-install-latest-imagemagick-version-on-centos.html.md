@@ -1,5 +1,7 @@
 ---
 title: How to install latest ImageMagick version on CentOS
+hero_image: hero-imagemagick-update-centos-rpm.jpg
+hero_alt: Updating ImageMagick on CentOS using rpm
 date: 2015-03-28 19:29 CDT
 article_summary: Yum does not have the latest ImageMagick in its repository; thankfully, the REMI repository does.
 ---
