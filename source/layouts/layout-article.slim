@@ -6,8 +6,7 @@ section#article-single
     - if current_page.data.date
       time.time pubdate="pubdate" datetime="#{current_page.data.date}" Last updated #{current_page.date.strftime('%Y-%m-%d')}
     hr
-    - if current_page.data.hero_image
-      = image_tag "articles/#{current_page.data.hero_image}", :alt => "#{current_page.data.hero_alt}", :class => "blog-hero"
+    = image_tag (current_page.data.hero_image ? "articles/#{current_page.data.hero_image}" : "http://placehold.it/1140x334"),:alt => (current_page.data.hero_alt ? "#{current_page.data.hero_alt}" : "#{current_page.data.title}"), :class => "blog-hero"
     = yield
   hr
   a href="#{url_blog}" &#8617; All articles

@@ -11,8 +11,7 @@ main role="main"
     - blog.articles.each do |article|
       article
         a href="#{article.url}" title="#{article.title}"
-          - if article.data.hero_image
-            = image_tag "articles/#{article.data.hero_image}", :alt => "#{article.data.hero_alt}", :class => "blog-hero"
+          = image_tag (article.data.hero_image ? "articles/#{article.data.hero_image}" : "http://placehold.it/1140x334"),:alt => (article.data.hero_alt ? "#{article.data.hero_alt}" : "#{article.data.title}"), :class => "blog-hero"
           .content
             h1.post-title #{article.title}
             - if article.data.article_summary
