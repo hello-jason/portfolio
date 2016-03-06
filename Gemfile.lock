@@ -194,23 +194,23 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  bootstrap-sass
-  builder
-  font-awesome-middleman
-  image_optim_pack
+  bootstrap-sass (~> 3.3.6)
+  builder (~> 3.2.2)
+  font-awesome-middleman (~> 4.5.0)
+  image_optim_pack (~> 0.2.1.20160103)
   middleman (~> 3.4.1)
-  middleman-autoprefixer
-  middleman-blog
-  middleman-deploy
-  middleman-disqus
-  middleman-favicon-maker
-  middleman-imageoptim
-  middleman-jquery
-  middleman-livereload
-  middleman-rouge
-  oj
-  redcarpet
-  slim
+  middleman-autoprefixer (~> 2.6.3)
+  middleman-blog (~> 3.5.3)
+  middleman-deploy (~> 1.0.0)
+  middleman-disqus (~> 1.1.0)
+  middleman-favicon-maker (~> 3.7)
+  middleman-imageoptim (~> 0.2.1)
+  middleman-jquery (~> 2.1.1)
+  middleman-livereload (~> 3.4.6)
+  middleman-rouge (~> 0.0.1)
+  oj (~> 2.14.3)
+  redcarpet (~> 3.3.4)
+  slim (~> 3.0.6)
 
 BUNDLED WITH
    1.11.2
