@@ -196,9 +196,10 @@ configure :build do
   # Ignore file/dir during build process
   ignore ".git"
   ignore "environment_variables.rb"
-  ignore "environment_variables.rb.sample"
+  ignore "environment_variables.sample.rb"
   ignore "favicon_template.png"
   ignore "article.tt"
+  ignore "imageoptim.manifest.yml"
 
   set :site_url, "#{site_url_production}"
 
