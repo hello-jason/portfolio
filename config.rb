@@ -111,7 +111,6 @@ helpers do
       <a href='#{url_portfolio}#{slug}'>
         <figcaption>
           <h3>#{title}</h3>
-          <span class='year'>#{year}</span>
           <span class='view'>&mdash;view&mdash;
         </figcaption>
         <img data-layzr='#{image_url}' alt='#{title}'>
@@ -196,16 +195,17 @@ configure :build do
   # Ignore file/dir during build process
   ignore ".git"
   ignore "environment_variables.rb"
-  ignore "environment_variables.rb.sample"
+  ignore "environment_variables.sample.rb"
   ignore "favicon_template.png"
   ignore "article.tt"
+  ignore "imageoptim.manifest.yml"
 
   set :site_url, "#{site_url_production}"
 
   # Optimization
   set :sass, line_comments: false, style: :compressed
   activate :minify_css
-  # activate :minify_html
+  activate :minify_html
   activate :minify_javascript
   activate :gzip
 
