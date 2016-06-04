@@ -205,7 +205,7 @@ configure :build do
   # Optimization
   set :sass, line_comments: false, style: :compressed
   activate :minify_css
-  # activate :minify_html
+  activate :minify_html
   activate :minify_javascript
   activate :gzip
 
