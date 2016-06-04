@@ -111,7 +111,6 @@ helpers do
       <a href='#{url_portfolio}#{slug}'>
         <figcaption>
           <h3>#{title}</h3>
-          <span class='year'>#{year}</span>
           <span class='view'>&mdash;view&mdash;
         </figcaption>
         <img data-layzr='#{image_url}' alt='#{title}'>
