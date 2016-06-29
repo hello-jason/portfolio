@@ -8,7 +8,7 @@ article_summary: Here's how you can develop WordPress sites onto Bedrock and dep
 
 ## Brief
 
-This bash script prepares a WordPress project built on Root's [Bedrock](https://roots.io/bedrock/) boilerplate with the [Sage](https://roots.io/sage/) starter theme and deploys it **to the WP Engine hosting platform**. It can be easily modified if you do not use the Sage theme.
+This bash script prepares a WordPress project built on Roots' [Bedrock](https://roots.io/bedrock/) boilerplate with the [Sage](https://roots.io/sage/) starter theme and deploys it **to the WP Engine hosting platform**. It can be easily modified if you do not use the Sage theme.
 
 * Repo: [https://github.com/hello-jason/bedrock-sage-deploy-to-wpengine](https://github.com/hello-jason/bedrock-sage-deploy-to-wpengine)
 * Demo: [http://bedrocksage.wpengine.com/](http://bedrocksage.wpengine.com/)

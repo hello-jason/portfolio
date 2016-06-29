@@ -95,6 +95,9 @@ figure.iphone6 {
     img {
       @extend .img-responsive;
       margin: 0 auto;
+      &+p {
+        margin-top: $jason-space;
+      }
     }
     h1 {
       text-transform: uppercase;
