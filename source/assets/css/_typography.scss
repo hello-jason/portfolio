@@ -10,12 +10,21 @@
   font-style: normal;
 }
 
+// Bebas
+@font-face {
+  font-family: 'Bebas Neue Regular';
+  src: url('../fonts/bebasneue_regular-webfont.woff2') format('woff2'),
+       url('../fonts/bebasneue_regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
 p {
   margin-bottom: ($jason-space / 2);
 }
 
 h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
-  font-weight: bold;
+  font-weight: normal;
   text-transform: capitalize;
 }
 h1, .h1 {
@@ -31,14 +40,26 @@ h2, .h2 {
 
 h3, .h3 {
   margin-bottom: 0;
+  letter-spacing: 1px;
   span {
-    font-family: $font-family-serif;
+    // font-family: $font-family-serif;
     font-style: italic;
   }
+}
+
+dt {
+  font-family: $headings-font-family;
+  font-weight: normal;
 }
 
 aside, main {
   a:link {
     text-decoration: underline;
   }
+}
+
+// Icons
+.icon-downarrow {
+  font-family: Wingdings;
+  font-size: $font-size-h2;
 }
