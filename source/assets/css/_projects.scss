@@ -95,6 +95,9 @@ figure.iphone6 {
     img {
       @extend .img-responsive;
       margin: 0 auto;
+      &+p {
+        margin-top: $jason-space;
+      }
     }
     h1 {
       text-transform: uppercase;
@@ -147,7 +150,6 @@ figure.iphone6 {
       line-height: 1.35em;
       font-weight: normal;
       text-transform: none;
-      font-family: $font-family-serif;
       @media (min-width: $screen-md-min) {
         font-size: 72px;
       }
