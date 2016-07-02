@@ -1,7 +1,7 @@
 ---
 title: <%= @title %>
-hero_image: http://placehold.it/1140x334
-hero_alt: Hero alt text
+hero_image:
+hero_alt: <%= @title %>
 date: <%= @date.strftime('%F %R %Z') %>
 date_updated:
 article_summary:

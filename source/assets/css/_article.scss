@@ -2,6 +2,10 @@
   color: $text-muted;
   font-size: $font-size-small;
 }
+.back-to-articles {
+  font-size: $font-size-small;
+  text-decoration: underline;
+}
 
 #article-single {
   @extend .container;
