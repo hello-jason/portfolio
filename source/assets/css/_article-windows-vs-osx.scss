@@ -1,0 +1,30 @@
+.logo-os {
+  max-width: 35px !important;
+  display: inline-block !important;
+}
+.icon-dichomoty {
+  max-width: 20px !important;
+  display: inline-block !important;
+  margin-right: 6px;
+}
+
+.blog_nitpicky-differences-between-windows-10-and-os-x {
+  .panel {
+    .panel-body {
+      padding: 0;
+    }
+    .row {
+      border-bottom: 1px solid $table-border-color;
+      padding-top: $jason-space;
+      padding-bottom: $jason-space;
+      margin: 0;
+      &::last-child {
+        padding-top: 0;
+        padding-bottom: 0;
+      }
+      &:nth-child(even) {
+        background: #f0f0f0;
+      }
+    }
+  }
+}

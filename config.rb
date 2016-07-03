@@ -174,6 +174,48 @@ helpers do
     "<div class=\"codepen-container\"><p data-height=\"#{height}\" data-theme-id=\"light\" data-slug-hash=\"#{slugHash}\" data-default-tab=\"#{defaultTabs}\" data-user=\"#{user}\" data-embed-version=\"2\""+  (runPen == "click" ? " data-preview=\"true\" " : "") +"class=\"codepen\"></div>"
   end
 
+  # Windows vs OS X points
+  # Arguments:
+  ## operatingSystem = [windows] or [osx]
+  ## dichotomy = string. [good] or [bad]
+  ## title = string. Title of the point being made.
+  ## description = string. Description of the point being made.
+  ## image = filename. Filename and filetype of screenshot.
+  def os_point(operatingSystem="windows",
+               dichotomy="good",
+               title="Give me a title",
+               description="Give me a description")
+
+      # Determine if Windows or OS X
+      if operatingSystem.downcase == "windows"
+        os_image = "/#{images_dir}/logo-windows-10.svg"
+      elsif operatingSystem.downcase == "osx"
+        os_image = "/#{images_dir}/logo-apple.svg"
+      end
+
+      # Determine if good or bad
+      if dichotomy.downcase == "good"
+        icon_image = "/#{images_dir}/icon-check-circle.svg"
+      elsif dichotomy.downcase == "bad"
+        icon_image = "/#{images_dir}/icon-times-circle.svg"
+      end
+
+      # Begin HTML layout
+      "<div class='row'>
+        <div class='col-md-1'>
+          <img class='icon-dichomoty' src='#{icon_image}' alt='#{dichotomy.capitalize} thing' />
+          <img class='logo-os' src='#{os_image}' alt='#{operatingSystem.capitalize}' />
+        </div>
+        <div class='col-md-6'>
+          <strong>#{title}</strong>
+          <p>#{description}</p>
+        </div>
+        <div class='col-md-5'>
+          <img src='http://placehold.it/700x150' />
+        </div>
+      </div>"
+  end
+
 end
 
 # ========================================================================
