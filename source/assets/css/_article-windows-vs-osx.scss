@@ -23,8 +23,14 @@
         padding-bottom: 0;
       }
       &:nth-child(even) {
-        background: #f0f0f0;
+        background: #f6f6f6;
       }
     }
+  }
+}
+
+.vs-screenshot {
+  img {
+    margin: 0 auto;
   }
 }

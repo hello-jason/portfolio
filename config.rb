@@ -184,7 +184,8 @@ helpers do
   def os_point(operatingSystem="windows",
                dichotomy="good",
                title="Give me a title",
-               description="Give me a description")
+               description="Give me a description",
+               screenshot="")
 
       # Determine if Windows or OS X
       if operatingSystem.downcase == "windows"
@@ -200,20 +201,34 @@ helpers do
         icon_image = "/#{images_dir}/icon-times-circle.svg"
       end
 
+      # Change width of description container, depending on if has screenshot or not
+      screenshot_div = ""
+
+      if screenshot != ""
+        descColumns = "col-md-6"
+        screenshot_div = "
+          <div class='vs-screenshot col-md-5'>
+            <img src='/#{images_dir}/articles/#{screenshot}' />
+          </div>"
+      else
+        descColumns = "col-md-11"
+      end
+
       # Begin HTML layout
-      "<div class='row'>
-        <div class='col-md-1'>
-          <img class='icon-dichomoty' src='#{icon_image}' alt='#{dichotomy.capitalize} thing' />
-          <img class='logo-os' src='#{os_image}' alt='#{operatingSystem.capitalize}' />
+      "<div class=\"row\">
+        <div class=\"col-md-1\">
+          <img class=\"icon-dichomoty\" src=\"#{icon_image}\" alt=\"#{dichotomy.capitalize} thing\" />
+          <img class=\"logo-os\" src=\"#{os_image}\" alt=\"#{operatingSystem.capitalize}\" />
         </div>
-        <div class='col-md-6'>
+
+        <div class=\"#{descColumns}\">
           <strong>#{title}</strong>
           <p>#{description}</p>
         </div>
-        <div class='col-md-5'>
-          <img src='http://placehold.it/700x150' />
-        </div>
-      </div>"
+
+      #{screenshot_div}
+
+      </div> <!-- /row -->"
   end
 
 end
