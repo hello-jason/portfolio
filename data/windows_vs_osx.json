@@ -1,0 +1,298 @@
+{
+  "sections": [
+    {
+      "id": "1",
+      "title": "File Explorer",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do",
+      "reasons": [
+        {
+          "operatingSystem": "windows",
+          "dichotomy": "good",
+          "title": "Copy as path",
+          "description": "Hold shift when right-clicking on a file, and you can copy the path to that file to your clipboard.",
+          "screenshot": "vs-copy-as-path.png"
+        },
+        {
+          "operatingSystem": "windows",
+          "dichotomy": "good",
+          "title": "Address bar with full path",
+          "description": "",
+          "screenshot": "vs-address-full-path.png"
+        },
+        {
+          "operatingSystem": "windows",
+          "dichotomy": "good",
+          "title": "Folder/file manipulation in dialog boxes",
+          "description": "",
+          "screenshot": ""
+        },
+        {
+          "operatingSystem": "windows",
+          "dichotomy": "good",
+          "title": "Create files from context menu",
+          "description": "",
+          "screenshot": "vs-new-file-context.png"
+        },
+        {
+          "operatingSystem": "windows",
+          "dichotomy": "good",
+          "title": "Install multiple fonts from context menu",
+          "description": "Windows lets you highlight a bunch of fonts, right click, then install them. The only way to install fonts in OS X is to open FontBook and drag them in.",
+          "screenshot": "vs-install-fonts.png"
+        },
+        {
+          "operatingSystem": "osx",
+          "dichotomy": "good",
+          "title": "Thumbnail previews for PSD, AI, etc.",
+          "description": "Finder shows thumbnails for Photoshop, raw camera, and other obscure graphic files, which is great. The same feature can be added to Explorer with <a href=\"http://www.fastpictureviewer.com/codecs/\">FastPictureViewer's Codec Pack</a>.",
+          "screenshot": ""
+        },
+        {
+          "operatingSystem": "osx",
+          "dichotomy": "good",
+          "title": "Multiple tabs in Finder",
+          "description": "It's great that OS X has multiple tabs built into Finder. Though this feature is easily added to Windows by installing <a href=\"http://ejie.me/\">Clover</a>, and its Chrome-like tabs are far superior in my book.",
+          "screenshot": ""
+        },
+        {
+          "operatingSystem": "osx",
+          "dichotomy": "bad",
+          "title": "Cannot cut files or folders",
+          "description": "",
+          "screenshot": ""
+        },
+        {
+          "operatingSystem": "osx",
+          "dichotomy": "bad",
+          "title": "Cover flow",
+          "description": "Cover flow view seems great; it shows columns as you drill down. But tough to get back to the top level when you’re far down.",
+          "screenshot": ""
+        },
+        {
+          "operatingSystem": "osx",
+          "dichotomy": "good",
+          "title": "Spacebar preview",
+          "description": "Click an image, tap the spacebar, and see a preview of it. It even works with Photoshop, etc. files. I haven't found a comparable alternative in Windows.",
+          "screenshot": ""
+        },
+        {
+          "operatingSystem": "osx",
+          "dichotomy": "bad",
+          "title": "Cannot get total file size of everything inside a folder",
+          "description": "Right-click, Get info on multiple files will open an Info window for each file individually (bad, terrible, wicked).",
+          "screenshot": "vs-multiple-files.png"
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "title": "Keyboard Shortcuts",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do",
+      "reasons": [
+        {
+          "operatingSystem": "windows",
+          "dichotomy": "good",
+          "title": "Home/End work like they should",
+          "description": "Home and End go to the beginning or end of the current line. Ctrl+Home and Ctrl+End jump to beginning or end of the current document. Why did OS X mess this up so badly?",
+          "screenshot": ""
+        },
+        {
+          "operatingSystem": "windows",
+          "dichotomy": "good",
+          "title": "Windows+L locks computer",
+          "description": "Need to go for a coffee break? Just hit this key combination to lock your computer, requiring a password to get back in. Simple.",
+          "screenshot": ""
+        },
+        {
+          "operatingSystem": "osx",
+          "dichotomy": "good",
+          "title": "The command key",
+          "description": "You can have this one. Using my thumb on the command key for shortcuts saves my poor pinky a lot of pain.",
+          "screenshot": ""
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "title": "User Interface",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do",
+      "reasons": [
+        {
+          "operatingSystem": "windows",
+          "dichotomy": "good",
+          "title": "Window snapping",
+          "description": "",
+          "screenshot": ""
+        },
+        {
+          "operatingSystem": "windows",
+          "dichotomy": "good",
+          "title": "Spaces",
+          "description": "",
+          "screenshot": ""
+        },
+        {
+          "operatingSystem": "windows",
+          "dichotomy": "good",
+          "title": "Each app has its own menu bar",
+          "description": "",
+          "screenshot": ""
+        },
+        {
+          "operatingSystem": "windows",
+          "dichotomy": "good",
+          "title": "Multi-monitor support",
+          "description": "Windows can span multiple monitors. Task bar on every monitor, settings to show where apps are open",
+          "screenshot": ""
+        },
+        {
+          "operatingSystem": "osx",
+          "dichotomy": "bad",
+          "title": "Clicking an app eats the first click",
+          "description": "",
+          "screenshot": ""
+        },
+        {
+          "operatingSystem": "osx",
+          "dichotomy": "good",
+          "title": "Closing apps (CMD+Q",
+          "description": "This keyboard shortcut will close the currently-active app. Handy! Alt+F4 usually works in Windows, but it's not a standard.",
+          "screenshot": ""
+        },
+        {
+          "operatingSystem": "osx",
+          "dichotomy": "bad",
+          "title": "Difficult to grab window corners for resizing",
+          "description": "",
+          "screenshot": ""
+        },
+        {
+          "operatingSystem": "osx",
+          "dichotomy": "bad",
+          "title": "Difficult telling titlebars apart",
+          "description": "",
+          "screenshot": ""
+        },
+        {
+          "operatingSystem": "osx",
+          "dichotomy": "bad",
+          "title": "Windows cannot span multiple monitors",
+          "description": "",
+          "screenshot": ""
+        },
+        {
+          "operatingSystem": "osx",
+          "dichotomy": "bad",
+          "title": "Does not know about additional monitors until after user logs in",
+          "description": "",
+          "screenshot": ""
+        },
+        {
+          "operatingSystem": "osx",
+          "dichotomy": "bad",
+          "title": "3rd party keyboard and mouse support BLOWS before user has logged in",
+          "description": "",
+          "screenshot": ""
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "title": "Photoshop",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do",
+      "reasons": [
+        {
+          "operatingSystem": "windows",
+          "dichotomy": "good",
+          "title": "Arrow keys to scroll through blending options",
+          "description": "",
+          "screenshot": ""
+        }
+      ]
+    },
+    {
+      "id": "5",
+      "title": "Dock/Taskbar",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do",
+      "reasons": [
+        {
+          "operatingSystem": "windows",
+          "dichotomy": "good",
+          "title": "Sneak peak view",
+          "description": "",
+          "screenshot": ""
+        },
+        {
+          "operatingSystem": "windows",
+          "dichotomy": "good",
+          "title": "Recently opened items (jump list)",
+          "description": "",
+          "screenshot": ""
+        },
+        {
+          "operatingSystem": "windows",
+          "dichotomy": "good",
+          "title": "Jump lists (and file pinning)",
+          "description": "This is huge!",
+          "screenshot": ""
+        },
+        {
+          "operatingSystem": "osx",
+          "dichotomy": "bad",
+          "title": "Cannot have dock on all monitors",
+          "description": "",
+          "screenshot": ""
+        },
+        {
+          "operatingSystem": "osx",
+          "dichotomy": "bad",
+          "title": "Clicking an icon in the dock does not maximize/minimize that application",
+          "description": "",
+          "screenshot": ""
+        },
+        {
+          "operatingSystem": "osx",
+          "dichotomy": "bad",
+          "title": "Minimizing an application tosses it to the right side of the dock and kills ability to alt+tab to maximize that app",
+          "description": "",
+          "screenshot": ""
+        }
+      ]
+    },
+    {
+      "id": "6",
+      "title": "General Features",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do",
+      "reasons": [
+        {
+          "operatingSystem": "windows",
+          "dichotomy": "good",
+          "title": "Remote desktop protocol",
+          "description": "Supports multiple monitors, sound, users",
+          "screenshot": ""
+        },
+        {
+          "operatingSystem": "osx",
+          "dichotomy": "good",
+          "title": "System-wide dictionary",
+          "description": "",
+          "screenshot": ""
+        }
+      ]
+    },
+    {
+      "id": "7",
+      "title": "Desktop",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do",
+      "reasons": [
+        {
+          "operatingSystem": "osx",
+          "dichotomy": "good",
+          "title": "Plugged in devices show on the desktop",
+          "description": "",
+          "screenshot": ""
+        }
+      ]
+    }
+  ]
+}
