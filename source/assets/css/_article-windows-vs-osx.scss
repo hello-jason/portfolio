@@ -29,8 +29,29 @@
   }
 }
 
+// Default styles for VS row section
+.vs-score {
+  @extend .col-md-1;
+}
+.vs-description {
+  @extend .col-md-6;
+  &.without-image {
+    @extend .col-md-11;
+  }
+}
 .vs-screenshot {
+  @extend .col-md-5;
   img {
     margin: 0 auto;
   }
 }
+
+// VS row section overrides
+.folder-file-manipulation-in-dialog-boxes {
+  .vs-description {
+    @extend .without-image;
+  }
+  .vs-screenshot {
+    @extend .col-md-12;
+  }
+ }

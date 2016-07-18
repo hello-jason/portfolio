@@ -6,62 +6,71 @@
       "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do",
       "reasons": [
         {
-          "operatingSystem": "windows",
-          "dichotomy": "good",
-          "title": "Copy as path",
-          "description": "Hold shift when right-clicking on a file, and you can copy the path to that file to your clipboard.",
-          "screenshot": "vs-copy-as-path.png"
-        },
-        {
-          "operatingSystem": "windows",
-          "dichotomy": "good",
-          "title": "Address bar with full path",
-          "description": "",
-          "screenshot": "vs-address-full-path.png"
-        },
-        {
+          "id": 1,
           "operatingSystem": "windows",
           "dichotomy": "good",
           "title": "Folder/file manipulation in dialog boxes",
-          "description": "",
-          "screenshot": ""
+          "description": "Filesystem-related dialog boxes (such as Save or Open) in Windows are like miniature file explorer windows; you can do nearly anything in them. Dialog boxes in OS X make me feel so shackled in comparison.<br><br>Let's say I export a file from Photoshop, then I check my desktop because that's where I thought it saved. Rather than searching, I can export again, then drag the file out the dialog box and onto my desktop.",
+          "screenshot": "vs-dialog-boxes.gif"
         },
         {
+          "id": 2,
+          "operatingSystem": "windows",
+          "dichotomy": "good",
+          "title": "Address bar with full path",
+          "description": "So simple, so useful. Windows shows you the path tree to the current directory, and it lets you copy that path to the clipboard.",
+          "screenshot": "vs-address-full-path.png"
+        },
+        {
+          "id": 3,
+          "operatingSystem": "windows",
+          "dichotomy": "good",
+          "title": "Copy as path",
+          "description": "Hold shift when right-clicking on a file, and you can copy the path to that file to your clipboard. Convenient when uploading something to a site or attaching a document to an email. Looks like this feature may now be <a href=\"https://www.tekrevue.com/tip/copy-file-path-finder-el-capitan/\">available on El Capitan</a>!",
+          "screenshot": "vs-copy-as-path.png"
+        },
+        {
+          "id": 4,
           "operatingSystem": "windows",
           "dichotomy": "good",
           "title": "Create files from context menu",
-          "description": "",
+          "description": "Want to create a new file some place, <em>then</em> open it in some program for editing? Sort of like touching a file on the command line, <em>then</em> opening it in vim for content. Windows lets you create new files with a right click of the mouse, whereas OS X forces you to create files from within the program for that file.",
           "screenshot": "vs-new-file-context.png"
         },
         {
+          "id": 5,
           "operatingSystem": "windows",
           "dichotomy": "good",
           "title": "Install multiple fonts from context menu",
-          "description": "Windows lets you highlight a bunch of fonts, right click, then install them. The only way to install fonts in OS X is to open FontBook and drag them in.",
+          "description": "Explorer lets you highlight a bunch of fonts, right click, then install them. The only way to install fonts in OS X is to open FontBook and drag them in.",
           "screenshot": "vs-install-fonts.png"
         },
         {
+          "id": 6,
           "operatingSystem": "osx",
           "dichotomy": "good",
           "title": "Thumbnail previews for PSD, AI, etc.",
-          "description": "Finder shows thumbnails for Photoshop, raw camera, and other obscure graphic files, which is great. The same feature can be added to Explorer with <a href=\"http://www.fastpictureviewer.com/codecs/\">FastPictureViewer's Codec Pack</a>.",
+          "description": "Finder shows thumbnails for Photoshop, raw camera, and other obscure graphic files, which is great for us designers. Add a better version of this feature to Explorer with <a href=\"http://www.fastpictureviewer.com/codecs/\">FastPictureViewer's Codec Pack</a>.",
           "screenshot": ""
         },
         {
+          "id": 7,
           "operatingSystem": "osx",
           "dichotomy": "good",
           "title": "Multiple tabs in Finder",
-          "description": "It's great that OS X has multiple tabs built into Finder. Though this feature is easily added to Windows by installing <a href=\"http://ejie.me/\">Clover</a>, and its Chrome-like tabs are far superior in my book.",
+          "description": "It's great that OS X has multiple tabs built into Finder. Add a better version of this feature to Explorer with <a href=\"http://ejie.me/\">Clover</a>, and its Chrome-like tabs are far superior in my book.",
           "screenshot": ""
         },
         {
+          "id": 8,
           "operatingSystem": "osx",
           "dichotomy": "bad",
-          "title": "Cannot cut files or folders",
+          "title": "Cut files or folders",
           "description": "",
           "screenshot": ""
         },
         {
+          "id": 9,
           "operatingSystem": "osx",
           "dichotomy": "bad",
           "title": "Cover flow",
@@ -69,6 +78,7 @@
           "screenshot": ""
         },
         {
+          "id": 10,
           "operatingSystem": "osx",
           "dichotomy": "good",
           "title": "Spacebar preview",
@@ -76,6 +86,7 @@
           "screenshot": ""
         },
         {
+          "id": 11,
           "operatingSystem": "osx",
           "dichotomy": "bad",
           "title": "Cannot get total file size of everything inside a folder",
@@ -90,6 +101,7 @@
       "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do",
       "reasons": [
         {
+          "id": 12,
           "operatingSystem": "windows",
           "dichotomy": "good",
           "title": "Home/End work like they should",
@@ -97,6 +109,7 @@
           "screenshot": ""
         },
         {
+          "id": 13,
           "operatingSystem": "windows",
           "dichotomy": "good",
           "title": "Windows+L locks computer",
@@ -104,6 +117,7 @@
           "screenshot": ""
         },
         {
+          "id": 14,
           "operatingSystem": "osx",
           "dichotomy": "good",
           "title": "The command key",
@@ -118,6 +132,7 @@
       "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do",
       "reasons": [
         {
+          "id": 15,
           "operatingSystem": "windows",
           "dichotomy": "good",
           "title": "Window snapping",
@@ -125,6 +140,7 @@
           "screenshot": ""
         },
         {
+          "id": 16,
           "operatingSystem": "windows",
           "dichotomy": "good",
           "title": "Spaces",
@@ -132,6 +148,7 @@
           "screenshot": ""
         },
         {
+          "id": 17,
           "operatingSystem": "windows",
           "dichotomy": "good",
           "title": "Each app has its own menu bar",
@@ -139,6 +156,7 @@
           "screenshot": ""
         },
         {
+          "id": 18,
           "operatingSystem": "windows",
           "dichotomy": "good",
           "title": "Multi-monitor support",
@@ -146,6 +164,7 @@
           "screenshot": ""
         },
         {
+          "id": 19,
           "operatingSystem": "osx",
           "dichotomy": "bad",
           "title": "Clicking an app eats the first click",
@@ -153,6 +172,7 @@
           "screenshot": ""
         },
         {
+          "id": 20,
           "operatingSystem": "osx",
           "dichotomy": "good",
           "title": "Closing apps (CMD+Q",
@@ -160,6 +180,7 @@
           "screenshot": ""
         },
         {
+          "id": 21,
           "operatingSystem": "osx",
           "dichotomy": "bad",
           "title": "Difficult to grab window corners for resizing",
@@ -167,6 +188,7 @@
           "screenshot": ""
         },
         {
+          "id": 22,
           "operatingSystem": "osx",
           "dichotomy": "bad",
           "title": "Difficult telling titlebars apart",
@@ -174,6 +196,7 @@
           "screenshot": ""
         },
         {
+          "id": 23,
           "operatingSystem": "osx",
           "dichotomy": "bad",
           "title": "Windows cannot span multiple monitors",
@@ -181,6 +204,7 @@
           "screenshot": ""
         },
         {
+          "id": 24,
           "operatingSystem": "osx",
           "dichotomy": "bad",
           "title": "Does not know about additional monitors until after user logs in",
@@ -188,6 +212,7 @@
           "screenshot": ""
         },
         {
+          "id": 25,
           "operatingSystem": "osx",
           "dichotomy": "bad",
           "title": "3rd party keyboard and mouse support BLOWS before user has logged in",
@@ -202,6 +227,7 @@
       "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do",
       "reasons": [
         {
+          "id": 26,
           "operatingSystem": "windows",
           "dichotomy": "good",
           "title": "Arrow keys to scroll through blending options",
@@ -216,6 +242,7 @@
       "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do",
       "reasons": [
         {
+          "id": 27,
           "operatingSystem": "windows",
           "dichotomy": "good",
           "title": "Sneak peak view",
@@ -223,6 +250,7 @@
           "screenshot": ""
         },
         {
+          "id": 28,
           "operatingSystem": "windows",
           "dichotomy": "good",
           "title": "Recently opened items (jump list)",
@@ -230,6 +258,7 @@
           "screenshot": ""
         },
         {
+          "id": 29,
           "operatingSystem": "windows",
           "dichotomy": "good",
           "title": "Jump lists (and file pinning)",
@@ -237,6 +266,7 @@
           "screenshot": ""
         },
         {
+          "id": 30,
           "operatingSystem": "osx",
           "dichotomy": "bad",
           "title": "Cannot have dock on all monitors",
@@ -244,6 +274,7 @@
           "screenshot": ""
         },
         {
+          "id": 31,
           "operatingSystem": "osx",
           "dichotomy": "bad",
           "title": "Clicking an icon in the dock does not maximize/minimize that application",
@@ -251,6 +282,7 @@
           "screenshot": ""
         },
         {
+          "id": 32,
           "operatingSystem": "osx",
           "dichotomy": "bad",
           "title": "Minimizing an application tosses it to the right side of the dock and kills ability to alt+tab to maximize that app",
@@ -265,6 +297,15 @@
       "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do",
       "reasons": [
         {
+          "id": 33,
+          "operatingSystem": "osx",
+          "dichotomy": "good",
+          "title": "Font rendering",
+          "description": "I must admit, ClearType is a joke. OS X has a far superior font renderer.",
+          "screenshot": ""
+        },
+        {
+          "id": 34,
           "operatingSystem": "windows",
           "dichotomy": "good",
           "title": "Remote desktop protocol",
@@ -272,10 +313,19 @@
           "screenshot": ""
         },
         {
+          "id": 35,
           "operatingSystem": "osx",
           "dichotomy": "good",
           "title": "System-wide dictionary",
           "description": "",
+          "screenshot": ""
+        },
+        {
+          "id": 36,
+          "operatingSystem": "osx",
+          "dichotomy": "good",
+          "title": "Font Book",
+          "description": "OS X comes with Font Book, which is a great way . Add a comparable program to Windows by installing <a href=\"http://fontba.se/\">FontBase</a>",
           "screenshot": ""
         }
       ]
@@ -286,6 +336,7 @@
       "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do",
       "reasons": [
         {
+          "id": 37,
           "operatingSystem": "osx",
           "dichotomy": "good",
           "title": "Plugged in devices show on the desktop",
