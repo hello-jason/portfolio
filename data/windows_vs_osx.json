@@ -59,7 +59,7 @@
           "dichotomy": "good",
           "title": "Multiple tabs in Finder",
           "description": "It's great that OS X has multiple tabs built into Finder. Add a better version of this feature to Explorer with <a href=\"http://ejie.me/\">Clover</a>, and its Chrome-like tabs are far superior in my book.",
-          "screenshot": ""
+          "screenshot": "vs-clover-explorer.png"
         },
         {
           "id": 8,
@@ -67,14 +67,6 @@
           "dichotomy": "bad",
           "title": "Cut files or folders",
           "description": "",
-          "screenshot": ""
-        },
-        {
-          "id": 9,
-          "operatingSystem": "osx",
-          "dichotomy": "bad",
-          "title": "Cover flow",
-          "description": "Cover flow view seems great; it shows columns as you drill down. But tough to get back to the top level when you’re far down.",
           "screenshot": ""
         },
         {
@@ -123,6 +115,12 @@
           "title": "The command key",
           "description": "You can have this one. Using my thumb on the command key for shortcuts saves my poor pinky a lot of pain.",
           "screenshot": ""
+        },{
+          "operatingSystem": "osx",
+          "dichotomy": "bad",
+          "title": "A proper delete key",
+          "description": "OS X requires a modifier key ",
+          "screenshot": ""
         }
       ]
     },
@@ -152,7 +150,7 @@
           "operatingSystem": "windows",
           "dichotomy": "good",
           "title": "Each app has its own menu bar",
-          "description": "",
+          "description": "A single menu bar to rule them all forces extra clicks and wasted time. Rather than seeing the menu item I want and clicking directly on it, OS X wants me to waste a click (or alt+tab) to make a program active first, then I can review the menu options for that program. This becomes more annoying when working on multiple monitors, having to jump back to the primary monitor to play with menu items. Oh, I can awkwardly slam the mouse against the top of another monitor to move the menu bar to another monitor? Windows wins, hands down.",
           "screenshot": ""
         },
         {
@@ -160,7 +158,7 @@
           "operatingSystem": "windows",
           "dichotomy": "good",
           "title": "Multi-monitor support",
-          "description": "Windows can span multiple monitors. Task bar on every monitor, settings to show where apps are open",
+          "description": "Windows 10 has incredible support for multiple monitors. Task bar on every monitor, settings to show where apps are open. Also, individual programs can span multiple monitors if you need something to be very wide; OS X just cuts it off if you try to do that.",
           "screenshot": ""
         },
         {
@@ -175,8 +173,8 @@
           "id": 20,
           "operatingSystem": "osx",
           "dichotomy": "good",
-          "title": "Closing apps (CMD+Q",
-          "description": "This keyboard shortcut will close the currently-active app. Handy! Alt+F4 usually works in Windows, but it's not a standard.",
+          "title": "Closing apps (CMD+Q)",
+          "description": "This keyboard shortcut will close the currently-active app. Handy! Alt+F4 usually works in Windows, but it's not a standard and it's a less convenient keyboard combo than CMD+Q.",
           "screenshot": ""
         },
         {
@@ -223,7 +221,7 @@
     },
     {
       "id": "4",
-      "title": "Photoshop",
+      "title": "Software",
       "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do",
       "reasons": [
         {
@@ -232,6 +230,13 @@
           "dichotomy": "good",
           "title": "Arrow keys to scroll through blending options",
           "description": "",
+          "screenshot": ""
+        },
+        {
+          "operatingSystem": "osx",
+          "dichotomy": "good",
+          "title": "Alfred",
+          "description": "You win, but the Hain project feels promising.",
           "screenshot": ""
         }
       ]
@@ -326,6 +331,12 @@
           "dichotomy": "good",
           "title": "Font Book",
           "description": "OS X comes with Font Book, which is a great way . Add a comparable program to Windows by installing <a href=\"http://fontba.se/\">FontBase</a>",
+          "screenshot": ""
+        },{
+          "operatingSystem": "osx",
+          "dichotomy": "bad",
+          "title": "Visual consistency",
+          "description": "OS X has this need for visual consistency. ????? Chrome and Firefox look identical, as do other programs. I am visual/spacial learner, so allowing each program to have their own unique look and feel helps me remember where everything is across my desktops.",
           "screenshot": ""
         }
       ]
