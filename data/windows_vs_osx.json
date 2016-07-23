@@ -134,23 +134,7 @@
           "operatingSystem": "windows",
           "dichotomy": "good",
           "title": "Window snapping",
-          "description": "",
-          "screenshot": ""
-        },
-        {
-          "id": 16,
-          "operatingSystem": "windows",
-          "dichotomy": "good",
-          "title": "Spaces",
-          "description": "",
-          "screenshot": ""
-        },
-        {
-          "id": 17,
-          "operatingSystem": "windows",
-          "dichotomy": "good",
-          "title": "Each app has its own menu bar",
-          "description": "A single menu bar to rule them all forces extra clicks and wasted time. Rather than seeing the menu item I want and clicking directly on it, OS X wants me to waste a click (or alt+tab) to make a program active first, then I can review the menu options for that program. This becomes more annoying when working on multiple monitors, having to jump back to the primary monitor to play with menu items. Oh, I can awkwardly slam the mouse against the top of another monitor to move the menu bar to another monitor? Windows wins, hands down.",
+          "description": "The snapping feature on Windows has drastically increased my efficiency. You get satisfying and helpful window placement options via the mouse and keyboard alike. They even finely-tuned the sensitivity when you move a window towards the edge of a monitor that has another monitor next to it&ndash;you can snap it to the edge, or keep on dragging to bring it to the other screen. OS X users have a few options to get this feature, such as <a href=\"https://itunes.apple.com/us/app/bettersnaptool/id417375580\">BetterSnapTool</a> (paid) or <a href=\"https://www.spectacleapp.com/\">Spectacle</a> (free); they'll do the trick, but I found they are not quite as refined as the Windows one.",
           "screenshot": ""
         },
         {
@@ -162,11 +146,19 @@
           "screenshot": ""
         },
         {
+          "id": 17,
+          "operatingSystem": "windows",
+          "dichotomy": "good",
+          "title": "Each app has its own menu bar",
+          "description": "Some people love, but I can't stand it. A single menu bar to rule them all forces extra clicks and wasted time. Rather than seeing the menu item I want and clicking directly on it, OS X wants me to waste a click (or alt+tab) to make a program active first, then I can review the menu options for that program. This becomes more annoying when working on multiple monitors, having to jump back to the primary monitor to play with menu items. Oh, I can awkwardly slam the mouse against the top of another monitor to move the menu bar to another monitor? Windows wins, hands down.",
+          "screenshot": ""
+        },
+        {
           "id": 19,
           "operatingSystem": "osx",
           "dichotomy": "bad",
           "title": "Clicking an app eats the first click",
-          "description": "",
+          "description": "My workstation typically includes 3 monitors, which means I have a lot of windows open at the same time. I find it annoying on OS X when I go to click a menu option on some window that is not currently active, only to have it eat the first click and force me to click a second time.",
           "screenshot": ""
         },
         {
@@ -182,7 +174,7 @@
           "operatingSystem": "osx",
           "dichotomy": "bad",
           "title": "Difficult to grab window corners for resizing",
-          "description": "",
+          "description": "Maybe it's just me, but I have a hard time grabbing the corner or side of a window to resize it in OS X&hellip;like the sweet spot is only 2 pixels wide. I usually have the same issue on Linux systems, but never on Windows.",
           "screenshot": ""
         },
         {
@@ -190,15 +182,15 @@
           "operatingSystem": "osx",
           "dichotomy": "bad",
           "title": "Difficult telling titlebars apart",
-          "description": "",
+          "description": "OS X places visual emphasis on the dock, so the titlebar for each program looks identical. I suppose they want the user to return to the dock whether launching or switching apps. Windows also lets you keep favorite applications in the taskbar, but most apps also have an icon of the logo to the far left of the menu bar.",
           "screenshot": ""
         },
         {
           "id": 23,
           "operatingSystem": "osx",
           "dichotomy": "bad",
-          "title": "Windows cannot span multiple monitors",
-          "description": "",
+          "title": "Programs cannot span multiple monitors",
+          "description": "You cannot stretch a window across multiple monitors on OS X; the piece of the window that overlaps the monitor's edge will just cut off. This is weird to me since I think of multiple monitors as a single overall plane.",
           "screenshot": ""
         },
         {
@@ -229,7 +221,7 @@
           "operatingSystem": "windows",
           "dichotomy": "good",
           "title": "Arrow keys to scroll through blending options",
-          "description": "",
+          "description": "Here's a Windows-only Photoshop tip that OS X users probably don't know they're missing. ??????????? I like adjusted a layer's blend mode in the Blending Options dialog box.",
           "screenshot": ""
         },
         {
@@ -290,8 +282,8 @@
           "id": 32,
           "operatingSystem": "osx",
           "dichotomy": "bad",
-          "title": "Minimizing an application tosses it to the right side of the dock and kills ability to alt+tab to maximize that app",
-          "description": "",
+          "title": "Cannot alt+tab to minimized apps",
+          "description": "Minimizing an application tosses it to the right side of the dock and kills ability to alt+tab to maximize that app.",
           "screenshot": ""
         }
       ]
