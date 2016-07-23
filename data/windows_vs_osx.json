@@ -3,22 +3,22 @@
     {
       "id": "1",
       "title": "File Explorer",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do",
+      "description": "I live in a file explorer, browsing website code and design assets. Cloud-based file storage has recently become a must.",
       "reasons": [
         {
           "id": 1,
           "operatingSystem": "windows",
           "dichotomy": "good",
           "title": "Folder/file manipulation in dialog boxes",
-          "description": "Filesystem-related dialog boxes (such as Save or Open) in Windows are like miniature file explorer windows; you can do nearly anything in them. Dialog boxes in OS X make me feel so shackled in comparison.<br><br>Let's say I export a file from Photoshop, then I check my desktop because that's where I thought it saved. Rather than searching, I can export again, then drag the file out the dialog box and onto my desktop.",
-          "screenshot": "vs-dialog-boxes.gif"
+          "description": "System dialog boxes (such as Save or Open) in Windows are like miniature file explorers, and you can do nearly anything in them. Dialog boxes in OS X make me feel shackled in comparison.<br><br>Let's say I thought that I exported a file from Photoshop to my desktop, but I actually saved it somewhere else deep in the system. I can simply export the file again, then drag it from wherever it is over to my desktop.",
+          "screenshot": ""
         },
         {
           "id": 2,
           "operatingSystem": "windows",
           "dichotomy": "good",
           "title": "Address bar with full path",
-          "description": "So simple, so useful. Windows shows you the path tree to the current directory, and it lets you copy that path to the clipboard.",
+          "description": "Explorer shows you the path tree to the current directory, and it lets you copy that path to the clipboard. So simple, so useful. There are ways to <a href=\"https://www.tekrevue.com/tip/show-path-finder-title-bar/\">show the path in Finder</a>, but they are purely visual references (you cannot copy the path).",
           "screenshot": "vs-address-full-path.png"
         },
         {
@@ -26,7 +26,7 @@
           "operatingSystem": "windows",
           "dichotomy": "good",
           "title": "Copy as path",
-          "description": "Hold shift when right-clicking on a file, and you can copy the path to that file to your clipboard. Convenient when uploading something to a site or attaching a document to an email. Looks like this feature may now be <a href=\"https://www.tekrevue.com/tip/copy-file-path-finder-el-capitan/\">available on El Capitan</a>!",
+          "description": "Explorer lets you copy the full path to a file in the context menu \(Shift+right click\). Convenient when uploading something to a site or attaching a document to an email. Looks like this feature is now be <a href=\"https://www.tekrevue.com/tip/copy-file-path-finder-el-capitan/\">available on El Capitan</a>!",
           "screenshot": "vs-copy-as-path.png"
         },
         {
@@ -34,7 +34,7 @@
           "operatingSystem": "windows",
           "dichotomy": "good",
           "title": "Create files from context menu",
-          "description": "Want to create a new file some place, <em>then</em> open it in some program for editing? Sort of like touching a file on the command line, <em>then</em> opening it in vim for content. Windows lets you create new files with a right click of the mouse, whereas OS X forces you to create files from within the program for that file.",
+          "description": "Windows lets you create new files with a right click of the mouse, whereas OS X forces you to create files by saving them out of a program.",
           "screenshot": "vs-new-file-context.png"
         },
         {
@@ -50,7 +50,7 @@
           "operatingSystem": "osx",
           "dichotomy": "good",
           "title": "Thumbnail previews for PSD, AI, etc.",
-          "description": "Finder shows thumbnails for Photoshop, raw camera, and other obscure graphic files, which is great for us designers. Add a better version of this feature to Explorer with <a href=\"http://www.fastpictureviewer.com/codecs/\">FastPictureViewer's Codec Pack</a>.",
+          "description": "Finder shows thumbnails for Photoshop, raw camera, and other obscure graphic files, which is great for us designers. But you can install a better version of this feature for Windows with <a href=\"http://www.fastpictureviewer.com/codecs/\">FastPictureViewer's Codec Pack</a>.",
           "screenshot": ""
         },
         {
@@ -58,15 +58,15 @@
           "operatingSystem": "osx",
           "dichotomy": "good",
           "title": "Multiple tabs in Finder",
-          "description": "It's great that OS X has multiple tabs built into Finder. Add a better version of this feature to Explorer with <a href=\"http://ejie.me/\">Clover</a>, and its Chrome-like tabs are far superior in my book.",
+          "description": "It's great that OS X has multiple tabs built into Finder, activated with Command+T. Add a Chrome-like version of this feature to Explorer with <a href=\"http://ejie.me/\">Clover</a> for Windows.",
           "screenshot": "vs-clover-explorer.png"
         },
         {
           "id": 8,
           "operatingSystem": "osx",
-          "dichotomy": "bad",
-          "title": "Cut files or folders",
-          "description": "",
+          "dichotomy": "good",
+          "title": "Simpler copy, cut, and paste",
+          "description": "You cannot \"cut\" a file in OS X, only copy it, which was annoying for me. I learned to hold CMD while dragging, which performs a move, but I was ecstatic to learn there are options when pasting a file. CMD+V pastes a copy, CMD+Option+V moves it. This is brilliant, and much better than Windows because I can change my mind.",
           "screenshot": ""
         },
         {
@@ -74,7 +74,7 @@
           "operatingSystem": "osx",
           "dichotomy": "good",
           "title": "Spacebar preview",
-          "description": "Click an image, tap the spacebar, and see a preview of it. It even works with Photoshop, etc. files. I haven't found a comparable alternative in Windows.",
+          "description": "Click an image, tap the spacebar, and see a preview of it. It even works with Photoshop, etc. files. I haven't found a comparable alternative in Windows, but FastPictureViewer's Codec Pack is acceptable.",
           "screenshot": ""
         },
         {
@@ -82,7 +82,7 @@
           "operatingSystem": "osx",
           "dichotomy": "bad",
           "title": "Cannot get total file size of everything inside a folder",
-          "description": "Right-click, Get info on multiple files will open an Info window for each file individually (bad, terrible, wicked).",
+          "description": "Have you ever highlighted a bunch of files/folders in Finder, then right clicked and chose Get info? It's a booby trap.<br><br>In Windows, this shows a single properties window with aggregate totals of what I selected. On OS X, however, I had to restart the machine because it opened hundreds of Get Info windows, one for every file in every subdirectory.",
           "screenshot": "vs-multiple-files.png"
         }
       ]
@@ -105,7 +105,7 @@
           "operatingSystem": "windows",
           "dichotomy": "good",
           "title": "Windows+L locks computer",
-          "description": "Need to go for a coffee break? Just hit this key combination to lock your computer, requiring a password to get back in. Simple.",
+          "description": "Need to go for a coffee break? Just hit this key combination to lock your computer, requiring a password to get back in. You're not logged out, the computer isn't sleeping or hibernating&hellip;it's simply locked. Great. You can do <a href=\"www.amsys.co.uk/2016/05/lock-os-x-screen-instantly-el-capitan-10-11/?nabe=5737850786545664:1\">something similar</a> in OS X, but I am baffled that you have to manually set this up and at the goofy keyboard combination. I tried setting it to a hot corner, but I kept locking my screen accidentally.",
           "screenshot": ""
         },
         {
@@ -119,7 +119,7 @@
           "operatingSystem": "osx",
           "dichotomy": "bad",
           "title": "A proper delete key",
-          "description": "OS X requires a modifier key ",
+          "description": "OS X requires a modifier key in order to delete characters in front of the cursor. My brain and fingers could not get comfortable with this.<br><br>A larger issue is more personal to me. I program the Backspace key to a button on <a href=\"https://evoluent.com/\">my mouse</a>, which also lets me go back in the browser and Explorer.",
           "screenshot": ""
         }
       ]
@@ -143,14 +143,14 @@
           "dichotomy": "good",
           "title": "Multi-monitor support",
           "description": "Windows 10 has incredible support for multiple monitors. Task bar on every monitor, settings to show where apps are open. Also, individual programs can span multiple monitors if you need something to be very wide; OS X just cuts it off if you try to do that.",
-          "screenshot": ""
+          "screenshot": "vs-multiple-monitors.png"
         },
         {
           "id": 17,
           "operatingSystem": "windows",
           "dichotomy": "good",
           "title": "Each app has its own menu bar",
-          "description": "Some people love, but I can't stand it. A single menu bar to rule them all forces extra clicks and wasted time. Rather than seeing the menu item I want and clicking directly on it, OS X wants me to waste a click (or alt+tab) to make a program active first, then I can review the menu options for that program. This becomes more annoying when working on multiple monitors, having to jump back to the primary monitor to play with menu items. Oh, I can awkwardly slam the mouse against the top of another monitor to move the menu bar to another monitor? Windows wins, hands down.",
+          "description": "Some people love it, but I can't stand it. A single menu bar to rule them all forces extra clicks and wasted time. Rather than seeing the menu item I want and clicking directly on it, OS X wants me to waste a click (or alt+tab) to make a program active first, then I can review the menu options for that program. This becomes more annoying when working on multiple monitors, having to jump back to the primary monitor to play with menu items. Oh, I can awkwardly slam the mouse against the top of another monitor to move the menu bar to another monitor? Windows wins, hands down.",
           "screenshot": ""
         },
         {
@@ -200,14 +200,6 @@
           "title": "Does not know about additional monitors until after user logs in",
           "description": "",
           "screenshot": ""
-        },
-        {
-          "id": 25,
-          "operatingSystem": "osx",
-          "dichotomy": "bad",
-          "title": "3rd party keyboard and mouse support BLOWS before user has logged in",
-          "description": "",
-          "screenshot": ""
         }
       ]
     },
@@ -229,6 +221,13 @@
           "dichotomy": "good",
           "title": "Alfred",
           "description": "You win, but the Hain project feels promising.",
+          "screenshot": ""
+        },
+        {
+          "operatingSystem": "windows",
+          "dichotomy": "good",
+          "title": "Bash on Ubuntu on Windows",
+          "description": "This changes everything. My current workflow includes an Ubuntu Server VM for all web development..?????<br><br>The only reason you would be required to own a Mac now is if you want to create a MacOS or iOS application, and even that is <a href=\"https://facebook.github.io/react-native/\">changing</a>.",
           "screenshot": ""
         }
       ]
