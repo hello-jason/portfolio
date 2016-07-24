@@ -2,7 +2,7 @@
   "sections": [
     {
       "id": "1",
-      "title": "File Explorer",
+      "title": "Explorer and Finder",
       "reasons": [
         {
           "id": 1,
@@ -65,24 +65,48 @@
           "operatingSystem": "osx",
           "dichotomy": "good",
           "title": "Simpler copy, cut, and paste",
-          "description": "You cannot \"cut\" a file in OS X, only copy it, which was annoying for me&hellip;at first. I learned to hold CMD while dragging, which performs a move, but I was ecstatic to learn there are options when pasting a file. CMD+V pastes a copy, CMD+Option+V moves it. This is brilliant, and much better than Windows because I can change my mind.",
+          "description": "You cannot \"cut\" a file in OS X, only copy it, which was annoying for me&hellip;at first. I learned to hold CMD while dragging, which performs a move, but I was ecstatic to learn there are options when pasting a file. CMD+V pastes a copy, CMD+Option+V moves it. This is brilliant, and much better than Windows because it moves the action to the last step of the process, and you can change your mind (move rather than duplicate) without having to start all over.",
+          "screenshot": ""
+        },
+        {
+          "id": 9,
+          "operatingSystem": "osx",
+          "dichotomy": "good",
+          "title": "Spacebar preview",
+          "description": "Click an image, tap the spacebar, and see a preview of it. It even works with Photoshop files, etc. I haven't found a comparable alternative in Windows, but FastPictureViewer's Codec Pack is acceptable.",
           "screenshot": ""
         },
         {
           "id": 10,
           "operatingSystem": "osx",
-          "dichotomy": "good",
-          "title": "Spacebar preview",
-          "description": "Click an image, tap the spacebar, and see a preview of it. It even works with Photoshop, etc. files. I haven't found a comparable alternative in Windows, but FastPictureViewer's Codec Pack is acceptable.",
-          "screenshot": ""
+          "dichotomy": "bad",
+          "title": "Cannot get total file size of everything inside a folder",
+          "description": "Have you ever highlighted a bunch of files/folders in Finder, then right clicked and chose Get info? It's a booby trap.<br><br>In Windows, this shows a single properties window with aggregate totals of what I selected. On OS X, however, I had to restart the machine because it opened hundreds of Get Info windows, one for every file in every subdirectory.",
+          "screenshot": "vs-multiple-files.png"
         },
         {
           "id": 11,
           "operatingSystem": "osx",
           "dichotomy": "bad",
-          "title": "Cannot get total file size of everything inside a folder",
-          "description": "Have you ever highlighted a bunch of files/folders in Finder, then right clicked and chose Get info? It's a booby trap.<br><br>In Windows, this shows a single properties window with aggregate totals of what I selected. On OS X, however, I had to restart the machine because it opened hundreds of Get Info windows, one for every file in every subdirectory.",
-          "screenshot": "vs-multiple-files.png"
+          "title": "Window buttons",
+          "description": "I may prefer the location of the window buttons in OS X, but I like the buttons themselves and their functionality much more in Windows. The area around each circular button is dead space, reducing the target area that I can click one (i.e., making it harder for me to click one of them). Also, the circle buttons are spaced away from the corner of the window, whereas the button <strong>is</strong> the entire corner on Windows. Look at the picture. It's the entire corner. Click anywhere in that red box to close the window.<br><br>Mac forces me to be precise with the mouse in order to close a window; Windows lets me slam my mouse up into the corner and click.",
+          "screenshot": "vs-window-buttons.png"
+        },
+        {
+          "id": 11,
+          "operatingSystem": "osx",
+          "dichotomy": "bad",
+          "title": "Grabbing windows",
+          "description": "On Windows, I can slam my mouse to the top of the screen and grab a window in the blink of an eye. Then I can drag it to another monitor and slam it against the top of the screen to go maximized. On Mac, the top of the screen is the menubar, which forces you to precisely move the mouse down a bit in order to grab the window.<br><br>",
+          "screenshot": "vs-window-buttons.png"
+        },
+        {
+          "id": 11,
+          "operatingSystem": "windows",
+          "dichotomy": "good",
+          "title": "Maximize",
+          "description": "A maximized program in Windows simply fills the entire workspace of the screen (that is, it won't cover up the taskbar). You can go <em>true fullscreen</em> in Windows by hitting the F11 key, and it will just do it without the ridiculous 3 second animation that OS X goes through.<br><br>OS X has a different concept of maximized that <strong>only</strong> does a true full screen, thus hiding your menubar and such.",
+          "screenshot": ""
         }
       ]
     },
@@ -102,8 +126,8 @@
           "id": 13,
           "operatingSystem": "windows",
           "dichotomy": "good",
-          "title": "Windows+L locks computer",
-          "description": "Need to go for a coffee break? Just hit this key combination to lock your computer, requiring a password to get back in. You're not logged out, the computer isn't sleeping or hibernating&hellip;it's simply locked. Great. You can do <a href=\"www.amsys.co.uk/2016/05/lock-os-x-screen-instantly-el-capitan-10-11/?nabe=5737850786545664:1\">something similar</a> in OS X, but I am baffled that you have to manually set this up and at the goofy keyboard combination. I tried setting it to a hot corner, but I kept locking my screen accidentally.",
+          "title": "Windows+L locks the computer",
+          "description": "Need to go for a coffee break? Just hit Win+L to lock your computer, requiring a password to get back in. You're not logged out, the computer isn't sleeping or hibernating&hellip;it's simply locked. Great. You can do <a href=\"www.amsys.co.uk/2016/05/lock-os-x-screen-instantly-el-capitan-10-11/?nabe=5737850786545664:1\">something similar</a> in OS X, but I am baffled that you have to manually set this up and at the goofy keyboard combination. I tried setting it to a hot corner, but I kept locking my screen accidentally.",
           "screenshot": ""
         },
         {
@@ -111,14 +135,15 @@
           "operatingSystem": "osx",
           "dichotomy": "good",
           "title": "The command key",
-          "description": "Using my thumb on the command key instead of control saves my poor pinky a lot of pain.",
+          "description": "Using my thumb on the command key instead of control saves my poor pinky a lot of pain. Plus there's <a href=\"https://en.wikipedia.org/wiki/Command_key\">great history</a> in key's purpose and icon design.",
           "screenshot": "vs-cmd-road-sign-h22.svg"
-        },{
+        },
+        {
           "operatingSystem": "osx",
           "dichotomy": "bad",
-          "title": "A proper delete key",
-          "description": "OS X requires a modifier key in order to delete characters in front of the cursor. My brain and fingers could not get comfortable with this.<br><br>A larger issue is more personal to me. I program the Backspace key to a button on <a href=\"https://evoluent.com/\">my mouse</a>, which also lets me go back in the browser and Explorer.",
-          "screenshot": "vs-delete-key.jpg"
+          "title": "Concept of deleting",
+          "description": "OS X requires a modifier key in order to delete characters in front of the cursor. My brain and fingers could not get comfortable with this.<br><br>Windows lets you go back one page in the browser and Explorer by hitting the backspace key. I take advantage of this by setting a button on <a href=\"https://evoluent.com/\">my mouse</a> to the Backspace key (instead of just Back), which lets me backspace and go back one page if my right hand is already on the mouse.",
+          "screenshot": "vs-evoluent-mouse.png"
         }
       ]
     },

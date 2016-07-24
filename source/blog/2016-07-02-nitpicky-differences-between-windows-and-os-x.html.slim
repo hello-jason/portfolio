@@ -11,7 +11,7 @@ p Web development on Windows is taboo, and I have yet to meet another designer w
 
 p I started working at WP Engine in October of 2015, and they issued me a brand new Macbook Pro. Though I immediately put myself on the waiting list for a Dell XPS, I spent 7 interesting months getting to know the intricacies of OS X.
 
-p This article focuses on nitpicky differences between the 2 operating systems, as they pertain to my workflow. I provide a comparable tool for the lacking operating system if I know of one to suggest.
+p This article focuses on nitpicky differences between the 2 operating systems, as they pertain to my workflow. I try to provide a comparable tool for lacking features operating system if I know of one to suggest.
 
 // Loop over data/osbattle.json, and spit out reasons
 - data.windows_vs_osx.sections.each do |section|
@@ -19,7 +19,7 @@ p This article focuses on nitpicky differences between the 2 operating systems, 
   - unless section.reasons.empty?
     .panel
       .panel-heading
-        h2.panel-title #{section.title}
+        h2.panel-title Section#{section.id}: #{section.title}
         p #{section.description}
       .panel-body
         - section.reasons.each do |reason|
