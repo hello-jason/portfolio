@@ -3,7 +3,6 @@
     {
       "id": "1",
       "title": "File Explorer",
-      "description": "I live in a file explorer, browsing website code and design assets. Cloud-based file storage has recently become a must.",
       "reasons": [
         {
           "id": 1,
@@ -26,7 +25,7 @@
           "operatingSystem": "windows",
           "dichotomy": "good",
           "title": "Copy as path",
-          "description": "Explorer lets you copy the full path to a file in the context menu \(Shift+right click\). Convenient when uploading something to a site or attaching a document to an email. Looks like this feature is now be <a href=\"https://www.tekrevue.com/tip/copy-file-path-finder-el-capitan/\">available on El Capitan</a>!",
+          "description": "Explorer lets you copy the full path to a file in the context menu (Shift+right click). Convenient when uploading something to a site or attaching a document to an email. Looks like this feature is now be <a href=\"https://www.tekrevue.com/tip/copy-file-path-finder-el-capitan/\">available on El Capitan</a>!",
           "screenshot": "vs-copy-as-path.png"
         },
         {
@@ -66,7 +65,7 @@
           "operatingSystem": "osx",
           "dichotomy": "good",
           "title": "Simpler copy, cut, and paste",
-          "description": "You cannot \"cut\" a file in OS X, only copy it, which was annoying for me. I learned to hold CMD while dragging, which performs a move, but I was ecstatic to learn there are options when pasting a file. CMD+V pastes a copy, CMD+Option+V moves it. This is brilliant, and much better than Windows because I can change my mind.",
+          "description": "You cannot \"cut\" a file in OS X, only copy it, which was annoying for me&hellip;at first. I learned to hold CMD while dragging, which performs a move, but I was ecstatic to learn there are options when pasting a file. CMD+V pastes a copy, CMD+Option+V moves it. This is brilliant, and much better than Windows because I can change my mind.",
           "screenshot": ""
         },
         {
@@ -89,8 +88,7 @@
     },
     {
       "id": "2",
-      "title": "Keyboard Shortcuts",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do",
+      "title": "Keyboard",
       "reasons": [
         {
           "id": 12,
@@ -113,21 +111,20 @@
           "operatingSystem": "osx",
           "dichotomy": "good",
           "title": "The command key",
-          "description": "You can have this one. Using my thumb on the command key for shortcuts saves my poor pinky a lot of pain.",
-          "screenshot": ""
+          "description": "Using my thumb on the command key instead of control saves my poor pinky a lot of pain.",
+          "screenshot": "vs-cmd-road-sign-h22.svg"
         },{
           "operatingSystem": "osx",
           "dichotomy": "bad",
           "title": "A proper delete key",
           "description": "OS X requires a modifier key in order to delete characters in front of the cursor. My brain and fingers could not get comfortable with this.<br><br>A larger issue is more personal to me. I program the Backspace key to a button on <a href=\"https://evoluent.com/\">my mouse</a>, which also lets me go back in the browser and Explorer.",
-          "screenshot": ""
+          "screenshot": "vs-delete-key.jpg"
         }
       ]
     },
     {
       "id": "3",
       "title": "User Interface",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do",
       "reasons": [
         {
           "id": 15,
@@ -206,7 +203,6 @@
     {
       "id": "4",
       "title": "Software",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do",
       "reasons": [
         {
           "id": 26,
@@ -220,46 +216,37 @@
           "operatingSystem": "osx",
           "dichotomy": "good",
           "title": "Alfred",
-          "description": "You win, but the Hain project feels promising.",
+          "description": "You win, but <a href=\"https://github.com/appetizermonster/hain\">Hain</a> feels promising.",
           "screenshot": ""
         },
         {
           "operatingSystem": "windows",
           "dichotomy": "good",
           "title": "Bash on Ubuntu on Windows",
-          "description": "This changes everything. My current workflow includes an Ubuntu Server VM for all web development..?????<br><br>The only reason you would be required to own a Mac now is if you want to create a MacOS or iOS application, and even that is <a href=\"https://facebook.github.io/react-native/\">changing</a>.",
-          "screenshot": ""
+          "description": "This is fantastic. My current workflow includes an Ubuntu Server VM for all web development. This isn't terrible per se, but I'm not overly excited about working over a Samba share and not having subl available on the command line.<br><br>The only reason you would be required to own a Mac is to create a MacOS or iOS application, and even that landscape is <a title=\"React Native\" href=\"https://facebook.github.io/react-native/\">changing</a>.",
+          "screenshot": "vs-bash-on-ubuntu-on-windows.png"
         }
       ]
     },
     {
       "id": "5",
       "title": "Dock/Taskbar",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do",
       "reasons": [
         {
           "id": 27,
           "operatingSystem": "windows",
           "dichotomy": "good",
           "title": "Sneak peak view",
-          "description": "",
-          "screenshot": ""
+          "description": "Windows users can hover the mouse over the icon of an open application to see a real-time sneak peak, including playback controls, if appropriate. It also shows multiple thumbnails if there are several windows open for that app.",
+          "screenshot": "vs-sneak-peak.png"
         },
         {
           "id": 28,
           "operatingSystem": "windows",
           "dichotomy": "good",
-          "title": "Recently opened items (jump list)",
-          "description": "",
-          "screenshot": ""
-        },
-        {
-          "id": 29,
-          "operatingSystem": "windows",
-          "dichotomy": "good",
-          "title": "Jump lists (and file pinning)",
-          "description": "This is huge!",
-          "screenshot": ""
+          "title": "Jump lists (pinned and recent items)",
+          "description": "This is a great feature. You can right click a program in your taskbar and see a list of recent, most visited, and pinned things for that program. It's often super convenient to open the program and the file right from your taskbar.",
+          "screenshot": "vs-jump-list.png"
         },
         {
           "id": 30,
@@ -281,8 +268,8 @@
           "id": 32,
           "operatingSystem": "osx",
           "dichotomy": "bad",
-          "title": "Cannot alt+tab to minimized apps",
-          "description": "Minimizing an application tosses it to the right side of the dock and kills ability to alt+tab to maximize that app.",
+          "title": "Cannot CMD+tab to minimized apps",
+          "description": "Minimizing an application tosses it to the right side of the dock and kills ability to use CMD+tab to switch to and maximize that app. There is an option to have apps minimize into their icon (rather than to the side) but things get wonky when you have multiple windows of the same app open.<br><br>In Windows, alt+tab lets you cycle through all open programs, regardless of their minimized status. And the new Win+tab feature (that mimics <a href=\"https://en.wikipedia.org/wiki/Mission_Control_(OS_X)\">Mission Control</a>) functions the same way.",
           "screenshot": ""
         }
       ]
@@ -290,14 +277,13 @@
     {
       "id": "6",
       "title": "General Features",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do",
       "reasons": [
         {
           "id": 33,
           "operatingSystem": "osx",
           "dichotomy": "good",
           "title": "Font rendering",
-          "description": "I must admit, ClearType is a joke. OS X has a far superior font renderer.",
+          "description": "ClearType is a hideous joke. Typography looks far sexier on OS X, with or without retina.",
           "screenshot": ""
         },
         {
@@ -313,7 +299,7 @@
           "operatingSystem": "osx",
           "dichotomy": "good",
           "title": "System-wide dictionary",
-          "description": "",
+          "description": "The built-in dictionary didn't save my life or anything, but it was nice having it built into context menus of various programs when highlighting text.",
           "screenshot": ""
         },
         {
@@ -321,28 +307,13 @@
           "operatingSystem": "osx",
           "dichotomy": "good",
           "title": "Font Book",
-          "description": "OS X comes with Font Book, which is a great way . Add a comparable program to Windows by installing <a href=\"http://fontba.se/\">FontBase</a>",
+          "description": "OS X comes with Font Book, which is a great way . Add a comparable program to Windows by installing <a href=\"http://fontba.se/\">FontBase</a>.",
           "screenshot": ""
         },{
           "operatingSystem": "osx",
           "dichotomy": "bad",
           "title": "Visual consistency",
           "description": "OS X has this need for visual consistency. ????? Chrome and Firefox look identical, as do other programs. I am visual/spacial learner, so allowing each program to have their own unique look and feel helps me remember where everything is across my desktops.",
-          "screenshot": ""
-        }
-      ]
-    },
-    {
-      "id": "7",
-      "title": "Desktop",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do",
-      "reasons": [
-        {
-          "id": 37,
-          "operatingSystem": "osx",
-          "dichotomy": "good",
-          "title": "Plugged in devices show on the desktop",
-          "description": "",
           "screenshot": ""
         }
       ]

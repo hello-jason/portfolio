@@ -1,6 +1,6 @@
 ---
-title: Nitpicky differences between Windows 10 and OS X
-hero_image:
+title: Nitpicky differences between Windows and OS X
+hero_image: hero-nitpicky-os-differences.jpg
 hero_alt: Hero alt text
 date: 2016-07-02 17:21 CDT
 date_updated:
@@ -17,9 +17,9 @@ p This article focuses on nitpicky differences between the 2 operating systems, 
 - data.windows_vs_osx.sections.each do |section|
   // Don't show a section if it has no reasons
   - unless section.reasons.empty?
-    .panel.panel-danger
+    .panel
       .panel-heading
-        h2.panel-title #{section.id} #{section.title}
+        h2.panel-title #{section.title}
         p #{section.description}
       .panel-body
         - section.reasons.each do |reason|

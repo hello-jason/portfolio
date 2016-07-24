@@ -8,10 +8,23 @@
   margin-right: 6px;
 }
 
-.blog_nitpicky-differences-between-windows-10-and-os-x {
+.blog_nitpicky-differences-between-windows-and-os-x {
   .panel {
     .panel-body {
       padding: 0;
+      border: 1px solid $table-border-color;
+    }
+    .panel-heading {
+      padding: ($jason-space / 2);
+      background: $brand-primary;
+      color: #fff;
+      p {
+        margin-bottom: 0;
+        line-height: 1.35em;
+      }
+    }
+    .panel-title {
+      font-size: $font-size-h1;
     }
     .row {
       border-bottom: 1px solid $table-border-color;
