@@ -293,7 +293,7 @@
           "id": 32,
           "operatingSystem": "osx",
           "dichotomy": "bad",
-          "title": "Cannot CMD+tab to minimized apps",
+          "title": "Cannot CMD+tab to switch to minimized apps",
           "description": "Minimizing an application tosses it to the right side of the dock and kills ability to use CMD+tab to switch to and maximize that app. There is an option to have apps minimize into their icon (rather than to the side) but things get wonky when you have multiple windows of the same app open.<br><br>In Windows, alt+tab lets you cycle through all open programs, regardless of their minimized status. And the new Win+tab feature (that mimics <a href=\"https://en.wikipedia.org/wiki/Mission_Control_(OS_X)\">Mission Control</a>) functions the same way.",
           "screenshot": ""
         }
@@ -308,7 +308,7 @@
           "operatingSystem": "osx",
           "dichotomy": "good",
           "title": "Font rendering",
-          "description": "ClearType is a hideous joke. Typography looks far sexier on OS X, with or without retina.",
+          "description": "ClearType is a joke when compared to OS X's font rendering. Typography looks far sexier on OS X, with or without a retina display.",
           "screenshot": ""
         },
         {
