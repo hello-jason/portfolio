@@ -98,7 +98,7 @@
           "dichotomy": "bad",
           "title": "Grabbing windows",
           "description": "On Windows, I can slam my mouse to the top of the screen and grab a window in the blink of an eye. Then I can drag it to another monitor and slam it against the top of the screen to go maximized. On Mac, the top of the screen is the menubar, which forces you to precisely move the mouse down a bit in order to grab the window.<br><br>",
-          "screenshot": "vs-window-buttons.png"
+          "screenshot": ""
         },
         {
           "id": 11,
@@ -135,7 +135,7 @@
           "operatingSystem": "osx",
           "dichotomy": "good",
           "title": "The command key",
-          "description": "Using my thumb on the command key instead of control saves my poor pinky a lot of pain. Plus there's <a href=\"https://en.wikipedia.org/wiki/Command_key\">great history</a> in key's purpose and icon design.",
+          "description": "Using my thumb on the command key instead of control saves my poor pinky a lot of pain. Plus there's <a href=\"https://en.wikipedia.org/wiki/Command_key\">great history</a> in thek ey's purpose and icon design.",
           "screenshot": "vs-cmd-road-sign-h22.svg"
         },
         {
@@ -230,19 +230,19 @@
       "title": "Software",
       "reasons": [
         {
-          "id": 26,
-          "operatingSystem": "windows",
-          "dichotomy": "good",
-          "title": "Arrow keys to scroll through blending options",
-          "description": "Here's a Windows-only Photoshop tip that OS X users probably don't know they're missing. ??????????? I like adjusted a layer's blend mode in the Blending Options dialog box.",
-          "screenshot": ""
-        },
-        {
           "operatingSystem": "osx",
           "dichotomy": "good",
           "title": "Alfred",
           "description": "You win, but <a href=\"https://github.com/appetizermonster/hain\">Hain</a> feels promising.",
-          "screenshot": ""
+          "screenshot": "vs-alfred-logo.png"
+        },
+        {
+          "id": 26,
+          "operatingSystem": "windows",
+          "dichotomy": "good",
+          "title": "Arrow keys to scroll through blending options",
+          "description": "Here's a Windows-only Photoshop tip that OS X users probably don't know they're missing. Once you choose an option from a dropdown menu in Photoshop's interface, you can use the up/down arrow keys to scrub through the other options. I often use this to quickly preview blend modes, for instance.",
+          "screenshot": "vs-photoshop-dropdowns.gif"
         },
         {
           "operatingSystem": "windows",
@@ -261,7 +261,7 @@
           "id": 27,
           "operatingSystem": "windows",
           "dichotomy": "good",
-          "title": "Sneak peak view",
+          "title": "Sneak peak",
           "description": "Windows users can hover the mouse over the icon of an open application to see a real-time sneak peak, including playback controls, if appropriate. It also shows multiple thumbnails if there are several windows open for that app.",
           "screenshot": "vs-sneak-peak.png"
         },
@@ -324,7 +324,7 @@
           "operatingSystem": "osx",
           "dichotomy": "good",
           "title": "System-wide dictionary",
-          "description": "The built-in dictionary didn't save my life or anything, but it was nice having it built into context menus of various programs when highlighting text.",
+          "description": "The built-in dictionary doesn't save my life or anything, but it was nice having it built into context menus of various programs when highlighting text.",
           "screenshot": ""
         },
         {
@@ -332,13 +332,7 @@
           "operatingSystem": "osx",
           "dichotomy": "good",
           "title": "Font Book",
-          "description": "OS X comes with Font Book, which is a great way . Add a comparable program to Windows by installing <a href=\"http://fontba.se/\">FontBase</a>.",
-          "screenshot": ""
-        },{
-          "operatingSystem": "osx",
-          "dichotomy": "bad",
-          "title": "Visual consistency",
-          "description": "OS X has this need for visual consistency. ????? Chrome and Firefox look identical, as do other programs. I am visual/spacial learner, so allowing each program to have their own unique look and feel helps me remember where everything is across my desktops.",
+          "description": "OS X comes with Font Book, which is a great way to view and organize fonts by style. Add a comparable program to Windows by installing <a href=\"http://fontba.se/\">FontBase</a>.",
           "screenshot": ""
         }
       ]

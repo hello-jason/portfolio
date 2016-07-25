@@ -39,8 +39,10 @@
         background: #f6f6f6;
       }
       &.the-command-key {
-        img {
-          max-width: 65% !important;
+        .vs-screenshot {
+          img {
+            max-width: 65% !important;
+          }
         }
       }
     }
