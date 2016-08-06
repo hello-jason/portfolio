@@ -1,0 +1,77 @@
+.logo-os {
+  max-width: 35px !important;
+  display: inline-block !important;
+}
+.icon-dichomoty {
+  max-width: 20px !important;
+  display: inline-block !important;
+  margin-right: 6px;
+}
+
+.blog_nitpicky-differences-between-windows-and-os-x {
+  .panel {
+    .panel-body {
+      padding: 0;
+      border: 1px solid $table-border-color;
+    }
+    .panel-heading {
+      padding: ($jason-space / 2);
+      background: $brand-primary;
+      color: #fff;
+      p {
+        margin-bottom: 0;
+        line-height: 1.35em;
+      }
+    }
+    .panel-title {
+      font-size: $font-size-h1;
+    }
+    .row {
+      border-bottom: 1px solid $table-border-color;
+      padding-top: $jason-space;
+      padding-bottom: $jason-space;
+      margin: 0;
+      &::last-child {
+        padding-top: 0;
+        padding-bottom: 0;
+      }
+      &:nth-child(even) {
+        background: #f6f6f6;
+      }
+      &.the-command-key {
+        .vs-screenshot {
+          img {
+            max-width: 65% !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Default styles for VS row section
+.vs-score {
+  @extend .col-md-1;
+}
+.vs-description {
+  @extend .col-md-6;
+  &.without-image {
+    @extend .col-md-11;
+  }
+}
+.vs-screenshot {
+  @extend .col-md-5;
+  img {
+    margin: 0 auto;
+  }
+}
+
+// VS row section overrides
+.folder-file-manipulation-in-dialog-boxes {
+  .vs-description {
+    @extend .without-image;
+  }
+  .vs-screenshot {
+    @extend .col-md-12;
+  }
+ }

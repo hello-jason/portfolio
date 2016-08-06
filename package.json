@@ -17,14 +17,14 @@
   },
   "homepage": "https://github.com/hello-jason/portfolio",
   "devDependencies": {
-    "gulp": "",
-    "gulp-uncss": "",
-    "gulp-csso": "",
-    "gulp-gzip": "",
-    "jquery": "",
-    "lightcase": "",
-    "layzr.js": "",
-    "svgo": "",
-    "pngout-bin": ""
+    "gulp": "3.9.1",
+    "gulp-uncss": "1.0.6",
+    "gulp-csso": "2.0.0",
+    "gulp-gzip": "1.4.0",
+    "jquery": "3.1.0",
+    "lightcase": "2.3.4",
+    "layzr.js": "1.4.3",
+    "svgo": "0.6.6",
+    "pngout-bin": "3.0.0"
   }
 }
