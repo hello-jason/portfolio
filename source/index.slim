@@ -4,18 +4,17 @@ priority: 1.0
 changefreq: weekly
 ---
 
-main role="main"
-  .col-md-4
+main.container role="main"
+  .section-headings
     h2 Recent Articles
-  .col-md-8
-    section#article-list
-      // Loop through articles
-      - blog.articles.each do |article|
-        article
-          a href="#{article.url}" title="#{article.title}"
-            = image_tag (article.data.hero_image ? "articles/#{article.data.hero_image}" : "http://placehold.it/1140x334"),:alt => (article.data.hero_alt ? "#{article.data.hero_alt}" : "#{article.data.title}"), :class => "blog-hero"
-            .content
-              h1.post-title #{article.title}
-              - if article.data.article_summary
-                p.post-summary #{article.data.article_summary}
-              time.time pubdate="pubdate" datetime="#{article.date}" Published #{article.date.strftime('%B %d, %Y')}
+  section#article-list.section-content
+    // Loop through articles
+    - blog.articles.each do |article|
+      article
+        a href="#{article.url}" title="#{article.title}"
+          .content
+            h1.post-title <span>#{article.title}</span>
+            - if article.data.article_summary
+              p.post-summary #{article.data.article_summary}
+            time.time pubdate="pubdate" datetime="#{article.date}" Posted #{article.date.strftime('%B %d, %Y')}
+            span.wingdings 

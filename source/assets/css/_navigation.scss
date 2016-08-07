@@ -1,5 +1,6 @@
+// For extending active styles
 .nav-link-active {
-  text-decoration: underline;
+  border-color: #fff;
 }
 
 #primary-navigation {
@@ -15,12 +16,13 @@
   }
   a {
     color: #fff;
-    padding-left: 5px;
-    padding-right: 5px;
+    padding: 0;
     font-family: $headings-font-family;
     text-transform: uppercase;
+    border-bottom: 2px solid transparent;
     @media (min-width: $screen-sm-min) {
-      padding: 0.95em 0.775em;
+      padding: 0.15em 0 !important;
+      margin-right: 0.25em;
     }
     line-height: 2.85em;
     &.logo {

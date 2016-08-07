@@ -35,42 +35,27 @@
   }
 }
 
-body.blog_index {
-  h1 {
-    padding: 0 ($jason-space / 2);
-  }
-}
 #article-list {
   padding: 0 $jason-space;
-  display: flex;
-  flex-wrap: wrap;
   article {
-    width: 100%;
-    margin-bottom: ($jason-space / 2);
-    float: left;
-    display: flex;
+    margin-bottom: $jason-space;
     border: 1px solid $table-border-color;
-    text-align: center;
-    overflow: hidden;
     @include transition(background-color 0.25s, border-color 0.25s);
-    @media (min-width: $screen-sm-min) {
-      width: 47%;
-      margin: ($jason-space / 4);
-    }
-    @media (min-width: $screen-md-min) {
-      width: 31%;
-    }
-    &:hover, &:focus {
-      border-color: $brand-primary;
-      background-color: rgba($brand-primary, 0.05);
-      .post-title {
-        color: darken($brand-primary, 15%);
-      }
-    }
+
+    // Upstate
     .post-title {
       display: block;
-      width: 100%;
       @include transition(color 0.25s);
+      font-size: $font-size-h2;
+      font-weight: normal;
+      color: $brand-primary;
+      span {
+        border-bottom: 1px solid transparent;
+        @include transition(border-color 0.25s);
+      }
+    }
+    .post-summary {
+      margin-bottom: ($jason-space / 2);
     }
     &>a {
       display: block;
@@ -80,19 +65,30 @@ body.blog_index {
     }
     .content {
       padding: $jason-space;
+      position: relative;
     }
-    .blog-hero {
-      @extend .img-responsive;
-      background-color: $table-border-color;
-    }
-    .post-title {
-      font-size: $font-size-h3;
-      font-weight: normal;
+    .wingdings {
       color: $brand-primary;
-      text-decoration: underline;
+      font-size: $font-size-small;
+      position: absolute;
+      right: ($jason-space / 2.5);
+      bottom: ($jason-space / 5);
+      opacity: 0;
+      @include transition(opacity 0.25s);
     }
-    .post-summary {
-      margin-bottom: ($jason-space / 2);
+
+    // Do stuff on hover/focus
+    &:hover, &:focus {
+      border-color: $brand-primary;
+      background-color: rgba($brand-primary, 0.05);
+      .post-title {
+        span {
+          border-bottom-color: $brand-primary;
+        }
+      }
+      .wingdings {
+        opacity: 1;
+      }
     }
   }
 }

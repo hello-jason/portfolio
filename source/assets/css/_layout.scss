@@ -4,3 +4,14 @@ section {
 dd {
   margin-bottom: 1.5em;
 }
+main.container {
+  padding-top: ($jason-space * 2);
+  padding-bottom: ($jason-space * 2);
+}
+.section-headings {
+  @extend .col-md-4;
+  text-align: right;
+}
+.section-content {
+  @extend .col-md-8;
+}

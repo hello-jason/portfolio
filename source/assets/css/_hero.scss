@@ -7,6 +7,7 @@
   height: 720px;
   padding: 0;
   margin: 0;
+  position: relative;
   .title {
     text-transform: uppercase;
     color: #fff;
@@ -14,14 +15,24 @@
     font-family: $headings-font-family;
     letter-spacing: -3rem;
     margin: 0;
-    padding: 0.55em 0 0;
+    padding: 0.12em 0 0;
     line-height: 0.75em;
   }
   .subtitle {
     text-transform: lowercase;
     color: #FFFF93;
     font-size: 36px;
+    font-weight: 200;
     padding: 0;
     margin: 0;
+    letter-spacing: -.008em;
+  }
+  .wingdings {
+    color: #fff;
+    font-size: 95px;
+    position: absolute;
+    bottom: 0;
+    left: $jason-space;
+    line-height: 0.65em;
   }
 }
