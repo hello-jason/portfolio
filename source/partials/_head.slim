@@ -83,6 +83,9 @@ html
     p.alert.alert-warning
       | You are using an outdated browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.
   #wrap
-    header role="banner"
-      = partial "partials/navigation"
-      = yield_content :header
+    div#hero
+      header.banner role="banner"
+        = partial "partials/navigation"
+        = yield_content :header
+      h1.title Hello
+      p.subtitle I'm Jason, a designer &amp; UI developer in Austin, TX

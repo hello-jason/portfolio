@@ -1,0 +1,27 @@
+#hero {
+  text-align: center;
+  background-color: #A432F4;
+  background-image: url(../img/hero-jason-purple.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 720px;
+  padding: 0;
+  margin: 0;
+  .title {
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 321px;
+    font-family: $headings-font-family;
+    letter-spacing: -3rem;
+    margin: 0;
+    padding: 0.55em 0 0;
+    line-height: 0.75em;
+  }
+  .subtitle {
+    text-transform: lowercase;
+    color: #FFFF93;
+    font-size: 36px;
+    padding: 0;
+    margin: 0;
+  }
+}

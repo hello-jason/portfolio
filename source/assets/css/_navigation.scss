@@ -14,9 +14,11 @@
     @extend .navbar-toggle;
   }
   a {
-    color: $text-color;
+    color: #fff;
     padding-left: 5px;
     padding-right: 5px;
+    font-family: $headings-font-family;
+    text-transform: uppercase;
     @media (min-width: $screen-sm-min) {
       padding: 0.95em 0.775em;
     }
@@ -32,7 +34,7 @@
       }
       font-weight: bold;
       font-size: $font-size-base;
-      color: $brand-primary;
+      color: $brand-secondary;
       .brand {
         margin-right: 0.75em;
         transition: all .5s;
