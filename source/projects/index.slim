@@ -4,27 +4,39 @@ priority: 1.0
 changefreq: weekly
 ---
 
-main role="main"
-  h1 Portfolio
-  section#proj-thumbnails
-    = project_thumb "Contact Mover", "contact-mover/", "thumbnail-contact-mover.jpg", "2013"
-    = project_thumb "pfsync", "pfsync/", "thumbnail-pfsync.jpg", "2013"
-    = project_thumb "Tool Tracker", "tool-tracker/", "thumbnail-tool-tracker.jpg", "2013"
-    = project_thumb "Gator Millworks", "gator-millworks/", "thumbnail-gatormillworks.jpg", "2014"
-    = project_thumb "Lighting Choice", "lighting-choice/", "thumbnail-lighting-choice.jpg", "2015"
-    = project_thumb "WP Engine Sales Chat", "wpengine-livechat/", "thumbnail-wpengine-livechat.jpg", "2016"
-    = project_thumb "Rotolo's Pizzeria", "rotolos/", "thumbnail-rotolos.jpg", "2012"
-    = project_thumb "Sweets &amp; Treats", "sweets-and-treats/", "thumbnail-sweets-and-treats.jpg", "2015"
-    = project_thumb "Dorignac's Food Store", "dorignacs/", "thumbnail-dorignacs.jpg", "2014"
-    = project_thumb "Holy Name of Jesus Parish", "hnj-church/", "thumbnail-hnj-church.jpg", "2011"
-    = project_thumb "Gatortrax", "gatortrax/", "thumbnail-gtrax.jpg", "2013"
-    = project_thumb "Immense Networks", "immense-networks/", "thumbnail-immense-networks.jpg", "2012"
-    = project_thumb "LSU Union Club", "lsu-club/", "thumbnail-lsu-club.jpg", "2012"
-    = project_thumb "P&amp;S Surgical Hospital", "ps-surgery/", "thumbnail-ps-surgery.jpg", "2014"
-    = project_thumb "Mow &amp; Tell", "mow-tell/", "thumbnail-mow-tell.jpg", "2013"
-    = project_thumb "Think Print 3D", "think-print-3d/", "thumbnail-thinkprint3d.jpg", "2014"
-    = project_thumb "Zorb-It", "zorbit/", "thumbnail-zorbit-packet.jpg", "2012"
-    = project_thumb "Simple Simon Tire", "simple-simon/", "thumbnail-simple-simon.jpg", "2010"
-    = project_thumb "ServerExec", "server-exec/", "thumbnail-serverexec.jpg", "2011"
-    = project_thumb "NGSTech", "ngstech/", "thumbnail-ngs-tech.jpg", "2013"
-    = project_thumb "ISC Constructors", "isc/", "thumbnail-isc.jpg", "2014"
+main#proj-thumbnails.container role="main"
+  section#case-studies
+    .section-heading
+      h2 Case Studies
+    .section-content
+      = project_thumb "Contact Mover", "contact-mover/", "thumbnail-contact-mover.jpg", "2013"
+      = project_thumb "pfsync", "pfsync/", "thumbnail-pfsync.jpg", "2013"
+      = project_thumb "Tool Tracker", "tool-tracker/", "thumbnail-tool-tracker.jpg", "2013"
+      = project_thumb "Gator Millworks", "gator-millworks/", "thumbnail-gatormillworks.jpg", "2014"
+      = project_thumb "Lighting Choice", "lighting-choice/", "thumbnail-lighting-choice.jpg", "2015"
+      = project_thumb "WP Engine Sales Chat", "wpengine-livechat/", "thumbnail-wpengine-livechat.jpg", "2016"
+
+  section.row
+    .section-heading
+    .section-content
+      hr
+
+  section#other-projects
+    .section-heading
+      h2 Other Projects
+    .section-content
+      = project_thumb "Rotolo's Pizzeria", "rotolos/", "thumbnail-rotolos.jpg", "2012"
+      = project_thumb "Sweets &amp; Treats", "sweets-and-treats/", "thumbnail-sweets-and-treats.jpg", "2015"
+      = project_thumb "Dorignac's Food Store", "dorignacs/", "thumbnail-dorignacs.jpg", "2014"
+      = project_thumb "Holy Name of Jesus Parish", "hnj-church/", "thumbnail-hnj-church.jpg", "2011"
+      = project_thumb "Gatortrax", "gatortrax/", "thumbnail-gtrax.jpg", "2013"
+      = project_thumb "Immense Networks", "immense-networks/", "thumbnail-immense-networks.jpg", "2012"
+      = project_thumb "LSU Union Club", "lsu-club/", "thumbnail-lsu-club.jpg", "2012"
+      = project_thumb "P&amp;S Surgical Hospital", "ps-surgery/", "thumbnail-ps-surgery.jpg", "2014"
+      = project_thumb "Mow &amp; Tell", "mow-tell/", "thumbnail-mow-tell.jpg", "2013"
+      = project_thumb "Think Print 3D", "think-print-3d/", "thumbnail-thinkprint3d.jpg", "2014"
+      = project_thumb "Zorb-It", "zorbit/", "thumbnail-zorbit-packet.jpg", "2012"
+      = project_thumb "Simple Simon Tire", "simple-simon/", "thumbnail-simple-simon.jpg", "2010"
+      = project_thumb "ServerExec", "server-exec/", "thumbnail-serverexec.jpg", "2011"
+      = project_thumb "NGSTech", "ngstech/", "thumbnail-ngs-tech.jpg", "2013"
+      = project_thumb "ISC Constructors", "isc/", "thumbnail-isc.jpg", "2014"
