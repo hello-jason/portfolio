@@ -1,5 +1,6 @@
 ---
-title: Hello
+title: Blog
+hero_title: Hello
 priority: 1.0
 changefreq: weekly
 ---
@@ -17,5 +18,8 @@ main.container role="main"
               h1.post-title <span>#{article.title}</span>
               - if article.data.article_summary
                 p.post-summary #{article.data.article_summary}
-              time.time pubdate="pubdate" datetime="#{article.date}" Posted #{article.date.strftime('%B %d, %Y')}
+              - if article.data.published === false
+                time.time ☒ Not published (<strong>draft</strong>)
+              - else
+                time.time pubdate="pubdate" datetime="#{article.date}" Published #{article.date.strftime('%B %d, %Y')}
               span.wingdings 

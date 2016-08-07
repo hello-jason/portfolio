@@ -1,22 +1,29 @@
 #hero {
+  position: relative;
   text-align: center;
+  min-height: 0;
   background-color: #A432F4;
   background-image: url(../img/hero-jason-purple.jpg);
   background-repeat: no-repeat;
-  background-position: center center;
-  height: 720px;
-  padding: 0;
+  background-position: center bottom;
+  padding: $jason-space;
   margin: 0;
-  position: relative;
+  @media (min-width: $screen-lg-min) {
+    min-height: 720px;
+  }
+
   .title {
+    font-family: $headings-font-family;
     text-transform: uppercase;
     color: #fff;
-    font-size: 321px;
-    font-family: $headings-font-family;
-    letter-spacing: -3rem;
-    margin: 0;
-    padding: 0.12em 0 0;
+    font-size: 29vw;
+    letter-spacing: -0.095em;
     line-height: 0.75em;
+    margin: 0;
+    padding: 0.325em 0 0;
+    @media (min-width: $screen-lg-min) {
+      font-size: 31rem;
+    }
   }
   .subtitle {
     text-transform: lowercase;
@@ -32,7 +39,20 @@
     font-size: 95px;
     position: absolute;
     bottom: 0;
-    left: $jason-space;
+    left: -9999em;
     line-height: 0.65em;
+    @media (min-width: $screen-sm-min) {
+      left: $jason-space;
+    }
+  }
+}
+
+body.blog {
+  #hero {
+    min-height: 0;
+    .title {
+      font-size: 11rem;
+      letter-spacing: 0;
+    }
   }
 }

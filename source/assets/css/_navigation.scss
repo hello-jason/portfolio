@@ -4,8 +4,8 @@
 }
 
 #primary-navigation {
-  margin-bottom: 0;
-  padding: 2.5em 2.05em;
+  margin: 0;
+  padding: 0;
   @extend .navbar;
   text-align: center;
   @media (min-width: $screen-sm-min) {

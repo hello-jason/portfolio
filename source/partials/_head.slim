@@ -87,6 +87,9 @@ html
       header.banner role="banner"
         = partial "partials/navigation"
         = yield_content :header
-      h1.title #{current_page.data.title}
+      - if current_page.data.hero_title
+        h1.title #{current_page.data.hero_title}
+      - else
+        h1.title #{current_page.data.title}
       p.subtitle I'm Jason, a designer &amp; UI developer in Austin, TX
       span.wingdings 
