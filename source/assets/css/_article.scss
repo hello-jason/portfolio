@@ -67,12 +67,12 @@
       position: relative;
     }
     .wingdings {
-      color: $brand-primary;
+      color: $text-muted;
       font-size: $font-size-small;
       position: absolute;
       right: ($jason-space / 2.5);
       bottom: ($jason-space / 5);
-      opacity: 0;
+      opacity: 0.15;
       @include transition(opacity 0.25s);
     }
 
@@ -86,6 +86,7 @@
         }
       }
       .wingdings {
+        color: $brand-primary;
         opacity: 1;
       }
     }

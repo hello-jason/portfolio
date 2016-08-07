@@ -7,32 +7,37 @@
   background-repeat: no-repeat;
   background-position: center bottom;
   padding: $jason-space;
+  padding-bottom: ($jason-space * 2);
   margin: 0;
-  @media (min-width: $screen-lg-min) {
-    min-height: 720px;
-  }
 
   .title {
     font-family: $headings-font-family;
     text-transform: uppercase;
     color: #fff;
-    font-size: 29vw;
+    font-size: 20vw;
     letter-spacing: -0.095em;
     line-height: 0.75em;
     margin: 0;
     padding: 0.325em 0 0;
     @media (min-width: $screen-lg-min) {
-      font-size: 31rem;
+      font-size: 11rem;
+      letter-spacing: 0;
     }
   }
   .subtitle {
     text-transform: lowercase;
     color: #FFFF93;
-    font-size: 36px;
+    font-size: 3.75vw;
     font-weight: 200;
     padding: 0;
     margin: 0;
     letter-spacing: -.008em;
+    @media (min-width: $screen-md-min) {
+      font-size: 3vw;
+    }
+    @media (min-width: $screen-lg-min) {
+      font-size: 2.85vw;
+    }
   }
   .wingdings {
     color: #fff;
@@ -47,12 +52,18 @@
   }
 }
 
-body.blog {
+// Different typography for home page
+body.index {
   #hero {
-    min-height: 0;
+    @media (min-width: $screen-lg-min) {
+      min-height: 720px;
+    }
     .title {
-      font-size: 11rem;
-      letter-spacing: 0;
+      font-size: 20vw;
+      letter-spacing: -0.095em;
+      @media (min-width: $screen-lg-min) {
+        font-size: 31rem;
+      }
     }
   }
 }

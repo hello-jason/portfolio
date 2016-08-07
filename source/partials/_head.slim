@@ -10,7 +10,7 @@ html
     meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible"
     meta content="width=device-width" name="viewport"
 
-    // Redirect user to https
+    // Redirect to https
     javascript:
       var host = "hellojason.net";
       if ((host == window.location.host) && (window.location.protocol != "https:"))
@@ -87,9 +87,11 @@ html
       header.banner role="banner"
         = partial "partials/navigation"
         = yield_content :header
-      - if current_page.data.hero_title
-        h1.title #{current_page.data.hero_title}
-      - else
-        h1.title #{current_page.data.title}
-      p.subtitle I'm Jason, a designer &amp; UI developer in Austin, TX
+      div.container
+        - if current_page.data.hero_title
+          h1.title #{current_page.data.hero_title}
+        - else
+          h1.title #{current_page.data.title}
+        - if current_page.url == "/"
+          p.subtitle I'm Jason, a designer &amp; UI developer in Austin, TX
       span.wingdings 

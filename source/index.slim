@@ -8,9 +8,9 @@ changefreq: weekly
 main.container role="main"
   section#article-list
     .section-heading
-      h2 Recent Articles
+      h2 Recent Posts
     .section-content
-      // Loop through articles
+      // Loop through posts
       - blog.articles.each do |article|
         article
           a href="#{article.url}" title="#{article.title}"
