@@ -1,20 +1,21 @@
 ---
-title: Blog Archive
+title: Hello
 priority: 1.0
 changefreq: weekly
 ---
 
 main.container role="main"
-  .section-headings
-    h2 Recent Articles
-  section#article-list.section-content
-    // Loop through articles
-    - blog.articles.each do |article|
-      article
-        a href="#{article.url}" title="#{article.title}"
-          .content
-            h1.post-title <span>#{article.title}</span>
-            - if article.data.article_summary
-              p.post-summary #{article.data.article_summary}
-            time.time pubdate="pubdate" datetime="#{article.date}" Posted #{article.date.strftime('%B %d, %Y')}
-            span.wingdings 
+  section#article-list
+    .section-heading
+      h2 Recent Articles
+    .section-content
+      // Loop through articles
+      - blog.articles.each do |article|
+        article
+          a href="#{article.url}" title="#{article.title}"
+            .content
+              h1.post-title <span>#{article.title}</span>
+              - if article.data.article_summary
+                p.post-summary #{article.data.article_summary}
+              time.time pubdate="pubdate" datetime="#{article.date}" Posted #{article.date.strftime('%B %d, %Y')}
+              span.wingdings 
