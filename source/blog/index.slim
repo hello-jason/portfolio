@@ -1,19 +1,13 @@
 ---
-title: Blog Archive
-priority: 1.0
-changefreq: weekly
+title: Blog
+redirect: /
+noindex: 1
 ---
 
-main role="main"
-  h1 Blog Archive
-  section#article-list
-    // Loop through articles
-    - blog.articles.each do |article|
-      article
-        a href="#{article.url}" title="#{article.title}"
-          = image_tag (article.data.hero_image ? "articles/#{article.data.hero_image}" : "http://placehold.it/1140x334"),:alt => (article.data.hero_alt ? "#{article.data.hero_alt}" : "#{article.data.title}"), :class => "blog-hero"
-          .content
-            h1.post-title #{article.title}
-            - if article.data.article_summary
-              p.post-summary #{article.data.article_summary}
-            time.time pubdate="pubdate" datetime="#{article.date}" Published #{article.date.strftime('%B %d, %Y')}
+// Intentionally left blank
+
+// There is currently no need to have content at /blog since the
+//  blog archive is on the home page.
+
+// This page exists in case the user attempts to visit /blog
+// directly, which would result in a meta redirect to the home page.
