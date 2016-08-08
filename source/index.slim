@@ -5,21 +5,20 @@ priority: 1.0
 changefreq: weekly
 ---
 
-main.container role="main"
-  section#article-list
-    .section-heading
-      h2 Recent Posts
-    .section-content
-      // Loop through posts
-      - blog.articles.each do |article|
-        article
-          a href="#{article.url}" title="#{article.title}"
-            .content
-              h1.post-title <span>#{article.title}</span>
-              - if article.data.article_summary
-                p.post-summary #{article.data.article_summary}
-              - if article.data.published === false
-                time.time ☒ Not published (<strong>draft</strong>)
-              - else
-                time.time pubdate="pubdate" datetime="#{article.date}" Published #{article.date.strftime('%B %d, %Y')}
-              span.wingdings 
+section#article-list
+  .section-heading
+    h2 Recent Posts
+  .section-content
+    // Loop through posts
+    - blog.articles.each do |article|
+      article
+        a href="#{article.url}" title="#{article.title}"
+          .content
+            h1.post-title <span>#{article.title}</span>
+            - if article.data.article_summary
+              p.post-summary #{article.data.article_summary}
+            - if article.data.published === false
+              time.time ☒ Not published (<strong>draft</strong>)
+            - else
+              time.time pubdate="pubdate" datetime="#{article.date}" Published #{article.date.strftime('%B %d, %Y')}
+            span.wingdings 

@@ -18,7 +18,7 @@ figure.iphone6 {
 }
 
 // Thumbnail gallery of projects
-#proj-thumbnails {
+.proj-thumbnails {
   figure {
     @extend .col-sm-6;
     @extend .col-md-4;
@@ -83,7 +83,7 @@ figure.iphone6 {
 // Project singles
 #project-single {
   padding: 0 $jason-space;
-  main {
+  main, .main {
     @extend .col-md-10;
     img {
       @extend .img-responsive;
@@ -101,7 +101,8 @@ figure.iphone6 {
   }
 }
 
-.project-case-study {
+// Custom layout case study
+.case-study {
   text-align: center;
   color: #2f3021;
   font-size: 24px;
@@ -110,6 +111,23 @@ figure.iphone6 {
     max-width: 790px;
     margin: 0 auto;
     padding: $casestudy-section-padding 15px;
+  }
+  .banner {
+    background: none;
+    span.wingdings {
+      display: none;
+    }
+    .title {
+      color: $text-color !important;
+    }
+    #primary-container {
+      li, a {
+        color: $text-color !important;
+        &:focus, &:hover {
+          border-color: $text-color !important;
+        }
+      }
+    }
   }
   figcaption {
     font-size: 18px;

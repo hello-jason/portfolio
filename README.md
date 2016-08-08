@@ -51,6 +51,15 @@ npm install
 bundle exec middleman
 ```
 
+## Case Studies
+
+Special project pages that break a typical page's layout. Set the following in frontmatter to build a custom page. These settings will give body a class of `case-study` and allow the page's content to break the container layout restriction.
+
+```
+layout: case-study
+body_class: case-study
+```
+
 ## Weblog
 
 Use [middleman-blog](https://middlemanapp.com/basics/blogging/) for blogging features.
