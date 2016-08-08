@@ -7,30 +7,27 @@
   text-decoration: underline;
 }
 
-#article-single {
+
+article#article-single {
   @extend .container;
-  article {
-    font-size: 20px;
-    line-height: 1.65em;
-    h1 {
-      text-transform: capitalize;
-    }
+  font-size: 20px;
+  line-height: 1.65em;
+  time {
+    display: block;
+    padding-top: $jason-space;
+  }
+  .blog-hero {
+    margin-bottom: $jason-space;
+  }
+  a:link {
+    text-decoration: underline;
+  }
+  img {
+     @extend .img-responsive;
+  }
+  @media screen and (max-width: $screen-sm-min) {
     time {
-      display: block;
-    }
-    .blog-hero {
-      margin-bottom: $jason-space;
-    }
-    a:link {
-      text-decoration: underline;
-    }
-    img {
-       @extend .img-responsive;
-    }
-    @media screen and (max-width: $screen-sm-min) {
-      h1, time {
-        text-align: center;
-      }
+      text-align: center;
     }
   }
 }

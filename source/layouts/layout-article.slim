@@ -1,15 +1,12 @@
 // Layout template for individual blog articles
 = partial "partials/head"
 
-section#article-single
-  article role="main"
-    // All articles should have a unique hero image
-    h1 #{current_page.data.title}
-    - if current_page.data.date
-      time.time pubdate="pubdate" datetime="#{current_page.data.date}" Last updated #{current_page.date.strftime('%Y-%m-%d')}
+article#article-single role="main"
+  - if current_page.data.date
+    time.time pubdate="pubdate" datetime="#{current_page.data.date}" Last updated #{current_page.date.strftime('%Y-%m-%d')}
     hr
-    = image_tag (current_page.data.hero_image ? "articles/#{current_page.data.hero_image}" : "http://placehold.it/1140x334"),:alt => (current_page.data.hero_alt ? "#{current_page.data.hero_alt}" : "#{current_page.data.title}"), :class => "blog-hero"
-    = yield
+  = image_tag (current_page.data.hero_image ? "articles/#{current_page.data.hero_image}" : "http://placehold.it/1140x334"),:alt => (current_page.data.hero_alt ? "#{current_page.data.hero_alt}" : "#{current_page.data.title}"), :class => "blog-hero"
+  = yield
   hr
   a.back-to-articles href="#{url_blog}" &#8617; All articles
   hr
