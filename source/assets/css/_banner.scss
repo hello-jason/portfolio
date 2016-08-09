@@ -39,15 +39,15 @@
       font-size: 2.85vw;
     }
   }
-  .wingdings {
-    color: #fff;
-    font-size: 95px;
+  svg.icon-arrow-downright {
+    fill: #fff;
+    width: 65px;
+    height: 65px;
     position: absolute;
     bottom: 0;
     left: -9999em;
-    line-height: 0.65em;
     @media (min-width: $screen-sm-min) {
-      left: $jason-space;
+      left: 2.75rem;
     }
   }
 }

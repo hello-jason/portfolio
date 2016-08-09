@@ -66,12 +66,13 @@ article#article-single {
       padding: $jason-space;
       position: relative;
     }
-    .wingdings {
-      color: $text-muted;
-      font-size: $font-size-small;
+    svg.icon-arrow-downright {
+      fill: orange;
+      width: 13px;
+      height: 13px;
       position: absolute;
-      right: ($jason-space / 2.5);
-      bottom: ($jason-space / 5);
+      right: 0.85rem;
+      bottom: 0.75rem;
       opacity: 0.15;
       @include transition(opacity 0.25s);
     }
@@ -85,8 +86,8 @@ article#article-single {
           border-bottom-color: $brand-primary;
         }
       }
-      .wingdings {
-        color: $brand-primary;
+      svg.icon-arrow-downright {
+        fill: $brand-primary;
         opacity: 1;
       }
     }
