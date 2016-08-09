@@ -28,16 +28,17 @@
   .subtitle {
     text-transform: lowercase;
     color: #FFFF93;
-    font-size: 3.75vw;
+    font-size: 4.75vw;
+    line-height: 1em;
     font-weight: 200;
     padding: 0;
-    margin: 0;
+    margin: 0.45em 0 0;
     letter-spacing: -.008em;
     @media (min-width: $screen-md-min) {
       font-size: 2.95vw;
     }
     @media (min-width: $screen-lg-min) {
-      font-size: 2.85vw;
+      font-size: 4rem;
     }
   }
   svg.icon-arrow-downright {
@@ -56,11 +57,12 @@
 // Different typography for home page
 body.index {
   .banner {
+    min-height: 380px;
     @media (min-width: $screen-lg-min) {
       min-height: 720px;
     }
     .title {
-      font-size: 20vw;
+      font-size: 28vw;
       letter-spacing: -0.095em;
       @media (min-width: $screen-lg-min) {
         font-size: 31rem;
