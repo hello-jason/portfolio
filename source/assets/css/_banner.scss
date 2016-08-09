@@ -14,14 +14,15 @@
     font-family: $headings-font-family;
     text-transform: uppercase;
     color: #fff;
-    font-size: 20vw;
-    letter-spacing: -0.095em;
+    font-size: 11vw;
     line-height: 0.75em;
     margin: 0;
     padding: 0.325em 0 0;
+    @media (min-width: $screen-sm-min) {
+      letter-spacing: -0.065em;
+    }
     @media (min-width: $screen-lg-min) {
       font-size: 11rem;
-      letter-spacing: 0;
     }
   }
   .subtitle {
@@ -33,7 +34,7 @@
     margin: 0;
     letter-spacing: -.008em;
     @media (min-width: $screen-md-min) {
-      font-size: 3vw;
+      font-size: 2.95vw;
     }
     @media (min-width: $screen-lg-min) {
       font-size: 2.85vw;
@@ -44,7 +45,7 @@
     width: 65px;
     height: 65px;
     position: absolute;
-    bottom: 0;
+    bottom: -3px;
     left: -9999em;
     @media (min-width: $screen-sm-min) {
       left: 2.75rem;

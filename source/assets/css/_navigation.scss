@@ -66,9 +66,9 @@
 #primary-container {
   .nav {
     @media (min-width: $screen-sm-min) {
+      padding-top: .5em;
       padding-left: 1.4em;
     }
-    padding-top: .5em;
     @extend .navbar-nav;
     @extend .list-inline;
   }
