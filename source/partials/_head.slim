@@ -10,7 +10,7 @@ html
     meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible"
     meta content="width=device-width" name="viewport"
 
-    // Redirect user to https
+    // Redirect to https
     javascript:
       var host = "hellojason.net";
       if ((host == window.location.host) && (window.location.protocol != "https:"))
@@ -82,7 +82,16 @@ html
   /[if lte IE 8]
     p.alert.alert-warning
       | You are using an outdated browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.
-  #wrap
-    header role="banner"
-      = partial "partials/navigation"
-      = yield_content :header
+  header.banner role="banner"
+    = partial "partials/navigation"
+    = yield_content :header
+    // Hide banner styles on case study pages
+    - unless current_page.data.layout == "case-study"
+      div.container
+        - if current_page.data.hero_title
+          h1.title #{current_page.data.hero_title}
+        - else
+          h1.title #{current_page.data.title}
+        - if current_page.url == "/"
+          p.subtitle I'm Jason, a designer &amp; UI developer in Austin, TX
+      = inline_svg "icon-arrow-downright.svg"

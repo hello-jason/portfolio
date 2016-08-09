@@ -1,10 +1,11 @@
+// For extending active styles
 .nav-link-active {
-  text-decoration: underline;
+  border-color: inherit !important;
 }
 
 #primary-navigation {
-  margin-bottom: 0;
-  padding: 2.5em 2.05em;
+  margin: 0;
+  padding: 0;
   @extend .navbar;
   text-align: center;
   @media (min-width: $screen-sm-min) {
@@ -13,12 +14,18 @@
   button {
     @extend .navbar-toggle;
   }
+  li, a {
+    color: #fff;
+  }
   a {
-    color: $text-color;
-    padding-left: 5px;
-    padding-right: 5px;
+    padding: 0;
+    font-family: $headings-font-family;
+    text-transform: uppercase;
+    border-bottom: 2px solid transparent;
+    font-size: $font-size-base;
     @media (min-width: $screen-sm-min) {
-      padding: 0.95em 0.775em;
+      padding: 0.15em 0 !important;
+      margin-right: 0.25em;
     }
     line-height: 2.85em;
     &.logo {
@@ -32,7 +39,7 @@
       }
       font-weight: bold;
       font-size: $font-size-base;
-      color: $brand-primary;
+      color: $brand-secondary;
       .brand {
         margin-right: 0.75em;
         transition: all .5s;
@@ -59,17 +66,17 @@
 #primary-container {
   .nav {
     @media (min-width: $screen-sm-min) {
+      padding-top: .5em;
       padding-left: 1.4em;
     }
-    padding-top: .5em;
     @extend .navbar-nav;
     @extend .list-inline;
   }
 }
 
 // Manual active styles
-body.portfolio {
-  li.nav-item-portfolio {
+body.projects {
+  li.nav-item-projects {
     a {
       @extend .nav-link-active;
     }

@@ -1,0 +1,134 @@
+---
+title: Tool Tracker
+meta_description: Tool Tracker is a cooperative website and iOS application that helps ISC Constructors track equipment for jobsites and invoice clients accordingly.
+layout: case-study
+body_class: case-study
+---
+
+section.hero
+  = image_tag "projects/tool-tracker/tool-tracker-logo-and-appicon.png"
+  h1 <span>Barcoded tool transfer management</span>
+  p.categories <span>Branding, iOS, Website</span>
+
+section.wheres-the-tools
+  .content
+    h2 Where&rsquo;s the Tools?
+    p ISC Constructors designs and installs complex electrical and power management systems. They do phenomenal work, and it&rsquo;s easy to see how passionate they are by looking at their beautiful installations.
+
+    p One process that makes their operation tick is a paper-based system that employees use to request the various tools they need at a particular job site. Each requisition goes through a process:
+
+    ol.big-list
+      = big_list_li "1", "Employee requests tool(s) for some job during some date range"
+      = big_list_li "2", "Requests are approved or denied based on tool availability and other factors"
+      = big_list_li "3", "Approved tools are collected and scheduled for delivery"
+      = big_list_li "4", "Tools are delivered to the job site, and someone signs off"
+
+    p A separate <em>return home</em> request occurs when tools are no longer needed, and the same workflow commences in reverse. The tool dispersal process was far from perfect, but it got the job done for many years.
+
+section.switching-software
+  .content
+    h2 Switching Software
+    p ISC eventually embraced a line-of-business software called Viewpoint for project management, invoicing, estimating, etc., which offered more efficient and paperless opportunities.
+
+    = image_tag "projects/tool-tracker/viewpoint-logo.png"
+
+    p However, the inevitable problem with any off-the-shelf software is that it only does 90% of what you really need it to do. ISC soon discovered that Viewpoint could not accommodate tool tracking and, therefore, it could not invoice tool rentals to job sites.
+
+section.discovery-process
+  .content
+    h2 The Discovery Process
+    p ISC approached us to deliver a solution to this problem, and our solution would ultimately need to submit data into Viewpoint so that it could be invoiced appropriately.
+
+    p This was also a wonderful opportunity to identify and improve pain points in the existing tool transfer process, which was far from perfect.
+
+    ul.big-list.list-negatives
+      = big_list_li "»", "Requesters can write anything they want on the tool request form, so bad data came across the approver&rsquo;s desk all the time"
+      = big_list_li "»", "Approvers do not readily know where every tool is at any given time"
+      = big_list_li "»", "Tools would sometimes be unusable upon delivery, and employees needed to reject them"
+      = big_list_li "»", "There was no system overview of all requisitions and tools"
+      = big_list_li "»", "It was not easy to identify who or what caused a disruption to the requisition process"
+
+    p As far as positives, ISC did have 2 things that we considered hugely beneficial:
+
+    ul.big-list.list-positives
+      = big_list_li "»", "Well-established workflow that employees understood"
+      = big_list_li "»", "Entire tool inventory was individually (and uniquely) barcoded"
+
+section.focus-whats-important
+  .content
+    h2 Focusing on What&rsquo;s Most Important
+    p Many pain points would be solved as a natural side effect of switching to a digital process, so we honed the project requirements to a focused-set of goals:
+
+    .numbered-reasoning
+      .numbered-reason
+        span.number 1
+        h3 Data integrity is most critical
+        p The most important process in Tool Tracker is that meaningful and accurate data gets imported into Viewpoint, because this data ultimately finds its way onto an invoice. Every decision was made with this in mind.
+      .numbered-reason
+        span.number 2
+        h3 Introduce employee accountability
+        p The old paper-based tool transfer method was prone to many issues, and there was no good method for determining who was the last person to interact with a particular tool. We have an opportunity to change that.
+
+    p We would build 2 separate applications: a website for tool request creation and approvals, and an iOS application for field tasks like picking, loading, and unloading. An iPhone mated with a laser barcode scanner was the perfect gadget for transitioning tools.
+
+  = image_tag "projects/tool-tracker/tool-tracker-linea-pro.png", :class => "hug-bottom pull-left"
+
+section.ios-component
+  .content
+    h2 iOS Component
+
+    p Once satisfied with the general workflow of the iOS app on my whiteboard and Visio diagrams, I created low-fidelity prototypes in FluidUI. This ultimately established preliminary design decisions including which workflows were acceptable and, more importantly, which ones were terrible.
+
+    p I was able to consider which information the user would need at each point in time, then I could quickly test it on an actual device for a proper experience. The client was involved with this process, ensuring we simplified the interface as much as possible while retaining core functionality.
+
+  = image_tag "projects/tool-tracker/full-tooltracker-fluidui.jpg", :class => "media-responsive"
+
+  .content
+    p I built upon the approved prototypes to design higher-fidelity mockups, which would serve as the UI goal of the final product. I was continuously involved with the development process to test each workflow from the user&rsquo;s perspective, and I prioritized changes as needed.
+
+    = image_tag "projects/tool-tracker/fluidui-vs-mockups.jpg", :class => "img-responsive"
+
+    p I incorporated a number pad entry method where I thought it would benefit the user greatly, such as logging back in after being idle. The most helpful use of the number pad allows barcodes to be entered manually, which eliminates the dependency on a barcode scanner attachment and makes Tool Tracker 100% functional on any iPod, iPad, or iPhone.
+
+    = image_tag "projects/tool-tracker/ios-tooltracker-pinscreens.jpg", :class => "img-responsive"
+
+section.logo-icon
+  .content
+    h2 Logo &amp; App Icon
+    p I was given full creative freedom with the logo and iOS app icon. I continued with styling queues that evolved during the prototyping phase, which were already extensions of ISC&rsquo;s existing branding guidelines  and logo—a faux italic version of Impact Regular (you have to pick your battles, but I am pleased with the outcome regardless).
+
+  = image_tag "projects/tool-tracker/logo-tool-tracker.jpg", :class => "media-responsive"
+
+section.website-component
+  .content
+    h2 Website Component
+
+    p The web-based Node application allows users to formally request and transfer tools between various job sites and company locations, tracking tool locations and handlers throughout each lifecycle. I designed the interfaces, built the jade HTML templates, and created the LESS-based stylesheets.
+
+    h3 Sign in & Registration
+    p Account registration queries Viewpoint, an internal management application. All users must have an active employee ID to register. Integration with LDAP allows single sign on for applicable users, and non LDAP employees are guided through account creation.
+
+  = image_tag "projects/tool-tracker/tool-tracker-signin-registration.jpg", :class => "media-responsive"
+
+  .content
+    h3 Heads Up Display
+    p The heads up display (HUD) page was designed to be visible on a large monitor all day, and web sockets allow real-time updates as tools transition between column states.
+
+  = image_tag "projects/tool-tracker/hud-beaumont.jpg", :class=> "media-responsive"
+
+  .content
+    h3 Batch Transfer
+    p A special permission was established that would allow certain users to create Batch Transfer files, which would be imported into Viewpoint for billing purposes. This functionality is what makes everything else worthwhile, so it had to be perfect.
+
+    p I worked with Viewpoint&rsquo;s own development team to create an integration method that would absolutely guarantee successful data imports without negative side effects. Lucky for us, this simply involved exporting our MongoDB data to a CSV file, particularly formatted, which would then be imported and processed within Viewpoint. Our most important priority here was to ensure each tool transfer is only exported to that file <strong>one time</strong>.
+
+  = image_tag "projects/tool-tracker/tool-tracker-batch-transfer.jpg", :class => "media-responsive"
+
+section.what-i-learned
+  .content
+    h2 What I Learned
+    p I learned how crucially important it is to plan a project before opening Photoshop or a text editor, especially when part of the goal is to (vaguely) improve upon some existing workflow while translating that workflow to another medium.
+
+    p I also learned important project management takeaways like identifying stakeholders, keeping detailed meeting notes, and understanding not only what we were building, but why and how we were building it one way instead of some other way; helpful when presenting to clients.
+
+    p From a technical perspective, I witnessed the benefits of making the API a first-class citizen.

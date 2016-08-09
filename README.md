@@ -4,24 +4,6 @@
 
 Written with [Ruby](https://www.ruby-lang.org/en/)+[Middleman](http://middlemanapp.com) and based on the [middleman-bss starter theme](https://github.com/hello-jason/middleman-bss)
 
-**Included packages:**
-
-* [Middleman](http://middlemanapp.com/)
-* [Slim](http://slim-lang.com/)
-* [Sass](http://sass-lang.com/)
-* [Bootstrap 3 Sass](https://github.com/twbs/bootstrap-sass)
-* [jQuery](http://jquery.com/)
-* [Favicon Maker](https://github.com/follmann/middleman-favicon-maker)
-
-**Included features:**
-
-* Autoprefixer
-* CSS reset
-* HTML5 layout
-* Image compression
-* Asset minification
-* Favicon generation
-
 ## Setup in development
 
 * Install [rbenv](https://github.com/sstephenson/rbenv) and [ruby-build](https://github.com/sstephenson/ruby-build#installing-as-an-rbenv-plugin-recommended)
@@ -67,6 +49,15 @@ npm install
 
 ```
 bundle exec middleman
+```
+
+## Case Studies
+
+Special project pages that break a typical page's layout. Set the following in frontmatter to build a custom page. These settings will give body a class of `case-study` and allow the page's content to break the container layout restriction.
+
+```
+layout: case-study
+body_class: case-study
 ```
 
 ## Weblog
