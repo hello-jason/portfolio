@@ -13,8 +13,11 @@ article#article-single {
   font-size: 20px;
   line-height: 1.65em;
   time {
-    display: block;
+    display: inline-block;
     padding-top: $jason-space;
+    &+time {
+      margin-left: ($jason-space / 2);
+    }
   }
   .blog-hero {
     margin-bottom: $jason-space;
