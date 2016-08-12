@@ -52,3 +52,12 @@ aside, main {
     text-decoration: underline;
   }
 }
+
+a[href*="//"]:not([href*="hellojason.net"]) {
+  &::after {
+    content: "\00A0(\2348)";
+    text-decoration: none;
+    display: inline-block;
+    color: $text-muted;
+  }
+}

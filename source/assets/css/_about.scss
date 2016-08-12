@@ -1,29 +1,8 @@
-#about {
-  padding: 0 $jason-space;
-  h2 {
-    font-size: $font-size-h1;
-  }
-  dt {
-    font-size: $font-size-h3;
-    letter-spacing: 1px;
-  }
-  aside {
-    @extend .col-md-2;
-    img {
-      @extend .img-responsive;
+body.about_index {
+  .list-contact {
+    @extend .list-unstyled;
+    li {
+      @extend .col-md-4;
     }
-  }
-  main {
-    @extend .col-md-8;
-  }
-}
-
-.about-me {
-  .self-image {
-    @extend .pull-left;
-    @extend .img-responsive;
-    max-width: 293px;
-    padding: 1px;
-    border: 1px solid $gray-lighter;
   }
 }
