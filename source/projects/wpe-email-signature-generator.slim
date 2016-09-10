@@ -14,19 +14,22 @@ section#project-single
     markdown:
       ## Inconsistent email signatures
       
-      WP Engine employees had not used the same email signatures since its inception. Each department basically created their own over the years, causing huge inconsistencies.
+      WP Engine employees had not used the same email signatures since the company's inception; each department created their own over the years, causing huge inconsistencies.
 
       ## Researching options
       
-      I had seen consistent email signatures [at my previous job](https://immense.net/deploying-unified-email-signature-template-outlook/) leveraging Exchange Server and Powershell, but WP Engine uses Google Apps. So, I met with our IT team to discuss possible ways to deploy something across the company. We decided the most practical solution would be to provide a self-help tool that our employees can 
+      I had assisted with generating consistent email signatures [at my previous job](https://immense.net/deploying-unified-email-signature-template-outlook/) by leveraging Exchange Server and Powershell, but WP Engine uses Google Apps. So, I met with the IT team to discuss possible ways to deploy something across the company. We decided the most practical solution would be to provide a tool that would allow employees to generate their own signatures.  
 
       ## Development
 
-      I decided the <abbr title="Minimum Viable Product">MVP</abbr> blah
+      Art Director [Elana Weinberg](http://www.elanadweinberg.com/) designed a lovely set of email signatures and vetted them with the leadership team. I decided the <abbr title="Minimum Viable Product">MVP</abbr> needed to remain simple, so I built the generator frontend onto Bootstrap and added realtime updates with some jQuery.
 
-    = project_image "Training gif animation", "WP-TOOL-EmailSignatureGenerator-Tutorial-v01-compressor.gif"
+      I decided to always show the required fields output side of the interface, in the generated signature section. This should make it obvious to the user which fields need editing and which can be skipped.
+
       
     markdown:
       ## Testing
       
-      I sent the tool and instructional GIF animation to the entire marketing team, asking them to use it in their email programs and send me a confirmation test. This trial run exposed a few issues with untested programs, like Apple Mail and Nylas N1.
+      I sent documentation and an instructional GIF to the entire marketing team for testing, asking them to use it in their email programs and send me a demo. This trial exposed a few issues with untested programs, like Apple Mail and Nylas N1.
+  
+    = project_image "Training gif animation", "WP-TOOL-EmailSignatureGenerator-Tutorial-v01-compressor.gif"
