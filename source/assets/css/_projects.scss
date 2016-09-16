@@ -21,8 +21,6 @@ figure.iphone6 {
 .proj-thumbnails {
   figure {
     @extend .col-sm-6;
-    @extend .col-md-4;
-    // @extend .col-lg-4;
     position: relative;
     text-align: center;
     padding-left: 0;
