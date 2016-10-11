@@ -7,9 +7,9 @@
 /* ==========================================================================
  * Imports / Includes
  * ========================================================================== */
-
 @import "variables"; // Bootstrap overrides and variables
 @import "bootstrap-includes"; // Bootstrap core
+@import "mixins";
 @import "layout";
 @import "banner";
 @import "projects";

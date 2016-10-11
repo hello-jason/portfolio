@@ -8,28 +8,35 @@ section#project-single
     = project_details "2016", "jQuery", "Design, Development"
 
     h3 Demo
-    a href="http://wpeng.in/signature" wpeng.in/signature
+    a href="http://wpeng.in/signature" Try it out
 
   main role="main"
-    markdown:
-      ## Inconsistent email signatures
+    h2 Inconsistent email signatures
 
-      WP Engine employees had not used the same email signatures since the company's inception; each department created their own over the years, causing huge inconsistencies.
+    p WP Engine employees had not used the same email signatures since the company's inception; each department created their own over the years, causing huge inconsistencies.
 
-      ## Researching options
+    h2 Researching options
 
-      I had assisted with generating consistent email signatures [at my previous job](https://immense.net/deploying-unified-email-signature-template-outlook/) by leveraging Exchange Server and Powershell, but WP Engine uses Google Apps. So, I met with the IT team to discuss possible ways to deploy something across the company. We ultimately decided to provide a tool that would allow employees to generate their own signatures and help themselves.
+    p I had assisted with generating consistent email signatures <a href="https://immense.net/deploying-unified-email-signature-template-outlook/">at my previous job</a> by leveraging Exchange Server and Powershell, but WP Engine uses Google Apps. So, I met with the IT team to discuss possible ways to deploy something across the company. We ultimately decided to provide a tool that would allow employees to generate their own signatures and help themselves.
 
-      ## Development
+    h2 Prototyping
 
-      Art Director [Elana Weinberg](http://www.elanadweinberg.com/) designed a lovely set of email signatures and vetted them with the leadership team, then she handed it off to me for development. I decided the <abbr title="Minimum Viable Product">MVP</abbr> needed to remain simple, so I built the frontend onto Bootstrap and added a realtime update functionality with some jQuery.
+    p Art Director <a href="http://www.elanadweinberg.com/">Elana Weinberg</a> designed a lovely set of email signatures and vetted them with the leadership team, then she handed it off to me for development. I decided the <abbr title="Minimum Viable Product">MVP</abbr> needed to remain simple, so I built the frontend onto Bootstrap and added a realtime update functionality with some jQuery.
 
-      I decided to always show the output side of the interface, in the generated signature section, with default information that is obviously not the person using the form. This signifies which fields require editing while giving instant gratification as the user fills the form.
-
-
-    markdown:
-      ## Testing
-
-      I sent documentation and an instructional GIF to the entire marketing team for testing, asking them to use it in their email programs and send me a demo. This trial exposed a few issues with untested programs, like Apple Mail and Nylas N1.
+    p I decided to always show the output side of the interface, in the generated signature section, with default information that is obviously not the person using the form. This signifies which fields require editing while giving instant gratification as the user fills the form.
 
     = project_image "Training gif animation", "WP-TOOL-EmailSignatureGenerator-Tutorial-v01-compressor.gif"
+
+    h2 Testing
+
+    p I sent documentation and an instructional GIF to the entire marketing team for testing, asking them to use it in their email programs and send me a demo. This trial exposed a few issues with untested programs, like Apple Mail and Nylas N1.
+
+    h2 Final Design
+
+    p Once the functionality and fields were locked in, I designed a proper interface for the signature generator. My primary focus was to teach the user how to use the tool via the layout, so there would be as little friction as possible with adoption of the new signatures across the company.
+
+    = project_image "Email signature generator design", "emailsig-design.jpg"
+
+    h2 Check it out
+
+    p Try the tool at <a href="http://wpeng.in/signature">http://wpeng.in/signature</a>
