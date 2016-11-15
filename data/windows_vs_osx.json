@@ -9,7 +9,7 @@
           "operatingSystem": "windows",
           "dichotomy": "good",
           "title": "Folder/file manipulation in dialog boxes",
-          "description": "System dialog boxes (such as Save or Open) in Windows are like miniature file explorers, and you can do nearly anything in them. Dialog boxes in OS X make me feel shackled in comparison.<br><br>Let's say I thought that I exported a file from Photoshop to my desktop, but I actually saved it somewhere else deep in the system. I can simply export the file again, then drag it from wherever it is over to my desktop.",
+          "description": "System dialog boxes (such as Save or Open) in Windows are like miniature file explorers, and you can do nearly anything in them from creating new folders to manipulating other files. Dialog boxes in OS X make me feel shackled in comparison.<br><br>Let's say I thought that I exported a file from Photoshop to my desktop, but I actually saved it somewhere else deep in the system. I can simply export the file again, then drag it from wherever it is over to my desktop.",
           "screenshot": ""
         },
         {
@@ -25,7 +25,7 @@
           "operatingSystem": "windows",
           "dichotomy": "good",
           "title": "Copy as path",
-          "description": "Explorer lets you copy the full path to a file in the context menu (Shift+right click). Convenient when uploading something to a site or attaching a document to an email. Looks like this feature is now be <a href=\"https://www.tekrevue.com/tip/copy-file-path-finder-el-capitan/\">available on El Capitan</a>!",
+          "description": "Explorer lets you copy the full path to a folder or file in the context menu (Shift+right click). Convenient when uploading something to a site or attaching a document to an email.<br><br><strong>Update:</strong> This feature was added <a href=\"https://www.tekrevue.com/tip/copy-file-path-finder-el-capitan/\">to El Capitan</a>!",
           "screenshot": "vs-copy-as-path.png"
         },
         {
@@ -33,7 +33,7 @@
           "operatingSystem": "windows",
           "dichotomy": "good",
           "title": "Create files from context menu",
-          "description": "Windows lets you create new files with a right click of the mouse, whereas OS X forces you to create files by saving them out of a program.",
+          "description": "Windows lets you create new files with a right click of the mouse, whereas OS X only lets you create files forces you to create files by saving them out of a program.",
           "screenshot": "vs-new-file-context.png"
         },
         {
@@ -81,7 +81,7 @@
           "operatingSystem": "osx",
           "dichotomy": "bad",
           "title": "Cannot get total file size of everything inside a folder",
-          "description": "Have you ever highlighted a bunch of files/folders in Finder, then right clicked and chose Get info? It's a booby trap.<br><br>In Windows, this shows a single properties window with aggregate totals of what I selected. On OS X, however, I had to restart the machine because it opened hundreds of Get Info windows, one for every file in every subdirectory.",
+          "description": "Have you ever highlighted a bunch of files/folders in Finder, then right clicked and chose Get info? It's a trap. I had to restart the machine because it opened hundreds of <em>Get Info</em> windows, one for every file in every subdirectory.<br><br>In Windows, however, this shows a single properties window with aggregate totals of what I selected&hellip;which is what I really wanted to see.",
           "screenshot": "vs-multiple-files.png"
         },
         {
@@ -89,7 +89,7 @@
           "operatingSystem": "osx",
           "dichotomy": "bad",
           "title": "Window buttons",
-          "description": "I may prefer the location of the window buttons in OS X, but I like the buttons themselves and their functionality much more in Windows. The area around each circular button is dead space, reducing the target area that I can click one (i.e., making it harder for me to click one of them). Also, the circle buttons are spaced away from the corner of the window, whereas the button <strong>is</strong> the entire corner on Windows. Look at the picture. It's the entire corner. Click anywhere in that red box to close the window.<br><br>Mac forces me to be precise with the mouse in order to close a window; Windows lets me slam my mouse up into the corner and click.",
+          "description": "I may prefer the location of the window buttons in OS X, but I like the buttons themselves and their functionality much more in Windows. The area around each circular button is dead space, reducing the target area that I can click (i.e., making it harder for me to click one of them). Also, the circle buttons are spaced away from the corner of the window, whereas the Windows button <strong>is the entire corner</strong>. Look at the picture. It's the entire corner. Click anywhere in that red box to close the window.<br><br>Mac forces me to be precise with the mouse in order to close a window; Windows lets me slam my mouse up into the corner and click.",
           "screenshot": "vs-window-buttons.png"
         },
         {
@@ -97,7 +97,7 @@
           "operatingSystem": "osx",
           "dichotomy": "bad",
           "title": "Grabbing windows",
-          "description": "On Windows, I can slam my mouse to the top of the screen and grab a window in the blink of an eye. Then I can drag it to another monitor and slam it against the top of the screen to go maximized. On Mac, the top of the screen is the menubar, which forces you to precisely move the mouse down a bit in order to grab the window.<br><br>",
+          "description": "On Windows, I can slam my mouse to the top of the screen and grab a window in the blink of an eye. Then I can drag it to another monitor and slam it against the top of the screen to go maximized.<br><br>On Mac, the top of the screen is the menubar, which forces me to precisely move the mouse down a bit in order to grab the window.",
           "screenshot": ""
         },
         {
@@ -105,7 +105,7 @@
           "operatingSystem": "windows",
           "dichotomy": "good",
           "title": "Maximize",
-          "description": "A maximized program in Windows simply fills the entire workspace of the screen (that is, it won't cover up the taskbar). You can go <em>true fullscreen</em> in Windows by hitting the F11 key, and it will just do it without the ridiculous 3 second animation that OS X goes through.<br><br>OS X has a different concept of maximized that <strong>only</strong> does a true full screen, thus hiding your menubar and such.",
+          "description": "A maximized program in Windows simply fills the entire workspace of the screen (that is, it won't cover up the taskbar). You can go <em>true fullscreen</em> in Windows by hitting the F11 key, and it will just do it without the ridiculous 3 second animation that OS X makes you wait for.<br><br>OS X has a different concept of maximized that <strong>only</strong> does a true full screen, thus hiding your menubar and such.",
           "screenshot": ""
         }
       ]
@@ -135,14 +135,14 @@
           "operatingSystem": "osx",
           "dichotomy": "good",
           "title": "The command key",
-          "description": "Using my thumb on the command key instead of control saves my poor pinky a lot of pain. Plus there's <a href=\"https://en.wikipedia.org/wiki/Command_key\">great history</a> in thek ey's purpose and icon design.",
+          "description": "Using my thumb on the command key instead of control saves my poor pinky a lot of pain. Plus there's <a href=\"https://en.wikipedia.org/wiki/Command_key\">great history</a> in the key's purpose and icon design.",
           "screenshot": "vs-cmd-road-sign-h22.svg"
         },
         {
           "operatingSystem": "osx",
           "dichotomy": "bad",
           "title": "Concept of deleting",
-          "description": "OS X requires a modifier key in order to delete characters in front of the cursor. My brain and fingers could not get comfortable with this.<br><br>Windows lets you go back one page in the browser and Explorer by hitting the backspace key. I take advantage of this by setting a button on <a href=\"https://evoluent.com/\">my mouse</a> to the Backspace key (instead of just Back), which lets me backspace and go back one page if my right hand is already on the mouse.",
+          "description": "OS X requires a modifier key in order to delete characters in front of the cursor. My brain and fingers could not get comfortable with this. Windows keyboards have a backspace key to remove text behind the cursor, and a delete key to remove characters in front of the cursor.<br><br>Windows also lets you go back one page in the browser and Explorer by hitting the backspace key. I take advantage of this by setting a button on <a href=\"https://evoluent.com/\">my mouse</a> to the Backspace key (instead of just Back), which lets me backspace and go back one page if my right hand is already on the mouse. I also use this mouse shortcut in Photoshop to delete layers, in Sublime to remove some lines, etc. Super handy.",
           "screenshot": "vs-evoluent-mouse.png"
         }
       ]
@@ -156,7 +156,7 @@
           "operatingSystem": "windows",
           "dichotomy": "good",
           "title": "Window snapping",
-          "description": "The snapping feature on Windows has drastically increased my efficiency. You get satisfying and helpful window placement options via the mouse and keyboard alike. They even finely-tuned the sensitivity when you move a window towards the edge of a monitor that has another monitor next to it&ndash;you can snap it to the edge, or keep on dragging to bring it to the other screen. OS X users have a few options to get this feature, such as <a href=\"https://itunes.apple.com/us/app/bettersnaptool/id417375580\">BetterSnapTool</a> (paid) or <a href=\"https://www.spectacleapp.com/\">Spectacle</a> (free); they'll do the trick, but I found they are not quite as refined as the Windows one.",
+          "description": "The snapping feature on Windows has drastically increased my efficiency. You get satisfying and helpful window placement options via the mouse and keyboard alike. They even finely-tuned the sensitivity when you move a window towards the edge of a monitor that has another monitor next to it&ndash;you can snap it to the edge, or keep on dragging to bring it to the other screen. OS X users have a few options to get this feature, such as <a href=\"https://itunes.apple.com/us/app/bettersnaptool/id417375580\">BetterSnapTool</a> (paid) or <a href=\"https://www.spectacleapp.com/\">Spectacle</a> (free); they'll do the trick, but I found they are not quite as refined or as satisfying as Windows.",
           "screenshot": ""
         },
         {
@@ -164,16 +164,8 @@
           "operatingSystem": "windows",
           "dichotomy": "good",
           "title": "Multi-monitor support",
-          "description": "Windows 10 has incredible support for multiple monitors. Task bar on every monitor, settings to show where apps are open. Also, individual programs can span multiple monitors if you need something to be very wide; OS X just cuts it off if you try to do that.",
+          "description": "Windows 10 has incredible support for multiple monitors; task bar options for each monitor, settings to show where apps are open. Also, individual programs can overflow across multiple monitors if you need something to be very wide; OS X just cuts it off if you try to do that.",
           "screenshot": "vs-multiple-monitors.png"
-        },
-        {
-          "id": 17,
-          "operatingSystem": "windows",
-          "dichotomy": "good",
-          "title": "Each app has its own menu bar",
-          "description": "Some people love it, but I can't stand it. A single menu bar to rule them all forces extra clicks and wasted time. Rather than seeing the menu item I want and clicking directly on it, OS X wants me to waste a click (or alt+tab) to make a program active first, then I can review the menu options for that program. This becomes more annoying when working on multiple monitors, having to jump back to the primary monitor to play with menu items. Oh, I can awkwardly slam the mouse against the top of another monitor to move the menu bar to another monitor? Windows wins, hands down.",
-          "screenshot": ""
         },
         {
           "id": 19,
@@ -196,7 +188,7 @@
           "operatingSystem": "osx",
           "dichotomy": "bad",
           "title": "Difficult to grab window corners for resizing",
-          "description": "Maybe it's just me, but I have a hard time grabbing the corner or side of a window to resize it in OS X&hellip;like the sweet spot is only 2 pixels wide. I usually have the same issue on Linux systems, but never on Windows.",
+          "description": "Maybe it's just me, but I have a hard time grabbing the corner or side of a window to resize it in OS X&hellip;like the sweet spot is only 2 pixels wide or something equally ridiculous. I usually have the same issue on Linux systems, but never on Windows.",
           "screenshot": ""
         },
         {
@@ -204,15 +196,15 @@
           "operatingSystem": "osx",
           "dichotomy": "bad",
           "title": "Difficult telling titlebars apart",
-          "description": "OS X places visual emphasis on the dock, so the titlebar for each program looks identical. I suppose they want the user to return to the dock whether launching or switching apps. Windows also lets you keep favorite applications in the taskbar, but most apps also have an icon of the logo to the far left of the menu bar.",
-          "screenshot": ""
+          "description": "OS X places visual emphasis on the dock, so the titlebar for each program looks identical. I suppose they want the user to return to the dock whether launching or switching apps. Windows also lets you keep favorite applications in the taskbar, but most apps also have an icon of the logo to the far left of the menu bar that I can use to differentiate them.",
+          "screenshot": "vs-titlebars.png"
         },
         {
           "id": 23,
           "operatingSystem": "osx",
           "dichotomy": "bad",
           "title": "Programs cannot span multiple monitors",
-          "description": "You cannot stretch a window across multiple monitors on OS X; the piece of the window that overlaps the monitor's edge will just cut off. This is weird to me since I think of multiple monitors as a single overall plane.",
+          "description": "You cannot stretch a window across multiple monitors on OS X; the piece of the window that overlaps the monitor's edge will just cut off. OS X treats each screen as a completely separate piece of real estate.<br><br>Windows gives you the best of both worlds. You can treat multiple monitors as a single overall plane by stretching a program across them, or you can use the snapping features to easily dock programs to individual monitors.",
           "screenshot": ""
         },
         {
@@ -220,7 +212,7 @@
           "operatingSystem": "osx",
           "dichotomy": "bad",
           "title": "Does not know about additional monitors until after user logs in",
-          "description": "",
+          "description": "The practical gripe here is that I would have my mouse and keyboard plugged into an external monitor, so that I didn't have to constantly unplug them when going to meetings, but OS X doesn't sense those inputs until after logging into my account. Not the end of the world to have to use the laptop's keyboard to log in, but still annoying.",
           "screenshot": ""
         }
       ]
@@ -248,7 +240,7 @@
           "operatingSystem": "windows",
           "dichotomy": "good",
           "title": "Bash on Ubuntu on Windows",
-          "description": "This is fantastic. My current workflow includes an Ubuntu Server VM for all web development. This isn't terrible per se, but I'm not overly excited about working over a Samba share and not having subl available on the command line.<br><br>The only reason you would be required to own a Mac is to create a MacOS or iOS application, and even that landscape is <a title=\"React Native\" href=\"https://facebook.github.io/react-native/\">changing</a>.",
+          "description": "This is fantastic. My current workflow includes an Ubuntu Server VM for all web development. This isn't terrible per se, but I'm not overly excited about working over a Samba share and not having <em>subl</em> available on the command line.<br><br>The only reason you would be required to own a Mac is to create a MacOS or iOS application, and even that landscape is <a title=\"React Native\" href=\"https://facebook.github.io/react-native/\">changing</a> (Well, sort of. Let me dream!).",
           "screenshot": "vs-bash-on-ubuntu-on-windows.png"
         }
       ]
@@ -270,15 +262,23 @@
           "operatingSystem": "windows",
           "dichotomy": "good",
           "title": "Jump lists (pinned and recent items)",
-          "description": "This is a great feature. You can right click a program in your taskbar and see a list of recent, most visited, and pinned things for that program. It's often super convenient to open the program and the file right from your taskbar.",
+          "description": "This is a great feature. You can right click a program in your taskbar and see a list of recent, most visited, and pinned things for that program. It's often super convenient to open the program and the file right from your taskbar and with a single click.",
           "screenshot": "vs-jump-list.png"
+        },
+        {
+          "id": 17,
+          "operatingSystem": "osx",
+          "dichotomy": "bad",
+          "title": "Single menu bar",
+          "description": "Some people love it, but I can't stand it. A single menu bar to rule them all forces extra clicks and wasted time. Rather than seeing the menu item I want and clicking directly on it, OS X wants me to waste a click (or alt+tab) to make a program active first, then I can review the menu options for that program.",
+          "screenshot": ""
         },
         {
           "id": 30,
           "operatingSystem": "osx",
           "dichotomy": "bad",
           "title": "Cannot have dock on all monitors",
-          "description": "",
+          "description": "Related to the point above, a single menu bar becomes more annoying when working on multiple monitors, having to jump back to the primary monitor to interact with menu items. And you can only have the menu on a single monitor at a time, which is not very helpful to me.",
           "screenshot": ""
         },
         {
@@ -286,7 +286,7 @@
           "operatingSystem": "osx",
           "dichotomy": "bad",
           "title": "Clicking an icon in the dock does not maximize/minimize that application",
-          "description": "",
+          "description": "OS X ignores my feeble attempts to minimize a program by clicking its icon in the dock. Windows lets you click an open application's taskbar icon (in the \"dock\") to minimize and maximize that program.",
           "screenshot": ""
         },
         {
@@ -294,7 +294,7 @@
           "operatingSystem": "osx",
           "dichotomy": "bad",
           "title": "Cannot CMD+tab to switch to minimized apps",
-          "description": "Minimizing an application tosses it to the right side of the dock and kills ability to use CMD+tab to switch to and maximize that app. There is an option to have apps minimize into their icon (rather than to the side) but things get wonky when you have multiple windows of the same app open.<br><br>In Windows, alt+tab lets you cycle through all open programs, regardless of their minimized status. And the new Win+tab feature (that mimics <a href=\"https://en.wikipedia.org/wiki/Mission_Control_(OS_X)\">Mission Control</a>) functions the same way.",
+          "description": "Minimizing an application in OS X tosses it to the right side of the dock and kills my ability to use CMD+tab to switch to and maximize that app. There is an option to have apps minimize into their icon (rather than to the side) but things get wonky when you have multiple windows of the same app open.<br><br>In Windows, alt+tab lets you cycle through all open programs, regardless of their minimized status. And the new Win+tab feature (that mimics <a href=\"https://en.wikipedia.org/wiki/Mission_Control_(OS_X)\">Mission Control</a>) functions the same way.",
           "screenshot": ""
         }
       ]
@@ -308,7 +308,7 @@
           "operatingSystem": "osx",
           "dichotomy": "good",
           "title": "Font rendering",
-          "description": "ClearType is a joke when compared to OS X's font rendering. Typography looks far sexier on OS X, with or without a retina display.",
+          "description": "From a designer/typography perspective, ClearType is a joke when compared to OS X's font rendering. Typography looks far sexier on OS X, with or without a retina display. Though, as others have pointed out, reading text for any period of time is easier on the eyes in Windows.",
           "screenshot": ""
         },
         {
@@ -316,7 +316,7 @@
           "operatingSystem": "windows",
           "dichotomy": "good",
           "title": "Remote desktop protocol",
-          "description": "Supports multiple monitors, sound, users",
+          "description": "I can use the built-in RDP feature of Windows to hop into another Windows computer with full mouse and keyboard abilities. This supports multiple monitors, audio, and even the clipboard.",
           "screenshot": ""
         },
         {
@@ -324,7 +324,7 @@
           "operatingSystem": "osx",
           "dichotomy": "good",
           "title": "System-wide dictionary",
-          "description": "The built-in dictionary doesn't save my life or anything, but it was nice having it built into context menus of various programs when highlighting text.",
+          "description": "The built-in dictionary doesn't save my life or anything, but it was nice having it built into context menus of various programs when highlighting text. Sort of like the browser feature where you can highlight a word, then you get \"Search Google for thisword\" in the context menu.",
           "screenshot": ""
         },
         {
