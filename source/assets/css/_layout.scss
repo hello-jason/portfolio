@@ -29,4 +29,11 @@ main.container {
       margin-top: 0;
     }
   }
+  hr {
+    margin-top: ($jason-space * 2);
+    margin-bottom: ($jason-space * 2);
+  }
+  img {
+    @extend .img-responsive;
+  }
 }
