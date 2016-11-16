@@ -20,7 +20,7 @@ figure.iphone6 {
 // Thumbnail gallery of projects
 .proj-thumbnails {
   figure {
-    @extend .col-sm-6;
+    @extend .col-sm-4;
     position: relative;
     text-align: center;
     padding-left: 0;
@@ -30,7 +30,7 @@ figure.iphone6 {
     max-width: 500px;
 
     h3 {
-      font-size: 37px;
+      font-size: 25px;
       margin-top: 0;
       margin-bottom: 0;
       color: #fff;
@@ -86,8 +86,10 @@ figure.iphone6 {
     @extend .col-md-10;
     img {
       @extend .img-responsive;
-      border: 1px solid $table-border-color;
       margin: 0 auto;
+      &.border {
+        border: 1px solid $table-border-color;
+      }
       &+p {
         margin-top: $jason-space;
       }

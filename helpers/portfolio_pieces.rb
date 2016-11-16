@@ -14,9 +14,12 @@ def project_thumb(title, slug, image, year)
 end
 
 # Single project images
-def project_image(title, image)
+def project_image(title, image, cssClass="")
   image_url = "/#{images_dir}/projects/#{image}"
-  "<img data-layzr='#{image_url}' alt='#{title}'>
+  if cssClass.present?
+    addClass = " class='#{cssClass}' "
+  end
+  "<img data-layzr='#{image_url}' alt='#{title}'#{addClass}>
   <noscript><img src='#{image_url}' alt='#{title}'></noscript>"
 end
 
@@ -24,7 +27,6 @@ end
 def project_details(year, software, roles)
   dl_content = content_tag :dl do
     str = ''
-
     unless current_page.data.title.empty?
       str += content_tag(:dt, 'Project') + content_tag(:dd, current_page.data.title)
     end
@@ -37,7 +39,6 @@ def project_details(year, software, roles)
     unless roles.empty?
       str += content_tag(:dt, 'Roles') + content_tag(:dd, roles)
     end
-
     str
   end
   dl_content + content_tag(:hr)
