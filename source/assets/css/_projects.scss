@@ -28,6 +28,7 @@ figure.iphone6 {
     overflow: hidden;
     border: 2px solid #fff;
     max-width: 500px;
+
     h3 {
       font-size: 37px;
       margin-top: 0;
@@ -39,7 +40,7 @@ figure.iphone6 {
       font-size: 20px;
     }
     .view {
-      color: darken(#fff, 5%);
+      color: lighten($brand-secondary, 25%);
       font-size: 17px;
       font-style: italic;
     }
@@ -54,13 +55,12 @@ figure.iphone6 {
       @extend .thumbnail;
       color: #fff;
       background: rgba(0,0,0,0);
-      background: rgba(red($brand-primary), green($brand-primary), blue($brand-primary), 0);
+      background: rgba($brand-primary, 0);
       margin: 0;
       &:hover, &:focus {
         figcaption {
-          color: #fff;
           opacity: 1;
-          background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAEElEQVQImWNgoAP4f2/1fwAJVAOILWUmIAAAAABJRU5ErkJggg==) rgba(red($brand-primary), green($brand-primary), blue($brand-primary), 0.85);
+          background: rgba($brand-primary, 0.85);
         }
       }
     }
@@ -73,6 +73,7 @@ figure.iphone6 {
       padding-right: 30px;
       opacity: 0;
       z-index: 2;
+      color: #fff;
       @include transition(opacity .5s);
     }
   }
@@ -85,6 +86,7 @@ figure.iphone6 {
     @extend .col-md-10;
     img {
       @extend .img-responsive;
+      border: 1px solid $table-border-color;
       margin: 0 auto;
       &+p {
         margin-top: $jason-space;
