@@ -5,7 +5,7 @@ def project_thumb(title, slug, image, year)
     <a href='#{url_portfolio}#{slug}'>
       <figcaption>
         <h3>#{title}</h3>
-        <span class='view'>&mdash;view&mdash;
+        <span class='view'>&mdash;view this project&mdash;
       </figcaption>
       <img data-layzr='#{image_url}' alt='#{title}'>
       <noscript><img src='#{image_url}' alt='#{title}'></noscript>
@@ -14,25 +14,34 @@ def project_thumb(title, slug, image, year)
 end
 
 # Single project images
-def project_image(title, image)
+def project_image(title, image, cssClass="")
   image_url = "/#{images_dir}/projects/#{image}"
-  "<img data-layzr='#{image_url}' alt='#{title}'>
+  if cssClass.present?
+    addClass = " class='#{cssClass}' "
+  end
+  "<img data-layzr='#{image_url}' alt='#{title}'#{addClass}>
   <noscript><img src='#{image_url}' alt='#{title}'></noscript>"
 end
 
 # Project details
 def project_details(year, software, roles)
-  "<dl>
-    <dt>Client</dt>
-    <dd>#{current_page.data.title}</dd>
-    <dt>Year</dt>
-    <dd>#{year}</dd>
-    <dt>Software</dt>
-    <dd>#{software}</dd>
-    <dt>Roles</dt>
-    <dd>#{roles}</dd>
-  </dl>
-  <hr>"
+  dl_content = content_tag :dl do
+    str = ''
+    unless current_page.data.title.empty?
+      str += content_tag(:dt, 'Project') + content_tag(:dd, current_page.data.title)
+    end
+    unless year.empty?
+      str += content_tag(:dt, 'Year') + content_tag(:dd, year.to_s)
+    end
+    unless software.empty?
+      str += content_tag(:dt, 'Software') + content_tag(:dd, software)
+    end
+    unless roles.empty?
+      str += content_tag(:dt, 'Roles') + content_tag(:dd, roles)
+    end
+    str
+  end
+  dl_content + content_tag(:hr)
 end
 
 # Image gallery
