@@ -33,7 +33,7 @@
           "operatingSystem": "windows",
           "dichotomy": "good",
           "title": "Create files from context menu",
-          "description": "Windows lets you create new files with a right click of the mouse, whereas OS X only lets you create files forces you to create files by saving them out of a program.",
+          "description": "Windows lets you create new files with a right click of the mouse, whereas OS X forces you to create files by saving them out of a program.",
           "screenshot": "vs-new-file-context.png"
         },
         {
