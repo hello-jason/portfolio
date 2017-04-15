@@ -10,11 +10,25 @@ require "./source/environment_variables.rb"
 # ========================================================================
 # Site settings
 # ========================================================================
-# URL when building for deployment to production
-set :site_title,           "Hello Jason"
-set :site_description,     "Design and development portfolio of Jason Cross"
-set :site_url_production,  "https://hellojason.net"
-set :site_url_development, ENV['site_url_development']
+config[:site_title]       = 'Hello Jason'
+config[:site_description] = 'Design and development portfolio of Jason Cross'
+
+# Set asset directories
+config[:css_dir]      = 'assets/stylesheets'
+config[:js_dir]       = 'assets/javascripts'
+config[:images_dir]   = 'assets/images'
+config[:fonts_dir]    = 'assets/fonts'
+config[:layouts_dir]  = 'layouts'
+
+# Use relative URLs
+activate :relative_assets
+# Sitemap URLs (use trailing slashes). Create additional variables here
+# for referencing your pages.
+config[:url_portfolio] = '/projects/'
+config[:url_projects]  = '/projects/'
+config[:url_about]     = '/about/'
+config[:url_blog]      = '/'
+config[:url_home]      = '#{url_blog}'
 
 # Set asset directories
 set :css_dir,              "assets/css"
