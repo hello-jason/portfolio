@@ -1,14 +1,13 @@
 # Project thumbnails
 def project_thumb(title, slug, image, year)
-  image_path = image_path "/thumbnails/#{image}"
   "<figure>
-    <a href='/projects/#{slug}'>
+    <a href='/projects/{slug}'>
       <figcaption>
         <h3>#{title}</h3>
         <span class='view'>&mdash;view this project&mdash;
-      </figcaption>
-      <img data-layzr='#{image_path}' alt='#{title}'>
-      <noscript><img src='#{image_path}' alt='#{title}'></noscript>
+      </figcaption>"
+      image_tag '#{image}'
+      "<noscript><img src='#{image}' alt='#{title}'></noscript>
     </a>
   </figure>"
 end
