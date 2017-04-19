@@ -1,15 +1,16 @@
 # Project thumbnails
 def project_thumb(title, slug, image, year)
-  "<figure>
-    <a href='/projects/{slug}'>
-      <figcaption>
-        <h3>#{title}</h3>
-        <span class='view'>&mdash;view this project&mdash;
-      </figcaption>"
-      image_tag '#{image}'
-      "<noscript><img src='#{image}' alt='#{title}'></noscript>
-    </a>
-  </figure>"
+  content = "
+    <figure>
+      <a href='/projects/#{slug}'>
+        <figcaption>
+          <h3>#{title}</h3>
+          <span class='view'>&mdash;view this project&mdash;
+        </figcaption>
+        <img src='/assets/images/thumbnails/#{image}' alt='#{title} project'>
+      </a>
+    </figure>"
+  content.html_safe
 end
 
 # Single project images
