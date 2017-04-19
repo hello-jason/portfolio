@@ -1,12 +1,9 @@
 source "https://rubygems.org"
 
 # Core
-gem "middleman", "~> 3.4.1"
-
-# Assets
-gem "bootstrap-sass", "~> 3.3.6", require: false
-gem "font-awesome-middleman", "~> 4.5.0"
-gem "middleman-favicon-maker", "~> 3.7"
+gem 'middleman', '~> 4.2'
+gem 'middleman-autoprefixer', '~> 2.7'
+gem "middleman-sprockets", "~> 4.1.0"
 
 # Assets
 gem "bootstrap-sass", "~> 3.3.7", require: false

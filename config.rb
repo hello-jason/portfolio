@@ -31,42 +31,26 @@ config[:url_about]     = 'about/'
 config[:url_blog]      = '/'
 config[:url_home]      = '/'
 
-# Set asset directories
-set :css_dir,              "assets/css"
-set :js_dir,               "assets/js"
-set :images_dir,           "assets/img"
-set :fonts_dir,            "assets/fonts"
-
-# Sitemap URLs (use trailing slashes). Create additional variables here
-# for referencing your pages.
-set :url_portfolio,        "/projects/"
-set :url_projects,         "/projects/"
-set :url_about,            "/about/"
-set :url_blog,             "/"
-set :url_home,             "#{url_blog}"
-
-# Remove layout template from sitemap.xml page
-page "/sitemap.xml", :layout => false
+# ========================================================================
+# Activate and configure extensions
+# ========================================================================
+# https://middlemanapp.com/advanced/configuration/#configuring-extensions
 
 # Slim template engine
 require "slim"
 
-# Use relative URLs
-activate :relative_assets
-
-# Add layzr to sprockets asset path
-sprockets.append_path File.join root, 'node_modules'
+# Bootstrap
+require "bootstrap-sass"
 
 # Autoprefixer
-activate :autoprefixer do |config|
-  config.browsers = ['last 2 versions', 'Explorer >= 9']
-  config.cascade  = false
-  config.inline   = false
+activate :autoprefixer do |prefix|
+  prefix.browsers = "last 2 versions"
 end
 
-# Markdown rendering
-set :markdown_engine, :redcarpet
-set :markdown, :fenced_code_blocks => true, :smartypants => true
+# ========================================================================
+# Layouts
+# ========================================================================
+# https://middlemanapp.com/basics/layouts/
 
 # Syntax highlighting
 # Documentation: https://github.com/jneen/rouge
