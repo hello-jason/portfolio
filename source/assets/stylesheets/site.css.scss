@@ -1,7 +1,3 @@
-/*
- *= require lightcase/src/css/lightcase
- */
-
 @charset "utf-8";
 
 /* ==========================================================================
@@ -20,7 +16,6 @@
 @import "navigation";
 @import "globals";
 @import "article";
-@import "lightcase"; // Lightbox-like JavaScript image gallery
 @import "pygments-css-default";  // Themes http://richleland.github.io/pygments-css/
 @import "codepen";
 
