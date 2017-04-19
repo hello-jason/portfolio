@@ -1,0 +1,82 @@
+<% all_methods = self.class.superclass.instance_methods - self.class.superclass.superclass.instance_methods %>
+<% output_helpers = ::Padrino::Helpers::OutputHelpers.instance_methods %>
+<% tag_helpers = ::Padrino::Helpers::TagHelpers.instance_methods %>
+<% asset_tag_helpers = ::Padrino::Helpers::AssetTagHelpers.instance_methods %>
+<% form_helpers = ::Padrino::Helpers::FormHelpers.instance_methods %>
+<% render_helpers = ::Padrino::Helpers::RenderHelpers.instance_methods %>
+<% number_helpers = ::Padrino::Helpers::NumberHelpers.instance_methods %>
+<% blog_helpers = Middleman::Blog::Helpers.instance_methods %>
+
+<% mm_methods = all_methods - output_helpers - tag_helpers - asset_tag_helpers - form_helpers - render_helpers - number_helpers %>
+
+<h3>Middle Man Methods</h3>
+<%= link_to "Documentation for middleman/middleman (master)", "http://rubydoc.info/github/middleman/middleman/frames" %>
+<ul>
+  <% mm_methods.map{|m|m.to_s}.sort.each do |method| %>
+    <li><%= method %></li>
+  <% end %>
+</ul>
+
+<h4>Variables</h4>
+<ul>
+  <li>current_page (current_resource)</li>
+  <li>current_path</li>
+  <li>data</li>
+  <li>environment</li>
+  <li>development?</li>
+  <li>build?</li>
+  <li>sitemap</li>
+  <li>config</li>
+</ul>
+
+<h3>Blog Helpers</h3>
+<%= link_to "Middleman::Blog::Helpers", "http://rubydoc.info/github/middleman/middleman-blog/master/Middleman/Blog/Helpers"%>
+<ul>
+  <% blog_helpers.map{|m|m.to_s}.sort.each do |method| %>
+    <li><%= method %></li>
+  <% end %>
+</ul>
+
+<h3>Padrino Helpers</h3>
+<%= link_to "Padrino Application Helpers", "http://www.padrinorb.com/guides/application-helpers"%>
+<h4>Output Helpers</h4>
+<ul>
+  <% output_helpers.map{|m|m.to_s}.sort.each do |method| %>
+    <li><%= method %></li>
+  <% end %>
+</ul>
+
+<h4>Tag Helpers</h4>
+<ul>
+  <% tag_helpers.map{|m|m.to_s}.sort.each do |method| %>
+    <li><%= method %></li>
+  <% end %>
+</ul>
+
+<h4>Asset Tag Helpers</h4>
+<ul>
+  <% asset_tag_helpers.map{|m|m.to_s}.sort.each do |method| %>
+    <li><%= method %></li>
+  <% end %>
+</ul>
+
+<h4>Form Helpers</h4>
+<ul>
+  <% form_helpers.map{|m|m.to_s}.sort.each do |method| %>
+    <li><%= method %></li>
+  <% end %>
+</ul>
+
+<h4>Render Helpers</h4>
+<ul>
+  <% render_helpers.map{|m|m.to_s}.sort.each do |method| %>
+    <li><%= method %></li>
+  <% end %>
+</ul>
+
+<h4>Number Helpers</h4>
+<ul>
+  <% number_helpers.map{|m|m.to_s}.sort.each do |method| %>
+    <li><%= method %></li>
+  <% end %>
+</ul>

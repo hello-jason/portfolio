@@ -15,12 +15,15 @@ end
 
 # Single project images
 def project_image(title, image, cssClass="")
-  image_url = "/#{images_dir}/projects/#{image}"
+  image_path = "/assets/images/projects/#{image}"
   if cssClass.present?
     addClass = " class='#{cssClass}' "
   end
-  "<img data-layzr='#{image_url}' alt='#{title}'#{addClass}>
-  <noscript><img src='#{image_url}' alt='#{title}'></noscript>"
+  content = "
+    <img src='#{image_path}' alt='#{title}'#{addClass}>
+    <noscript><img src='#{image_path}' alt='#{title}'></noscript>"
+
+  content.html_safe
 end
 
 # Project details
@@ -47,26 +50,29 @@ end
 # Image gallery
 def image_gallery(image, collection, title="")
   # = image_gallery "car.jpg" "cars" "Nice car!"
-  full_image_url = "/#{images_dir}/#{collection}/#{image}"
-  thumb_image_url = "/#{images_dir}/#{collection}/thumbs/thumbs_#{image}"
-  "<a href='#{full_image_url}' data-rel='lightcase:#{collection}'>
-    <img src='#{thumb_image_url}' alt='#{title}' class='img-thumbnail' />
-  </a>
-  "
+  full_image_url = "/assets/images/#{collection}/#{image}"
+  thumb_image_url = "/assets/images/#{collection}/thumbs/thumbs_#{image}"
+   content = "<a href='#{full_image_url}' data-rel='lightcase:#{collection}'>
+      <img src='#{thumb_image_url}' alt='#{title}' class='img-thumbnail' />
+    </a>
+    "
+  content.html_safe
 end
 
 # iPhone 6 canvas
 def iphone6(image, caption)
   # = iphone6 "image.gif", "Something about the image"
-  "
-  <figure class='iphone6'>
-    <img src='/#{images_dir}/#{image}'>
-    <figcaption>#{caption}</figcaption>
-  </figure>
-  "
+  content = "
+    <figure class='iphone6'>
+      <img src='/assets/images/#{image}'>
+      <figcaption>#{caption}</figcaption>
+    </figure>
+    "
+  content.html_safe
 end
 
 # Big list <li> items
 def big_list_li(number, text)
-  "<li><span class='number'>#{number}</span> <span class='text'>#{text}</span></li>"
+  content = "<li><span class='number'>#{number}</span> <span class='text'>#{text}</span></li>"
+  content.html_safe
 end

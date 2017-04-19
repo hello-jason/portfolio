@@ -10,25 +10,26 @@ require "./source/environment_variables.rb"
 # ========================================================================
 # Site settings
 # ========================================================================
+config[:site_url]       = 'http://localhost:4567/'
 config[:site_title]       = 'Hello Jason'
 config[:site_description] = 'Design and development portfolio of Jason Cross'
 
 # Set asset directories
-config[:css_dir]      = 'assets/stylesheets'
-config[:js_dir]       = 'assets/javascripts'
-config[:images_dir]   = 'assets/images'
-config[:fonts_dir]    = 'assets/fonts'
-config[:layouts_dir]  = 'layouts'
+config[:css_dir]      = '/assets/stylesheets'
+config[:js_dir]       = '/assets/javascripts'
+config[:images_dir]   = '/assets/images'
+config[:fonts_dir]    = '/assets/fonts'
+config[:layouts_dir]  = '/layouts'
 
 # Use relative URLs
 # activate :relative_assets
 # Sitemap URLs (use trailing slashes). Create additional variables here
 # for referencing your pages.
-config[:url_portfolio] = '/projects/'
-config[:url_projects]  = '/projects/'
-config[:url_about]     = '/about/'
+config[:url_portfolio] = 'projects/'
+config[:url_projects]  = 'projects/'
+config[:url_about]     = 'about/'
 config[:url_blog]      = '/'
-config[:url_home]      = '#{url_blog}'
+config[:url_home]      = '/'
 
 # Set asset directories
 set :css_dir,              "assets/css"
@@ -90,45 +91,6 @@ end
 activate :directory_indexes
 
 
-
-# With alternative layout
-# page '/path/to/file.html', layout: 'other_layout'
-
-# Proxy pages
-# https://middlemanapp.com/advanced/dynamic-pages/
-
-# proxy(
-#   '/this-page-has-no-template.html',
-#   '/template-file.html',
-#   locals: {
-#     which_fake_page: 'Rendering a fake page with a local variable'
-#   },
-# )
-
-# ========================================================================
-# Helpers
-# ========================================================================
-# Helpers have been moved to /helpers, into their own files
-
-# ========================================================================
-# Development-specific configuration
-# ========================================================================
-configure :development do
-  set :site_url, "#{site_url_development}"
-
-  # Reload the browser automatically whenever files change
-  activate :livereload
-
-  # Disqus comments
-  activate :disqus do |d|
-    # using a special shortname
-    d.shortname = "hello-jason-dev"
-    # or setting to `nil` will stop Disqus loading
-    # d.shortname = nil
-  end
-end
-
-# ========================================================================
 # Build-specific configuration
 # ========================================================================
 configure :build do
@@ -198,33 +160,6 @@ configure :build do
   }
 end
 
-# ========================================================================
-# Deploy-specific configuration
-# Documentation: https://github.com/middleman-contrib/middleman-deploy
-# ========================================================================
-case ENV['TARGET'].to_s.downcase
-  #
-  # rake deploy:production
-  #
-  when 'production'
-    activate :deploy do |deploy|
-      deploy.build_before = false # build happens in rake task
-      deploy.method = :git
-      deploy.remote   = 'origin'
-      deploy.branch   = 'gh-pages'
-      deploy.strategy = :force_push
-      deploy.clean = true
-    end
-  #
-  # rake deploy:staging
-  #
-  when 'staging'
-    activate :deploy do |deploy|
-      deploy.build_before = false # build happens in rake task
-      deploy.method = :git
-      deploy.remote   = 'origin'
-      deploy.branch   = 'staging'
-      deploy.strategy = :force_push
-      deploy.clean = true
-    end
-  end
+configure :build do
+  config[:site_url]       = 'https://hellojason.net'
+end

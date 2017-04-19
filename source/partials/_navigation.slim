@@ -1,10 +1,10 @@
 #primary-navigation role="navigation"
   .navbar-header
-    a.logo href="#{url_home}" title="#{site_title} Portfolio"
-      = inline_svg "hello-jason-logo.svg", :class => "brand"
+    a.logo href="#{config.url_home}" title="#{config.site_title} Portfolio"
+      = partial "#{config.images_dir}/hello-jason-logo.svg"
       span.tagline Hello, I'm Jason.
   #primary-container
     ul.nav
-      = nav_li "Blog", "#{url_home}"
-      = nav_li "Projects", "#{url_projects}"
-      = nav_li "About", "#{url_about}"
+      = nav_li "Blog", "#{config.url_home}"
+      = nav_li "Projects", "#{config.url_projects}"
+      = nav_li "About", "#{config.url_about}"
