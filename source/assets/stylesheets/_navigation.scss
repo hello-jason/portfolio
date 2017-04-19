@@ -1,0 +1,98 @@
+// For extending active styles
+.nav-link-active {
+  border-color: inherit !important;
+}
+
+#primary-navigation {
+  margin: 0;
+  padding: 0;
+  @extend .navbar;
+  text-align: center;
+  @media (min-width: $screen-sm-min) {
+    text-align: left;
+  }
+  button {
+    @extend .navbar-toggle;
+  }
+  li, a {
+    color: #fff;
+  }
+  a {
+    padding: 0;
+    font-family: $headings-font-family;
+    text-transform: uppercase;
+    border-bottom: 2px solid transparent;
+    font-size: $font-size-base;
+    @media (min-width: $screen-sm-min) {
+      padding: 0.15em 0 !important;
+      margin-right: 0.25em;
+    }
+    line-height: 2.85em;
+    &.logo {
+      @extend .navbar-brand;
+      float: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      @media (min-width: $screen-sm-min) {
+        padding: .85em 0 0;
+      }
+      font-weight: bold;
+      font-size: $font-size-base;
+      color: $brand-secondary;
+      .brand {
+        margin-right: 0.75em;
+        transition: all .5s;
+        display: inline-block;
+        width: 43px;
+      }
+    }
+  }
+  li {
+    a {
+      &:hover, &:focus {
+        background: none;
+        @extend .nav-link-active;
+      }
+    }
+    &.active {
+      a {
+        @extend .nav-link-active;
+      }
+    }
+  }
+}
+
+#primary-container {
+  .nav {
+    @media (min-width: $screen-sm-min) {
+      padding-top: .5em;
+      padding-left: 1.4em;
+    }
+    @extend .navbar-nav;
+    @extend .list-inline;
+  }
+}
+
+// Manual active styles
+body.projects {
+  li.nav-item-projects {
+    a {
+      @extend .nav-link-active;
+    }
+  }
+}
+body.about {
+  li.nav-item-about {
+    a {
+      @extend .nav-link-active;
+    }
+  }
+}
+body.blog {
+  li.nav-item-blog {
+    a {
+      @extend .nav-link-active;
+    }
+  }
+}

@@ -1,0 +1,282 @@
+figure.iphone6 {
+  background: url(../img/iphone-6-shape.svg) no-repeat center;
+  @media (max-width: $screen-md-min) {
+    width: 243px;
+  }
+  margin: 0 auto;
+  img {
+    margin-top: 121px !important;
+    max-width: 214px;
+    @media (min-width: $screen-md-min) {
+      margin-top: 106px !important;
+      max-width: 378px;
+    }
+  }
+  figcaption {
+    margin-top: 18px;
+  }
+}
+
+// Thumbnail gallery of projects
+.proj-thumbnails {
+  figure {
+    @extend .col-sm-4;
+    position: relative;
+    text-align: center;
+    padding-left: 0;
+    padding-right: 0;
+    overflow: hidden;
+    border: 2px solid #fff;
+    max-width: 500px;
+
+    h3 {
+      font-size: 25px;
+      margin-top: 0;
+      margin-bottom: 0;
+      color: #fff;
+    }
+    .year {
+      display: block;
+      font-size: 20px;
+    }
+    .view {
+      color: lighten($brand-secondary, 25%);
+      font-size: 17px;
+      font-style: italic;
+    }
+    img {
+      @extend .img-responsive;
+      position: relative;
+      top: 0;
+      left: 0;
+      z-index: 1;
+    }
+    a {
+      @extend .thumbnail;
+      color: #fff;
+      background: rgba(0,0,0,0);
+      background: rgba($brand-primary, 0);
+      margin: 0;
+      &:hover, &:focus {
+        figcaption {
+          opacity: 1;
+          background: rgba($brand-primary, 0.85);
+        }
+      }
+    }
+    figcaption {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      padding-top: 26%;
+      padding-left: 30px;
+      padding-right: 30px;
+      opacity: 0;
+      z-index: 2;
+      color: #fff;
+      @include transition(opacity .5s);
+    }
+  }
+}
+
+// Project singles
+#project-single {
+  padding: 0 $jason-space;
+  main, .main {
+    @extend .col-md-10;
+    img {
+      @extend .img-responsive;
+      margin: 0 auto;
+      &.border {
+        border: 1px solid $table-border-color;
+      }
+      &+p {
+        margin-top: $jason-space;
+      }
+    }
+    h1 {
+      text-transform: uppercase;
+    }
+  }
+  aside {
+    @extend .col-md-2;
+  }
+}
+
+// Custom layout case study
+.case-study {
+  text-align: center;
+  color: #2f3021;
+  font-size: 24px;
+  line-height: 34px;
+  .content {
+    max-width: 790px;
+    margin: 0 auto;
+    padding: $casestudy-section-padding 15px;
+  }
+  .banner {
+    background: none;
+    svg.icon-arrow-downright {
+      display: none;
+    }
+    .title {
+      color: $text-color !important;
+    }
+    #primary-container {
+      li, a {
+        color: $text-color !important;
+        &:focus, &:hover {
+          border-color: $text-color !important;
+        }
+      }
+    }
+  }
+  figcaption {
+    font-size: 18px;
+    line-height: 21px;
+    font-style: italic;
+  }
+  img {
+    margin-top: ($casestudy-section-padding / 2);
+    margin-bottom: ($casestudy-section-padding / 2);
+    margin-left: auto;
+    margin-right: auto;
+    &.media-responsive {
+      max-width: $screen-lg-min;
+      margin-top: 0;
+      @media (max-width: $screen-lg-min) {
+        display: block;
+        width: 100%;
+      }
+    }
+    &.hug-bottom {
+      margin-bottom: 0;
+    }
+  }
+  h3 {
+    margin-top: ($grid-gutter-width);
+  }
+  .hero {
+    background-size: cover;
+    h1 {
+      font-size: 48px;
+      line-height: 1.35em;
+      font-weight: normal;
+      text-transform: none;
+      @media (min-width: $screen-md-min) {
+        font-size: 72px;
+      }
+    }
+    .categories {
+      font-weight: bold;
+      font-size: 20px;
+      display: block;
+      span {
+        background: rgba(255,255,255,0.6);
+      }
+    }
+    img {
+      margin-bottom: 1.25em;
+    }
+  }
+  .vcard {
+    margin-bottom: ($casestudy-section-padding / 2);
+    img, .name, .role {
+      display: block;
+    }
+    .name {
+      font-weight: bold;
+    }
+    img {
+      border-radius: 70px;
+      margin-bottom: 1rem;
+    }
+  }
+  blockquote {
+    border: 0 none;
+    font-size: 24px;
+    &.section-quote {
+      font-style: italic;
+      @media (min-width: $screen-md-min) {
+        font-size: 47px;
+        line-height: 52px;
+      }
+      em {
+        color: #5949aa;
+      }
+    }
+  }
+  h2 {
+    font-size: 50px;
+    margin-bottom: 6rem;
+  }
+  .big-list {
+    text-align: left;
+    list-style: none;
+    padding: 0;
+    margin-bottom: ($casestudy-section-padding / 2);
+    li, .number {
+      background: #b1b1b1;
+    }
+    li {
+      display: flex;
+      flex-flow: row wrap;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+    em {
+      font-style: normal;
+      text-decoration: underline;
+    }
+    .number, .text {
+      padding: 30px 21px;
+    }
+    .number {
+      text-align: center;
+      flex: 1 1 auto;
+      order: 1;
+      max-width: 67px;
+    }
+    .text {
+      background: #d5d5d5;
+      flex: 15 1 0px;
+      order: 2;
+    }
+  }
+  .check-it-out {
+    .content {
+      padding-top: ($casestudy-section-padding / 2);
+    }
+    .btn {
+      @extend .btn-primary;
+      @extend .btn-lg;
+      @extend .btn-block;
+      @media (max-width: $screen-md-min) {
+        margin-bottom: 15px;
+      }
+    }
+  }
+}
+
+.numbered-reasoning {
+  font-size: 16px;
+  line-height: 2.5rem;
+  margin-bottom: $grid-gutter-width;
+  @extend .clearfix;
+  .numbered-reason {
+    position: relative;
+    @extend .col-md-6;
+    h3, p {
+      position: relative;
+      z-index: 5;
+    }
+  }
+  .number {
+    font-size: 147px;
+    color: #c9d4bd;
+    position: absolute;
+    z-index: 1;
+    bottom: 6rem;
+    left: 0;
+  }
+}

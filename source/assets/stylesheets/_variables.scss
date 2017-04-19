@@ -1,0 +1,30 @@
+//=======================================================================
+// Bootstrap Overrides
+//=======================================================================
+// Colors
+$brand-primary:           #A432F4;
+$brand-secondary:         #FAAC2C;
+$text-color:              #2F3021;
+$body-bg:                 #FFFFFF;
+
+// Layout
+$border-radius-base:      0;
+$jason-space:             2rem;
+
+// Typography
+$font-size-base:          18px;
+$font-family-sans-serif:  "Segoe UI Light", "Lucida Grande", sans-serif;
+$font-family-base:        $font-family-sans-serif;
+$headings-font-family:    "Affogato-Bold", sans-serif;
+
+$font-size-h1:            ceil($font-size-base * 1.95);
+$font-size-h2:            ceil($font-size-base * 1.65);
+$font-size-h3:            ceil($font-size-base * 1.15);
+
+// Thumbnails
+$thumbnail-padding:       0;
+$thumbnail-bg:            none;
+$thumbnail-border:        none;
+
+// Case Studies
+$casestudy-section-padding: 12rem;

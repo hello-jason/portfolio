@@ -1,0 +1,63 @@
+// Affogato Bold
+@font-face {
+  font-family: 'Affogato-Bold';
+  src: url('../fonts/Affogato-Bold.eot');
+  src: url('../fonts/Affogato-Bold.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/Affogato-Bold.woff') format('woff'),
+       url('../fonts/Affogato-Bold.woff2') format('woff2'),
+       url('../fonts/Affogato-Bold.ttf')  format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-feature-settings: 'liga', 'kern';
+  text-rendering: optimizeLegibility;
+}
+
+p {
+  margin-bottom: ($jason-space / 2);
+}
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
+  font-weight: normal;
+  text-transform: capitalize;
+}
+h1, .h1 {
+  margin-top: 0;
+}
+
+h2, .h2 {
+  margin-top: $jason-space;
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+h3, .h3 {
+  margin-bottom: 0;
+  letter-spacing: 1px;
+  span {
+    font-style: italic;
+  }
+}
+
+dt {
+  font-family: $headings-font-family;
+  font-weight: normal;
+}
+
+aside, main {
+  a:link {
+    text-decoration: underline;
+  }
+}
+
+a[href*="//"]:not([href*="hellojason.net"]) {
+  &::after {
+    content: "\00A0(\2348)";
+    text-decoration: none;
+    display: inline-block;
+    color: $text-muted;
+  }
+}

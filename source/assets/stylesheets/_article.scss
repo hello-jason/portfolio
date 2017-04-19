@@ -1,0 +1,101 @@
+.time {
+  color: $text-muted;
+  font-size: $font-size-small;
+}
+.back-to-articles {
+  font-size: $font-size-small;
+  text-decoration: underline;
+}
+
+
+article#article-single {
+  @extend .container;
+  font-size: 20px;
+  line-height: 1.65em;
+  time {
+    display: inline-block;
+    padding-top: $jason-space;
+    &+time {
+      margin-left: ($jason-space / 2);
+    }
+  }
+  .blog-hero {
+    margin-bottom: $jason-space;
+  }
+  a:link {
+    text-decoration: underline;
+  }
+  img {
+     @extend .img-responsive;
+  }
+  @media screen and (max-width: $screen-sm-min) {
+    time {
+      text-align: center;
+    }
+  }
+}
+
+#article-list {
+  article {
+    margin-bottom: $jason-space;
+    border: 1px solid $table-border-color;
+    @include transition(background-color 0.25s, border-color 0.25s);
+
+    // Upstate
+    .post-title {
+      display: block;
+      @include transition(color 0.25s);
+      font-size: $font-size-h2;
+      font-weight: normal;
+      color: $brand-primary;
+      span {
+        border-bottom: 1px solid transparent;
+        @include transition(border-color 0.25s);
+      }
+    }
+    .post-summary {
+      margin-bottom: ($jason-space / 2);
+    }
+    &>a {
+      display: block;
+      color: $text-color;
+      text-decoration: none;
+      width: 100%;
+    }
+    .content {
+      padding: $jason-space;
+      position: relative;
+    }
+    svg.icon-arrow-downright {
+      fill: orange;
+      width: 13px;
+      height: 13px;
+      position: absolute;
+      right: 0.85rem;
+      bottom: 0.75rem;
+      opacity: 0.15;
+      @include transition(opacity 0.25s);
+    }
+
+    // Do stuff on hover/focus
+    &:hover, &:focus {
+      border-color: $brand-primary;
+      background-color: rgba($brand-primary, 0.05);
+      .post-title {
+        span {
+          border-bottom-color: $brand-primary;
+        }
+      }
+      svg.icon-arrow-downright {
+        fill: $brand-primary;
+        opacity: 1;
+      }
+    }
+  }
+}
+
+body.blog_free-shipping-for-certain-products-in-magento_index {
+  img {
+    margin: 1em auto;
+  }
+}

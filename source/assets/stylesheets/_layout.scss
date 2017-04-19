@@ -1,0 +1,39 @@
+section {
+  @extend .clearfix;
+}
+dd {
+  margin-bottom: 1.5em;
+}
+main.container {
+  padding-top: ($jason-space * 2);
+  padding-bottom: ($jason-space * 2);
+  @media (max-width: $screen-md-min) {
+    padding: $jason-space;
+  }
+}
+.section-heading {
+  @extend .col-md-4;
+  text-align: right;
+  @media (max-width: $screen-md-min) {
+    text-align: center;
+  }
+  h2 {
+    text-transform: uppercase;
+  }
+}
+.section-content {
+  @extend .col-md-8;
+  h3 {
+    color: $brand-primary;
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+  hr {
+    margin-top: ($jason-space * 2);
+    margin-bottom: ($jason-space * 2);
+  }
+  img {
+    @extend .img-responsive;
+  }
+}

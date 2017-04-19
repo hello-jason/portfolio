@@ -1,0 +1,90 @@
+// Contact Mover case study
+.projects_contact-mover {
+  .contact-mover-v1-ui {
+    display: block;
+    width: 100%;
+    max-width: 496px;
+  }
+  .hero {
+    background: #6083bb url(../img/projects/contact-mover/hero-bkg-skytrees.jpg) no-repeat;
+    background-size: cover;
+    h1 {
+      color: #fff;
+      span {
+        background: rgba(90,73,169,0.7);
+      }
+    }
+  }
+  .scratch-the-itch {
+    @media (min-width: $screen-md-min) {
+      text-align: left;
+    }
+    #logo-immense-networks {
+      width: 240px;
+      color: #2f3021;
+      display: block;
+      clear: both;
+      margin: 0 auto;
+    }
+    blockquote {
+      font-size: 42px;
+      line-height: 1em;
+      font-style: italic;
+      @media (min-width: $screen-md-min) {
+        float: right;
+        width: 50%;
+      }
+    }
+  }
+  .first-to-market {
+    background: linear-gradient(#6e4f7d, #5949aa);
+    color: #fff;
+    .vcard {
+      color: #dbd1f8;
+    }
+  }
+  .workflow-help {
+    background: #7d74bd;
+    color: #fff;
+    .big-list {
+      li, .number {
+        background: #443588;
+      }
+      .text {
+        background: #5a49a9;
+      }
+    }
+  }
+  .version-2 {
+    .vcard {
+      color: #b3b3b3;
+    }
+    .version-2-wireframes {
+      @media (max-width: $screen-md-min) {
+        display: block;
+        width: 100%;
+      }
+      @media (min-width: $screen-md-min) {
+        margin-left: -97px !important;
+      }
+    }
+  }
+  .redesign-contact-mover {
+    background: #e5e5e5;
+  }
+  .public-site {
+    img {
+      @media (max-width: $screen-md-min) {
+        display: block;
+        width: 100%;
+      }
+      @media (min-width: $screen-md-min) {
+        margin-left: -94px !important;
+        max-width: 900px;
+      }
+    }
+  }
+  .what-i-learned {
+    background: #CFD7BB;
+  }
+}

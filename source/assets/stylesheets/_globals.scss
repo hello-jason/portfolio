@@ -1,0 +1,51 @@
+.visible {
+  display: block !important;
+  opacity: 1;
+  height: auto;
+}
+
+.cloak {
+  display: none !important;
+  opacity: 0;
+  height: 0;
+}
+
+::selection {
+  color: white;
+  background: $brand-secondary;
+}
+
+::-moz-selection {
+  color: white;
+  background: $brand-secondary;
+}
+
+.alignleft, .alignright, .pull-left, .pull-right {
+  margin-bottom: $jason-space;
+}
+
+.alignleft, .pull-left {
+  margin-right: $jason-space;
+  float: left;
+}
+
+.alignright, .pull-right {
+  margin-left: $jason-space;
+  float: right;
+}
+
+hr {
+  margin-top: $jason-space;
+  margin-bottom: 2em;
+  &+h1, &+.h1, &+h2, &+.h2, &+h3, &+.h3 {
+    margin-top: 0;
+  }
+}
+
+.clear {
+  clear: both;
+}
+
+a:focus {
+  outline: 0;
+}

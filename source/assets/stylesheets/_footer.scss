@@ -1,0 +1,8 @@
+footer#footer {
+  color: darken($body-bg, 35%);
+  background: #A432F4 url(../img/hero-jason-feet-purple.jpg) no-repeat center -33px;
+  height: 156px;
+  .content {
+    padding: ($jason-space / 2) $jason-space;
+  }
+}

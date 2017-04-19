@@ -1,0 +1,8 @@
+body.about_index {
+  .list-contact {
+    @extend .list-unstyled;
+    li {
+      @extend .col-md-4;
+    }
+  }
+}

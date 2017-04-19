@@ -1,0 +1,65 @@
+.projects_tool-tracker {
+  h2 {
+    text-transform: none;
+  }
+  .hero {
+    background: url(../img/projects/tool-tracker/hero-tool-tracker.jpg) no-repeat center top;
+    background-size: cover;
+    color: #fff;
+    padding: 6rem 0;
+    span, .categories span {
+      background: none;
+    }
+    .content {
+      padding: 0;
+    }
+  }
+  .switching-software, .focus-whats-important {
+    background: linear-gradient(#36598f, #012c71);
+    color: #fff;
+  }
+  .focus-whats-important {
+    .content {
+      padding-bottom: 0;
+    }
+    .hug-bottom {
+      margin-top: 0;
+      margin-left: -70px;
+    }
+  }
+  .logo-icon {
+    background: #e0e7f1;
+  }
+  .what-i-learned {
+    background: #CFD7BB;
+  }
+  .list-negatives, .list-positives {
+    .text {
+      background: #fff;
+      color: $text-color;
+    }
+  }
+  .list-negatives {
+    li, .number {
+      background: #f0234f;
+      color: #fff;
+    }
+    li {
+      border: 1px solid #f0234f;
+    }
+  }
+  .list-positives {
+    li, .number {
+      background: #24dd50;
+      color: #fff;
+    }
+    li {
+      border: 1px solid #24dd50;
+    }
+  }
+  .numbered-reasoning {
+    .number {
+      color: #3b629f;
+    }
+  }
+}

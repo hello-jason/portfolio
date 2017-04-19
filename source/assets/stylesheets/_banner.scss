@@ -1,0 +1,72 @@
+.banner {
+  position: relative;
+  text-align: center;
+  min-height: 0;
+  background-color: #A432F4;
+  background-image: url(../img/hero-jason-purple.jpg);
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  padding: $jason-space;
+  padding-bottom: ($jason-space * 2);
+  margin: 0;
+
+  .title {
+    font-family: $headings-font-family;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 11vw;
+    line-height: 0.75em;
+    margin: 0;
+    padding: 0.325em 0 0;
+    @media (min-width: $screen-sm-min) {
+      letter-spacing: -0.065em;
+    }
+    @media (min-width: $screen-lg-min) {
+      font-size: 11rem;
+    }
+  }
+  .subtitle {
+    text-transform: lowercase;
+    color: #FFFF93;
+    font-size: 4.75vw;
+    line-height: 1em;
+    font-weight: 200;
+    padding: 0;
+    margin: 0.45em 0 0;
+    letter-spacing: -.008em;
+    @media (min-width: $screen-md-min) {
+      font-size: 2.95vw;
+    }
+    @media (min-width: $screen-lg-min) {
+      font-size: 4rem;
+    }
+  }
+  svg.icon-arrow-downright {
+    fill: #fff;
+    width: 65px;
+    height: 65px;
+    position: absolute;
+    bottom: -3px;
+    left: -9999em;
+    @media (min-width: $screen-sm-min) {
+      left: 2.75rem;
+    }
+  }
+}
+
+// Different typography for home page
+body.index {
+  .banner {
+    min-height: 380px;
+    @media (min-width: $screen-lg-min) {
+      min-height: 720px;
+    }
+    .title {
+      font-size: 28vw;
+      letter-spacing: -0.095em;
+      @media (min-width: $screen-lg-min) {
+        font-size: 31rem;
+      }
+    }
+  }
+}
