@@ -18,11 +18,6 @@ source/environment_variables.rb
 
 # OS Specific
 .DS_Store
-Thumbs.db
-
-# Ignore logs
-*.log
-
-# Dependencies
+.sass-cache
+build/
 node_modules
-bower_components
