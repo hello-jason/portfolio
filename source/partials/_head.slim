@@ -94,4 +94,4 @@ html
           h1.title #{current_page.data.title}
         - if current_page.url == "/"
           p.subtitle I'm Jason, a designer &amp; UI developer in Austin, TX
-      / = inline_svg "icon-arrow-downright.svg"
+      = partial "#{config.images_dir}/icon-arrow-downright.svg"
