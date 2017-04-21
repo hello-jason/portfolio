@@ -32,6 +32,17 @@ config[:url_blog]      = '/'
 config[:url_home]      = '/'
 
 # ========================================================================
+# Layouts
+# ========================================================================
+# https://middlemanapp.com/basics/layouts/
+
+# Per-page layout changes
+page '/*.xml', layout: false
+page '/*.json', layout: false
+page '/*.txt', layout: false
+
+
+# ========================================================================
 # Activate and configure extensions
 # ========================================================================
 # https://middlemanapp.com/advanced/configuration/#configuring-extensions
@@ -46,15 +57,6 @@ require "bootstrap-sass"
 activate :autoprefixer do |prefix|
   prefix.browsers = "last 2 versions"
 end
-
-# ========================================================================
-# Layouts
-# ========================================================================
-# https://middlemanapp.com/basics/layouts/
-
-# Syntax highlighting
-# Documentation: https://github.com/jneen/rouge
-activate :rouge_syntax
 
 # ========================================================================
 # Weblog extension
