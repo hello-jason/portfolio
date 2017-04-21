@@ -37,34 +37,34 @@ The first thing we'll want to do is create a product attribute giving us the opt
 
 ### Here's the goal:
 
-![Free shipping](assets/img/articles/magento-01n.png)
+![Free shipping](assets/images/articles/magento-01n.png)
 
 1. Go to **Catalog > Attributes > Manage Attributes**
-![Manage attributes](assets/img/articles/magento-11n.png)
+![Manage attributes](assets/images/articles/magento-11n.png)
 
 2. Click **add new attribute**
-![Add new attribute](assets/img/articles/magento-09n.png)
+![Add new attribute](assets/images/articles/magento-09n.png)
 
 3. Fill in the fields as shown in the image below exactly. You may select your store name for the `Scope` if applicable. You may also name the Attribute Code something else, but keep it simple as we will be using this field later.
-![Attribute properties](assets/img/articles/magento-08n.png)
+![Attribute properties](assets/images/articles/magento-08n.png)
 
 4. Make sure to select `Yes` for the following choices to make the free shipping option visible on the front-end and use the attribute for `Price Rule Conditions`.
-![Frontend properties](assets/img/articles/magento-07n.png)
+![Frontend properties](assets/images/articles/magento-07n.png)
 
 5. Click **Manage Label/Options** from the left sidebar. The field under Admin is the text visible to administrators in the Magento backend (best to call this Free Shipping). Below, click **add an option** to make our drop-down choices. We only need to make one choice (Yes), which will turn free shipping on for a particular product. The admin field here will be the choice visible in the drop down menu. The field under your store name is the text front-end users will see. Position should be 1. **Do not set this as default** to avoid automatically giving all products a Yes value (that would be bad).
-![Attribute label/options](assets/img/articles/magento-06n.png)
+![Attribute label/options](assets/images/articles/magento-06n.png)
 
 6. Our attribute is made, but we need to assign this new attribute to an attribute set to actually use it when creating or editing our products. Go to **Catalog > Attributes > Manage Attribute Sets**
-![Manage attribute sets](assets/img/articles/magento-051n.png)
+![Manage attribute sets](assets/images/articles/magento-051n.png)
 
 7. If you're lucky, you've been using the default attribute set for your products. If you're unlucky like me, you already have quite a few sets made. For this option to show up, you have to **select each attribute set and perform step #8 to each one**.
-![Select attribute set](assets/img/articles/magento-04n.png)
+![Select attribute set](assets/images/articles/magento-04n.png)
 
 8. After clicking an attribute set, you will see the free shipping attribute we created over in the Unassigned Attributes column to the right. Click+drag the attribute into one of the sections to the left. You can put this item anywhere you want, and this will determine where it is available in the Manage Products area. Typically, the General or Prices section makes the most sense here. **Remember to do this for every attribute set you want this available**
-![Move unassigned attribute](assets/img/articles/magento-02n.png)
+![Move unassigned attribute](assets/images/articles/magento-02n.png)
 
 9. Now you should be able to go to **Catalog > Manage Products** and select a product from the list. Go to the section where you dragged the free shipping attribute under (General, in my case), and scroll down to find our new free shipping attribute.
-![Select free shipping](assets/img/articles/magento-00n.png)
+![Select free shipping](assets/images/articles/magento-00n.png)
 
 ---
 
@@ -78,18 +78,18 @@ The first thing we'll want to do is create a product attribute giving us the opt
 We have the interface set up, but now we have to make it function properly.
 
 1. Click **Promotions > Shopping Cart Price Rules**
-![Shopping cart price rules](assets/img/articles/7-9-2010-5-53-01-PMn.png)
+![Shopping cart price rules](assets/images/articles/7-9-2010-5-53-01-PMn.png)
 
 2. Click **Add new rule**
-![Add new rule](assets/img/articles/7-9-2010-5-53-22-PMn.png)
+![Add new rule](assets/images/articles/7-9-2010-5-53-22-PMn.png)
 
 3. Give the rule a name and description (these are for administrator reference only). Set the status to **Active**. Be sure to to leave the "to date" blank, unless you want an expiration date for free shipping (note: if you set an expiration date, it will be site wide, not per product).
-![Rule and name](assets/img/articles/7-9-2010-5-55-45-PMn.png)
+![Rule and name](assets/images/articles/7-9-2010-5-55-45-PMn.png)
 
 4. Ignore the Conditions tab. Instead, click **Actions** in the left sidebar.
 
 5. Match your fields with the ones in the image below.
-  ![Free shipping actions](assets/img/articles/7-9-2010-5-56-48-PMn.png)
+  ![Free shipping actions](assets/images/articles/7-9-2010-5-56-48-PMn.png)
 
 > Apply: Percent of product price discount
 >
@@ -105,7 +105,7 @@ We have the interface set up, but now we have to make it function properly.
 
 For the rules, keep the default "if ALL of these conditions are TRUE". Click the plus sign to add a condition. Select Free Shipping from the list. Click the ellipses and select Yes from the drop down (note: if Free Shipping is not in this list, refer back to step 4 in the last section, and make sure **Use for price rule conditions** is set to Yes).
 
-![Free shipping rules](assets/img/articles/7-9-2010-5-57-57-PMn.png)
+![Free shipping rules](assets/images/articles/7-9-2010-5-57-57-PMn.png)
 6. Save the rule
 
 ---
@@ -126,10 +126,10 @@ As we already know, Magento's core free shipping option only works for a minimum
 ### Internal calculators
 
 1. If you are not using external calculators, select Free Shipping from this list.
-![Internal free shipping](assets/img/articles/7-9-2010-6-07-14-PMn.png)
+![Internal free shipping](assets/images/articles/7-9-2010-6-07-14-PMn.png)
 
 2. Set Enabled to Yes. **Here's the trick**: Set the Minimum order amount to some outrageous number, like 9999999999.99. This lets us enable free shipping without having to worry about false positives.
-![Internal free shipping settings](assets/img/articles/7-9-2010-6-07-58-PMn.png)
+![Internal free shipping settings](assets/images/articles/7-9-2010-6-07-58-PMn.png)
 
 ### Using a shipping provider (UPS, USPS, FedEx, DHL)
 
@@ -138,13 +138,13 @@ As we already know, Magento's core free shipping option only works for a minimum
 2. Fill in all appropriate fields, such as Gateway URL, allowed methods, etc. This data can be found on your shipping provider's website. (This information must be correct for Magento to reach the 3rd party calculator. Also, your shipping account must be in production mode)
 
 3. We're most interested in the Free Method option. In my case, I want my products to receive Free Ground Shipping. Free shipping with minimum order amount is set to disabled. I still set my Minimum order amount to some outrageous number like 9999999999.99 just in case. This lets us enable free shipping without having to worry about false positives.
-![UPS free shipping settings](assets/img/articles/7-9-2010-6-11-42-PMn.png)
+![UPS free shipping settings](assets/images/articles/7-9-2010-6-11-42-PMn.png)
 
 4. Enable the provider.
-![External shipping enabled](assets/img/articles/7-9-2010-6-17-21-PMn.png)
+![External shipping enabled](assets/images/articles/7-9-2010-6-17-21-PMn.png)
 
 5. Test the free shipping rule by editing a product, select Yes for free shipping, add it to the cart, and run the Estimate shipping and tax quote. I chose Free Ground Shipping, so this is reflected by the quote generator.
-![Test free shipping](assets/img/articles/7-9-2010-6-57-04-PMn.png)
+![Test free shipping](assets/images/articles/7-9-2010-6-57-04-PMn.png)
 
 ---
 
@@ -157,7 +157,7 @@ As we already know, Magento's core free shipping option only works for a minimum
 
 ### Here's the goal
 
-![Free shipping on front-end](assets/img/articles/7-9-2010-6-30-40-PMn.png)
+![Free shipping on front-end](assets/images/articles/7-9-2010-6-30-40-PMn.png)
 
 1. Locate the template file you want to add the Free Shipping text to, a product page, for instance. Finding specific template files is outside the scope of this tutorial.
 
@@ -171,7 +171,7 @@ As we already know, Magento's core free shipping option only works for a minimum
 3. Notice I put the text to a p tag with a class. You can alter this however you wish. This lets me style the text and assign a background image to complete the effect.
 
 4. It is best practice to also include this code on the shopping cart page since free shipping only applies to specific items. This will let users know which items in their cart receive free shipping.
-![My shopping cart](assets/img/articles/7-9-2010-6-54-27-PMn.png)
+![My shopping cart](assets/images/articles/7-9-2010-6-54-27-PMn.png)
 
 The `cart.phtml` page requires a different call. Use the code below in your `template/checkout/cart/item/default.phtml`:
 
