@@ -79,14 +79,12 @@ html
   - else
     body class="#{page_classes}"
 
-  /[if lte IE 8]
-    p.alert.alert-warning
-      | You are using an outdated browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.
   header.banner role="banner"
     = partial "partials/navigation"
     = yield_content :header
     // Hide banner styles on case study pages
-    - unless current_page.data.layout == "case-study"
+    // by adding layout: case-study to frontmatter
+    - unless current_page.data.body_class == "case-study"
       div.container
         - if current_page.data.hero_title
           h1.title #{current_page.data.hero_title}
