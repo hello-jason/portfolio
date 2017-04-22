@@ -1,0 +1,20 @@
+.highlight {
+  border-color: $table-border-color;
+  padding-bottom: 0;
+}
+pre {
+  background: none;
+}
+.rouge-table {
+  * {
+    font-family: monospace;
+  }
+  pre {
+    border: 0 none;
+    margin: 0;
+  }
+  .rouge-gutter {
+    border-right: 1px solid $table-border-color;
+    text-align: right;
+  }
+}
