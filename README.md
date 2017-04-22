@@ -4,9 +4,12 @@
 
 Written with [Ruby](https://www.ruby-lang.org/en/)+[Middleman](http://middlemanapp.com) and based on the [middleman-bss starter theme](https://github.com/hello-jason/middleman-bss)
 
-## Setup in development
+*Dependencies*
+* [rbenv](https://github.com/rbenv/rbenv)
+* [ruby-build](https://github.com/rbenv/ruby-build#installing-as-an-rbenv-plugin-recommended)
+* [Nodejs](http://nodejs.org/) (via [nvm](https://github.com/creationix/nvm))
 
-* Install [rbenv](https://github.com/sstephenson/rbenv) and [ruby-build](https://github.com/sstephenson/ruby-build#installing-as-an-rbenv-plugin-recommended)
+## Setup in development
 
 * Clone project and cd into project directory
 
@@ -17,17 +20,8 @@ git clone git@github.com:hello-jason/portfolio.git hello-jason-portfolio && cd h
 * Install Ruby version set in `.ruby-version`
 
 ```
-rbenv install && rbenv rehash
+rbenv install
 ```
-
-* Set local ruby (this number should reflect the ruby version that was just installed)
-
-```
-rbenv local 2.2.3
-```
-
-* Install JavaScript runtime
-You need a JS runtime. I suggest installing [Nodejs](http://nodejs.org/) via [node version manager (nvm)](https://github.com/creationix/nvm).
 
 * Install gems
 
@@ -40,10 +34,6 @@ gem install bundler && bundle install
 ```
 npm install
 ```
-
-* Copy `source/environment_variables.rb.sample` to `source/environment_variables.rb`
-
-* Set `site_url_development` in `source/environment_variables.rb`
 
 * Start Middleman server
 
