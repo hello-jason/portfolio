@@ -2,7 +2,7 @@ namespace :deploy do
 
   def deploy(env)
     puts "Deploying to #{env}"
-    system "TARGET=#{env} bundle exec middleman deploy"
+    system "bundle exec middleman deploy TARGET=#{env}"
   end
 
   task :local do

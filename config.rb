@@ -174,7 +174,7 @@ case ENV['TARGET'].to_s.downcase
   when 'production'
     activate :deploy do |deploy|
       deploy.build_before = false # build happens in rake task
-      deploy.method = :git
+      deploy.deploy_method = :git
       deploy.remote   = 'origin'
       deploy.branch   = 'gh-pages'
       deploy.strategy = :force_push
@@ -185,11 +185,11 @@ case ENV['TARGET'].to_s.downcase
   #
   when 'staging'
     activate :deploy do |deploy|
-      deploy.build_before = false # build happens in rake task
-      deploy.method = :git
+      # deploy.build_before = false # build happens in rake task
+      # deploy.method = :git
       deploy.remote   = 'origin'
       deploy.branch   = 'staging'
       deploy.strategy = :force_push
-      deploy.clean = true
+      # deploy.clean = true
     end
   end
