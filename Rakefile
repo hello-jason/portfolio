@@ -2,27 +2,33 @@ namespace :deploy do
 
   def deploy(env)
     puts "Deploying to #{env}"
-    system "bundle exec middleman deploy TARGET=#{env}"
+    system "TARGET=#{env} bundle exec middleman deploy"
   end
 
   task :local do
-    sh "rm -rf build"
-    sh "bundle exec middleman build"
-    sh "gulp buildcss"
+    system "rm -rf build"
+    system "bundle exec middleman build"
+    system "./node_modules/gulp/bin/gulp.js buildcss"
   end
 
   task :staging do
-    sh "rm -rf build"
-    sh "bundle exec middleman build"
-    sh "gulp buildcss"
+    system "bundle exec middleman build"
+    system "./node_modules/gulp/bin/gulp.js buildcss"
     deploy :staging
   end
 
   task :production do
-    sh "rm -rf build"
-    sh "bundle exec middleman build"
-    sh "gulp buildcss"
+    system "rm -rf build"
+    system "bundle exec middleman build"
+    system "./node_modules/gulp/bin/gulp.js buildcss"
     deploy :production
+  end
+
+  task :test do
+    system "rm -rf build"
+    system "bundle exec middleman build"
+    system "./node_modules/gulp/bin/gulp.js buildcss"
+    system "TARGET=staging bundle exec middleman deploy"
   end
 
 end
