@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 
 # Core
-gem 'middleman', '~> 4.2'
+gem 'middleman', '~> 4.2.1'
 gem 'middleman-autoprefixer', '~> 2.7'
 gem "middleman-sprockets", "~> 4.1.0"
 
