@@ -17,7 +17,6 @@
   },
   "homepage": "https://github.com/hello-jason/portfolio",
   "devDependencies": {
-    "bootstrap-sass": "^3.3.7",
     "gulp": "3.9.1",
     "gulp-csso": "2.0.0",
     "gulp-gzip": "1.4.0",
@@ -26,6 +25,6 @@
     "layzr.js": "1.4.3",
     "lightcase": "2.3.4",
     "pngout-bin": "3.0.0",
-    "svgo": "0.6.6"
+    "svgo": "^0.6.6"
   }
 }
