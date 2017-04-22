@@ -19,25 +19,31 @@ git clone git@github.com:hello-jason/portfolio.git hello-jason-portfolio && cd h
 
 * Install Ruby version set in `.ruby-version`
 
-```
+```bash
 rbenv install
 ```
 
 * Install gems
 
-```
+```ruby
 gem install bundler && bundle install
 ```
 
-* Install node packages
+* Install project node packages
 
-```
+```bash
 npm install
+```
+
+* Install optimization packages, globally
+
+```bash
+npm install -g svgo pngout-bin
 ```
 
 * Start Middleman server
 
-```
+```bash
 bundle exec middleman
 ```
 
@@ -45,7 +51,7 @@ bundle exec middleman
 
 Special project pages that break a typical page's layout. Set the following in frontmatter to build a custom page. These settings will give body a class of `case-study` and allow the page's content to break the container layout restriction.
 
-```
+```yaml
 layout: case-study
 body_class: case-study
 ```
@@ -56,7 +62,7 @@ Use [middleman-blog](https://middlemanapp.com/basics/blogging/) for blogging fea
 
 * Create new posts via the command line:
 
-```
+```bash
 middleman article "Some title for the article"
 ```
 
@@ -83,7 +89,7 @@ Simplified deployments courtesy of [middleman-deploy](https://github.com/middlem
 
 Builds project and runs uncss. Useful to `cd` into `build` and run `http-server` for local testing.
 
-```
+```ruby
 rake deploy:local
 ```
 
@@ -91,7 +97,7 @@ rake deploy:local
 
 Builds project, runs uncss, then pushes to branch `staging`.
 
-```
+```ruby
 rake deploy:staging
 ```
 
@@ -99,6 +105,6 @@ rake deploy:staging
 
 Builds project, runs uncss, then pushes to branch `gh-pages`
 
-```
+```ruby
 rake deploy:production
 ```
