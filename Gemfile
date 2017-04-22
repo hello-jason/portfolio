@@ -24,14 +24,17 @@ gem "middleman-disqus", "~> 1.2.0"
 gem 'tzinfo-data', platforms: [:mswin, :mingw, :jruby]
 gem 'wdm', '~> 0.1', platforms: [:mswin, :mingw]
 
-# Optimization & minification
+# Development
+# gem "middleman-livereload", "~> 3.4.6"
+
+# Optimization
 # gem "middleman-jquery", "~> 2.1.1"
 gem "middleman-imageoptim", "~> 0.2.1"
 gem "middleman-minify-html", "~> 3.4.1"
 
-# Development
-# gem "middleman-livereload", "~> 3.4.6"
-# gem "oj", "~> 2.14.3"
+# Faster JS compiles
+gem "therubyracer", "~> 0.12.3"
+gem "oj", "~> 2.18.5"
 
 # Deploying
 gem "middleman-favicon-maker", "~> 4.0.4"
