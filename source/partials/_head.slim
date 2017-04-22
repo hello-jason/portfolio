@@ -84,7 +84,7 @@ html
     = yield_content :header
     // Hide banner styles on case study pages
     // by adding layout: case-study to frontmatter
-    - unless current_page.data.body_class == "case-study"
+    - unless current_page.options[:layout] == "case-study"
       div.container
         - if current_page.data.hero_title
           h1.title #{current_page.data.hero_title}
