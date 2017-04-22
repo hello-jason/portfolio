@@ -1,12 +1,14 @@
 namespace :deploy do
 
+  # Deploy to environment function
   def deploy(env)
     puts "Deploying to #{env}"
     system "TARGET=#{env} bundle exec middleman deploy"
   end
 
+  # Rake tasks
+  # Usage: bundle exec rake deploy:taskname
   task :local do
-    system "rm -rf build"
     system "bundle exec middleman build"
     system "./node_modules/gulp/bin/gulp.js buildcss"
   end
@@ -18,17 +20,9 @@ namespace :deploy do
   end
 
   task :production do
-    system "rm -rf build"
     system "bundle exec middleman build"
     system "./node_modules/gulp/bin/gulp.js buildcss"
     deploy :production
-  end
-
-  task :test do
-    system "rm -rf build"
-    system "bundle exec middleman build"
-    system "./node_modules/gulp/bin/gulp.js buildcss"
-    system "TARGET=staging bundle exec middleman deploy"
   end
 
 end
