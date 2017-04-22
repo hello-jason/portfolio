@@ -38,5 +38,5 @@ gem "oj", "~> 2.18.5"
 
 # Deploying
 gem "middleman-favicon-maker", "~> 4.0.4"
-#gem "middleman-deploy", "~> 1.0.0"
+gem "middleman-deploy", "~> 2.0.0.pre.alpha"
 # gem "builder", "~> 3.2.2"
