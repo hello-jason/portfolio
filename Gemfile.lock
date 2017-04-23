@@ -24,6 +24,7 @@ GEM
     bootstrap-sass (3.3.7)
       autoprefixer-rails (>= 5.2.1)
       sass (>= 3.3.4)
+    builder (3.2.3)
     coffee-script (2.4.1)
       coffee-script-source
       execjs
@@ -173,6 +174,7 @@ PLATFORMS
 
 DEPENDENCIES
   bootstrap-sass (~> 3.3.7)
+  builder (~> 3.2.3)
   middleman (~> 4.2.1)
   middleman-autoprefixer (~> 2.7)
   middleman-blog (~> 4.0.1)
