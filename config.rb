@@ -3,10 +3,6 @@
 # http://hellojason.net
 # ========================================================================
 
-# Copy ./source/environment_variables.example to ./source/environment_variables.rb
-# then update settings there.
-require "./source/environment_variables.rb"
-
 # ========================================================================
 # Site settings
 # ========================================================================
