@@ -11,8 +11,6 @@ gem "bootstrap-sass", "~> 3.3.7", require: false
 
 # Templating
 gem "slim", "~> 3.0.6"
-gem "middleman-autoprefixer", "~> 2.6.3"
-gem "builder", "~> 3.2.2"
 
 # Blogging
 gem 'middleman-blog', '~> 4.0.1'
