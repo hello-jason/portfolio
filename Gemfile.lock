@@ -1,6 +1,7 @@
 GIT
-  remote: https://github.com/georgecheng/middleman-imageoptim
-  revision: 39f50bc1c40d17150d388d88a290718180f15c3d
+  remote: https://github.com/plasticine/middleman-imageoptim
+  revision: feae9a7635b4eb6b4f9d0750eb5a31191034cc58
+  branch: master
   specs:
     middleman-imageoptim (0.2.1)
       image_optim (~> 0.20.2)
@@ -181,7 +182,7 @@ DEPENDENCIES
   middleman-deploy (~> 2.0.0.pre.alpha)
   middleman-disqus (~> 1.2.0)
   middleman-favicon-maker (~> 4.0.4)
-  middleman-imageoptim (~> 0.2.1)!
+  middleman-imageoptim!
   middleman-minify-html (~> 3.4.1)
   middleman-sprockets (~> 4.1.0)
   middleman-syntax (~> 3.0.0)

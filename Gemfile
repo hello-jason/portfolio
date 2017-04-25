@@ -27,7 +27,7 @@ gem 'wdm', '~> 0.1', platforms: [:mswin, :mingw]
 
 # Optimization
 # gem "middleman-jquery", "~> 2.1.1"
-gem "middleman-imageoptim", "~> 0.2.1", :git => "https://github.com/georgecheng/middleman-imageoptim"
+gem "middleman-imageoptim", :git => "https://github.com/plasticine/middleman-imageoptim", :branch => "master"
 gem "middleman-minify-html", "~> 3.4.1"
 
 # Faster JS compiles
