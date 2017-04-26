@@ -96,7 +96,8 @@ end
 # Build-specific configuration
 
 configure :build do
-  config[:host]       = 'https://hellojason.net'
+  config[:site_url]   = 'https://hellojason.net/'
+  config[:host]       = 'https://hellojason.net/'
 
   # Ignore file/dir during build process
   ignore "layouts/*"
