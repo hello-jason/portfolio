@@ -1,6 +1,6 @@
 <% # Documentation: http://www.sitemaps.org/protocol.html %>
 <% # Collect all pages, except the ones|specified|in|pipes %>
-<% pages = sitemap.resources.find_all{|p| p.source_file.match(%r{^((?!sitemap.xml|CNAME|robots.txt|environment_variables.sample.rb|environment_variables.rb|assets|favicon_template.png).)*$}) } %>
+<% pages = sitemap.resources.find_all{|p| p.source_file.match(%r{^((?!sitemap.xml|CNAME|robots.txt|assets|article.tt|favicon_template.png|all-methods).)*$}) } %>
 <% # Collect all images, except the ones|specified|in|pipes %>
 <% images = sitemap.resources.find_all{|p| p.source_file.match(%r{(.jpg|.png|.gif)}) } %>
 <?xml version="1.0" encoding="UTF-8"?>
@@ -9,9 +9,9 @@
   <% pages.each do |p| %>
     <url>
       <% # We are using directory indexes, so let's remove index.html from every page %>
-      <loc><%= config.site_url %>/<%= p.destination_path.gsub('/index.html','/') %></loc>
+      <loc><%= config.site_url %><%= p.destination_path.gsub('/index.html','/') %></loc>
       <% # Show last modified date, if set in frontmatter %>
-      <%= p.data.date ? '<lastmod>' + p.date.strftime('%Y-%m-%d') + '</lastmod>' : '' %>
+      <%#= p.data.date ? '<lastmod>' + p.date.strftime('%Y-%m-%d') + '</lastmod>' : '' %>
       <% # Override change frequency, if set in frontmatter %>
       <changefreq><%= p.data.changefreq ? p.data.changefreq : 'monthly' %></changefreq>
       <% # Override priority, if set in frontmatter %>
