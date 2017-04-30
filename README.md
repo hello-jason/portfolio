@@ -4,12 +4,19 @@
 
 Written with [Ruby](https://www.ruby-lang.org/en/)+[Middleman](http://middlemanapp.com) and based on the [middleman-bss starter theme](https://github.com/hello-jason/middleman-bss)
 
+## Setup in development
+
 *Dependencies*
 * [rbenv](https://github.com/rbenv/rbenv)
 * [ruby-build](https://github.com/rbenv/ruby-build#installing-as-an-rbenv-plugin-recommended)
 * [Nodejs](http://nodejs.org/) (via [nvm](https://github.com/creationix/nvm))
+* [yarn](https://yarnpkg.com/en/docs/install)
 
-## Setup in development
+* Install optimization packages, globally
+
+```bash
+npm install -g svgo pngout-bin
+```
 
 * Clone project and cd into project directory
 
@@ -32,13 +39,7 @@ gem install bundler && bundle install
 * Install project node packages
 
 ```bash
-npm install
-```
-
-* Install optimization packages, globally
-
-```bash
-npm install -g svgo pngout-bin
+yarn install
 ```
 
 * Start Middleman server
