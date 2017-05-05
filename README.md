@@ -91,7 +91,7 @@ Simplified deployments courtesy of [middleman-deploy](https://github.com/middlem
 Builds project and runs uncss. Useful to `cd` into `build` and run `http-server` for local testing.
 
 ```bash
-bundle exec middleman rake deploy:local
+bundle exec rake deploy:local
 ```
 
 **Staging**
@@ -99,7 +99,7 @@ bundle exec middleman rake deploy:local
 Builds project, runs uncss, then pushes to branch `staging`.
 
 ```bash
-bundle exec middleman rake deploy:staging
+bundle exec rake deploy:staging
 ```
 
 **Production**
@@ -107,5 +107,5 @@ bundle exec middleman rake deploy:staging
 Builds project, runs uncss, then pushes to branch `gh-pages`
 
 ```bash
-bundle exec middleman rake deploy:production
+bundle exec rake deploy:production
 ```
