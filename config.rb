@@ -120,7 +120,7 @@ configure :build do
     # Use a build manifest to prevent re-compressing images between builds
     options.manifest = false
     # Image extensions to attempt to compress
-    options.image_extensions = %w(.jpg .gif .svg)
+    options.image_extensions = %w(.jpg .gif .svg .png)
     # Cause image_optim to be in shouty-mode
     options.verbose = false
   end
