@@ -2,7 +2,7 @@ source "https://rubygems.org"
 
 # Core
 gem 'middleman', '~> 4.2.1'
-gem 'middleman-autoprefixer', '~> 2.7'
+gem 'middleman-autoprefixer', '~> 2.7.1'
 gem "middleman-sprockets", "~> 4.1.0"
 
 # Assets
@@ -10,7 +10,7 @@ gem "bootstrap-sass", "~> 3.3.7", require: false
 # gem "font-awesome-middleman", "~> 4.5.0"
 
 # Templating
-gem "slim", "~> 3.0.6"
+gem "slim", "~> 3.0.8"
 
 # Blogging
 gem 'middleman-blog', '~> 4.0.1'
@@ -32,7 +32,7 @@ gem "middleman-minify-html", "~> 3.4.1"
 
 # Faster JS compiles
 gem "therubyracer", "~> 0.12.3"
-gem "oj", "~> 2.18.5"
+gem "oj", "~> 3.0.5"
 
 # Deploying
 gem "rake", "~> 12.0.0"
