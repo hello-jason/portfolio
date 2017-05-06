@@ -32,7 +32,7 @@ namespace :deploy do
   # Deploy to production
   task :production do
     buildSite
-    STDOUT.puts "Deploying to #{env}. Are you sure? (yes/no)"
+    STDOUT.puts "Deploying to production. Are you sure? (yes/no)"
     input = STDIN.gets.strip
     if input == 'yes'
       deploy :production
