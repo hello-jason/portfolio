@@ -7,10 +7,13 @@ Written with [Ruby](https://www.ruby-lang.org/en/)+[Middleman](http://middlemana
 ## Setup in development
 
 *Dependencies*
+
 * [rbenv](https://github.com/rbenv/rbenv)
 * [ruby-build](https://github.com/rbenv/ruby-build#installing-as-an-rbenv-plugin-recommended)
 * [Nodejs](http://nodejs.org/) (via [nvm](https://github.com/creationix/nvm))
 * [yarn](https://yarnpkg.com/en/docs/install)
+
+*Installation steps*
 
 * Install optimization packages, globally
 
