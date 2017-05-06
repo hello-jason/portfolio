@@ -18,10 +18,11 @@
   "homepage": "https://github.com/hello-jason/portfolio",
   "devDependencies": {
     "gulp": "3.9.1",
-    "gulp-csso": "2.0.0",
+    "gulp-csso": "3.0.0",
     "gulp-gzip": "1.4.0",
     "gulp-uncss": "1.0.6",
-    "jquery": "3.1.0",
-    "layzr.js": "1.4.3",
-    "lightcase": "2.3.4"  }
+    "jquery": "3.2.1",
+    "layzr.js": "2.2.2",
+    "lightcase": "2.4.0"
+  }
 }
