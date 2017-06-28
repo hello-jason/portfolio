@@ -1,0 +1,68 @@
+---
+title: Email Template Generator
+meta_description: Some meta description
+layout: case-study
+body_class: case-study
+---
+
+section.hero
+  .content
+    h1 <span>Write modern HTML/CSS and get an email-friendly version for HubSpot, etc.</span>
+    p.categories <span>Project Management, Development</span>
+    p How a single request for an email template inspired a new, robust workflow
+
+section.summary
+  .content
+    h2 The problem
+    p Our rapidly developing Marketing team is focusing on brand awareness. Part of that focus includes a redesign of many customer-facing email templates. However, this focus was not obvious at the beginning of this project. In fact, this project started with a single request for a single email (our Customer Newsletter) and it morphed into a robust email templating solution from there.
+
+section.first-attempt
+  .content
+    h2 First attempt
+    p My first stab at building the email template relied solely on HubSpot's visual editor, hoping to quickly setup a template that non-technical folks can manipulate as needed in the future. This proved hopeless in 2 ways:
+
+    ol.big-list
+      li <span class="number">1</span> <span class="text">I was only able to get the template to a certain point using the GUI builder&mdash;I had to switch to hand-coding mode to respect the new email design.</span>
+      li <span class="number">2</span> <span class="text">The GUI builder created an email that was too bloated, inserting tons of nested tables and inline styles; code dignity aside, certain email programs would clip the email at a certain point, hiding the rest of its content, and that's a terrible thing since users are almost guaranteed not to click the tiny "show entire email" text link at the bottom of the email.</span>
+
+    p The newsletters went out on time, but click-through rates were not ideal. I knew that I would have to rethink the project and ultimately recode the template from scratch, to make it as small as possible.
+
+section.second-attempt
+  .content
+    h2 Second attempt
+    p During the development of the first iteration of the new Customer Newsletter template, other email redesign requests were coming in from other departments, for other customer-facing emails. I decided that my next attempt would not be so hasty; I dug deeper into the needs of all these requests and discovered they all were an effort to support the company’s north star goal of increasing brand awareness through visual consistency.
+    p The shared goal of all these email requests surfaced a larger, company-wide problem, and I could solve a greater need&mdash;consistent and manageable email templates, company-wide.
+    h3 Time for research
+    p I considered immediate and long-term needs when devising a solution:
+    ul.big-list
+      li <span class="number">»</span> <span class="text"><strong>Time is important.</strong><br>The most crucial point, our Customer Newsletter is monthly, so I had about 3 weeks to deliver a fixed version of that template.</span>
+      li <span class="number">»</span> <span class="text"><strong>Consistency is important.</strong><br>Emails will be visually similar, so they should all share base layout components and stylesheets.</span>
+      li <span class="number">»</span> <span class="text"><strong>Speed is important.</strong><br>New templates will be created regularly, as we build out our library of email templates. I should not be the bottle neck for cranking out new ones.</span>
+      li <span class="number">»</span> <span class="text"><strong>Juggling is important.</strong><br>Multiple templates will probably be developed simultaneously, and email programs are not known for their version control.</span>
+      li <span class="number">»</span> <span class="text"><strong>Agility is important.</strong><br>We will be completely overhauling our main website over the coming months, meaning all these email templates will be changed again to match the new direction.</span>
+      li <span class="number">»</span> <span class="text"><strong>Enablement is important.</strong><br>Non-technical folks should eventually be able to update content themselves, such as for the monthly Customer Newsletter.</span>
+      li <span class="number">»</span> <span class="text"><strong>Simplicity and documentation is important.</strong><br>My solution should be approachable by other developers for contributions and maintenance.</span>
+
+section.build-the-thing
+  .content
+    h2 Building the thing
+    p I was hesitant to roll a custom solution, but I decided to leverage <a href="https://github.com/hello-jason/magento-transactional-email-generator">a project from my past</a> as the starting point for this endeavor. I knew that project well, and I knew it could be expanded to meet our requirements. So, I felt it would let me deliver the time-sensitive Customer Newsletter template quickly and also be a suitable foundation to satisfy our future needs. This allowed me to get moving quickly without introducing a steep learning curve (and time delay) of some new system.
+
+section.deep-dive
+  .content
+    h2 Project component breakdown
+
+    h3 Core
+    p My project combines <a href="https://middlemanapp.com/">Middleman</a>, a static website framework, with <a href="http://premailer.dialect.ca/">Premailer</a>, a package that modifies HTML files to be email-friendly. The result is a modern web stack that developers can learn quickly and a build process that generates self-contained, email-friendly HTML files to be placed into any email platform.
+
+    h3 Starter theme
+    p stuff
+
+    h3 HubSpot helpers
+    p I developed a series of helper methods to help with HubSpot integration. Using these helpers spits out actual HTML when viewing locally, but that is replaced with HubSpot HUBL snippets when building for production. HubSpot recognizes these snippets and replaces them with meaningful content, such as the current month or an editable rich text area.
+
+    markdown:
+
+      ```
+      = hubl_template "stuff"
+      ```

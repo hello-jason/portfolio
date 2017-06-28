@@ -1,0 +1,29 @@
+.projects_email-template-generator {
+  .hero {
+    background: #fbc547 url(../images/projects/email-template-generator/etg-hero.jpg) center no-repeat;
+    background-size: cover;
+    h1 {
+      color: #fff;
+      span {
+        background: rgba(#8b6d27, 0.6);
+      }
+    }
+  }
+  section.first-attempt,
+  section.build-the-thing
+  {
+    background-color: #fbc547;
+  }
+
+  .big-list {
+    li, .number {
+      background: #8b6d27;
+    }
+    .number {
+      color: #fff;
+    }
+    .text {
+      background: #d7a93d;
+    }
+  }
+}
