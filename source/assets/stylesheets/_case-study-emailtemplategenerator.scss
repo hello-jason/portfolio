@@ -1,6 +1,8 @@
 .projects_email-template-generator {
   .hero {
-    background: #fbc547 url(../images/projects/email-template-generator/etg-hero.jpg) center no-repeat;
+    background-image: url(../images/projects/email-template-generator/etg-hero.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
     background-size: cover;
     h1 {
       color: #fff;
@@ -9,21 +11,18 @@
       }
     }
   }
-  section.first-attempt,
-  section.build-the-thing
-  {
+  section.odd {
     background-color: #fbc547;
-  }
-
-  .big-list {
-    li, .number {
-      background: #8b6d27;
-    }
-    .number {
-      color: #fff;
-    }
-    .text {
-      background: #d7a93d;
+    .big-list {
+      li, .number {
+        background: #8b6d27;
+      }
+      .number {
+        color: #fff;
+      }
+      .text {
+        background: #d7a93d;
+      }
     }
   }
 }
