@@ -19,24 +19,24 @@ section.first-attempt.odd
     h2 First attempt
   = image_tag "projects/email-template-generator/etg-hubspot-gui.png", :class => "media-responsive"
   .content
-    p My first stab at building the email template relied solely on HubSpot's visual editor, hoping to quickly setup a template that non-technical folks can manipulate as needed in the future. This proved hopeless in 2 ways:
+    p My first stab at building the email template relied solely on HubSpot's visual editor, hoping to quickly setup a template that non-technical folks can manipulate as needed in the future (i.e. I'm not the bottleneck). But this proved hopeless in 2 ways:
 
     ol.big-list
-      = big_list_li "1", "I was only able to get the template to a certain point using the GUI builder&mdash;I had to switch to hand-coding mode to respect the new email design."
-      = big_list_li "2", "The GUI builder created an email that was too bloated, inserting tons of nested tables and inline styles; code dignity aside, certain email programs would clip the email at a certain point, hiding the rest of its content, and that's a terrible thing since users are almost guaranteed not to click the tiny \"show entire email\" text link at the bottom of the email."
+      = big_list_li "1", "I was only able to get the template to a certain point using HubSpot's GUI builder, but it was unable to accommodate our new design&mdash;I had to switch to hand-coding mode to respect the new email design, which rendered it uneditable by non-technical folks."
+      = big_list_li "2", "HubSpot's GUI builder created an email that was too bloated; code dignity aside, certain email programs would clip the email because it was too big. That's a terrible thing since users are almost guaranteed not to click the tiny \"show entire email\" text link at the bottom of the email."
 
-    p The newsletters went out on time, but click-through rates were not ideal. I knew that I would have to rethink the project and ultimately recode the template from scratch, to make it as small as possible.
+    p The newsletters went out on time, but click-through rates tanked. I knew that I would have to rethink the project and ultimately recode the template from scratch, to make it as small as possible, but I can't be the bottleneck&hellip;
 
 section.second-attempt
   .content
     h2 Second attempt
-    p During the development of the first iteration of the new Customer Newsletter template, other email redesign requests were coming in from other departments, for other customer-facing emails. I decided that my next attempt would not be so hasty; I dug deeper into the needs of all these requests and discovered they all were an effort to support the company’s north star goal of increasing brand awareness through visual consistency.
-    p The shared goal of all these email requests surfaced a larger, company-wide problem, and I could solve a greater need&mdash;consistent and manageable email templates, company-wide.
+    p Other email requests for other departments came in during the development of the first iteration of the new Customer Newsletter template. I decided that my next attempt would not be so hasty; I dug deeper into the needs of all these requests and discovered they all were an effort to support the company’s north star goal of increasing brand awareness through visual consistency.
+    p The shared goal of all these email requests surfaced a larger, company-wide problem, and I could solve a greater need&mdash;consistent and manageable email templates, company-wide. But I can't be the bottleneck&hellip;
     h3 Time for research
     p I considered immediate and long-term needs when devising a solution:
     ul.big-list
-      = big_list_li "»", "<strong>Time is important.</strong><br>The most crucial point, our Customer Newsletter is monthly, so I had about 3 weeks to deliver a fixed version of that template."
-      = big_list_li "»", "<strong>Consistency is important.</strong><br>Emails will be visually similar, so they should all share base layout components and stylesheets."
+      = big_list_li "»", "<strong>Time is important.</strong><br>The most crucial point, our Customer Newsletter is monthly, so I had about 3 weeks to deliver a fixed version of that template, regardless of how I chose to do that."
+      = big_list_li "»", "<strong>Consistency is important.</strong><br>Emails will be visually similar, so they should share base layout components and stylesheets."
       = big_list_li "»", "<strong>Speed is important.</strong><br>New templates will be created regularly, as we build out our library of email templates. I should not be the bottle neck for cranking out new ones."
       = big_list_li "»", "<strong>Juggling is important.</strong><br>Multiple templates will probably be developed simultaneously, and email programs are not known for their version control."
       = big_list_li "»", "<strong>Agility is important.</strong><br>We will be completely overhauling our main website over the coming months, meaning all these email templates will be changed again to match the new direction."
