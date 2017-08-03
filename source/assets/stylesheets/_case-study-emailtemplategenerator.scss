@@ -25,4 +25,12 @@
       }
     }
   }
+  @media (min-width: $screen-lg-min) {
+    img.hubspot-gui {
+      margin-left: -81.5px;
+    }
+    img.newtemplate-create {
+      margin-left: -164.5px;
+    }
+  }
 }

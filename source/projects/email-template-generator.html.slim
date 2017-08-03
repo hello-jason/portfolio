@@ -7,46 +7,45 @@ body_class: case-study
 
 section.hero.odd
   .content
-    h1 <span>How an email request turned into a full-blown template generator</span>
+    h1 <span>How a single email request morphed into a robust email template generator</span>
 
 section.summary
   .content
-    h2 The problem
-    p Our rapidly developing Marketing team at WP Engine is focusing on brand awareness. Part of that focus includes a redesign of many customer-facing email templates. However, this focus was not obvious at the beginning of this project. In fact, this project started with a single request for a single email (our Customer Newsletter) and it morphed into a robust email templating solution from there.
+    h2 Just a newsletter, please
+    p This project originated from a single request for a single HubSpot email template, the monthly newsletter, as part of WP Engine's initiative to bring more value to customers and partners while also bringing it inline with our brand. I worked with stakeholders from Demand Gen to Customer Experience and designed a fresh newsletter that was on brand and could accomplish the goal.
+    = image_tag "projects/email-template-generator/etg-newsletter-left.gif", :class => "media-responsive etg-newsletter"
 
 section.first-attempt.odd
   .content
     h2 First attempt
-  = image_tag "projects/email-template-generator/etg-hubspot-gui.png", :class => "media-responsive"
-  .content
-    p My first stab at building the email template relied solely on HubSpot's visual editor, hoping to quickly setup a template that non-technical folks can manipulate as needed in the future (i.e. I'm not the bottleneck). But this proved hopeless in 2 ways:
-
+    p My first stab at building the email template relied solely on HubSpot's visual editor, hoping to quickly setup a template that non-technical folks can manipulate as needed in the future (i.e. I'm not the bottleneck every month).
+    = image_tag "projects/email-template-generator/etg-hubspot-gui.png", :class => "media-responsive hubspot-gui"
+    p But the HubSpot editor proved hopeless for 2 reasons:
     ol.big-list
-      = big_list_li "1", "I was only able to get the template to a certain point using HubSpot's GUI builder, but it was unable to accommodate our new design&mdash;I had to switch to hand-coding mode to respect the new email design, which rendered it uneditable by non-technical folks."
+      = big_list_li "1", "HubSpot's GUI builder was unable to accommodate parts of our new design&mdash;I had to switch to hand-coding mode to respect the new email design, which rendered it uneditable by non-technical folks."
       = big_list_li "2", "HubSpot's GUI builder created an email that was too bloated; code dignity aside, certain email programs would clip the email because it was too big. That's a terrible thing since users are almost guaranteed not to click the tiny \"show entire email\" text link at the bottom of the email."
-
-    p The newsletters went out on time, but click-through rates tanked. I knew that I would have to rethink the project and ultimately recode the template from scratch, to make it as small as possible, but I can't be the bottleneck&hellip;
+    p The newsletters went out on time, but click-through rates tanked. I knew that I would have to rethink the project and ultimately recode the template from scratch, to make it as small as possible. But this newsletter goes out every month, and I can't be the bottleneck&hellip;
 
 section.second-attempt
   .content
     h2 Second attempt
-    p Other email requests for other departments came in during the development of the first iteration of the new Customer Newsletter template. I decided that my next attempt would not be so hasty; I dug deeper into the needs of all these requests and discovered they all were an effort to support the company’s north star goal of increasing brand awareness through visual consistency.
-    p The shared goal of all these email requests surfaced a larger, company-wide problem, and I could solve a greater need&mdash;consistent and manageable email templates, company-wide. But I can't be the bottleneck&hellip;
+    p Other email requests for other departments came in during this time, and hand-coding emails in 2017 is torturous. I decided that my next attempt would not be so hasty; I dug deeper into the needs of all these requests and discovered they all were an effort to support the company’s north star goal of increasing brand awareness through visual consistency.
+    p The shared goal of all these requests surfaced a larger, company-wide problem, and I could solve a greater need&mdash;consistent and manageable email templates, company-wide. But I can't be the bottleneck&hellip;
     h3 Time for research
     p I considered immediate and long-term needs when devising a solution:
     ul.big-list
-      = big_list_li "»", "<strong>Time is important.</strong><br>The most crucial point, our Customer Newsletter is monthly, so I had about 3 weeks to deliver a fixed version of that template, regardless of how I chose to do that."
+      = big_list_li "»", "<strong>Time is important.</strong><br>The most crucial point, our newsletter is monthly, so I had about 3 weeks to deliver a fixed version of that template, regardless of how I chose to do that."
       = big_list_li "»", "<strong>Consistency is important.</strong><br>Emails will be visually similar, so they should share base layout components and stylesheets."
-      = big_list_li "»", "<strong>Speed is important.</strong><br>New templates will be created regularly, as we build out our library of email templates. I should not be the bottle neck for cranking out new ones."
+      = big_list_li "»", "<strong>Speed is important.</strong><br>New templates will be created regularly, as we build out our library of email templates. I should not be the only person capable of cranking out new ones."
       = big_list_li "»", "<strong>Juggling is important.</strong><br>Multiple templates will probably be developed simultaneously, and email programs are not known for their version control."
       = big_list_li "»", "<strong>Agility is important.</strong><br>We will be completely overhauling our main website over the coming months, meaning all these email templates will be changed again to match the new direction."
-      = big_list_li "»", "<strong>Enablement is important.</strong><br>Non-technical folks should eventually be able to update content themselves, such as for the monthly Customer Newsletter."
+      = big_list_li "»", "<strong>Enablement is important.</strong><br>Non-technical folks should eventually be able to update content themselves, such as for the monthly newsletter."
       = big_list_li "»", "<strong>Simplicity and documentation is important.</strong><br>My solution should be approachable by other developers for contributions and maintenance."
 
 section.build-the-thing.odd
   .content
     h2 Building the thing
-    p I was hesitant to roll a custom solution, but I decided to leverage <a href="https://github.com/hello-jason/magento-transactional-email-generator">a project from my past</a> as the starting point for this endeavor. I knew that project well, and I knew it could be expanded to meet our requirements. So, I felt it would let me deliver the time-sensitive Customer Newsletter template quickly and also be a suitable foundation to satisfy our future needs. This allowed me to get moving quickly without introducing a steep learning curve (and time delay) of some new system.
+    p I was hesitant to roll a custom solution, but I decided to leverage <a href="https://github.com/hello-jason/magento-transactional-email-generator">a project from my past</a> as the starting point for this endeavor. I knew that project well, and I knew it could be expanded to meet our requirements. So, I felt it would let me deliver the time-sensitive newsletter template quickly and also be a suitable foundation to satisfy our future needs. This allowed me to get moving quickly without introducing a steep learning curve (and time delay) of some new system.
 
 section.deep-dive
   .content
@@ -55,14 +54,25 @@ section.deep-dive
     h3 Core
     p My project combines <a href="https://middlemanapp.com/">Middleman</a>, a static website framework, with <a href="http://premailer.dialect.ca/">Premailer</a>, a package that modifies HTML files to be email-friendly. The result is a modern web stack that developers can learn quickly and a build process that generates self-contained, email-friendly HTML files to be placed into any email platform.
 
-    h3 Starter theme
-    p stuff
-
     h3 HubSpot helpers
-    p I developed a series of helper methods to help with HubSpot integration. Using these helpers spits out actual HTML when viewing locally, but that is replaced with HubSpot HUBL snippets when building for production. HubSpot recognizes these snippets and replaces them with meaningful content, such as the current month or an editable rich text area.
+    p I developed a series of helper methods to help with HubSpot integration. They spit out actual HTML when viewing locally, but that is replaced with HubSpot <a href="http://designers.hubspot.com/docs/hubl/hubl-module-syntax-and-parameters">HUBL snippets</a> when building for production. HubSpot recognizes these snippets and replaces them with meaningful content, such as the current month or an editable rich text area.
 
-    markdown:
+    h3 Documentation
+    p I documented the crap out of this project, specifically the monthly newsletters., with step-by-step instructions and screenshots.
 
-      ```
-      = hubl_template "stuff"
-      ```
+    = image_tag "projects/email-template-generator/etg-newtemplate-create.png", :class => "media-responsive newtemplate-create"
+
+section.improvements.odd
+  .content
+    h2 If it ain't broke, make it better
+    p The newsletter process worked great for a few months, so I devoted time with each newsletter to improve the project.
+    ul.big-list
+      = big_list_li "»", "A flag could be set to let the build process know which email program each template was for, such as HubSpot, Gainsight, or Netsuite. This would show or hide template parts that were specific to each platform."
+      = big_list_li "»", "Data was decoupled from the view template and moved to individual JSON files. This made copying/pasting content from Google Docs much easier."
+      = big_list_li "»", "Smarter templates that automatically find the matching view and content for each month."
+
+section.future
+  .content
+    h2 The future
+    p The newsletter workflow is quite efficient, but it still must go through a developer each month. And meticulously iterating over content changes is&hellip;tedious. The next step for me is to explore something like <a href="http://www.alpacajs.org/">Alpaca Forms</a>, which generates a web form based on a JSON schema. This could allow the content team to tweak the copy themselves and simply give my team a JSON blob to run through the generator.
+    p The obvious step after that is to add the build process directly into that web form, so they can edit, build, and paste the email templates directly into HubSpot 100% on their own. One day&hellip;
