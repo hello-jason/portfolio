@@ -153,6 +153,16 @@ figure.iphone6 {
       margin-bottom: 0;
     }
   }
+  figure {
+    margin-top: ($casestudy-section-padding / 4);
+    margin-bottom: ($casestudy-section-padding / 2);
+    img {
+      margin-bottom: 0;
+    }
+    figcaption {
+      margin-top: ($casestudy-section-padding / 4);
+    }
+  }
   h3 {
     margin-top: ($grid-gutter-width);
   }

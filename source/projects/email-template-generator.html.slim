@@ -15,16 +15,18 @@ section.summary
     h2 Just a newsletter, please
     p This project originated from a request for a single HubSpot email template, the monthly newsletter, as part of WP Engine's initiative to bring more value to customers and partners while also applying updated brand styles. I worked with our creative director and stakeholders from Demand Gen to Customer Experience and designed a fresh newsletter that was on brand and could accomplish the goal.
     = image_tag "projects/email-template-generator/etg-newsletter-left.gif", :class => "media-responsive etg-newsletter"
-    p Beautiful, but this case study is about the rest of the process.
+    p Great, but this case study is about the rest of the process.
 
 section.first-attempt.odd
   .content
     h2 First attempt
-    p My first stab at building the email template relied solely on HubSpot's visual editor, hoping to quickly setup a template that non-technical folks can manipulate as needed in the future (i.e. I'm not the bottleneck every month).
-    = image_tag "projects/email-template-generator/etg-hubspot-gui.png", :class => "media-responsive hubspot-gui"
+    p I leveraged HubSpot's drag &amp; drop visual editor for my first attempt at building the template, hoping to quickly set up a template that non-technical folks can manipulate as needed in the future.
+    figure
+      = image_tag "projects/email-template-generator/etg-hubspot-gui.png", :alt => "aa", :class => "media-responsive hubspot-gui"
+      figcaption HubSpot's drag &amp; drop visual editor
     p But the HubSpot editor proved hopeless for 2 reasons:
     ol.big-list
-      = big_list_li "1", "HubSpot's GUI builder was simply unable to accommodate parts of our new design&mdash;I had to switch to hand-coding mode to respect the new email design, which rendered it uneditable by non-technical folks."
+      = big_list_li "1", "HubSpot's <abbr title='graphical user interface'>GUI</abbr> builder was simply unable to accommodate parts of our new design&mdash;I had to switch to hand-coding mode to respect the new email design, which rendered it uneditable by non-technical folks."
       = big_list_li "2", "HubSpot's GUI builder created an email that was too bloated; code dignity aside, certain email programs would truncate the email because of its file size. That's a terrible thing since users are almost guaranteed not to click the tiny \"show entire email\" text link at the bottom of the email."
     p The newsletters went out on time, but click-through rates tanked. I knew that I would have to rethink the project's execution. But this newsletter goes out every month, and I can't be the bottleneck&hellip;
 
@@ -36,7 +38,7 @@ section.second-attempt
     h3 Time for research
     p I considered immediate and long-term needs when devising a solution:
     ul.big-list
-      = big_list_li "»", "<strong>Time is important.</strong><br>The most crucial point, our newsletter is monthly, so I had about 3 weeks to deliver a fixed version of that template, regardless of how I chose to do that."
+      = big_list_li "»", "<strong>Time is important.</strong><br>The most crucial point: our newsletter is monthly, so I had about 3 weeks to deliver a fixed version of that template, regardless of how I chose to do that."
       = big_list_li "»", "<strong>Consistency is important.</strong><br>Emails will be visually similar, so they should share base layout components and stylesheets."
       = big_list_li "»", "<strong>Speed is important.</strong><br>New templates will be created regularly, as we build out our library of email templates. I should not be the only person capable of cranking out new ones."
       = big_list_li "»", "<strong>Juggling is important.</strong><br>Multiple templates will probably be developed simultaneously, and email programs are not known for their version control."
@@ -47,7 +49,7 @@ section.second-attempt
 section.build-the-thing.odd
   .content
     h2 Building the thing
-    p I was hesitant to roll a custom solution, but I decided to leverage <a href="https://github.com/hello-jason/magento-transactional-email-generator">a project from my past</a> as a catalytic starting point for this endeavor. I knew that project well, and I knew it could be expanded to meet our requirements. So, I felt it would let me deliver the time-sensitive newsletter template quickly and also be a suitable foundation to satisfy our future needs. This allowed me to get moving quickly without introducing a steep learning curve (and time delay) of some new system.
+    p I used <a href="https://github.com/hello-jason/magento-transactional-email-generator">a project from my past</a> as an established starting point for this endeavor. I knew that project well, and I knew it could be expanded to meet our requirements. So, I felt it would let me deliver the time-sensitive newsletter template quickly and also be a suitable foundation to satisfy our future needs.
 
 section.deep-dive
   .content
