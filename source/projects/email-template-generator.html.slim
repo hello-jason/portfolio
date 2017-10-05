@@ -13,30 +13,30 @@ section.hero.odd
 section.summary
   .content
     h2 Just a newsletter, please
-    p This project originated from a request for a single HubSpot email template, the monthly newsletter, as part of WP Engine's initiative to bring more value to customers and partners while also applying updated brand styles. I worked with our creative director and stakeholders from Demand Gen to Customer Experience and designed a fresh newsletter that was on brand and could accomplish the goal.
+    p This project originated from a request for a single HubSpot email template&mdash;the monthly newsletter&mdash;as part of WP Engine's initiative to bring more value to customers and partners while also applying updated brand styles. I worked with our creative director and stakeholders from Demand Gen to Customer Experience and designed a fresh newsletter that was on brand and could accomplish the goal.
     = image_tag "projects/email-template-generator/etg-newsletter-left.gif", :class => "media-responsive etg-newsletter"
-    p Great, but this case study is about the rest of the process.
+    p Great, but this case study is about the journey afterwards.
 
 section.first-attempt.odd
   .content
     h2 First attempt
-    p I leveraged HubSpot's drag &amp; drop visual editor for my first attempt at building the template, hoping to quickly set up a template that non-technical folks can manipulate as needed in the future.
+    p I used HubSpot's visual editor for my first attempt at building the template, hoping that non-technical folks in the Marketing department could manipulate it as needed in the future.
     figure
       = image_tag "projects/email-template-generator/etg-hubspot-gui.png", :alt => "aa", :class => "media-responsive hubspot-gui"
       figcaption HubSpot's drag &amp; drop visual editor
     p But the HubSpot editor proved hopeless for 2 reasons:
     ol.big-list
-      = big_list_li "1", "HubSpot's <abbr title='graphical user interface'>GUI</abbr> builder was simply unable to accommodate parts of our new design&mdash;I had to switch to hand-coding mode to respect the new email design, which rendered it uneditable by non-technical folks."
-      = big_list_li "2", "HubSpot's GUI builder created an email that was too bloated; code dignity aside, certain email programs would truncate the email because of its file size. That's a terrible thing since users are almost guaranteed not to click the tiny \"show entire email\" text link at the bottom of the email."
-    p The newsletters went out on time, but click-through rates tanked. I knew that I would have to rethink the project's execution. But this newsletter goes out every month, and I can't be the bottleneck&hellip;
+      = big_list_li "1", "HubSpot's <abbr title='graphical user interface'>GUI</abbr> builder was simply unable to accommodate parts of the design&mdash;I had to switch to hand-coding mode, which made it inaccessible to non-technical folks."
+      = big_list_li "2", "HubSpot's GUI builder generated a bloated mess of an email. Code dignity aside, certain email clients truncated the email because of its file size, hiding content behind a tiny \"show entire email\" text link at the bottom."
+    p The newsletters went out on time, but click-through rates tanked. I knew that I would have to rethink the project's execution. But this newsletter goes out every month, and I can't be the bottleneck.
 
 section.second-attempt
   .content
     h2 Second attempt
-    p Other email requests for other departments came in during this time. Hand-coding emails in 2017 is torturous, so I decided that my next attempt could be more elegant and reusable; I dug deeper into the needs of all these requests and discovered they all were an effort to support the company’s north star goal of increasing brand awareness through visual consistency.
+    p Email requests for other departments also came in during this time. Hand-coding emails in 2017 is torturous, so I decided that my next attempt could be more elegant and reusable; I dug deeper into the needs of all these requests and discovered they all were an effort to support the company’s north star goal of increasing brand awareness through visual consistency.
     p The shared goal of all these requests surfaced a larger, company-wide problem, and I could solve a greater need&mdash;consistent and manageable email templates, company-wide, from a single codebase. But I can't be the bottleneck&hellip;
     h3 Time for research
-    p I considered immediate and long-term needs when devising a solution:
+    p I considered immediate and long-term needs:
     ul.big-list
       = big_list_li "»", "<strong>Time is important.</strong><br>The most crucial point: our newsletter is monthly, so I had about 3 weeks to deliver a fixed version of that template, regardless of how I chose to do that."
       = big_list_li "»", "<strong>Consistency is important.</strong><br>Emails will be visually similar, so they should share base layout components and stylesheets."
@@ -59,7 +59,7 @@ section.deep-dive
     p My project combines <a href="https://middlemanapp.com/">Middleman</a>, a static website framework, with <a href="http://premailer.dialect.ca/">Premailer</a>, a package that modifies HTML files to be email-friendly. The result is a modern web stack that developers can learn quickly and a build process that generates self-contained, email-friendly HTML files to be placed into any email platform.
 
     h3 HubSpot helpers
-    p I developed a series of helper methods to help with HubSpot integration. They spit out placeholder HTML when viewing locally, but that is replaced with HubSpot <a href="http://designers.hubspot.com/docs/hubl/hubl-module-syntax-and-parameters">HUBL snippets</a> when building for production. HubSpot recognizes these snippets and replaces them with meaningful content, such as the current month or an editable rich text area.
+    p I developed a series of helper methods for HubSpot integration. They spit out placeholder HTML when viewing locally, but that is replaced with HubSpot <a href="http://designers.hubspot.com/docs/hubl/hubl-module-syntax-and-parameters">HUBL snippets</a> when building for production. HubSpot recognizes these snippets and replaces them with meaningful content, such as the current month or an editable rich text area.
 
     h3 Documentation
     p I documented the crap out of this project, specifically the monthly newsletters, with step-by-step instructions and screenshots.
