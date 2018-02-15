@@ -234,7 +234,7 @@ rake deploy:production
 
 ## Results
 
-![After uncss](assets/img/articles/portfolio-after-uncss.jpg)
+![After uncss](assets/images/articles/portfolio-after-uncss.jpg)
 
 Before, the stylesheet on this site measured **190.71 kb**.
 

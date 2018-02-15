@@ -1,28 +1,44 @@
 namespace :deploy do
-
+  #=====================================================
+  # Functions
+  #=====================================================
+  # Deploy to environment function
   def deploy(env)
     puts "Deploying to #{env}"
     system "TARGET=#{env} bundle exec middleman deploy"
-  end
+  end # deploy
 
+  # Build the site
+  def buildSite
+    system "bundle exec middleman build"
+    system "./node_modules/gulp/bin/gulp.js buildcss"
+  end # buildSite
+
+  #=====================================================
+  # Rake tasks
+  # Usage: bundle exec rake deploy:taskname
+  #=====================================================
+  # Deploy locally
   task :local do
-    sh "rm -rf build"
-    sh "bundle exec middleman build"
-    sh "gulp buildcss"
-  end
+    buildSite
+  end # local
 
+  # Deploy to staging
   task :staging do
-    sh "rm -rf build"
-    sh "bundle exec middleman build"
-    sh "gulp buildcss"
+    buildSite
     deploy :staging
-  end
+  end # staging
 
+  # Deploy to production
   task :production do
-    sh "rm -rf build"
-    sh "bundle exec middleman build"
-    sh "gulp buildcss"
-    deploy :production
-  end
+    buildSite
+    STDOUT.puts "Deploying to production. Are you sure? (yes/no)"
+    input = STDIN.gets.strip
+    if input == 'yes'
+      deploy :production
+    else
+      STDOUT.puts "Aborting..."
+    end
+  end # production
 
-end
+end # namespace

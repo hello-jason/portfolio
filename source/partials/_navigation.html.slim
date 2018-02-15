@@ -1,0 +1,10 @@
+#primary-navigation role="navigation"
+  .navbar-header
+    a.logo href="#{config.url_home}" title="#{config.site_title} Portfolio"
+      = partial "#{config.images_dir}/hello-jason-logo.svg"
+      span.tagline Hello, I'm Jason.
+  #primary-container
+    ul.nav
+      = nav_li "Blog", "#{config.url_home}"
+      = nav_li "Projects", "#{config.url_projects}"
+      = nav_li "About", "#{config.url_about}"

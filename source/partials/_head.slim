@@ -24,16 +24,16 @@ html
 
     // Check if page should redirect in frontmatter
     - if current_page.data.redirect
-      meta http-equiv="refresh" content="0;URL='#{site_url}#{current_page.data.redirect}'"
+      meta http-equiv="refresh" content="0;URL='#{config.site_url}#{current_page.data.redirect}'"
 
     // Favicons
-    link href="#{site_url}/apple-touch-icon-152x152-precomposed.png" rel="apple-touch-icon-precomposed" sizes="152x152"
-    link href="#{site_url}/apple-touch-icon-144x144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144"
-    link href="#{site_url}/apple-touch-icon-114x114-precomposed.png" rel="apple-touch-icon-precomposed" sizes="114x114"
-    link href="#{site_url}/apple-touch-icon-72x72-precomposed.png" rel="apple-touch-icon-precomposed" sizes="72x72"
-    link href="#{site_url}/apple-touch-icon-precomposed.png" rel="apple-touch-icon-precomposed"
-    link href="#{site_url}/favicon.png" rel="shortcut icon"
-    link href="#{site_url}/favicon.ico" rel="icon" type="image/ico"
+    link href="#{config.site_url}/apple-touch-icon-152x152-precomposed.png" rel="apple-touch-icon-precomposed" sizes="152x152"
+    link href="#{config.site_url}/apple-touch-icon-144x144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144"
+    link href="#{config.site_url}/apple-touch-icon-114x114-precomposed.png" rel="apple-touch-icon-precomposed" sizes="114x114"
+    link href="#{config.site_url}/apple-touch-icon-72x72-precomposed.png" rel="apple-touch-icon-precomposed" sizes="72x72"
+    link href="#{config.site_url}/apple-touch-icon-precomposed.png" rel="apple-touch-icon-precomposed"
+    link href="#{config.site_url}/favicon.png" rel="shortcut icon"
+    link href="#{config.site_url}/favicon.ico" rel="icon" type="image/ico"
 
     markdown:
       <!--
@@ -51,18 +51,18 @@ html
 
     // Check if page is overriding title in frontmatter, otherwise use default set in config.rb
     - if current_page.data.title
-      title #{site_title} / #{current_page.data.title}
+      title #{config.site_title} / #{current_page.data.title}
     - else
-      title #{site_title}
+      title #{config.site_title}
 
     // Check if page is overriding meta description in frontmatter, otherwise use default set in config.rb
     - if current_page.data.meta_description
       meta content="#{current_page.data.meta_description}" name="description"
     - else
-      meta content="#{site_description}" name="description"
+      meta content="#{config.site_description}" name="description"
     // Stylesheet
-    = stylesheet_link_tag "main"
-    link href="#{site_url+current_page.url}" rel="canonical"
+    = stylesheet_link_tag 'site'
+    link href="#{config.site_url+current_page.url}" rel="canonical"
     // Google Analytics
     javascript:
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -79,19 +79,17 @@ html
   - else
     body class="#{page_classes}"
 
-  /[if lte IE 8]
-    p.alert.alert-warning
-      | You are using an outdated browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.
   header.banner role="banner"
     = partial "partials/navigation"
     = yield_content :header
     // Hide banner styles on case study pages
-    - unless current_page.data.layout == "case-study"
+    // by adding layout: case-study to frontmatter
+    - unless current_page.options[:layout] == "case-study"
       div.container
         - if current_page.data.hero_title
           h1.title #{current_page.data.hero_title}
         - else
           h1.title #{current_page.data.title}
         - if current_page.url == "/"
-          p.subtitle I'm Jason, a designer &amp; UI developer in Austin, TX
-      = inline_svg "icon-arrow-downright.svg"
+          p.subtitle I'm Jason, a designer &amp; website optimizer in Austin, TX
+      = partial "#{config.images_dir}/icon-arrow-downright.svg"

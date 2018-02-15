@@ -31,3 +31,29 @@
     }
   }
 }
+
+// Change primary header bar
+//
+// Use this on pages where the primary nav bar should receive
+// a different treatment
+@mixin custom-header($background-color, $text-color) {
+  background: $background-color;
+  #primary-navigation {
+    a.logo {
+      color: $text-color;
+    }
+  }
+  #primary-container {
+    li, a {
+      color: $text-color !important;
+      &:hover, &:focus {
+        border-color: $text-color !important;
+      }
+    }
+  }
+  #hellojason-logo {
+    .cls-1 {
+      fill: $text-color;
+    }
+  }
+}

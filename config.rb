@@ -3,59 +3,61 @@
 # http://hellojason.net
 # ========================================================================
 
-# Copy ./source/environment_variables.example to ./source/environment_variables.rb
-# then update settings there.
-require "./source/environment_variables.rb"
-
 # ========================================================================
 # Site settings
 # ========================================================================
-# URL when building for deployment to production
-set :site_title,           "Hello Jason"
-set :site_description,     "Design and development portfolio of Jason Cross"
-set :site_url_production,  "https://hellojason.net"
-set :site_url_development, ENV['site_url_development']
+config[:site_url]       = 'http://localhost:4567/'
+config[:site_title]       = 'Hello Jason'
+config[:site_description] = 'Design and development portfolio of Jason Cross'
 
 # Set asset directories
-set :css_dir,              "assets/css"
-set :js_dir,               "assets/js"
-set :images_dir,           "assets/img"
-set :fonts_dir,            "assets/fonts"
+config[:css_dir]      = '/assets/stylesheets'
+config[:js_dir]       = '/assets/javascripts'
+config[:images_dir]   = '/assets/images'
+config[:fonts_dir]    = '/assets/fonts'
+config[:layouts_dir]  = '/layouts'
 
+# Use relative URLs
+activate :relative_assets
 # Sitemap URLs (use trailing slashes). Create additional variables here
 # for referencing your pages.
-set :url_portfolio,        "/projects/"
-set :url_projects,         "/projects/"
-set :url_about,            "/about/"
-set :url_blog,             "/"
-set :url_home,             "#{url_blog}"
+config[:url_portfolio] = '/projects/'
+config[:url_projects]  = '/projects/'
+config[:url_about]     = '/about/'
+config[:url_blog]      = '/'
+config[:url_home]      = '/'
 
-# Remove layout template from sitemap.xml page
-page "/sitemap.xml", :layout => false
+# ========================================================================
+# Layouts
+# ========================================================================
+# https://middlemanapp.com/basics/layouts/
+
+# Per-page layout changes
+page '/*.xml', layout: false
+page '/*.json', layout: false
+page '/*.txt', layout: false
+
+
+# ========================================================================
+# Activate and configure extensions
+# ========================================================================
+# https://middlemanapp.com/advanced/configuration/#configuring-extensions
 
 # Slim template engine
 require "slim"
 
-# Use relative URLs
-activate :relative_assets
-
-# Add layzr to sprockets asset path
-sprockets.append_path File.join root, 'node_modules'
+# Bootstrap
+require "bootstrap-sass"
 
 # Autoprefixer
-activate :autoprefixer do |config|
-  config.browsers = ['last 2 versions', 'Explorer >= 9']
-  config.cascade  = false
-  config.inline   = false
+activate :autoprefixer do |prefix|
+  prefix.browsers = "last 2 versions"
 end
 
 # Markdown rendering
+activate :syntax, :line_numbers => true
 set :markdown_engine, :redcarpet
 set :markdown, :fenced_code_blocks => true, :smartypants => true
-
-# Syntax highlighting
-# Documentation: https://github.com/jneen/rouge
-activate :rouge_syntax
 
 # ========================================================================
 # Weblog extension
@@ -75,47 +77,30 @@ end
 # This must be activated AFTER the blog extension
 activate :directory_indexes
 
-# ========================================================================
-# Helpers
-# ========================================================================
-# Helpers have been moved to /helpers, into their own files
 
 # ========================================================================
 # Development-specific configuration
 # ========================================================================
 configure :development do
-  set :site_url, "#{site_url_development}"
-
-  # Reload the browser automatically whenever files change
-  activate :livereload
-
-  # Disqus comments
-  activate :disqus do |d|
-    # using a special shortname
-    d.shortname = "hello-jason-dev"
-    # or setting to `nil` will stop Disqus loading
-    # d.shortname = nil
-  end
 end
+
 
 # ========================================================================
 # Build-specific configuration
-# ========================================================================
-configure :build do
-  # Ignore file/dir during build process
-  ignore ".git"
-  ignore "environment_variables.rb"
-  ignore "environment_variables.sample.rb"
-  ignore "favicon_template.png"
-  ignore "article.tt"
-  ignore "imageoptim.manifest.yml"
 
-  set :site_url, "#{site_url_production}"
+configure :build do
+  config[:site_url]   = 'https://hellojason.net/'
+  config[:host]       = 'https://hellojason.net/'
+
+  # Ignore file/dir during build process
+  ignore "layouts/*"
+  ignore "**/.keep"
+  ignore "all-methods.*"
 
   # Optimization
   set :sass, line_comments: false, style: :compressed
-  activate :minify_css
   activate :minify_html
+  activate :minify_css
   activate :minify_javascript
   activate :gzip
 
@@ -128,15 +113,9 @@ configure :build do
     # Use a build manifest to prevent re-compressing images between builds
     options.manifest = false
     # Image extensions to attempt to compress
-    options.image_extensions = %w(.jpg .gif .svg)
+    options.image_extensions = %w(.jpg .gif .svg .png)
     # Cause image_optim to be in shouty-mode
     options.verbose = false
-  end
-
-  # Disqus comments
-  activate :disqus do |d|
-    # using a different shortname for production builds
-    d.shortname = "hellojason"
   end
 
   # Create favicon and device-specific icons
@@ -179,7 +158,7 @@ case ENV['TARGET'].to_s.downcase
   when 'production'
     activate :deploy do |deploy|
       deploy.build_before = false # build happens in rake task
-      deploy.method = :git
+      deploy.deploy_method = :git
       deploy.remote   = 'origin'
       deploy.branch   = 'gh-pages'
       deploy.strategy = :force_push
@@ -191,9 +170,19 @@ case ENV['TARGET'].to_s.downcase
   when 'staging'
     activate :deploy do |deploy|
       deploy.build_before = false # build happens in rake task
-      deploy.method = :git
+      deploy.deploy_method = :git
       deploy.remote   = 'origin'
       deploy.branch   = 'staging'
+      deploy.strategy = :force_push
+      deploy.clean = true
+    end
+
+  else
+    activate :deploy do |deploy|
+      deploy.build_before = false # build happens in rake task
+      deploy.deploy_method = :git
+      deploy.remote   = 'origin'
+      deploy.branch   = 'other'
       deploy.strategy = :force_push
       deploy.clean = true
     end

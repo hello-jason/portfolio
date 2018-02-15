@@ -21,4 +21,4 @@ section#article-list
               time.time ☒ Not published (<strong>draft</strong>)
             - else
               time.time pubdate="pubdate" datetime="#{article.date}" Published #{article.date.strftime('%B %d, %Y')}
-            = inline_svg "icon-arrow-downright.svg"
+            = partial "#{config.images_dir}/icon-arrow-downright.svg"

@@ -1,5 +1,5 @@
 figure.iphone6 {
-  background: url(../img/iphone-6-shape.svg) no-repeat center;
+  background: url(../images/iphone-6-shape.svg) no-repeat center;
   @media (max-width: $screen-md-min) {
     width: 243px;
   }
@@ -151,6 +151,16 @@ figure.iphone6 {
     }
     &.hug-bottom {
       margin-bottom: 0;
+    }
+  }
+  figure {
+    margin-top: ($casestudy-section-padding / 4);
+    margin-bottom: ($casestudy-section-padding / 2);
+    img {
+      margin-bottom: 0;
+    }
+    figcaption {
+      margin-top: ($casestudy-section-padding / 4);
     }
   }
   h3 {

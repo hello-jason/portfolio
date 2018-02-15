@@ -16,16 +16,16 @@ def os_point(operatingSystem="windows",
 
   # Determine if Windows or OS X
   if operatingSystem.downcase == "windows"
-    os_image = "/#{images_dir}/logo-windows-10.svg"
+    os_image = "#{config.images_dir}/logo-windows-10.svg"
   elsif operatingSystem.downcase == "osx"
-    os_image = "/#{images_dir}/logo-apple.svg"
+    os_image = "#{config.images_dir}/logo-apple.svg"
   end
 
   # Determine if good or bad
   if dichotomy.downcase == "good"
-    icon_image = "/#{images_dir}/icon-check-circle.svg"
+    icon_image = "#{config.images_dir}/icon-check-circle.svg"
   elsif dichotomy.downcase == "bad"
-    icon_image = "/#{images_dir}/icon-times-circle.svg"
+    icon_image = "#{config.images_dir}/icon-times-circle.svg"
   end
 
   # Change width of description container, depending on if has screenshot or not
@@ -35,7 +35,7 @@ def os_point(operatingSystem="windows",
   if screenshot != ""
     screenshot_div = "
       <div class='vs-screenshot'>
-        <img src='/#{images_dir}/articles/#{screenshot}' />
+        <img src='#{config.images_dir}/articles/#{screenshot}' />
       </div>"
   else
     descColumns = descColumns + " without-image"
