@@ -85,17 +85,28 @@ section.ideation-planning
     h2 Ideation and planning
     p I flew to Salt Lake City with our core team to meet and brainstorm with Axis41, the agency chosen to help blueprint a meaningful site structure and general user experience. This allowed me to have a deep understanding of our direction and vision, and it set the roadmap for the sitemap and visual style. I then lead internal efforts to explore and expand on the concepts, which ultimately produced a robust design component system (discussed later).
 
-section.my-notable-parts.odd
+section.integrations.odd
+  .content
+    h2 Integrations with marketing and sales systems
+    ol.big-list
+      li <span class="number">»</span> <span class="text">Articles from <strong>Velocitize and Torque</strong> are pulled in via the WordPress REST API, based on what we know .</span>
+      li <span class="number">»</span> <span class="text">A custom form builder plugin connects WordPress forms to <strong>HubSpot</strong> via their API. Automated workflows on HubSpot's side take over and route messages accordingly, such as into Salesforce or nurture campaigns.</span>
+      li <span class="number">»</span> <span class="text">We heavily customized how LiveChat integrates into the user's sales experience throughout the site.</span>
+      li <span class="number">»</span> <span class="text">Things like the sales phone number, nearest office location, and customer logos are localized depending on where in the world the user is located, leveraging GeoIP from WP&nbsp;Engine's platform.</span>
+
+section.my-notable-parts
   .content
     h2 Notable parts that I worked on
 
     h3 Powder burst graphic and animation
-    p The new website needed a "wow" factor, something mesmerizing and beautiful to get lost in the moment you landed on the home page. We explored all sorts of ideas, all sorts of technologies. One guy played with three.js(https://threejs.org/) to create particle effects in a 3D space that responded to mouse movement. And we liked the playfulness of how Adobe Max(https://max.adobe.com/) recreated their logo in various real-world mediums, like dry ice and ink experiments. But since time and budget were a factor, I explored an inexpensive piece of software I found called Plotagraph(https://plotaverse.com/), which lets you give life to still images. Most of the example artwork on their site is painfully overdone, but I was able to apply it to a powder-burst version of the WP&nbsp;Engine logo that I created to give it some feeling of awe. After launch, the average time of existing users who only visit the home page to log into their account increased a bit, likely meaning that they stopped to gaze at my logo burst; UX speed bump, but selfishly rewarding.
+    p The new website needed a "wow" factor, something mesmerizing and beautiful to get lost in the moment you landed on the home page. We explored all sorts of ideas, all sorts of technologies. One guy played with three.js(https://threejs.org/) to create particle effects in a 3D space that responded to mouse movement. And we liked the playfulness of how Adobe Max(https://max.adobe.com/) recreated their logo in various real-world mediums, like dry ice and ink experiments. But since time and budget were a factor, I explored an inexpensive piece of software I found called Plotagraph(https://plotaverse.com/), which lets you give life to still images. Most of the example artwork on their site is painfully overdone, but I was able to apply it to a powder-burst version of the WP&nbsp;Engine logo that I created to give it some feeling of awe.
+
+    p After launch, the average time of existing customers who only visit the home page to log into their account increased a bit, likely meaning that they stopped to gaze at my logo burst; UX speed bump, but selfishly rewarding.
 
     p [image of powder burst]
 
     h3 Primary navigation
-    p My typical workflow in the past was to design the entire navigation at the beginning of a project, which would provide design queues that sprinkle down into the pages. But this project was different; the navigation was one of the last components I worked on. The primary navigation of any site is a huge deal, and ours probably involved the most discussion and collaboration. Although we mostly finalized our navigation's structure and overall layout during the offsite with the agency, I had to push those wireframes into something that felt complete, something representative of the brand. This proved challenging. It required lots of iterations with top stakeholders like David Fossas (Director of Brand), Elana Weinberg (Creative Director), and even Mary Ellen Dugan (CMO).
+    p My typical workflow in the past was to design the entire navigation at the beginning of a project, which would provide design queues that sprinkle down into the pages. But this project was different; the navigation was one of the last components I worked on. The primary navigation of any site is a huge deal, and ours probably involved the most discussion and collaboration. Although we mostly finalized our navigation's structure and overall layout during the offsite with the agency, I had to push those wireframes into something that felt complete, something representative of the brand. This proved challenging. It required lots of iterations with top stakeholders.
 
     p [images of other navigation options from iterations]
 
@@ -109,21 +120,12 @@ section.my-notable-parts.odd
     p [image of talk to a specialist button ellipses]
 
     h3 Pricing tiles and tables
-    p Our plans components are often how users are converted into customers via the website, "unassisted signups". These are a big deal. Like with sales chat, I had been heavily involved in exploration that would increase unassisted signups and ARPU (?average revenue per customer), so I executed on our -------.
+    p Our plans components are often how users are converted into customers via the website, "unassisted signups". These are a big deal. Like with sales chat, I had been heavily involved in exploration that would increase unassisted signups and ARPU (?average revenue per customer). I applied past lessons to keep this component similar to our existing version, hoping to avoid decreasing its conversions.
 
     h3 Profile builder form
     p The profile builder form is the first outward-facing component of our personalization. I worked with a developer ------.
 
     p [gif of p13n form]
-
-section.integrations
-  .content
-    h2 Integrations with marketing and sales systems
-    ol.big-list
-      li <span class="number">»</span> <span class="text">Articles from <strong>Velocitize and Torque</strong> are pulled in via the WordPress REST API, based on what we know .</span>
-      li <span class="number">»</span> <span class="text">A custom form builder plugin connects WordPress forms to <strong>HubSpot</strong> via their API. Automated workflows on HubSpot's side take over and route messages accordingly, such as into Salesforce or nurture campaigns.</span>
-      li <span class="number">»</span> <span class="text">We heavily customized how LiveChat integrates into the user's sales experience throughout the site.</span>
-      li <span class="number">»</span> <span class="text">Things like the sales phone number, nearest office location, and customer logos are localized depending on where in the world the user is located, leveraging GeoIP from WP&nbsp;Engine's platform.</span>
 
 section.component-system.odd
   .content
