@@ -113,6 +113,10 @@ figure.iphone6 {
     max-width: 790px;
     margin: 0 auto;
     padding: $casestudy-section-padding 15px;
+    &.tighten {
+      padding-top: ($casestudy-section-padding / 2);
+      padding-bottom: ($casestudy-section-padding / 2);
+    }
   }
   .banner {
     background: none;
@@ -148,6 +152,9 @@ figure.iphone6 {
         display: block;
         width: 100%;
       }
+    }
+    &.media-inline {
+      display: inline-block;
     }
     &.hug-bottom {
       margin-bottom: 0;

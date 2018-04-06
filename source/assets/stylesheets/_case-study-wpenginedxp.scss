@@ -4,6 +4,16 @@ $color-mirage:  #002838;
 $color-polar:   #f4f7fa;
 
 .projects_wpengine-dxp {
+  // Images
+  @media (min-width: $screen-lg-min) {
+    img.nav-exploration {
+      margin-left: -108.5px;
+    }
+    img.p13n-form {
+      margin-left: -116.5px;
+    }
+  }
+
   section.odd {
     background: $color-polar;
   }
@@ -12,6 +22,11 @@ $color-polar:   #f4f7fa;
     background-size: cover;
     color: #fff;
     position: relative;
+    .categories {
+      span {
+        background: rgba(255,255,255,0.26);
+      }
+    }
     .content {
       position: relative;
       z-index: 1;
@@ -33,6 +48,13 @@ $color-polar:   #f4f7fa;
       }
     }
   }
+  // Powder video
+  .powder-video {
+    width: 100%;
+    max-width: 1100px;
+  }
+
+  // The team
   .collaborators {
     display: flex;
     flex-wrap: wrap;
@@ -44,5 +66,10 @@ $color-polar:   #f4f7fa;
         margin: 0 auto;
       }
     }
+  }
+  // What I learned
+  .what-i-learned {
+    background: $color-tiffany;
+    color: #fff;
   }
 }
