@@ -1,6 +1,6 @@
 .banner {
   position: relative;
-  text-align: center;
+  text-align: left;
   min-height: 0;
   background-color: #A432F4;
   background-image: url(../images/JC-HERO-PurpleFace-v02.jpg);
@@ -58,14 +58,16 @@
 body.index {
   .banner {
     min-height: 380px;
+    text-align: center;
     @media (min-width: $screen-lg-min) {
       min-height: 720px;
     }
     .title {
-      font-size: 28vw;
-      letter-spacing: -0.095em;
+      font-size: 15vw;
+      letter-spacing: -0.065em;
       @media (min-width: $screen-lg-min) {
-        font-size: 31rem;
+        font-size: 20rem;
+        padding-top: 16rem;
       }
     }
   }

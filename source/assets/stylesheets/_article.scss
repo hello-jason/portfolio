@@ -10,8 +10,6 @@
 
 article#article-single {
   @extend .container;
-  font-size: 20px;
-  line-height: 1.65em;
   time {
     display: inline-block;
     padding-top: $jason-space;

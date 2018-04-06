@@ -1,13 +1,9 @@
-// Affogato Bold
 @font-face {
-  font-family: 'Affogato-Bold';
-  src: url('../fonts/Affogato-Bold.eot');
-  src: url('../fonts/Affogato-Bold.eot?#iefix') format('embedded-opentype'),
-       url('../fonts/Affogato-Bold.woff2') format('woff2'),
-       url('../fonts/Affogato-Bold.woff') format('woff'),
-       url('../fonts/Affogato-Bold.ttf')  format('truetype');
-  font-weight: normal;
-  font-style: normal;
+    font-family: 'headingstbold';
+    src: url('../fonts/headings-bold-webfont.woff2') format('woff2'),
+         url('../fonts/headings-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
 
 body {
@@ -16,7 +12,7 @@ body {
 }
 
 p {
-  margin-bottom: ($jason-space / 2);
+  margin-bottom: $jason-space;
 }
 
 h1, .h1, h2, .h2, h3, .h3, h4, .h4 {

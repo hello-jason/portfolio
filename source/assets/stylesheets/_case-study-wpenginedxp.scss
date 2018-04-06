@@ -10,6 +10,11 @@ $color-polar:   #f4f7fa;
   section.hero {
     background: $color-mirage;
     color: #fff;
+    h1 {
+      span {
+        background: rgba($color-tiffany, 0.7);
+      }
+    }
   }
   .collaborators {
     display: flex;

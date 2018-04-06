@@ -22,7 +22,7 @@
     font-family: $headings-font-family;
     text-transform: uppercase;
     border-bottom: 2px solid transparent;
-    font-size: $font-size-base;
+    font-size: $font-size-small;
     @media (min-width: $screen-sm-min) {
       padding: 0.15em 0 !important;
       margin-right: 0.25em;
@@ -38,7 +38,7 @@
         padding: .85em 0 0;
       }
       font-weight: bold;
-      font-size: $font-size-base;
+      font-size: $font-size-small;
       color: $brand-secondary;
       #hellojason-logo {
         margin-right: 0.75em;
