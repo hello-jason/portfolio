@@ -94,29 +94,32 @@ section.integrations.odd
       li <span class="number">»</span> <span class="text">Things like the sales phone number, nearest office location, and customer logos are localized depending on where in the world the user is located, leveraging GeoIP from WP&nbsp;Engine's platform.</span>
 
 section.my-notable-parts
-  .content.tighten
+  .content
+    p And now for some of the key components I worked on&hellip;
+
+section.powder-burst
+  .content
     h2 Powder burst graphic and animation
     p The new website needed a <em>wow factor</em>, something mesmerizing and beautiful to get lost in the moment you landed on the home page. We explored all sorts of ideas, from particle effects in <a href="https://threejs.org/" rel="nofollow">three.js</a> to the playfulness of how <a href="https://max.adobe.com/" rel="nofollow">Adobe Max</a> recreated their logo in dry ice and ink experiments.
 
     p But since time and budget were a factor, I explored an inexpensive piece of software called <a href="https://plotaverse.com/" rel="nofollow">Plotagraph</a>, which lets you give life to still images. Most of the example artwork on their site is painfully overdone, but I was able to apply it to a powder-burst version of the WP&nbsp;Engine logo that I created to give it some feeling of awe.
 
-  video.powder-video loop="1" playsinline="1" autoplay="1" preload="none" poster="../assets/videos/logo-poof.jpg"
-    source type="video/mp4" src="../assets/videos/logo-poof.mp4"
-    source type="video/webm" src="../assets/videos/logo-poof.webm"
+    video.powder-video loop="1" playsinline="1" autoplay="1" preload="none" poster="../assets/videos/logo-poof.jpg"
+      source type="video/mp4" src="../assets/videos/logo-poof.mp4"
+      source type="video/webm" src="../assets/videos/logo-poof.webm"
 
-  .content.tighten
     p After launch, the average time of existing customers who visit the home page to log into their account increased a bit, likely meaning that they stopped to gaze at my creation; UX speed bump, but selfishly rewarding.
 
-  hr
-  .content.tighten
+section.primary-navigation.odd
+  .content
     h2 Primary navigation
     p My typical workflow in the past was to design the navigation first, which would inspire the rest of the design. But this project was different; the navigation was one of the last components I worked on.
     p Although we mostly finalized our navigation's structure months early, I had to push those wireframes into something that felt complete, something representative of the brand. This proved challenging. It required lots of iterations with top stakeholders.
 
     = image_tag "projects/wpengine-dxp/nav-exploration.jpg", :class => "media-responsive nav-exploration"
 
-  hr
-  .content.tighten
+section.sales-chat
+  .content
     h2 Sales chat experience
     p Live chat on any website is often a high-priority lead generation pipeline for that business. I had been heavily involved in <a href="/projects/wpengine-livechat/">sales chat A/B testing</a> on wpengine.com, so I explored how to integrate that channel into the new website experience.
 
@@ -128,30 +131,36 @@ section.my-notable-parts
 
     = image_tag "projects/wpengine-dxp/specialist-popup.gif"
 
-  hr
-  .content.tighten
-    h2 Pricing tiles and tables
+section.pricing-components.odd
+  .content
+    h2 Pricing components
     p Our plans components are often how users are converted into customers via the website, "unassisted signups". These are a big deal. Like with sales chat, I had been heavily involved in exploration that would increase unassisted signups and ARPU (?average revenue per customer). I applied past lessons to keep this component similar to our existing version, hoping to avoid decreasing its conversions.
 
-  hr
-  .content.tighten
+section.profile-builder
+  .content
     h2 Profile builder form
     p The profile builder form is the first outward-facing component of our personalization. I worked with a developer ------.
 
-    = image_tag "projects/wpengine-dxp/p13n-form.gif", :class => "p13n-form"
+    = image_tag "projects/wpengine-dxp/p13n-form.gif", :class => "media-responsive p13n-form"
 
 section.component-system.odd
   .content
     h2 Component-based design system
-    p I lead our design team in creating a robust series of "components" to present different types of content on a web page. These components are meant to complement each other when used in various configurations. Our developers integrated this component system into a page builder plugin for WordPress called Beaver Builder. This is the foundation that allows us to quickly build new web pages that are on brand.
+    p We created a series of <em>web components</em> for different types of content, which complement each other when used in various configurations. Our developers integrated this component system into a page builder plugin for WordPress called <a href="https://www.wpbeaverbuilder.com/" rel="nofollow">Beaver Builder</a>. This is the foundation that allows us to quickly build new web pages that are on brand.
 
+    br
+    hr
     h3 How new pages are built
-    p New pages often begin with the stakeholder and copywriter hashing out the overall story. The copywriter then fits that story into our design components within a Google Doc. A designer is sometimes part of this process, but the content team has gotten very good at knowing which components work best for the sections of their story. Once done, the copywriter hands over that Google Doc with their content broken down into the design component sections. We then build the page directly in WordPress by dragging in the Beaver Builder components and editing the text/images as needed.
-    p So that’s Copywriter > Designer > Stakeholder approval > Published!. Often no need for developer intervention at all.
+    p New pages often begin with the stakeholder and copywriter hashing out the overall story. The copywriter then fits that story into our design components within a Google Doc. Once done, the copywriter hands over that Google Doc with their content broken down into the design component sections. A designer then builds the page directly in WordPress by dragging in the Beaver Builder components and applying the text as needed. Often no need for developer intervention at all.
 
+    ol.big-list
+      li <span class="number">»</span> <span class="text">Copywriter &rarr; Designer &rarr; Stakeholder approval &rarr; <strong>Published</strong></span>
+
+    br
+    hr
     h3 Improving the process
-    p To improve this process further, we have begun training other teams how to build their own pages using our design system. Our system is documented with pictures, step-by-step walkthrough guides, and pro-tips for finding approved images and so forth. We have also created custom WordPress user roles so they can log into the site and only see the parts that they need to see. They are beginning to build their own pages and submit them for review. Once a designer on our team approves their page, we can publish it for them.
-    p This shift in workload lets the other teams get their pages out faster, and it allows the design/dev team to both create more engaging experiences on the site and to make the page builder tools more friendly.
+    p To improve this process further, we have begun training other teams how to build their own pages using our design system. Our system is documented with pictures, step-by-step guides, and pro-tips for finding approved images and so forth. We created custom WordPress user roles so they can log in and see only what they need to see.
+    p Other teams are beginning to build their own pages and submit them for review. Once a designer on our team approves their page, we can publish it for them. This shift in workload results in pages getting out faster, and it allows my team to make the page builder tools more friendly and to create more engaging experiences on the site.
 
 section.what-i-learned
   .content

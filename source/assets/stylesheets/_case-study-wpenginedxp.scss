@@ -3,6 +3,11 @@ $color-tiffany: #0ECAD4;
 $color-mirage:  #002838;
 $color-polar:   #f4f7fa;
 
+.bkg-tiffany {
+  background: $color-tiffany;
+  color: #fff;
+}
+
 .projects_wpengine-dxp {
   // Images
   @media (min-width: $screen-lg-min) {
@@ -48,6 +53,14 @@ $color-polar:   #f4f7fa;
       }
     }
   }
+
+  section.my-notable-parts {
+    @extend .bkg-tiffany;
+    p {
+      margin-bottom: 0;
+    }
+  }
+
   // Powder video
   .powder-video {
     width: 100%;
@@ -69,7 +82,6 @@ $color-polar:   #f4f7fa;
   }
   // What I learned
   .what-i-learned {
-    background: $color-tiffany;
-    color: #fff;
+    @extend .bkg-tiffany;
   }
 }
