@@ -8,8 +8,25 @@ $color-polar:   #f4f7fa;
     background: $color-polar;
   }
   section.hero {
-    background: $color-mirage;
+    background: $color-mirage url(../images/projects/wpengine-dxp/dxp-hero.jpg) no-repeat center top;
+    background-size: cover;
     color: #fff;
+    position: relative;
+    .content {
+      position: relative;
+      z-index: 1;
+    }
+    &::after{
+      display: block;
+      width: 100%;
+      height: 100%;
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: rgba($color-mirage, 0.4);
+      z-index: 0;
+    }
     h1 {
       span {
         background: rgba($color-tiffany, 0.7);
