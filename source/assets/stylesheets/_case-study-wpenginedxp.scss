@@ -9,21 +9,39 @@ $color-polar:   #f4f7fa;
 }
 
 .projects_wpengine-dxp {
-  // Images
+  // manually center images
   @media (min-width: $screen-lg-min) {
     img.nav-exploration {
-      margin-left: -108.5px;
+      margin-left: -112.5px;
     }
     img.p13n-form {
-      margin-left: -116.5px;
+      margin-left: -121.5px;
+    }
+    img.doc-components {
+      margin-left: -187.5px;
+    }
+    img.doc-bbdemo {
+      margin-left: -210px;
+    }
+    img.doc-guide {
+      margin-left: -47px;
+    }
+   .powder-video {
+      margin-left: -170px;
+    }
+    img.component-plans-table {
+      margin-left: -170px;
     }
   }
 
   section.odd {
     background: $color-polar;
+    hr {
+      border-color: darken($color-polar, 10%);
+    }
   }
   section.hero {
-    background: $color-mirage url(../images/projects/wpengine-dxp/dxp-hero.jpg) no-repeat center top;
+    background: $color-mirage url(../images/projects/wpengine-dxp/dxp-hero.jpg) no-repeat center center;
     background-size: cover;
     color: #fff;
     position: relative;
@@ -56,15 +74,14 @@ $color-polar:   #f4f7fa;
 
   section.my-notable-parts {
     @extend .bkg-tiffany;
-    p {
-      margin-bottom: 0;
-    }
   }
 
   // Powder video
   .powder-video {
-    width: 100%;
     max-width: 1100px;
+    @media (max-width: $screen-md-min) {
+      width: 100%;
+    }
   }
 
   // The team
