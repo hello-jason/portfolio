@@ -76,3 +76,8 @@ def big_list_li(number, text)
   content = "<li><span class='number'>#{number}</span> <span class='text'>#{text}</span></li>"
   content.html_safe
 end
+
+# Teammate
+def teammate(name, role, image_url)
+  content = "<figure class='vcard'><img src='../../assets/images/projects/#{image_url}' alt='#{name}'><figcaption><span class='name'>#{name}</span><span class='role'>#{role}</span></figcaption></figure>"
+end

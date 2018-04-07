@@ -106,13 +106,24 @@ figure.iphone6 {
 // Custom layout case study
 .case-study {
   text-align: center;
+  @media (max-width: $screen-sm-min) {
+    text-align: left;
+  }
   color: #2f3021;
   font-size: 24px;
   line-height: 34px;
   .content {
     max-width: 790px;
     margin: 0 auto;
-    padding: $casestudy-section-padding 15px;
+    padding: ($casestudy-section-padding / 2) 15px;
+    @media (min-width: $screen-md-min) {
+      padding-top: $casestudy-section-padding;
+      padding-bottom: $casestudy-section-padding;
+    }
+    &.tighten {
+      padding-top: ($casestudy-section-padding / 2);
+      padding-bottom: ($casestudy-section-padding / 2);
+    }
   }
   .banner {
     background: none;
@@ -134,43 +145,46 @@ figure.iphone6 {
   figcaption {
     font-size: 18px;
     line-height: 21px;
-    font-style: italic;
   }
-  img {
+  img, video {
     margin-top: ($casestudy-section-padding / 2);
     margin-bottom: ($casestudy-section-padding / 2);
+  }
+  img {
     margin-left: auto;
     margin-right: auto;
     &.media-responsive {
       max-width: $screen-lg-min;
-      margin-top: 0;
       @media (max-width: $screen-lg-min) {
         display: block;
         width: 100%;
       }
+    }
+    &.media-inline {
+      display: inline-block;
     }
     &.hug-bottom {
       margin-bottom: 0;
     }
   }
   figure {
-    margin-top: ($casestudy-section-padding / 4);
-    margin-bottom: ($casestudy-section-padding / 2);
+    padding-bottom: ($casestudy-section-padding / 4);
     img {
       margin-bottom: 0;
     }
     figcaption {
-      margin-top: ($casestudy-section-padding / 4);
+      margin-top: 1rem;
     }
   }
   h3 {
-    margin-top: ($grid-gutter-width);
+    margin-top: $grid-gutter-width;
   }
   .hero {
     background-size: cover;
+    text-align: center;
     h1 {
       font-size: 48px;
-      line-height: 1.35em;
+      line-height: 1.25em;
       font-weight: normal;
       text-transform: none;
       @media (min-width: $screen-md-min) {
@@ -218,7 +232,10 @@ figure.iphone6 {
   }
   h2 {
     font-size: 50px;
-    margin-bottom: 6rem;
+    margin-bottom: 3rem;
+    @media (min-width: $screen-md-min) {
+      margin-bottom: 6rem;
+    }
   }
   .big-list {
     text-align: left;
@@ -245,7 +262,10 @@ figure.iphone6 {
       text-align: center;
       flex: 1 1 auto;
       order: 1;
-      max-width: 67px;
+      max-width: 37px;
+      @media (min-width: $screen-md-min) {
+        max-width: 67px;
+      }
     }
     .text {
       background: #d5d5d5;
