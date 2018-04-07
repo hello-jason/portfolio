@@ -26,7 +26,7 @@ $color-polar:   #f4f7fa;
     img.doc-guide {
       margin-left: -47px;
     }
-   .powder-video {
+   .powder-video, .powder-image {
       margin-left: -170px;
     }
     img.component-plans-table {
@@ -77,10 +77,35 @@ $color-polar:   #f4f7fa;
   }
 
   // Powder video
-  .powder-video {
-    max-width: 1100px;
-    @media (max-width: $screen-md-min) {
+  .powder-container {
+    @media (hover) {
+      position: relative;
+      cursor: crosshair;
+      &:hover, &:active {
+        .powder-video {
+          opacity: 0;
+        }
+      }
+    }
+    .powder-video {
       width: 100%;
+      display: none;
+      @media (hover) {
+        display: block;
+        position: absolute;
+        top: 0;
+        transition: opacity 1s;
+      }
+      @media (min-width: $screen-lg-min) {
+        max-width: 1100px;
+        width: unset;
+      }
+    }
+    .powder-image {
+
+      @media (hover) {
+
+      }
     }
   }
 
@@ -92,6 +117,10 @@ $color-polar:   #f4f7fa;
     .vcard {
       flex: 0 0 25%;
       margin: 0;
+      @media (max-width: $screen-sm-min) {
+        flex: 0 0 50%;
+        text-align: center;
+      }
       img {
         margin: 0 auto;
       }

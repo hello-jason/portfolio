@@ -13,14 +13,14 @@ section.hero
 
 section.business-case
   .content
-    h2 Business case
+    h2.section__title Business case
     p WP&nbsp;Engine has positioned itself as the first WordPress Digital Experience Platform (DXP), soon before Gartner released its first <a href="https://martechtoday.com/gartner-releases-first-magic-quadrant-report-digital-experience-platforms-209846">magic quadrant for DXP</a> and inline with announcing a <a href="https://wpengine.com/blog/milestone-announcement/">major fundraising event</a> from Silver Lake. This tilts the company upmarket with an enterprise-focused product offering, and entry-level tiers for <abbr title="small and medium businesses">SMBs</abbr> and agencies to set themselves up for growth and scale.
 
     p WP&nbsp;Engine is a challenger in the Adobe Experience Manager, Sitecore, and Acquia space, and it's the only one built on an open-source framework that's nearly 30% of the entire internet&mdash;WordPress. Our new website should be the premier case study of the WP&nbsp;Engine platform, punching through dated misconceptions that WordPress is a meek blogging tool. It should demonstrate a cohesive execution of art and science.
 
 section.callout.odd
   .content
-    h2 The team
+    h2.section__title The team
 
     .collaborators
       = teammate "Mary Ellen Dugan", "Chief Marketing Officer", "wpengine-dxp/dxp-MaryEllenDugan.jpg"
@@ -38,12 +38,12 @@ section.callout.odd
 
 section.ideation-planning
   .content
-    h2 Ideation and planning
+    h2.section__title Ideation and planning
     p I flew to Salt Lake City with our creative leaders to meet and brainstorm with <a href="https://www.axis41.com/">Axis41</a>, the agency chosen to help blueprint a meaningful site structure and general user experience. This allowed me to have a deep understanding of our direction and vision, and it established our sitemap and visual style. I then lead internal efforts to explore and expand on the concepts, which ultimately produced a robust design component system (discussed later) that we build pages with.
 
 section.integrations.odd
   .content
-    h2 Integrations with marketing and sales systems
+    h2.section__title Integrations with marketing and sales systems
     ol.big-list
       li <span class="number">»</span> <span class="text">Articles from <a href="https://velocitize.com" rel="nofollow">Velocitize</a> and <a href="https://torquemag.io" rel="nofollow">Torque</a> are pulled in via the WordPress REST API.</span>
       li <span class="number">»</span> <span class="text">A custom form builder plugin connects WordPress forms to <strong>HubSpot</strong> via their API. Automated workflows on HubSpot's side take over and route messages accordingly, such as into <strong>Salesforce</strong> or nurture campaigns.</span>
@@ -56,20 +56,22 @@ section.my-notable-parts
 
 section.powder-burst
   .content
-    h2 Powder burst graphic and animation
+    h2.section__title Powder burst graphic and animation
     p The new website needed a <em>wow factor</em>, something mesmerizing and beautiful. We explored all sorts of ideas, from particle effects in <a href="https://threejs.org/" rel="nofollow">three.js</a> to the playfulness of how <a href="https://max.adobe.com/" rel="nofollow">Adobe Max</a> recreates their logo in dry ice and ink experiments.
 
     p But since time and budget were a factor, I explored an inexpensive piece of software called <a href="https://plotaverse.com/" rel="nofollow">Plotagraph</a>, which lets you give life to still images. Most of the example artwork on their site is painfully overdone, but I was able to apply it to a powder-burst version of the WP&nbsp;Engine logomark that I created to give it some feeling of awe.
 
-    video.powder-video.media-responsive loop="1" playsinline="1" autoplay="1" preload="none" poster="../../assets/videos/logo-poof.jpg"
-      source type="video/mp4" src="../../assets/videos/logo-poof.mp4"
-      source type="video/webm" src="../../assets/videos/logo-poof.webm"
+    .powder-container.media-responsive
+      = image_tag "projects/wpengine-dxp/powder-plotagraph.jpg", :class => "media-responsive powder-image"
+      video.powder-video.media-responsive loop="1" playsinline="1" autoplay="1" preload="none" poster="../../assets/videos/logo-poof.jpg"
+        source type="video/mp4" src="../../assets/videos/logo-poof.mp4"
+        source type="video/webm" src="../../assets/videos/logo-poof.webm"
 
     p After launch, the average time of existing customers who visit the home page to log into their account increased a bit, likely meaning that they stopped to gaze at my creation; UX speed bump, but selfishly rewarding.
 
 section.primary-navigation.odd
   .content
-    h2 Primary navigation
+    h2.section__title Primary navigation
     p My typical workflow in the past was to design the navigation first, which would inspire the rest of the process. But this project was different; the navigation was one of the last components I worked on.
     p Although we mostly finalized our navigation's structure months early, I had to push those wireframes into something that felt complete, something representative of the brand. This proved challenging. It required lots of iterations with top stakeholders.
 
@@ -77,14 +79,14 @@ section.primary-navigation.odd
 
 section.sales-chat
   .content
-    h2 Sales chat experience
+    h2.section__title Sales chat experience
     p Live chat on any website is often a high-priority lead generation pipeline for that business. I had been heavily involved in <a href="/projects/wpengine-livechat/">sales chat A/B testing</a> on wpengine.com, so I explored how to integrate that channel into the new website experience.
 
     p I built onto past learnings from our testing and made the live chat experience noticeable and engaging. The chat pops into view a few seconds after the page has fully loaded, so you're more likely to notice it, accompanied by a quick bloop sound. We randomize photos of actual WP&nbsp;Engine sales employees, and a red notification bubble indicates you have an unread message.
 
     = image_tag "projects/wpengine-dxp/nav-chat-notification.gif", :class => "media-responsive"
 
-    p A variant of this experience can be applied to buttons. Clicking the button will reveal the same employee's face from above, but we build anticipation with an animation mimicking typing, followed by a nice message from our sales team. Clicking <em>reply</em> triggers a chat with someone in sales, so the experience is natural for potential customers.
+    p A variant of this experience can be applied to buttons. Clicking the button will reveal the same employee's face from above, but we build anticipation with an animation mimicking typing, followed by a nice message. Clicking <em>reply</em> triggers a chat with someone in sales, so the experience is natural for potential customers.
 
     = image_tag "projects/wpengine-dxp/specialist-popup.gif", :class => "media-responsive"
 
@@ -92,21 +94,21 @@ section.sales-chat
 
 section.pricing-components.odd
   .content
-    h2 Pricing components
-    p Our plans components are often how users convert into customers on the website. These are a big deal. Like with sales chat, I had been heavily involved in previous explorations to increase unassisted signups and <abbr title="average revenue per customer">ARPU</abbr> through these pricing components. I applied past lessons to this component to minimize conversion loss.
+    h2.section__title Pricing components
+    p These components are often how users convert into customers on the website. They are a big deal. Like with sales chat, I had been heavily involved in previous explorations to increase unassisted signups and <abbr title="average revenue per customer">ARPU</abbr> through these pricing components, so I applied past lessons here to minimize conversion loss.
 
     = image_tag "projects/wpengine-dxp/component-plans-table.gif", :class => "media-responsive component-plans-table"
 
 section.profile-builder
   .content
-    h2 Profile builder form
-    p The profile builder form is the first outward-facing component of our personalization engine. Users who complete the form are rewarded with customized content and messaging throughout the website. I worked with a developer to make it enticing and fun, and we are seeing user engagement, but this initial version of the form will be improved over time.
+    h2.section__title Profile builder form
+    p The profile builder form is the first outward-facing component of our personalization engine. Users who complete the form are rewarded with customized content and messaging throughout the website. I worked with a developer to make it enticing and fun, and we are seeing user engagement. This initial version of the form will be improved over time.
 
     = image_tag "projects/wpengine-dxp/p13n-form.gif", :class => "media-responsive p13n-form"
 
 section.component-system.odd
   .content
-    h2 Component-based design system
+    h2.section__title Component-based design system
     p We created a series of <em>web components</em> for different types of content, which complement each other when used in various configurations. Our developers integrated this component system into a page builder plugin for WordPress called <a href="https://www.wpbeaverbuilder.com/" rel="nofollow">Beaver Builder</a>. This is the foundation that allows us to quickly build new web pages that are on brand.
 
     = image_tag "projects/wpengine-dxp/documentation-components.gif", :class => "media-responsive doc-components"
@@ -120,21 +122,21 @@ section.component-system.odd
     = image_tag "projects/wpengine-dxp/documentation-bbdemo.gif", :class => "media-responsive doc-bbdemo"
 
     h3 Improving the process
-    p To improve this process further, we have begun training other teams how to build their own pages using our design system. Our system is documented with pictures, step-by-step guides, and pro-tips for finding approved images and so forth. We created custom WordPress user roles so they can log in and see only what they need to see.
-    p Other teams are beginning to build their own pages and submit them for review. Once a designer on our team approves their page, we can publish it for them. This shift in workload results in pages getting out faster, and it allows my team to make the page builder tools more friendly and to create more engaging experiences on the site.
+    p To improve this process further, I have begun training other teams how to build their own pages. I documented our design system with pictures, step-by-step guides, and pro-tips for finding approved images and so forth. We created custom WordPress user roles so they can log in and see only what they need to see.
+    p Other teams are beginning to build their own pages and submit them for review. A designer reviews their page and publishes it for them. This shift in workload results in pages getting out faster, and it allows my team to make the page builder tools more friendly and to create more engaging experiences elsewhere on the site.
 
     = image_tag "projects/wpengine-dxp/documentation-guide.gif", :class => "media-responsive doc-guide"
 
 section.what-i-learned
   .content
-    h2 What I learned
+    h2.section__title What I learned
     p I had never collaborated with so many professionals on a project before. The experience was humbling, exciting, and even frustrating at times. I learned to break out of the designer's mindset that cherishes pixels, and instead speak for the user during early phases and throughout the entire production. I found a place at the table that allowed me to oversee and execute the collision of business objectives and user delight.
 
     p I'm happy with the project. And while I cannot detail ongoing marketing efforts for the website, it is of course an ever-evolving thing.
 
 section.check-it-out.odd
   .content
-    h2 Check it out
+    h2.section__title Check it out
     .col-md-6
       a.btn href="https://wpengine.com/" Visit the website
     .col-md-6

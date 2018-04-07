@@ -106,13 +106,20 @@ figure.iphone6 {
 // Custom layout case study
 .case-study {
   text-align: center;
+  @media (max-width: $screen-sm-min) {
+    text-align: left;
+  }
   color: #2f3021;
   font-size: 24px;
   line-height: 34px;
   .content {
     max-width: 790px;
     margin: 0 auto;
-    padding: $casestudy-section-padding 15px;
+    padding: ($casestudy-section-padding / 2) 15px;
+    @media (min-width: $screen-md-min) {
+      padding-top: $casestudy-section-padding;
+      padding-bottom: $casestudy-section-padding;
+    }
     &.tighten {
       padding-top: ($casestudy-section-padding / 2);
       padding-bottom: ($casestudy-section-padding / 2);
@@ -174,6 +181,7 @@ figure.iphone6 {
   }
   .hero {
     background-size: cover;
+    text-align: center;
     h1 {
       font-size: 48px;
       line-height: 1.25em;
@@ -224,7 +232,10 @@ figure.iphone6 {
   }
   h2 {
     font-size: 50px;
-    margin-bottom: 6rem;
+    margin-bottom: 3rem;
+    @media (min-width: $screen-md-min) {
+      margin-bottom: 6rem;
+    }
   }
   .big-list {
     text-align: left;
@@ -251,7 +262,10 @@ figure.iphone6 {
       text-align: center;
       flex: 1 1 auto;
       order: 1;
-      max-width: 67px;
+      max-width: 37px;
+      @media (min-width: $screen-md-min) {
+        max-width: 67px;
+      }
     }
     .text {
       background: #d5d5d5;
