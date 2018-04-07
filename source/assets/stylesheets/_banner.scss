@@ -18,11 +18,12 @@
     line-height: 0.75em;
     margin: 0;
     padding: 0.325em 0 0;
+    text-shadow: 9px 7px 16px rgba(0,0,0,0.1);
     @media (min-width: $screen-sm-min) {
       letter-spacing: -0.065em;
     }
     @media (min-width: $screen-lg-min) {
-      font-size: 11rem;
+      font-size: 8rem;
     }
   }
   .subtitle {
@@ -34,6 +35,7 @@
     padding: 0;
     margin: 0.45em 0 0;
     letter-spacing: -.008em;
+    text-shadow: 3px 2px 4px rgba(0,0,0,0.2);
     @media (min-width: $screen-md-min) {
       font-size: 2.95vw;
     }
@@ -66,7 +68,7 @@ body.index {
       font-size: 15vw;
       letter-spacing: -0.065em;
       @media (min-width: $screen-lg-min) {
-        font-size: 20rem;
+        font-size: 24rem;
         padding-top: 16rem;
       }
     }
