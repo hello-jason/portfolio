@@ -24,7 +24,7 @@ main.container {
 .section-content {
   @extend .col-md-8;
   h3 {
-    color: $brand-primary;
+    color: darken($brand-primary, 25%);
     &:first-child {
       margin-top: 0;
     }
