@@ -5,4 +5,13 @@ body.about_index {
       @extend .col-md-4;
     }
   }
+  .job__role {
+    font-size: $font-size-small;
+    margin-bottom: ($jason-space / 2);
+    color: lighten($text-color, 15%);
+    font-style: italic;
+  }
+  h3 {
+    margin-top: ($jason-space * 3);
+  }
 }
