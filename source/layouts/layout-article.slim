@@ -13,7 +13,7 @@ article#article-single role="main"
   hr
   
   // Hero image
-  = image_tag (current_page.data.hero_image ? "articles/#{current_page.data.hero_image}" : "http://placehold.it/1140x334"),:alt => (current_page.data.hero_alt ? "#{current_page.data.hero_alt}" : "#{current_page.data.title}"), :class => "blog-hero"
+  = image_tag (current_page.data.hero_image ? "articles/#{current_page.data.hero_image}" : "#{config.images_dir}/1140x334.png"),:alt => (current_page.data.hero_alt ? "#{current_page.data.hero_alt}" : "#{current_page.data.title}"), :class => "blog-hero"
   
   // Inject copy from the article
   = yield
