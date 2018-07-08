@@ -1,19 +1,16 @@
 ---
 title: How to setup WordPress locally on Windows Subsystem for Linux
-hero_image:
+hero_image: wponwsl_hero.png
 hero_alt: How to setup WordPress locally on Windows Subsystem for Linux
 date: 2018-07-07 16:23 CDT
 date_updated:
 article_summary:
+published: false
 ---
 
-# How to setup WordPress locally on Windows Subsystem for Linux (WSL), for advanced developers
+This guide is for more advanced developers that prefer doing everything on the command line and want ultimate control over things. For a more visual approach to things, I suggest [Local](https://local.getflywheel.com/) or [Wamp](http://www.wampserver.com/en/), which are great but they run in virtual machines. This guide also assumes you want Ubuntu as your Linux disto. There are other distros to choose from, but you may require other steps or commands not covered here.
 
-## Intro
-
-This guide is for more advanced developers that prefer doing everything on the command line and want ultimate control over things. For a more visual approach to things, I suggest [Local](https://local.getflywheel.com/) or [Wamp](http://www.wampserver.com/en/), which are great but they run in virtual machines. This guide also assumes you want Ubuntu as your Linux disto. There are others to choose from, but you may require other steps or commands.
-
-![Install Linux from the Microsoft Store](assets/images/articles/ubuntu-in-windows-store.png)
+![Install Linux from the Microsoft Store](assets/images/articles/wponwsl_ubuntu-in-windows-store.png)
 
 ## Table of Contents
 
@@ -25,11 +22,13 @@ This guide is for more advanced developers that prefer doing everything on the c
 * install WordPress site
 * configure terminal in vscode (optional)
 
+---
+
 ## 1. Install Ubuntu
 
 Open PowerShell prompt with admin rights
 
-![Open PowerShell as admin](assets/images/articles/open-powershell-as-admin.png)
+![Open PowerShell as admin](assets/images/articles/wponwsl_run-powershell-as-admin.png)
 
 Enable the feature in Windows. In a Powershell with Admin rights
 
@@ -37,21 +36,19 @@ Enable the feature in Windows. In a Powershell with Admin rights
 Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
 ```
 
-![Enable WSL](enable-wsl.png)
+![Enable WSL](assets/images/articles/wponwsl_enable-wsl.png)
 
 **Download Ubuntu 16**. You could open the Microsoft Store and search for Ubuntu, otherwise [here's the direct Ubuntu download](https://aka.ms/wsl-ubuntu-1604) without a Microsoft account. (openSUSE: https://aka.ms/wsl-opensuse-42, SLES: https://aka.ms/wsl-sles-12)
 
-![Download Ubuntu installer](assets/images/articles/download-ubuntu.png)
+![Download Ubuntu installer](assets/images/articles/wponwsl_download-ubuntu.png)
 
 Run Ubuntu installer
 
-![Run Ubuntu installer](assets/images/articles/install-ubuntu.png)
-![Ubuntu installer running](assets/images/articles/ubuntu-installer-running.png)
-![Command prompt installing Ubuntu](assets/images/articles/cmd-installing-ubuntu.png)
+![Run Ubuntu installer](assets/images/articles/wponwsl_install-ubuntu.png)
 
 Setup a UNIX username and password. A warning, **choose a username that is different than any of your Windows usernames**; I've encountered weird situations with permissions when I had the same username for both, plus it gets confusing to keep track of Linux vs Windows on the command line if you see the same username everywhere.
 
-![Setup UNIX username and password](assets/images/articles/setup-unix-user-account.png)
+![Setup UNIX username and password](assets/images/articles/wponwsl_setup-unix-user-account.png)
 
 This should drop you into a bash shell, inside a command prompt terminal window. Let's immediately get Ubuntu updating, then we can go get a better terminal.
 
@@ -63,7 +60,7 @@ sudo apt update && sudo apt -y upgrade
 
 Keep this window open until the process finishes.
 
-![Update Ubuntu](assets/images/articles/ubuntu-upgrade-process.png)
+![Update Ubuntu](assets/images/articles/wponwsl_ubuntu-upgrade-process.png)
 
 ---
 
@@ -75,7 +72,7 @@ Keep this window open until the process finishes.
 
 Let's configure Hyper to always launch into an Ubunu shell. Click the `hamburger menu > Edit > Preferences` (or hit Ctrl+,).
 
-![Open Hyper preferences](assets/images/articles/hyper-edit-preferences.png)
+![Open Hyper preferences](assets/images/articles/wponwsl_hyper-edit-preferences.png)
 
 > If you need more robust terminal configurations, [cmder](http://cmder.net/) is an amazing choice that gives you an delightfully-opinionated configuration of ConEmu.
 
@@ -85,11 +82,11 @@ Add shell line. Replace YOURUSER with your current Windows user name
 shell: 'C:\\Users\\YOURUSER\\AppData\\Local\\Microsoft\\WindowsApps\\ubuntu.exe',
 ```
 
-![Configure shell in Hyper preferences](assets/images/articles/hyper-shell-config.png)
+![Configure shell in Hyper preferences](assets/images/articles/wponwsl_hyper-shell-config.png)
 
 Close and reopen Hyper. You should see this message above **UnixUsername@WindowsComputerName:~$**
 
-![Hyper opens in Ubuntu bash](assets/images/articles/hyper-in-ubuntu.png)
+![Hyper opens in Ubuntu bash](assets/images/articles/wponwsl_hyper-in-ubuntu.png)
 
 Hint, to copy and paste within Hyper, use `Ctrl+Shift+C` and `Ctrl+Shift+V` respectively
 
@@ -130,7 +127,7 @@ sudo service apache2 start
 
 Then visit [localhost](http://localhost) in your browser, and you should see the **Apache2 Ubuntu Default Page**.
 
-![Apache2 Ubuntu Default Page](assets/images/articles/apache2-ubuntu-default-page.png)
+![Apache2 Ubuntu Default Page](assets/images/articles/wponwsl_apache2-ubuntu-default-page.png)
 
 ### Setup Apache
 
@@ -254,7 +251,7 @@ We have to update the Windows hosts file so that we can type a URL into our brow
 
 Hit the Windows key, type `notepad`. Right-click on the Notepad program, then click `Run as administrator`.
 
-![Open Notepad as administrator](assets/images/articles/run-notepad-as-admin.png)
+![Open Notepad as administrator](assets/images/articles/wponwsl_run-notepad-as-admin.png)
 
 Choose `File > Open`, then enter the following path into the Open dialog:
 
@@ -262,7 +259,7 @@ Choose `File > Open`, then enter the following path into the Open dialog:
 C:\Windows\System32\drivers\etc\hosts
 ```
 
-![Open Windows hosts file](assets/images/articles/open-windows-hosts.png)
+![Open Windows hosts file](assets/images/articles/wponwsl_open-windows-hosts.png)
 
 Add the following line to the bottom of the file. Note, using `127.0.0.1` is important here; `localhost` will not work.
 
@@ -294,7 +291,7 @@ ServerName wordpress.local
 DocumentRoot /mnt/c/Sites/wordpress
 ```
 
-![Apache VirtualHost config](assets/images/articles/apache-virtualhost-config.png)
+![Apache VirtualHost config](assets/images/articles/wponwsl_apache-virtualhost-config.png)
 
 Save and quit the file. Then, we need to tell Apache that we want it to load this configuration file by creating a symlink in the `sites-enabled` directory.
 
@@ -309,7 +306,7 @@ sudo service apache2 reload
 
 And check out the site at [http://wordpress.local](http://wordpress.local) in your browser, and you should be rewarded with the WordPress install screen.
 
-![WordPress install screen](assets/images/articles/wordpress-install-screen.png)
+![WordPress install screen](assets/images/articles/wponwsl_wordpress-install-screen.png)
 
 ---
 
