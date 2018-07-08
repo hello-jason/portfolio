@@ -1,5 +1,3 @@
-[![Dependency Status](https://gemnasium.com/hello-jason/portfolio.svg)](https://gemnasium.com/hello-jason/portfolio)
-
 # Hello Jason Portfolio
 
 Written with [Ruby](https://www.ruby-lang.org/en/)+[Middleman](http://middlemanapp.com) and based on the [middleman-bss starter theme](https://github.com/hello-jason/middleman-bss)
@@ -21,10 +19,10 @@ Written with [Ruby](https://www.ruby-lang.org/en/)+[Middleman](http://middlemana
 npm install -g svgo pngout-bin
 ```
 
-* Clone project and cd into project directory
+* Clone project and cd into project directory. [A bug in middleman-blog](https://github.com/middleman/middleman/issues/1923) requires absolute path, so this project must live in `~/Sites/portfolio`.
 
 ```bash
-git clone git@github.com:hello-jason/portfolio.git hello-jason-portfolio && cd hello-jason-portfolio
+git clone git@github.com:hello-jason/portfolio.git ~/Sites/portfolio && cd ~/Sites/portfolio
 ```
 
 * Install Ruby version set in `.ruby-version`
@@ -82,6 +80,7 @@ The following options are available in frontmatter:
 * date: 2015-03-28 19:29 CDT
 * date_updated: 2015-03-28 19:29 CDT
 * article_summary: String, summary of blog article used in blog archive list
+* published: false (default: true)
 
 ## Deploying to Github Pages
 

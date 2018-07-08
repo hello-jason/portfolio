@@ -61,7 +61,7 @@ set :markdown, :fenced_code_blocks => true, :smartypants => true
 
 # ========================================================================
 # Weblog extension
-# Documentatin: http://middlemanapp.com/basics/blogging/
+# Documentation: http://middlemanapp.com/basics/blogging/
 # ========================================================================
 Time.zone = "America/Chicago"
 activate :blog do |blog|
