@@ -8,16 +8,15 @@ article_summary:
 published: false
 ---
 
-This guide is for more advanced developers that prefer doing everything on the command line and want ultimate control over things. For a more visual approach to things, I suggest [Local](https://local.getflywheel.com/) or [Wamp](http://www.wampserver.com/en/), which are great but they run in virtual machines. This guide also assumes you want Ubuntu as your Linux disto. There are other distros to choose from, but you may require other steps or commands not covered here.
+This guide is for more advanced developers who prefer doing most things on the command line and want a truely native development experience for WordPress on Windows while using the more-familiar *nix commands. For a more visual approach to things, I suggest [Local](https://local.getflywheel.com/) or [Wamp](http://www.wampserver.com/en/), which are great but run in virtual machines. This guide assumes you want Ubuntu as your disto. There are other distros to choose from, but you may require other steps or commands not covered here.
 
 ## Table of Contents
 
 * install Ubuntu
 * get a better terminal (optional)
 * setup a LAMP stack
-* install a better shell (optional)
-* install helpful WordPress tools (node, wp-cli, composer, lamp script)
-* install WordPress site
+* install helpful WordPress tools
+* setup a vanilla WordPress site
 * configure terminal in vscode (optional)
 
 ---
@@ -102,13 +101,11 @@ Close and reopen Hyper, and you should see **UnixUsername@WindowsComputerName:~$
 
 ### Important, magic step
 
-Before we continue, the following setup is my opinion, and you are free to set up your LAMP stack however you please. I've followed several guides for this setup and have had to start over many times after getting backed into some weird corner; everything from one extreme of symlinking my entire Linux home folder to my Windows home directory (do not do this, things get weird) to the opposite extreme of treating Windows and Linux as 2 completely separate things and never cross-contaminate them (do not do this, you lose many benefits).
+Before we continue, the following setup is my opinion, and you are free to set up your LAMP stack however you please. I've followed several guides for this setup and have had to start over many times after getting backed into some weird corner; everything from one extreme of symlinking my entire Linux home folder to my Windows home directory (do not do this, things get weird) to the opposite extreme of treating Windows and Linux as 2 completely separate things and never sharing files between them (do not do this, you lose many benefits).
 
-Here's the thing: in WSL, **Linux can modify Windows files**, but **Windows cannot modify Linux** files.
+I want Ubuntu to function exactly as it would on any other machine, and I want to be able to follow any Ubuntu guide on the internet without worrying about an atypical setup. And I also want the benefits of truely developing locally, like running `code somefolder` and having that open as a project in VS Code, and so forth. The whole point of WSL is that you are literally running a completely native command line Linux experience, but your base OS happens to be Windows.
 
-I want Ubuntu to function exactly as it would on any other machine, and I want to be able to follow any Ubuntu guide on the internet without accommodating some weird special circumstance because my setup is atypical. And I also want the benefits of truely developing locally, like running `code somefolder` and having that open as a project in VS Code, and so forth. The whole point of WSL is that you are literally running a completely native command line Linux experience, but your base OS happens to be Windows.
-
-So, my suggestion for accomplishing these goals is to keep everything for Ubuntu right where it gets installed (ssh keys, dotfiles, etc.), and then the only thing I'll have in Windows is a working project folder that can be referenced from Ubuntu.
+Here's the thing: Microsoft says **Linux can modify Windows files**, but **Windows cannot modify Linux** files. So, my suggestion for accomplishing these goals is to keep everything for Ubuntu right where it gets installed (ssh keys, dotfiles, etc.), and then the only thing I'll have in Windows is a working project folder that can be referenced from Ubuntu. That working folder can hold files for any project, from PHP to Ruby to just about anything.
 
 ### Install LAMP stack
 
@@ -120,7 +117,7 @@ sudo apt install -y lamp-server^
 
 When prompted, configure a MySQL root password.
 
-Then, let's quickly test the installation. Spin up the apache server...
+Then, let's quickly test the installation. Spin up the Apache server...
 
 ```shell
 sudo service apache2 start
@@ -130,13 +127,13 @@ Then visit [localhost](http://localhost) in your browser, and you should see the
 
 ![Apache2 Ubuntu Default Page](assets/images/articles/wponwsl_apache2-ubuntu-default-page.png)
 
-Let that sync in for a second. You just installed Apache in a Linux environment, and it's immediately available on your localhost. You can even see *apache2* processes in Task Manager, and I think that's just swell.
+Let that sync in for a second. You just installed Apache in a Linux way on your Windows machine, and it's immediately available at localhost. You can even see *apache2* processes in Task Manager, and I think that's just swell.
 
 ![Apache2 running natively in Windows task manager](assets/images/articles/wponwsl_apache2-running-natively.png)
 
 ### Configure Apache
 
-We need to create a folder for our projects to live in, then tell Apache about that folder so it knows to look for websites.
+We need to create a folder for our projects to live in, then tell Apache about that folder so it knows to look for websites. This project folder will live in Windows.
 
 Create a folder directly on your `C:\` drive called `Sites`.
 
@@ -145,7 +142,7 @@ mkdir /mnt/c/Sites
 ```
 
 <div class="alert alert-warning">
-    <p>This folder will be readily available to Windows text editors and so forth, while also being available to Linux via the path <em>/mnt/c/Sites</em>. You can place it somewhere else if you prefer, like into your Windows user home directory, but things will get funky if your username has a space or strange character in it.</p>
+    <p>This folder will be readily available to Windows text editors and so forth, while also being available to Linux via the path <em>/mnt/c/Sites</em>. You can place it somewhere else if you prefer, like into your Windows user home directory, but things may get funky if your username has a space or strange character in it.</p>
 </div>
 
 Now lets tell Apache to serve files from our new folder. Open `apache2.conf` in your favorite editor.
@@ -208,12 +205,8 @@ sudo service mysql start
 
 ---
 
-## 4. Install a better shell (optional)
 
-
----
-
-## 5. Install helpful WordPress tools
+## 4. Install helpful WordPress tools
 
 Our server is ready to go, so let's grab a few WordPress-specific tools before we setup our first site.
 
@@ -222,13 +215,13 @@ Our server is ready to go, so let's grab a few WordPress-specific tools before w
 Optional
 
 * [Install composer](https://getcomposer.org/download/) then [make it global](https://getcomposer.org/doc/00-intro.md#globally)
-* Install node [with nvm[(https://github.com/creationix/nvm#install-script)
+* Install node [with nvm](https://github.com/creationix/nvm#install-script)
 
 ---
 
-## Install a WordPress site
+## Setup a vanilla WordPress site
 
-This is the section that you'll have to repeat for every new WordPress site you want to setup. Google owns the `.dev` TLD now, so our sites will all use `.local` instead.
+This is the section that you'll have to repeat for every new WordPress site you want to setup. Google owns the `.dev` TLD now, so my sites use `.local` instead.
 
 ### Install WordPress
 
@@ -286,7 +279,7 @@ cd /etc/apache2/sites-available/
 Duplicate and edit the default configuration file:
 
 ```shell
-sudo cp 000-default.conf wordpress.local.conf&& sudo vim wordpress.local.conf
+sudo cp 000-default.conf wordpress.local.conf && sudo vim wordpress.local.conf
 ```
 
 The only 2 fields we care about here are `ServerName`, which tells Apache what URL to listen for incoming requests from, and `DocumentRoot`, which tells Apache where to look for the website files when it gets a request on that server name.
@@ -311,22 +304,28 @@ Reload Apache so the changes take effect.
 sudo service apache2 reload
 ```
 
-And check out the site at [http://wordpress.local](http://wordpress.local) in your browser, and you should be rewarded with the WordPress install screen.
+Now check out the site at [http://wordpress.local](http://wordpress.local) in your browser, and you should be rewarded with the WordPress install screen.
 
 ![WordPress install screen](assets/images/articles/wponwsl_wordpress-install-screen.png)
 
 ---
 
-## 6. Extra goodness
+## 5. Extra goodness
 
 ### Configure terminal in Visual Studio Code
 
 Add the following to your vscode user settings, then  hit ``Ctrl+` `` to launch a terminal session.
 
 ```javascript
-"terminal.integrated.shell.windows": "C:\\Users\\Jason\\AppData\\Local\\Microsoft\\WindowsApps\\ubuntu.exe",
+"terminal.integrated.shell.windows": "C:\\Users\\YOURUSERNAME\\AppData\\Local\\Microsoft\\WindowsApps\\ubuntu.exe",
 ```
 
 ### Install phpmyadmin
 
 I can't do any better than this article by [Digital Ocean](https://www.digitalocean.com/community/tutorials/how-to-install-and-secure-phpmyadmin-on-ubuntu-16-04).
+
+---
+
+## 6. Caveats
+
+* You can do things like `code .zshrc` to open a Linux file in a Windows program (VSCode, in this case). But I have not figured out how to do this on files that belong to the root user, such as apache configs. My current workflow for edits needing sudo is to use vim, and you've seen some of that in this guide.
