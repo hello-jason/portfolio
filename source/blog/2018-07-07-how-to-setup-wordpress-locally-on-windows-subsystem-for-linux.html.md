@@ -4,13 +4,12 @@ hero_image: wponwsl_hero.png
 hero_alt: How to setup WordPress locally on Windows Subsystem for Linux
 date: 2018-07-07 16:23 CDT
 date_updated:
-article_summary:
-published: false
+article_summary: For web developers on Windows who prefer the command line and want to avoid virtual machines.
 ---
 
 ## Who is this for?
 
-This guide is for developers who use Windows and prefer doing most things on the command line. It will provide you a truly native development experience for WordPress on Windows with more-familiar *nix commands. This guide assumes you want Ubuntu as your disto. There are other supported distros to choose from, but you may require other steps or commands not covered here.
+This guide is for web developers on Windows who prefer the command line and want to avoid virtual machines. It will provide you a truly native development experience for WordPress on Windows with more-familiar *nix commands. This guide assumes you want Ubuntu as your disto. There are other supported distros to choose from, but you may require other steps or commands not covered here.
 
 For a more turnkey, visual approach to things, I suggest [Local](https://local.getflywheel.com/) or [Wamp](http://www.wampserver.com/en/), in that order.
 
@@ -24,7 +23,6 @@ For a more turnkey, visual approach to things, I suggest [Local](https://local.g
 * [Install helpful WordPress tools](#toc__wp-tools)
 * [Setup a vanilla WordPress site](#toc__vanilla-wp)
 * [Extra goodness](#toc__extra-goodness)
-* [Caveats](#toc__caveats)
 
 ---
 
@@ -137,7 +135,7 @@ Visit [localhost](http://localhost) in your browser, and you should see the **Ap
 
 ![Apache2 Ubuntu Default Page](assets/images/articles/wponwsl_apache2-ubuntu-default-page.png)
 
-Let this sink in for a second. You just installed Apache in a Linux way on your Windows machine, and it's immediately available at localhost. You can even see *apache2* processes in Task Manager, and I think that's just swell.
+Let this sink in for a second. You just installed Apache, in a Linux way, on your Windows machine, and it's immediately available at localhost. You can even see *apache2* processes in Task Manager, and I think that's just swell.
 
 ![Apache2 running natively in Windows task manager](assets/images/articles/wponwsl_apache2-running-natively.png)
 
@@ -161,7 +159,7 @@ Now lets tell Apache to serve files from our new folder. Open `apache2.conf` in 
 sudo vim /etc/apache2/apache2.conf
 ```
 
-Find the block `<Directory /var/www>` (hit page down 4 times) and paste this below it.
+Find the block `<Directory /var/www>` and paste this below it:
 
 ```shell
 <Directory /mnt/c/Sites>
@@ -193,7 +191,7 @@ Enable mod_rewrite, so our .htaccess files will work.
 sudo a2enmod rewrite
 ```
 
-Reload Apache, so it gets the changes.
+Reload Apache to get the changes.
 
 ```shell
 sudo service apache2 reload
@@ -201,13 +199,13 @@ sudo service apache2 reload
 
 ### Setup MySQL
 
-Installing mysql on WSL comes with a HOME directory warning. We just need to set one:
+Installing MySQL on WSL comes with a HOME directory warning. We just need to set one:
 
 ```shell
 sudo usermod -d /var/lib/mysql/ mysql
 ```
 
-Then spin up the mysql service:
+Then spin up the MySQL service:
 
 ```shell
 sudo service mysql start
@@ -338,11 +336,3 @@ Add the following to your vscode user settings, then  hit ``Ctrl+` `` to launch 
 ### Install phpmyadmin
 
 I can't do any better than this article by [Digital Ocean](https://www.digitalocean.com/community/tutorials/how-to-install-and-secure-phpmyadmin-on-ubuntu-16-04).
-
----
-
-<a id="toc__caveats"></a>
-
-## 7. Caveats
-
-* You can do things like `code .zshrc` to open a Linux file in a Windows program (VSCode, in this case). But I have not figured out how to do this on files that belong to the root user, such as apache configs. My current workflow for edits needing sudo is to use vim, and you've seen some of that in this guide.
