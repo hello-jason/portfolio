@@ -2,6 +2,8 @@
 = partial "partials/head"
 
 article#article-single role="main"
+
+  // Sort out Published vs Updated dates
   - if current_page.data.date
     time.time pubdate="pubdate" datetime="#{current_page.data.date}" Published #{current_page.date.strftime('%B %d, %Y')}
 
@@ -9,8 +11,13 @@ article#article-single role="main"
     time.time pubdate="pubdate" datetime="#{current_page.data.date_updated}" (updated #{current_page.data.date_updated.strftime('%B %d, %Y')})
 
   hr
-  = image_tag (current_page.data.hero_image ? "articles/#{current_page.data.hero_image}" : "http://placehold.it/1140x334"),:alt => (current_page.data.hero_alt ? "#{current_page.data.hero_alt}" : "#{current_page.data.title}"), :class => "blog-hero"
+  
+  // Hero image
+  = image_tag (current_page.data.hero_image ? "articles/#{current_page.data.hero_image}" : "#{config.images_dir}/1140x334.png"),:alt => (current_page.data.hero_alt ? "#{current_page.data.hero_alt}" : "#{current_page.data.title}"), :class => "blog-hero"
+  
+  // Inject copy from the article
   = yield
+  
   hr
   a.back-to-articles href="#{config.url_blog}" &#8617; All articles
   br

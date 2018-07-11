@@ -61,7 +61,7 @@ set :markdown, :fenced_code_blocks => true, :smartypants => true
 
 # ========================================================================
 # Weblog extension
-# Documentatin: http://middlemanapp.com/basics/blogging/
+# Documentation: http://middlemanapp.com/basics/blogging/
 # ========================================================================
 Time.zone = "America/Chicago"
 activate :blog do |blog|
@@ -70,7 +70,7 @@ activate :blog do |blog|
   blog.prefix               = "blog"
   blog.layout               = "layout-article"
   # Custom template when running `middleman article "Article name"`
-  blog.new_article_template = "source/layouts/article.tt"
+  blog.new_article_template = "~/Sites/portfolio/source/layouts/article.tt"
 end
 
 # Pretty URLs
