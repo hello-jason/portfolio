@@ -8,22 +8,31 @@ article_summary:
 published: false
 ---
 
-This guide is for more advanced developers who prefer doing most things on the command line and want a truely native development experience for WordPress on Windows while using the more-familiar *nix commands. For a more visual approach to things, I suggest [Local](https://local.getflywheel.com/) or [Wamp](http://www.wampserver.com/en/), which are great but run in virtual machines. This guide assumes you want Ubuntu as your disto. There are other distros to choose from, but you may require other steps or commands not covered here.
+## Who is this for?
 
-## Table of Contents
+This guide is for developers who use Windows and prefer doing most things on the command line. It will provide you a truly native development experience for WordPress on Windows with more-familiar *nix commands. This guide assumes you want Ubuntu as your disto. There are other supported distros to choose from, but you may require other steps or commands not covered here.
 
-* install Ubuntu
-* get a better terminal (optional)
-* setup a LAMP stack
-* install helpful WordPress tools
-* setup a vanilla WordPress site
-* configure terminal in vscode (optional)
+For a more turnkey, visual approach to things, I suggest [Local](https://local.getflywheel.com/) or [Wamp](http://www.wampserver.com/en/), in that order.
 
 ---
 
+## Table of contents
+
+* [Install Ubuntu](#toc__install-ubuntu)
+* [Get a better terminal (optional)](#toc__better-terminal)
+* [Setup a LAMP stack](#toc__lamp-stack)
+* [Install helpful WordPress tools](#toc__wp-tools)
+* [Setup a vanilla WordPress site](#toc__vanilla-wp)
+* [Extra goodness](#toc__extra-goodness)
+* [Caveats](#toc__caveats)
+
+---
+
+<a id="toc__install-ubuntu"></a>
+
 ## 1. Install Ubuntu
 
-Hit the Windows key, type `powershell`. Right-click on the *Windows PowerShell ISE* program, then click `Run as administrator`.
+We first need to enable the WSL feature in Windows. Hit the Windows key, type `powershell`. Right-click on the *Windows PowerShell ISE* program, then click `Run as administrator`.
 
 ![Open PowerShell as admin](assets/images/articles/wponwsl_run-powershell-as-admin.png)
 
@@ -51,7 +60,7 @@ When prompted, setup a UNIX username and password.
 
 ![Setup UNIX username and password](assets/images/articles/wponwsl_setup-unix-user-account.png)
 
-This should drop you into a bash shell, inside a command prompt. Let's immediately get Ubuntu updating, then we can go get a better terminal.
+This should drop you into a bash shell, inside a command prompt. Let's immediately get Ubuntu updating, then we can go get a better terminal while that runs.
 
 First things first, update Ubuntu and outdated packages.
 
@@ -65,21 +74,23 @@ Keep this window open until the process finishes.
 
 ---
 
+<a id="toc__better-terminal"></a>
+
 ## 2. Get a better terminal (optional)
 
 **This step is completely optional**, but recommended for a better experience. Skip this step if you're content with command prompt, otherwise leave that Ubuntu update running and let's get a better terminal.
 
 [Download Hyper](https://hyper.is/), install it, and run it.
 
+<div class="alert alert-warning">
+    <p>For more robust terminal configurations, <a href="http://cmder.net/">cmder</a> is an amazing option with a delightfully-opinionated configuration of <a href="https://conemu.github.io/">ConEmu</a>.</p>
+</div>
+
 Let's configure Hyper to always launch into an Ubunu shell. Click the `hamburger menu > Edit > Preferences` (or hit Ctrl+,).
 
 ![Open Hyper preferences](assets/images/articles/wponwsl_hyper-edit-preferences.png)
 
-<div class="alert alert-warning">
-    <p>If you need more robust terminal configurations, <a href="http://cmder.net/">cmder</a> is an amazing choice with a delightfully-opinionated configuration of ConEmu.</p>
-</div>
-
-Add this shell line into the config. Replace YOURUSER with your current Windows user name.
+Add this line into the config. Replace YOURUSER with your current Windows user name.
 
 ```javascript
 shell: 'C:\\Users\\YOURUSER\\AppData\\Local\\Microsoft\\WindowsApps\\ubuntu.exe',
@@ -91,21 +102,17 @@ Close and reopen Hyper, and you should see **UnixUsername@WindowsComputerName:~$
 
 ![Hyper opens in Ubuntu bash](assets/images/articles/wponwsl_hyper-in-ubuntu.png)
 
-<div class="alert alert-warning">
-    <p>Hint, to copy and paste within Hyper, use Ctrl+Shift+C and Ctrl+Shift+V respectively</p>
-</div>
-
 ---
+
+<a id="toc__lamp-stack"></a>
 
 ## 3. Setup a LAMP stack
 
-### Important, magic step
+The following setup is my suggestion based on numerous unsuccessful attempts; everything from one extreme of symlinking my entire Linux home folder to my Windows home directory (do not do this, things get weird) to the opposite extreme of treating Windows and Linux as 2 completely separate worlds and never sharing files between them (do not do this, you lose many benefits).
 
-Before we continue, the following setup is my opinion, and you are free to set up your LAMP stack however you please. I've followed several guides for this setup and have had to start over many times after getting backed into some weird corner; everything from one extreme of symlinking my entire Linux home folder to my Windows home directory (do not do this, things get weird) to the opposite extreme of treating Windows and Linux as 2 completely separate things and never sharing files between them (do not do this, you lose many benefits).
+I want Ubuntu to function exactly as it would on any other machine, and I want to be able to follow any Ubuntu-related guide on the internet without worrying about an atypical setup. And I also want the benefits of truly developing locally, like running `code somefolder` and having that folder open as a project in VS Code, and so forth. The whole point of WSL is that you are literally running a completely native command line Linux experience, but your base OS happens to be Windows.
 
-I want Ubuntu to function exactly as it would on any other machine, and I want to be able to follow any Ubuntu guide on the internet without worrying about an atypical setup. And I also want the benefits of truely developing locally, like running `code somefolder` and having that open as a project in VS Code, and so forth. The whole point of WSL is that you are literally running a completely native command line Linux experience, but your base OS happens to be Windows.
-
-Here's the thing: Microsoft says **Linux can modify Windows files**, but **Windows cannot modify Linux** files. So, my suggestion for accomplishing these goals is to keep everything for Ubuntu right where it gets installed (ssh keys, dotfiles, etc.), and then the only thing I'll have in Windows is a working project folder that can be referenced from Ubuntu. That working folder can hold files for any project, from PHP to Ruby to just about anything.
+Here's the thing: Microsoft says **Linux can modify Windows files**, but **Windows cannot modify Linux** files. So, my suggestion for accomplishing these goals is to keep everything for a native Ubuntu experience right where it gets installed (ssh keys, dotfiles, etc.), and then the only thing that lives in Windows is a working project folder that can be referenced from Ubuntu. That working folder will hold files for your projects, from PHP to Ruby to just about anything.
 
 ### Install LAMP stack
 
@@ -114,6 +121,9 @@ There are several ways to do this, but this method is easiest for me to remember
 ```shell
 sudo apt install -y lamp-server^
 ```
+<div class="alert alert-warning">
+    <p>Hint, to copy and paste within Hyper, use Ctrl+Shift+C and Ctrl+Shift+V respectively.</p>
+</div>
 
 When prompted, configure a MySQL root password.
 
@@ -123,11 +133,11 @@ Then, let's quickly test the installation. Spin up the Apache server...
 sudo service apache2 start
 ```
 
-Then visit [localhost](http://localhost) in your browser, and you should see the **Apache2 Ubuntu Default Page**.
+Visit [localhost](http://localhost) in your browser, and you should see the **Apache2 Ubuntu Default Page**.
 
 ![Apache2 Ubuntu Default Page](assets/images/articles/wponwsl_apache2-ubuntu-default-page.png)
 
-Let that sync in for a second. You just installed Apache in a Linux way on your Windows machine, and it's immediately available at localhost. You can even see *apache2* processes in Task Manager, and I think that's just swell.
+Let this sink in for a second. You just installed Apache in a Linux way on your Windows machine, and it's immediately available at localhost. You can even see *apache2* processes in Task Manager, and I think that's just swell.
 
 ![Apache2 running natively in Windows task manager](assets/images/articles/wponwsl_apache2-running-natively.png)
 
@@ -205,6 +215,7 @@ sudo service mysql start
 
 ---
 
+<a id="toc__wp-tools"></a>
 
 ## 4. Install helpful WordPress tools
 
@@ -219,7 +230,9 @@ Optional
 
 ---
 
-## Setup a vanilla WordPress site
+<a id="toc__vanilla-wp"></a>
+
+## 5. Setup a vanilla WordPress site
 
 This is the section that you'll have to repeat for every new WordPress site you want to setup. Google owns the `.dev` TLD now, so my sites use `.local` instead.
 
@@ -310,7 +323,9 @@ Now check out the site at [http://wordpress.local](http://wordpress.local) in yo
 
 ---
 
-## 5. Extra goodness
+<a id="toc__extra-goodness"></a>
+
+## 6. Extra goodness
 
 ### Configure terminal in Visual Studio Code
 
@@ -326,6 +341,8 @@ I can't do any better than this article by [Digital Ocean](https://www.digitaloc
 
 ---
 
-## 6. Caveats
+<a id="toc__caveats"></a>
+
+## 7. Caveats
 
 * You can do things like `code .zshrc` to open a Linux file in a Windows program (VSCode, in this case). But I have not figured out how to do this on files that belong to the root user, such as apache configs. My current workflow for edits needing sudo is to use vim, and you've seen some of that in this guide.
