@@ -4,10 +4,18 @@
 article#article-single role="main"
 
   // Published status
+  // Status: draft
   - if current_page.data.published === false
     time.time ☒ Not published (<strong>draft</strong>)
+  // Status: modified
+  - elsif !current_page.data.date_updated.nil?
+    time.time pubdate="pubdate" datetime="#{current_page.date}"
+      del.modified-time Published #{current_page.date.strftime('%B %d, %Y')}
+      |&ensp;Updated #{current_page.data.date_updated}
+  // Status: published
   - else
-    time.time pubdate="pubdate" datetime="#{current_page.data.date}" Published #{current_page.date.strftime('%B %d, %Y')}
+    // Published
+    time.time pubdate="pubdate" datetime="#{current_page.date}" Published #{current_page.date.strftime('%B %d, %Y')}
 
   hr
   

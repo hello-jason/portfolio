@@ -6,7 +6,9 @@
   font-size: $font-size-small;
   text-decoration: underline;
 }
-
+.modified-time {
+  opacity: 0.4;
+}
 
 article#article-single {
   @extend .container;
