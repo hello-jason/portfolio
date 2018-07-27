@@ -15,10 +15,13 @@ section#article-list
         a href="#{article.url}" title="#{article.title}"
           .content
             h1.post-title <span>#{article.title}</span>
+            // Article summary
             - if article.data.article_summary
               p.post-summary #{article.data.article_summary}
+            // Published status
             - if article.data.published === false
               time.time ☒ Not published (<strong>draft</strong>)
             - else
               time.time pubdate="pubdate" datetime="#{article.date}" Published #{article.date.strftime('%B %d, %Y')}
+            // Graphical ornament
             = partial "#{config.images_dir}/icon-arrow-downright.svg"

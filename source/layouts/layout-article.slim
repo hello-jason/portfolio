@@ -3,12 +3,11 @@
 
 article#article-single role="main"
 
-  // Sort out Published vs Updated dates
-  - if current_page.data.date
+  // Published status
+  - if current_page.data.published === false
+    time.time ☒ Not published (<strong>draft</strong>)
+  - else
     time.time pubdate="pubdate" datetime="#{current_page.data.date}" Published #{current_page.date.strftime('%B %d, %Y')}
-
-  - if current_page.data.date_updated
-    time.time pubdate="pubdate" datetime="#{current_page.data.date_updated}" (updated #{current_page.data.date_updated.strftime('%B %d, %Y')})
 
   hr
   
