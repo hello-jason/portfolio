@@ -15,10 +15,21 @@ section#article-list
         a href="#{article.url}" title="#{article.title}"
           .content
             h1.post-title <span>#{article.title}</span>
+            // Article summary
             - if article.data.article_summary
               p.post-summary #{article.data.article_summary}
+            // Published status
+            // Status: draft
             - if article.data.published === false
               time.time ☒ Not published (<strong>draft</strong>)
+            // Status: modified
+            - elsif !article.data.date_updated.nil?
+              time.time pubdate="pubdate" datetime="#{article.date}"
+                del.modified-time Published #{article.date.strftime('%B %d, %Y')}
+                |&ensp;Updated #{article.data.date_updated}
+            // Status: published
             - else
+              // Published
               time.time pubdate="pubdate" datetime="#{article.date}" Published #{article.date.strftime('%B %d, %Y')}
+            // Graphical ornament
             = partial "#{config.images_dir}/icon-arrow-downright.svg"

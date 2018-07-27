@@ -78,7 +78,7 @@ The following options are available in frontmatter:
 * priority: 0.0 to 1.0 (default 0.5)
 * changefreq: always/hourly/daily/weekly/monthly/yearly/never (default: monthly)
 * date: 2015-03-28 19:29 CDT
-* date_updated: 2015-03-28 19:29 CDT
+* date_updated: July 27, 2018
 * article_summary: String, summary of blog article used in blog archive list
 * published: false (default: true)
 
