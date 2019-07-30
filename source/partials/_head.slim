@@ -56,7 +56,9 @@ html
       title #{config.site_title}
 
     // Check if page is overriding meta description in frontmatter, otherwise use default set in config.rb
-    - if current_page.data.meta_description
+    - if current_page.data.article_summary
+      meta content="#{current_page.data.article_summary}" name="description"
+    - elsif current_page.data.meta_description
       meta content="#{current_page.data.meta_description}" name="description"
     - else
       meta content="#{config.site_description}" name="description"
