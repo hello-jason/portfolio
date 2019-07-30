@@ -34,15 +34,12 @@ GEM
       sass (>= 3.2, < 3.5)
     concurrent-ruby (1.0.5)
     contracts (0.13.0)
-    docile (1.1.5)
     dotenv (2.2.0)
     erubis (2.7.0)
     execjs (2.7.0)
     exifr (1.2.5)
     fast_blank (1.0.0)
     fastimage (2.1.0)
-    favicon_maker (1.3.1)
-      docile (~> 1.1)
     ffi (1.9.18)
     fspath (2.1.1)
     haml (4.0.7)
@@ -113,9 +110,6 @@ GEM
       middleman-core (>= 3.2)
       net-sftp
       ptools
-    middleman-favicon-maker (4.0.4)
-      favicon_maker (~> 1.3, >= 1.3.1)
-      middleman-core (~> 4.0)
     middleman-minify-html (3.4.1)
       htmlcompressor (~> 0.2.0)
       middleman-core (>= 3.2)
@@ -178,7 +172,6 @@ DEPENDENCIES
   middleman-autoprefixer (~> 2.7.1)
   middleman-blog (~> 4.0.1)
   middleman-deploy (~> 2.0.0.pre.alpha)
-  middleman-favicon-maker (~> 4.0.4)
   middleman-imageoptim!
   middleman-minify-html (~> 3.4.1)
   middleman-sprockets (~> 4.1.0)
@@ -192,4 +185,4 @@ DEPENDENCIES
   wdm (~> 0.1)
 
 BUNDLED WITH
-   1.14.6
+   1.16.2
