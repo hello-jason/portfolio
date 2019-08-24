@@ -76,6 +76,7 @@ end
 # Pretty URLs
 # This must be activated AFTER the blog extension
 activate :directory_indexes
+page "/404.html", :directory_index => false
 
 
 # ========================================================================
