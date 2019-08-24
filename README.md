@@ -106,7 +106,7 @@ bundle exec rake deploy:staging
 
 **Production**
 
-Builds project, runs uncss, then pushes to branch `gh-pages`
+Builds project, runs uncss, then pushes to branch `gh-pages`. After site builds, you must type `yes` to confirm the deploy.
 
 ```bash
 bundle exec rake deploy:production
