@@ -67,8 +67,11 @@ body.index {
     .title {
       font-size: 24vw;
       letter-spacing: -0.065em;
+      @media (min-width: $screen-md-min) {
+        font-size: 15rem;
+      }
       @media (min-width: $screen-lg-min) {
-        // font-size: 24rem;
+        font-size: 24rem;
         padding-top: 16rem;
       }
     }
