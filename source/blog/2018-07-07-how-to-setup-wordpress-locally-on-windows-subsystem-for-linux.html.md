@@ -3,7 +3,7 @@ title: How to setup WordPress locally on Windows Subsystem for Linux
 hero_image: wponwsl_hero.png
 hero_alt: How to setup WordPress locally on Windows Subsystem for Linux
 date: 2018-07-07 16:23 CDT
-date_updated:
+date_updated: August 24, 2019
 article_summary: For web developers on Windows who prefer the command line and want to avoid virtual machines.
 ---
 
@@ -81,6 +81,10 @@ Keep this window open until the process finishes.
 [Download Hyper](https://hyper.is/), install it, and run it.
 
 <div class="alert alert-warning">
+    <p>Microsoft is finally building a useful Windows Terminal! You can <a href="https://www.microsoft.com/en-us/p/windows-terminal-preview/9n0dx20hk701?activetab=pivot:overviewtab">download the preview</a> from the Microsoft Store. I'm sure I will switch to this when it's more stable.</p>
+</div>
+
+<div class="alert alert-warning">
     <p>For more robust terminal configurations, <a href="http://cmder.net/">cmder</a> is an amazing option with a delightfully-opinionated configuration of <a href="https://conemu.github.io/">ConEmu</a>.</p>
 </div>
 
@@ -141,7 +145,7 @@ Let this sink in for a second. You just installed Apache, in a Linux way, on you
 
 ### Configure Apache
 
-We need to create a folder for our projects to live in, then tell Apache about that folder so it knows to look for websites. This project folder will live in Windows.
+We need to create a folder for our projects to live in, then tell Apache about that folder so it knows where to look for websites. This project folder will live in Windows.
 
 Create a folder directly on your `C:\` drive called `Sites`.
 
@@ -153,7 +157,7 @@ mkdir /mnt/c/Sites
     <p>This folder will be readily available to Windows text editors and so forth, while also being available to Linux via the path <em>/mnt/c/Sites</em>. You can place it somewhere else if you prefer, like into your Windows user home directory, but things may get funky if your username has a space or strange character in it.</p>
 </div>
 
-Now lets tell Apache to serve files from our new folder. Open `apache2.conf` in your favorite editor.
+Now let's tell Apache to serve files from our new folder. Open `apache2.conf` in your favorite editor.
 
 ```shell
 sudo vim /etc/apache2/apache2.conf
@@ -272,7 +276,7 @@ C:\Windows\System32\drivers\etc\hosts
 
 ![Open Windows hosts file](assets/images/articles/wponwsl_open-windows-hosts.png)
 
-Add the following line to the bottom of the file. Note, using `127.0.0.1` is important here; `localhost` will not work.
+Add the following line to the bottom of the file. Using `127.0.0.1` is important here; `localhost` will not work.
 
 ```text
 # Windows Subsytem for Linux
