@@ -34,6 +34,6 @@ gem "therubyracer", "~> 0.12.3"
 gem "oj", "~> 3.0.5"
 
 # Deploying
-gem "rake", "~> 12.0.0"
+gem "rake", "~> 12.3.3"
 gem "middleman-deploy", "~> 2.0.0.pre.alpha"
 gem "builder", "~> 3.2.3"
