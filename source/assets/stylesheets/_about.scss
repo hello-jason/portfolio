@@ -7,11 +7,23 @@ body.about_index {
   }
   .job__role {
     font-size: $font-size-small;
-    margin-bottom: ($jason-space / 2);
-    color: lighten($text-color, 15%);
+    margin-top: ($jason-space / 2);
+    margin-bottom: 0;
+    color: darken($brand-primary, 25%);
     font-style: italic;
+    & + p {
+      // color: red;
+    }
   }
   h3 {
     margin-top: ($jason-space * 3);
+  }
+  .job__links {
+    a {
+      @media (max-width: $screen-sm-min) {
+        display: block;
+        line-height: 0em;
+      }
+    }
   }
 }

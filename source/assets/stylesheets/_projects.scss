@@ -75,6 +75,14 @@ figure.iphone6 {
       z-index: 2;
       color: #fff;
       @include transition(opacity .5s);
+      @media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+        h3 {
+          font-size: $font-size-h4;
+        }
+        .view {
+          font-size: $font-size-small;
+        }
+      }
     }
   }
 }

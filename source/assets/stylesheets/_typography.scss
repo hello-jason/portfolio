@@ -60,3 +60,17 @@ a[href*="//"]:not([href*="hellojason.net"]) {
     color: inherit;
   }
 }
+
+.section-heading {
+  @extend .col-md-4;
+  text-align: right;
+  @media (max-width: $screen-md-min) {
+    text-align: left;
+  }
+  h2 {
+    text-transform: uppercase;
+    @media (max-width: $screen-sm-min) {
+      font-size: $font-size-h3;
+    }
+  }
+}

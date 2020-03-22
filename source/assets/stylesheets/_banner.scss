@@ -19,8 +19,10 @@
     margin: 0;
     padding: 0.325em 0 0;
     text-shadow: 9px 7px 16px rgba(110,11,179,0.6);
+    text-align: center;
     @media (min-width: $screen-sm-min) {
       letter-spacing: -0.065em;
+      text-align: left;
     }
     @media (min-width: $screen-lg-min) {
       font-size: 8rem;
@@ -67,6 +69,7 @@ body.index {
     .title {
       font-size: 24vw;
       letter-spacing: -0.065em;
+      text-align: center;
       @media (min-width: $screen-md-min) {
         font-size: 15rem;
       }

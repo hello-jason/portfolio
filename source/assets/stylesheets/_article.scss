@@ -46,6 +46,9 @@ article#article-single {
       display: block;
       @include transition(color 0.25s);
       font-size: $font-size-h2;
+      @media screen and (max-width: $screen-sm-min) {
+        font-size: $font-size-h3;
+      }
       font-weight: normal;
       color: $brand-primary;
       span {
