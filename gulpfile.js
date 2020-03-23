@@ -1,18 +1,27 @@
-var gulp   = require('gulp'); // core gulp
-var uncss  = require('gulp-uncss'); // removes unused css
-var csso   = require('gulp-csso'); // minify css
-var gzip   = require('gulp-gzip'); // gzip compression
+// Variables
+var gulp = require('gulp');
+var postcss = require('gulp-postcss');
+var uncss = require('postcss-uncss'); // remove unused css
+var csso = require('gulp-csso'); // minify css
+var gzip = require('gulp-gzip'); // gzip compression
 
-gulp.task('uncss', function() {
-  return gulp.src('build/assets/stylesheets/**/*.css')
-    .pipe(uncss({
-        html: ['build/**/*.html']
-    }))
+// Tasks
+gulp.task('stylesheets', function () {
+  var plugins = [
+    uncss({
+      html: ['./build/**/*.html']
+    }),
+  ];
+  return gulp.src('./build/assets/stylesheets/**/*.css')
+    // uncss
+    .pipe(postcss(plugins))
+    // minify
     .pipe(csso())
     .pipe(gulp.dest('./build/assets/stylesheets'))
+    // gzip
     .pipe(gzip())
     .pipe(gulp.dest('./build/assets/stylesheets'));
 });
 
-// Scan site, remove unused css, minifiy css, gzip css
-gulp.task('buildcss', ['uncss']);
+// // Scan site, remove unused css, minifiy css, gzip css
+gulp.task('buildcss', ['stylesheets']);
