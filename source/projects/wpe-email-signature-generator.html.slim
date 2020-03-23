@@ -36,7 +36,23 @@ section#project-single
     p Once the functionality and fields were locked in, I designed a proper interface for the signature generator. My primary focus was to teach the user how to use the tool via the layout, so there would be as little friction as possible with adoption of the new signatures across the company.
 
     = project_image "Email signature generator design", "emailsig-design-full.jpg", "border"
+    
+    hr
 
+    h2 Improvements (2019 update)
+    
+    h3 Easier maintenance
+    p Maintaining this app has been a challenge. I wrote it quickly using jQuery during a hackathon, and it was deployed before refactoring. Basic tasks, like adding a new office location, were cumbersome to complete. So, I decided to use another hackathon to solve that problem by swapping to a JavaScript framework with native data binding.
+    
+    p Early attempts to use React proved difficult, since it wants you to write your app from scratch in that framework. Instead, I implemented VueJS and transitioned each form field over to it, one at a time. I knocked it out in 2 days, updated the documentation, and now it's much easier for any developer on the team to make changes to the project.
+    
+    h3 Inclusion
+    p WP Engine has an internal community called Engine For Good, which allows employees to create community groups that are important to us. I partnered with our Pride group to add gender pronouns to our company email signatures, hoping to encourage openness and normalcy around how individuals want to be identified.
+    
+    = project_image "Gender pronouns in email signature", "emailsig-gender-pronouns.jpg", "border"
+    
+    hr
+    
     h2 Check it out
 
     p Try the tool at <a href="http://wpeng.in/signature">http://wpeng.in/signature</a>
