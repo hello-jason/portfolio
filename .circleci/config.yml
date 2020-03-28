@@ -1,0 +1,30 @@
+version: 2
+
+jobs:
+  build:
+    docker:
+      - image: circleci/ruby:2.6.5-node
+
+    steps:
+      - checkout
+
+      - run:
+          name: Install Ruby dependencies
+          working_directory: template
+          command: bundle install
+
+      - run:
+          name: Install npm dependencies
+          working_directory: template
+          command: npm install
+
+      - run:
+          name: Setup the environment
+          working_directory: template
+          command: cp .env.sample .env
+
+      - run:
+          name: Build Middleman site
+          working_directory: template
+          command: bundle exec rake deploy:staging
+          
