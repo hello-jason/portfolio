@@ -1,5 +1,11 @@
 footer#footer
 // Load Codepen's JS if this page needs it
-- if current_page.data.has_codepen = true
+- if current_page.data.has_codepen == true
   = javascript_include_tag '//assets.codepen.io/assets/embed/ei.js', :async => true
-= javascript_include_tag 'site'
+  
+// Load gallery JS if this page needs it
+- if current_page.data.has_gallery == true
+  <script>console.log("has gallery");</script>
+  <link rel="stylesheet" href="https://gitcdn.link/repo/blueimp/Gallery/master/css/blueimp-gallery.min.css">
+  <script src="https://gitcdn.link/repo/blueimp/Gallery/master/js/blueimp-gallery.min.js"></script>
+  = javascript_include_tag 'site'
