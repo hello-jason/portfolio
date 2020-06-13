@@ -63,11 +63,11 @@ build/assets/images/articles/vs-bash-on-ubuntu-on-windows.png: 2019-08-31 22:22:
   -05:00
 build/assets/images/articles/vs-clover-explorer.png: 2019-08-31 22:22:28.310833100
   -05:00
-build/assets/images/articles/vs-cmd-road-sign-h22.svg: 2020-06-12 23:31:28.134653100
+build/assets/images/articles/vs-cmd-road-sign-h22.svg: 2020-06-12 23:42:45.618368100
   -05:00
 build/assets/images/articles/vs-copy-as-path.png: 2019-08-31 22:22:25.904784100 -05:00
 build/assets/images/articles/vs-delete-key.jpg: 2019-08-31 22:22:25.421434400 -05:00
-build/assets/images/articles/vs-evoluent-mouse.png: 2019-08-31 22:22:36.535991600
+build/assets/images/articles/vs-evoluent-mouse.png: 2020-06-12 23:42:52.288936700
   -05:00
 build/assets/images/articles/vs-install-fonts.png: 2019-08-31 22:22:34.904797200 -05:00
 build/assets/images/articles/vs-jump-list.png: 2019-08-31 22:22:42.868148200 -05:00
@@ -79,7 +79,7 @@ build/assets/images/articles/vs-new-file-context.png: 2019-08-31 22:22:38.419015
   -05:00
 build/assets/images/articles/vs-photoshop-dropdowns.gif: 2019-08-31 22:22:36.267709500
   -05:00
-build/assets/images/articles/vs-sneak-peak.png: 2019-08-31 22:22:37.077603500 -05:00
+build/assets/images/articles/vs-sneak-peak.png: 2020-06-12 23:43:03.533138700 -05:00
 build/assets/images/articles/vs-titlebars.png: 2019-08-31 22:22:40.840596400 -05:00
 build/assets/images/articles/vs-window-buttons.png: 2019-08-31 22:22:39.955901000
   -05:00
@@ -87,7 +87,7 @@ build/assets/images/articles/wordpress-roots-stack.jpg: 2019-08-31 22:22:40.8155
   -05:00
 build/assets/images/articles/wponwsl_apache-conf-sites-block.png: 2019-08-31 22:22:44.512378400
   -05:00
-build/assets/images/articles/wponwsl_apache-virtualhost-config.png: 2019-08-31 22:22:45.056481700
+build/assets/images/articles/wponwsl_apache-virtualhost-config.png: 2020-06-12 23:43:11.365843400
   -05:00
 build/assets/images/articles/wponwsl_apache2-running-natively.png: 2019-08-31 22:22:53.276180300
   -05:00
@@ -104,7 +104,7 @@ build/assets/images/articles/wponwsl_hyper-edit-preferences.png: 2019-08-31 22:2
   -05:00
 build/assets/images/articles/wponwsl_hyper-in-ubuntu.png: 2019-08-31 22:22:52.837249700
   -05:00
-build/assets/images/articles/wponwsl_hyper-shell-config.png: 2019-08-31 22:23:01.626401000
+build/assets/images/articles/wponwsl_hyper-shell-config.png: 2020-06-12 23:43:33.828990800
   -05:00
 build/assets/images/articles/wponwsl_install-ubuntu.png: 2019-08-31 22:23:09.420542300
   -05:00
@@ -114,13 +114,13 @@ build/assets/images/articles/wponwsl_run-notepad-as-admin.png: 2019-08-31 22:23:
   -05:00
 build/assets/images/articles/wponwsl_run-powershell-as-admin.png: 2019-08-31 22:23:08.165900400
   -05:00
-build/assets/images/articles/wponwsl_setup-unix-user-account.png: 2019-08-31 22:23:01.092829800
+build/assets/images/articles/wponwsl_setup-unix-user-account.png: 2020-06-12 23:43:32.177894100
   -05:00
-build/assets/images/articles/wponwsl_ubuntu-in-windows-store.png: 2019-08-31 22:23:15.449804300
+build/assets/images/articles/wponwsl_ubuntu-in-windows-store.png: 2020-06-12 23:43:44.176270500
   -05:00
 build/assets/images/articles/wponwsl_ubuntu-installer-running.png: 2019-08-31 22:23:12.730163500
   -05:00
-build/assets/images/articles/wponwsl_ubuntu-upgrade-process.png: 2019-08-31 22:23:08.697477200
+build/assets/images/articles/wponwsl_ubuntu-upgrade-process.png: 2020-06-12 23:43:38.148326300
   -05:00
 build/assets/images/articles/wponwsl_wordpress-install-screen.png: 2019-08-31 22:23:26.740528200
   -05:00
@@ -234,13 +234,13 @@ build/assets/images/logo-apple.svg: 2020-06-12 23:32:06.208363300 -05:00
 build/assets/images/logo-windows-10.svg: 2020-06-12 23:32:06.255226900 -05:00
 build/assets/images/projects/contact-mover/appicon-app-store.png: 2019-08-31 22:23:17.173254000
   -05:00
-build/assets/images/projects/contact-mover/appicon-contact-mover-v1.png: 2019-08-31
-  22:23:19.949589400 -05:00
+build/assets/images/projects/contact-mover/appicon-contact-mover-v1.png: 2020-06-12
+  23:43:50.801068800 -05:00
 build/assets/images/projects/contact-mover/appicon-contact-mover-v2.png: 2019-08-31
   22:23:19.534933900 -05:00
 build/assets/images/projects/contact-mover/contact-mover-public-site.jpg: 2019-08-31
   22:21:49.710201500 -05:00
-build/assets/images/projects/contact-mover/contact-mover-v1-ui.png: 2019-08-31 22:23:29.546371600
+build/assets/images/projects/contact-mover/contact-mover-v1-ui.png: 2020-06-12 23:44:03.645960000
   -05:00
 build/assets/images/projects/contact-mover/contact-mover-v2-icon.png: 2019-08-31 22:23:18.301173900
   -05:00
@@ -248,7 +248,7 @@ build/assets/images/projects/contact-mover/contact-mover-v2-wireframes.jpg: 2019
   22:21:49.711199300 -05:00
 build/assets/images/projects/contact-mover/hero-bkg-skytrees.jpg: 2019-08-31 22:21:49.714190600
   -05:00
-build/assets/images/projects/contact-mover/immense-networks-logo.svg: 2020-06-12 23:32:07.572931600
+build/assets/images/projects/contact-mover/immense-networks-logo.svg: 2020-06-12 23:43:50.741283200
   -05:00
 build/assets/images/projects/contact-mover/person-andrew-frederick.jpg: 2019-08-31
   22:21:49.713193300 -05:00
@@ -381,9 +381,9 @@ build/assets/images/projects/monitor-right-thinkprint3d-comingsoon.jpg: 2019-08-
 build/assets/images/projects/mowtell-about.jpg: 2019-08-31 22:23:28.030118700 -05:00
 build/assets/images/projects/pfsync/feature-how-it-works.png: 2019-08-31 22:23:30.765941500
   -05:00
-build/assets/images/projects/pfsync/immense-networks-logo.svg: 2020-06-12 23:32:16.049784200
+build/assets/images/projects/pfsync/immense-networks-logo.svg: 2020-06-12 23:44:06.075584500
   -05:00
-build/assets/images/projects/pfsync/logo-activesync.svg: 2020-06-12 23:32:17.085897500
+build/assets/images/projects/pfsync/logo-activesync.svg: 2020-06-12 23:44:06.851625600
   -05:00
 build/assets/images/projects/pfsync/logo-pfsync.svg: 2020-06-12 23:32:17.600124500
   -05:00
@@ -391,7 +391,7 @@ build/assets/images/projects/pfsync/pfsync-account-management.jpg: 2019-08-31 22
   -05:00
 build/assets/images/projects/pfsync/pfsync-brand-breakdown.jpg: 2019-08-31 22:21:49.844873300
   -05:00
-build/assets/images/projects/pfsync/pfsync-hero.png: 2019-08-31 22:24:54.097123400
+build/assets/images/projects/pfsync/pfsync-hero.png: 2020-06-12 23:45:17.422139000
   -05:00
 build/assets/images/projects/pfsync/pfsync-public-site-overview.jpg: 2019-08-31 22:21:49.846838000
   -05:00
@@ -446,10 +446,10 @@ build/assets/images/projects/tool-tracker/person-christopher-mcknight.jpg: 2019-
   22:21:49.895704800 -05:00
 build/assets/images/projects/tool-tracker/tool-tracker-batch-transfer.jpg: 2019-08-31
   22:23:35.276241000 -05:00
-build/assets/images/projects/tool-tracker/tool-tracker-linea-pro.png: 2019-08-31 22:23:36.160389000
+build/assets/images/projects/tool-tracker/tool-tracker-linea-pro.png: 2020-06-12 23:44:27.097211800
   -05:00
-build/assets/images/projects/tool-tracker/tool-tracker-logo-and-appicon.png: 2019-08-31
-  22:23:39.500016600 -05:00
+build/assets/images/projects/tool-tracker/tool-tracker-logo-and-appicon.png: 2020-06-12
+  23:44:24.332869000 -05:00
 build/assets/images/projects/tool-tracker/tool-tracker-signin-registration.jpg: 2019-08-31
   22:23:36.112518500 -05:00
 build/assets/images/projects/tool-tracker/viewpoint-logo.png: 2019-08-31 22:23:37.457430800
@@ -458,7 +458,7 @@ build/assets/images/projects/tp3d-home.jpg: 2019-08-31 22:23:38.779891900 -05:00
 build/assets/images/projects/velocitize-home.jpg: 2019-08-31 22:23:39.201764000 -05:00
 build/assets/images/projects/velocitize-logo-slide.gif: 2019-08-31 22:23:40.591096200
   -05:00
-build/assets/images/projects/velocitize-newsletter.png: 2019-08-31 22:24:22.985528600
+build/assets/images/projects/velocitize-newsletter.png: 2020-06-12 23:45:10.371660200
   -05:00
 build/assets/images/projects/velocitize-singlepost.jpg: 2019-08-31 22:23:42.063104800
   -05:00
