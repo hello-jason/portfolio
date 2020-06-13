@@ -17,11 +17,11 @@
   },
   "homepage": "https://github.com/hello-jason/portfolio",
   "devDependencies": {
-    "gulp": "3.9.1",
+    "gulp": "4.0.2",
     "gulp-csso": "^4.0.1",
     "gulp-gzip": "^1.4.2",
     "gulp-postcss": "^8.0.0",
-    "jquery": "3.2.1",
+    "jquery": "^3.5.1",
     "layzr.js": "2.2.2",
     "lightcase": "2.4.0",
     "postcss-uncss": "^0.17.0",
