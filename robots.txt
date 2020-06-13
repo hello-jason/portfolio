@@ -1,0 +1,7 @@
+User-agent: *
+Sitemap: http://hellojason.net/sitemap.xml
+Disallow: /assets/fonts/
+Disallow: /portfolio/index.html
+Disallow: /portfolio/index.html.gz
+Disallow: /imageoptim.manifest.yml
+Disallow: /CNAME

@@ -1,0 +1,582 @@
+---
+build/android-chrome-192x192.png: 2019-08-31 22:21:54.772813000 -05:00
+build/android-chrome-256x256.png: 2019-08-31 22:21:55.757183500 -05:00
+build/apple-touch-icon.png: 2019-08-31 22:21:54.537443900 -05:00
+build/assets/images/1140x334.png: 2019-08-31 22:21:56.560547500 -05:00
+build/assets/images/arrow-downright.svg: 2020-06-12 23:31:05.432922500 -05:00
+build/assets/images/articles/7-9-2010-5-53-01-PMn.png: 2019-08-31 22:21:54.387885400
+  -05:00
+build/assets/images/articles/7-9-2010-5-53-22-PMn.png: 2019-08-31 22:22:02.770917400
+  -05:00
+build/assets/images/articles/7-9-2010-5-55-45-PMn.png: 2019-08-31 22:22:28.878286800
+  -05:00
+build/assets/images/articles/7-9-2010-5-56-48-PMn.png: 2019-08-31 22:22:09.368639600
+  -05:00
+build/assets/images/articles/7-9-2010-5-57-57-PMn.png: 2019-08-31 22:21:57.971507500
+  -05:00
+build/assets/images/articles/7-9-2010-6-07-14-PMn.png: 2019-08-31 22:21:57.360113500
+  -05:00
+build/assets/images/articles/7-9-2010-6-07-58-PMn.png: 2019-08-31 22:21:57.371083500
+  -05:00
+build/assets/images/articles/7-9-2010-6-11-42-PMn.png: 2019-08-31 22:21:58.022340300
+  -05:00
+build/assets/images/articles/7-9-2010-6-17-21-PMn.png: 2019-08-31 22:21:58.989866600
+  -05:00
+build/assets/images/articles/7-9-2010-6-30-40-PMn.png: 2019-08-31 22:22:16.428081300
+  -05:00
+build/assets/images/articles/7-9-2010-6-54-27-PMn.png: 2019-08-31 22:22:16.657433400
+  -05:00
+build/assets/images/articles/7-9-2010-6-57-04-PMn.png: 2019-08-31 22:22:09.976012700
+  -05:00
+build/assets/images/articles/bedrock-wordpress-deploy-to-wp-engine.jpg: 2019-08-31
+  22:21:58.662741600 -05:00
+build/assets/images/articles/bootstrap-purple-field.gif: 2019-08-31 22:21:49.990451200
+  -05:00
+build/assets/images/articles/headless-virtualbox-vm.jpg: 2019-08-31 22:21:49.557610600
+  -05:00
+build/assets/images/articles/hero-imagemagick-update-centos-rpm.jpg: 2019-08-31 22:21:59.291118700
+  -05:00
+build/assets/images/articles/hero-magento-free-shipping-specific-products.jpg: 2019-08-31
+  22:21:59.432169800 -05:00
+build/assets/images/articles/hero-mustang-project.jpg: 2019-08-31 22:21:59.539881500
+  -05:00
+build/assets/images/articles/hero-nitpicky-os-differences.jpg: 2019-08-31 22:21:59.660469000
+  -05:00
+build/assets/images/articles/magento-00n.png: 2019-08-31 22:22:12.156178300 -05:00
+build/assets/images/articles/magento-01n.png: 2019-08-31 22:22:00.928136000 -05:00
+build/assets/images/articles/magento-02n.png: 2019-08-31 22:22:16.238555300 -05:00
+build/assets/images/articles/magento-04n.png: 2019-08-31 22:22:11.033184700 -05:00
+build/assets/images/articles/magento-051n.png: 2019-08-31 22:22:23.400898300 -05:00
+build/assets/images/articles/magento-06n.png: 2019-08-31 22:22:31.566154600 -05:00
+build/assets/images/articles/magento-07n.png: 2019-08-31 22:22:21.622146200 -05:00
+build/assets/images/articles/magento-08n.png: 2019-08-31 22:22:37.037709900 -05:00
+build/assets/images/articles/magento-09n.png: 2019-08-31 22:22:22.051039400 -05:00
+build/assets/images/articles/magento-11n.png: 2019-08-31 22:22:33.960979600 -05:00
+build/assets/images/articles/portfolio-after-uncss.jpg: 2019-08-31 22:22:23.069272500
+  -05:00
+build/assets/images/articles/portfolio-before-uncss.jpg: 2019-08-31 22:22:23.308632300
+  -05:00
+build/assets/images/articles/vs-address-full-path.png: 2019-08-31 22:22:24.888479800
+  -05:00
+build/assets/images/articles/vs-alfred-logo.png: 2019-08-31 22:22:24.567792000 -05:00
+build/assets/images/articles/vs-bash-on-ubuntu-on-windows.png: 2019-08-31 22:22:37.262110600
+  -05:00
+build/assets/images/articles/vs-clover-explorer.png: 2019-08-31 22:22:28.310833100
+  -05:00
+build/assets/images/articles/vs-cmd-road-sign-h22.svg: 2020-06-12 23:31:28.134653100
+  -05:00
+build/assets/images/articles/vs-copy-as-path.png: 2019-08-31 22:22:25.904784100 -05:00
+build/assets/images/articles/vs-delete-key.jpg: 2019-08-31 22:22:25.421434400 -05:00
+build/assets/images/articles/vs-evoluent-mouse.png: 2019-08-31 22:22:36.535991600
+  -05:00
+build/assets/images/articles/vs-install-fonts.png: 2019-08-31 22:22:34.904797200 -05:00
+build/assets/images/articles/vs-jump-list.png: 2019-08-31 22:22:42.868148200 -05:00
+build/assets/images/articles/vs-multiple-files.png: 2019-08-31 22:22:44.239109400
+  -05:00
+build/assets/images/articles/vs-multiple-monitors.png: 2019-08-31 22:22:39.656701800
+  -05:00
+build/assets/images/articles/vs-new-file-context.png: 2019-08-31 22:22:38.419015700
+  -05:00
+build/assets/images/articles/vs-photoshop-dropdowns.gif: 2019-08-31 22:22:36.267709500
+  -05:00
+build/assets/images/articles/vs-sneak-peak.png: 2019-08-31 22:22:37.077603500 -05:00
+build/assets/images/articles/vs-titlebars.png: 2019-08-31 22:22:40.840596400 -05:00
+build/assets/images/articles/vs-window-buttons.png: 2019-08-31 22:22:39.955901000
+  -05:00
+build/assets/images/articles/wordpress-roots-stack.jpg: 2019-08-31 22:22:40.815599000
+  -05:00
+build/assets/images/articles/wponwsl_apache-conf-sites-block.png: 2019-08-31 22:22:44.512378400
+  -05:00
+build/assets/images/articles/wponwsl_apache-virtualhost-config.png: 2019-08-31 22:22:45.056481700
+  -05:00
+build/assets/images/articles/wponwsl_apache2-running-natively.png: 2019-08-31 22:22:53.276180300
+  -05:00
+build/assets/images/articles/wponwsl_apache2-ubuntu-default-page.png: 2019-08-31 22:22:52.223965800
+  -05:00
+build/assets/images/articles/wponwsl_cmd-installing-ubuntu.png: 2019-08-31 22:22:51.545780700
+  -05:00
+build/assets/images/articles/wponwsl_download-ubuntu.png: 2019-08-31 22:22:44.375743900
+  -05:00
+build/assets/images/articles/wponwsl_enable-wsl.png: 2019-08-31 22:22:52.821667800
+  -05:00
+build/assets/images/articles/wponwsl_hero.png: 2019-08-31 22:22:52.455347600 -05:00
+build/assets/images/articles/wponwsl_hyper-edit-preferences.png: 2019-08-31 22:22:55.344215100
+  -05:00
+build/assets/images/articles/wponwsl_hyper-in-ubuntu.png: 2019-08-31 22:22:52.837249700
+  -05:00
+build/assets/images/articles/wponwsl_hyper-shell-config.png: 2019-08-31 22:23:01.626401000
+  -05:00
+build/assets/images/articles/wponwsl_install-ubuntu.png: 2019-08-31 22:23:09.420542300
+  -05:00
+build/assets/images/articles/wponwsl_open-windows-hosts.png: 2019-08-31 22:23:06.826484200
+  -05:00
+build/assets/images/articles/wponwsl_run-notepad-as-admin.png: 2019-08-31 22:23:07.439901900
+  -05:00
+build/assets/images/articles/wponwsl_run-powershell-as-admin.png: 2019-08-31 22:23:08.165900400
+  -05:00
+build/assets/images/articles/wponwsl_setup-unix-user-account.png: 2019-08-31 22:23:01.092829800
+  -05:00
+build/assets/images/articles/wponwsl_ubuntu-in-windows-store.png: 2019-08-31 22:23:15.449804300
+  -05:00
+build/assets/images/articles/wponwsl_ubuntu-installer-running.png: 2019-08-31 22:23:12.730163500
+  -05:00
+build/assets/images/articles/wponwsl_ubuntu-upgrade-process.png: 2019-08-31 22:23:08.697477200
+  -05:00
+build/assets/images/articles/wponwsl_wordpress-install-screen.png: 2019-08-31 22:23:26.740528200
+  -05:00
+build/assets/images/cars/mustang_0001.jpg: 2019-08-31 22:23:10.050991200 -05:00
+build/assets/images/cars/mustang_0002.jpg: 2019-08-31 22:23:10.207435400 -05:00
+build/assets/images/cars/mustang_0003.jpg: 2019-08-31 22:23:10.497516800 -05:00
+build/assets/images/cars/mustang_0004.jpg: 2019-08-31 22:23:10.546361700 -05:00
+build/assets/images/cars/mustang_0005.jpg: 2019-08-31 22:23:10.556335200 -05:00
+build/assets/images/cars/mustang_0006.jpg: 2019-08-31 22:23:10.755348400 -05:00
+build/assets/images/cars/mustang_0007.jpg: 2019-08-31 22:23:10.871039000 -05:00
+build/assets/images/cars/mustang_0008.jpg: 2019-08-31 22:23:10.917959400 -05:00
+build/assets/images/cars/mustang_0009.jpg: 2019-08-31 22:23:10.924895600 -05:00
+build/assets/images/cars/mustang_0010.jpg: 2019-08-31 22:23:11.188602300 -05:00
+build/assets/images/cars/mustang_0011.jpg: 2019-08-31 22:23:11.231142900 -05:00
+build/assets/images/cars/mustang_0012.jpg: 2019-08-31 22:23:11.291280200 -05:00
+build/assets/images/cars/mustang_0013.jpg: 2019-08-31 22:23:11.313854200 -05:00
+build/assets/images/cars/mustang_0014.jpg: 2019-08-31 22:23:11.581990700 -05:00
+build/assets/images/cars/mustang_0015.jpg: 2019-08-31 22:23:11.602650900 -05:00
+build/assets/images/cars/mustang_0016.jpg: 2019-08-31 22:23:11.641546900 -05:00
+build/assets/images/cars/mustang_0017.jpg: 2019-08-31 22:23:11.663488100 -05:00
+build/assets/images/cars/mustang_0018.jpg: 2019-08-31 22:23:11.671718700 -05:00
+build/assets/images/cars/mustang_0019.jpg: 2019-08-31 22:23:11.962217800 -05:00
+build/assets/images/cars/mustang_0020.jpg: 2019-08-31 22:23:11.983163200 -05:00
+build/assets/images/cars/mustang_0021.jpg: 2019-08-31 22:23:12.035023200 -05:00
+build/assets/images/cars/mustang_0022.jpg: 2019-08-31 22:23:12.028042100 -05:00
+build/assets/images/cars/mustang_0025.jpg: 2019-08-31 22:23:12.074917900 -05:00
+build/assets/images/cars/mustang_0026.jpg: 2019-08-31 22:23:12.346309300 -05:00
+build/assets/images/cars/mustang_0027.jpg: 2019-08-31 22:23:12.372120800 -05:00
+build/assets/images/cars/mustang_0028.jpg: 2019-08-31 22:23:12.403114100 -05:00
+build/assets/images/cars/mustang_0029.jpg: 2019-08-31 22:23:12.403114100 -05:00
+build/assets/images/cars/mustang_0030.jpg: 2019-08-31 22:23:12.437944600 -05:00
+build/assets/images/cars/mustang_0031.jpg: 2019-08-31 22:23:12.679298900 -05:00
+build/assets/images/cars/mustang_0032.jpg: 2019-08-31 22:23:12.713208100 -05:00
+build/assets/images/cars/mustang_0033.jpg: 2019-08-31 22:23:12.791002000 -05:00
+build/assets/images/cars/mustang_engine_001.jpg: 2019-08-31 22:23:12.751107000 -05:00
+build/assets/images/cars/thumbs/thumbs_mustang_0001.jpg: 2019-08-31 22:23:12.657405600
+  -05:00
+build/assets/images/cars/thumbs/thumbs_mustang_0002.jpg: 2019-08-31 22:23:12.893726800
+  -05:00
+build/assets/images/cars/thumbs/thumbs_mustang_0003.jpg: 2019-08-31 22:23:12.920653500
+  -05:00
+build/assets/images/cars/thumbs/thumbs_mustang_0004.jpg: 2019-08-31 22:23:12.938162000
+  -05:00
+build/assets/images/cars/thumbs/thumbs_mustang_0005.jpg: 2019-08-31 22:23:13.002988700
+  -05:00
+build/assets/images/cars/thumbs/thumbs_mustang_0006.jpg: 2019-08-31 22:23:13.044969400
+  -05:00
+build/assets/images/cars/thumbs/thumbs_mustang_0007.jpg: 2019-08-31 22:23:13.105805700
+  -05:00
+build/assets/images/cars/thumbs/thumbs_mustang_0008.jpg: 2019-08-31 22:23:13.164648900
+  -05:00
+build/assets/images/cars/thumbs/thumbs_mustang_0009.jpg: 2019-08-31 22:23:13.183597200
+  -05:00
+build/assets/images/cars/thumbs/thumbs_mustang_0010.jpg: 2019-08-31 22:23:13.218504400
+  -05:00
+build/assets/images/cars/thumbs/thumbs_mustang_0011.jpg: 2019-08-31 22:23:13.272359700
+  -05:00
+build/assets/images/cars/thumbs/thumbs_mustang_0012.jpg: 2019-08-31 22:23:13.338183700
+  -05:00
+build/assets/images/cars/thumbs/thumbs_mustang_0013.jpg: 2019-08-31 22:23:13.383063800
+  -05:00
+build/assets/images/cars/thumbs/thumbs_mustang_0014.jpg: 2019-08-31 22:23:13.459907200
+  -05:00
+build/assets/images/cars/thumbs/thumbs_mustang_0015.jpg: 2019-08-31 22:23:13.441010500
+  -05:00
+build/assets/images/cars/thumbs/thumbs_mustang_0016.jpg: 2019-08-31 22:23:13.500749200
+  -05:00
+build/assets/images/cars/thumbs/thumbs_mustang_0017.jpg: 2019-08-31 22:23:13.576547700
+  -05:00
+build/assets/images/cars/thumbs/thumbs_mustang_0018.jpg: 2019-08-31 22:23:13.605473300
+  -05:00
+build/assets/images/cars/thumbs/thumbs_mustang_0019.jpg: 2019-08-31 22:23:13.654337900
+  -05:00
+build/assets/images/cars/thumbs/thumbs_mustang_0020.jpg: 2019-08-31 22:23:13.701213100
+  -05:00
+build/assets/images/cars/thumbs/thumbs_mustang_0021.jpg: 2019-08-31 22:23:13.736119000
+  -05:00
+build/assets/images/cars/thumbs/thumbs_mustang_0022.jpg: 2019-08-31 22:23:13.778007300
+  -05:00
+build/assets/images/cars/thumbs/thumbs_mustang_0025.jpg: 2019-08-31 22:23:13.860789900
+  -05:00
+build/assets/images/cars/thumbs/thumbs_mustang_0026.jpg: 2019-08-31 22:23:13.887731000
+  -05:00
+build/assets/images/cars/thumbs/thumbs_mustang_0027.jpg: 2019-08-31 22:23:13.920629900
+  -05:00
+build/assets/images/cars/thumbs/thumbs_mustang_0028.jpg: 2019-08-31 22:23:13.963545700
+  -05:00
+build/assets/images/cars/thumbs/thumbs_mustang_0029.jpg: 2019-08-31 22:23:14.016372100
+  -05:00
+build/assets/images/cars/thumbs/thumbs_mustang_0030.jpg: 2019-08-31 22:23:14.070228200
+  -05:00
+build/assets/images/cars/thumbs/thumbs_mustang_0031.jpg: 2019-08-31 22:23:14.112116300
+  -05:00
+build/assets/images/cars/thumbs/thumbs_mustang_0032.jpg: 2019-08-31 22:23:14.173242300
+  -05:00
+build/assets/images/cars/thumbs/thumbs_mustang_0033.jpg: 2019-08-31 22:23:14.201875800
+  -05:00
+build/assets/images/cars/thumbs/thumbs_mustang_engine_001.jpg: 2019-08-31 22:23:14.245760300
+  -05:00
+build/assets/images/hello-jason-logo.png: 2019-08-31 22:23:14.624744200 -05:00
+build/assets/images/hello-jason-logo.svg: 2020-06-12 23:32:05.261753400 -05:00
+build/assets/images/hello-jason-self.jpg: 2019-08-31 22:23:14.355466700 -05:00
+build/assets/images/hero-jason-feet-purple.jpg: 2019-08-31 22:23:14.400559200 -05:00
+build/assets/images/icon-arrow-downright.svg: 2020-06-12 23:32:05.279706100 -05:00
+build/assets/images/icon-check-circle.svg: 2020-06-12 23:32:05.417845200 -05:00
+build/assets/images/icon-times-circle.svg: 2020-06-12 23:32:05.412858700 -05:00
+build/assets/images/iphone-6-shape.svg: 2020-06-12 23:32:05.676551900 -05:00
+build/assets/images/JC-HERO-PurpleFace-v02.jpg: 2019-08-31 22:23:14.490105300 -05:00
+build/assets/images/JC-HERO-PurpleFeet-v02.jpg: 2019-08-31 22:23:14.490105300 -05:00
+build/assets/images/logo-apple.svg: 2020-06-12 23:32:06.208363300 -05:00
+build/assets/images/logo-windows-10.svg: 2020-06-12 23:32:06.255226900 -05:00
+build/assets/images/projects/contact-mover/appicon-app-store.png: 2019-08-31 22:23:17.173254000
+  -05:00
+build/assets/images/projects/contact-mover/appicon-contact-mover-v1.png: 2019-08-31
+  22:23:19.949589400 -05:00
+build/assets/images/projects/contact-mover/appicon-contact-mover-v2.png: 2019-08-31
+  22:23:19.534933900 -05:00
+build/assets/images/projects/contact-mover/contact-mover-public-site.jpg: 2019-08-31
+  22:21:49.710201500 -05:00
+build/assets/images/projects/contact-mover/contact-mover-v1-ui.png: 2019-08-31 22:23:29.546371600
+  -05:00
+build/assets/images/projects/contact-mover/contact-mover-v2-icon.png: 2019-08-31 22:23:18.301173900
+  -05:00
+build/assets/images/projects/contact-mover/contact-mover-v2-wireframes.jpg: 2019-08-31
+  22:21:49.711199300 -05:00
+build/assets/images/projects/contact-mover/hero-bkg-skytrees.jpg: 2019-08-31 22:21:49.714190600
+  -05:00
+build/assets/images/projects/contact-mover/immense-networks-logo.svg: 2020-06-12 23:32:07.572931600
+  -05:00
+build/assets/images/projects/contact-mover/person-andrew-frederick.jpg: 2019-08-31
+  22:21:49.713193300 -05:00
+build/assets/images/projects/contact-mover/person-christopher-mcknight.jpg: 2019-08-31
+  22:21:49.718180600 -05:00
+build/assets/images/projects/contact-mover/zoho-to-exchange.gif: 2019-08-31 22:21:49.993452500
+  -05:00
+build/assets/images/projects/dorignacs-meats-seafood.jpg: 2019-08-31 22:23:19.479082500
+  -05:00
+build/assets/images/projects/email-template-generator/etg-hero.jpg: 2019-08-31 22:23:19.656124800
+  -05:00
+build/assets/images/projects/email-template-generator/etg-hubspot-gui.png: 2019-08-31
+  22:23:28.018190900 -05:00
+build/assets/images/projects/email-template-generator/etg-newsletter-left.gif: 2019-08-31
+  22:23:19.874583800 -05:00
+build/assets/images/projects/email-template-generator/etg-newsletter.gif: 2019-08-31
+  22:23:19.936623800 -05:00
+build/assets/images/projects/email-template-generator/etg-newtemplate-create.png: 2019-08-31
+  22:23:45.087924500 -05:00
+build/assets/images/projects/emailsig-design-full.jpg: 2019-08-31 22:23:20.191475000
+  -05:00
+build/assets/images/projects/emailsig-design.jpg: 2019-08-31 22:23:20.171528700 -05:00
+build/assets/images/projects/emailsig-gender-pronouns.jpg: 2020-06-08 20:48:32.648091000
+  -05:00
+build/assets/images/projects/gatormillworks-home.jpg: 2019-08-31 22:23:20.751707400
+  -05:00
+build/assets/images/projects/gatormillworks-projects.jpg: 2019-08-31 22:23:20.896321000
+  -05:00
+build/assets/images/projects/hnj-parish-membership.jpg: 2019-08-31 22:23:21.239403500
+  -05:00
+build/assets/images/projects/immense-hosting-equipment.jpg: 2019-08-31 22:23:21.562434400
+  -05:00
+build/assets/images/projects/immense-luxe-business-cards.jpg: 2019-08-31 22:23:21.217461900
+  -05:00
+build/assets/images/projects/immense-server-migrations.jpg: 2019-08-31 22:23:21.699662900
+  -05:00
+build/assets/images/projects/ios-front-cmover.jpg: 2019-08-31 22:23:21.544482300 -05:00
+build/assets/images/projects/livechat-mobile.jpg: 2019-08-31 22:23:21.891387500 -05:00
+build/assets/images/projects/livechat-old-new.jpg: 2019-08-31 22:23:21.851496700 -05:00
+build/assets/images/projects/livechat-report.jpg: 2019-08-31 22:23:21.845510200 -05:00
+build/assets/images/projects/livechat-sales-or-support.png: 2019-08-31 22:23:26.883104500
+  -05:00
+build/assets/images/projects/livechat-ss-inchat.png: 2019-08-31 22:23:33.341377900
+  -05:00
+build/assets/images/projects/logo-contact-mover.jpg: 2019-08-31 22:23:22.174176900
+  -05:00
+build/assets/images/projects/logo-gator-millworks.jpg: 2019-08-31 22:23:22.187142200
+  -05:00
+build/assets/images/projects/logo-hnj-church.jpg: 2019-08-31 22:23:22.414546400 -05:00
+build/assets/images/projects/logo-serverexec.jpg: 2019-08-31 22:23:22.441461600 -05:00
+build/assets/images/projects/lsu-club-home.jpg: 2019-08-31 22:23:22.911583700 -05:00
+build/assets/images/projects/mockup-lightingchoice-home.jpg: 2019-08-31 22:23:23.007596500
+  -05:00
+build/assets/images/projects/mockup-lightingchoice-product.jpg: 2019-08-31 22:23:23.382836100
+  -05:00
+build/assets/images/projects/monitor-front-dorignacs.jpg: 2019-08-31 22:23:23.286094900
+  -05:00
+build/assets/images/projects/monitor-front-gatormillworks.jpg: 2019-08-31 22:23:23.578313200
+  -05:00
+build/assets/images/projects/monitor-front-gtrax.jpg: 2019-08-31 22:23:23.629176100
+  -05:00
+build/assets/images/projects/monitor-front-hnj.jpg: 2019-08-31 22:23:23.839709000
+  -05:00
+build/assets/images/projects/monitor-front-immense.jpg: 2019-08-31 22:23:23.890518800
+  -05:00
+build/assets/images/projects/monitor-front-isc.jpg: 2019-08-31 22:23:24.086992700
+  -05:00
+build/assets/images/projects/monitor-front-lightingchoice.jpg: 2019-08-31 22:23:24.247563200
+  -05:00
+build/assets/images/projects/monitor-front-lsuclub.jpg: 2019-08-31 22:23:24.361259000
+  -05:00
+build/assets/images/projects/monitor-front-mowtell.jpg: 2019-08-31 22:23:24.512627700
+  -05:00
+build/assets/images/projects/monitor-front-ngstech.jpg: 2019-08-31 22:23:24.654367100
+  -05:00
+build/assets/images/projects/monitor-front-pssurgery.jpg: 2019-08-31 22:23:24.792996100
+  -05:00
+build/assets/images/projects/monitor-front-rotolos.jpg: 2019-08-31 22:23:24.935128200
+  -05:00
+build/assets/images/projects/monitor-front-serverexec.jpg: 2019-08-31 22:23:25.046828800
+  -05:00
+build/assets/images/projects/monitor-front-simplesimon.jpg: 2019-08-31 22:23:25.242306500
+  -05:00
+build/assets/images/projects/monitor-front-xs-dorignacs.jpg: 2019-08-31 22:23:25.282198700
+  -05:00
+build/assets/images/projects/monitor-front-xs-gatormillworks.jpg: 2019-08-31 22:23:25.484103700
+  -05:00
+build/assets/images/projects/monitor-front-xs-gtrax.jpg: 2019-08-31 22:23:25.510034000
+  -05:00
+build/assets/images/projects/monitor-front-xs-hnj.jpg: 2019-08-31 22:23:25.700590800
+  -05:00
+build/assets/images/projects/monitor-front-xs-immense.jpg: 2019-08-31 22:23:25.721597000
+  -05:00
+build/assets/images/projects/monitor-front-xs-isc.jpg: 2019-08-31 22:23:25.926985500
+  -05:00
+build/assets/images/projects/monitor-front-xs-lsuclub.jpg: 2019-08-31 22:23:25.942673100
+  -05:00
+build/assets/images/projects/monitor-front-xs-mowtell.jpg: 2019-08-31 22:23:26.128092200
+  -05:00
+build/assets/images/projects/monitor-front-xs-ngstech.jpg: 2019-08-31 22:23:26.165159100
+  -05:00
+build/assets/images/projects/monitor-front-xs-pssurgery.jpg: 2019-08-31 22:23:26.330584300
+  -05:00
+build/assets/images/projects/monitor-front-xs-rotolos.jpg: 2019-08-31 22:23:26.388429400
+  -05:00
+build/assets/images/projects/monitor-front-xs-serverexec.jpg: 2019-08-31 22:23:26.555980900
+  -05:00
+build/assets/images/projects/monitor-front-xs-simplesimon.jpg: 2019-08-31 22:23:26.605916500
+  -05:00
+build/assets/images/projects/monitor-front-xs-thinkprint3d.jpg: 2019-08-31 22:23:26.770406900
+  -05:00
+build/assets/images/projects/monitor-front-xs-zorbit.jpg: 2019-08-31 22:23:26.847201400
+  -05:00
+build/assets/images/projects/monitor-front-zorbit.jpg: 2019-08-31 22:23:27.008936800
+  -05:00
+build/assets/images/projects/monitor-right-gtrax-table.jpg: 2019-08-31 22:23:27.099525400
+  -05:00
+build/assets/images/projects/monitor-right-gtrax-v2.jpg: 2019-08-31 22:23:27.263087800
+  -05:00
+build/assets/images/projects/monitor-right-isc-alt1.jpg: 2019-08-31 22:23:27.345866300
+  -05:00
+build/assets/images/projects/monitor-right-isc-alt2.jpg: 2019-08-31 22:23:27.539348100
+  -05:00
+build/assets/images/projects/monitor-right-ngstech-gallery.jpg: 2019-08-31 22:23:27.580521000
+  -05:00
+build/assets/images/projects/monitor-right-serverexec-home.jpg: 2019-08-31 22:23:27.615319800
+  -05:00
+build/assets/images/projects/monitor-right-thinkprint3d-comingsoon.jpg: 2019-08-31
+  22:23:27.792832100 -05:00
+build/assets/images/projects/mowtell-about.jpg: 2019-08-31 22:23:28.030118700 -05:00
+build/assets/images/projects/pfsync/feature-how-it-works.png: 2019-08-31 22:23:30.765941500
+  -05:00
+build/assets/images/projects/pfsync/immense-networks-logo.svg: 2020-06-12 23:32:16.049784200
+  -05:00
+build/assets/images/projects/pfsync/logo-activesync.svg: 2020-06-12 23:32:17.085897500
+  -05:00
+build/assets/images/projects/pfsync/logo-pfsync.svg: 2020-06-12 23:32:17.600124500
+  -05:00
+build/assets/images/projects/pfsync/pfsync-account-management.jpg: 2019-08-31 22:21:49.841849200
+  -05:00
+build/assets/images/projects/pfsync/pfsync-brand-breakdown.jpg: 2019-08-31 22:21:49.844873300
+  -05:00
+build/assets/images/projects/pfsync/pfsync-hero.png: 2019-08-31 22:24:54.097123400
+  -05:00
+build/assets/images/projects/pfsync/pfsync-public-site-overview.jpg: 2019-08-31 22:21:49.846838000
+  -05:00
+build/assets/images/projects/pfsync/sign-in-flydown.gif: 2019-08-31 22:23:30.986352200
+  -05:00
+build/assets/images/projects/phpcompat-ctas.gif: 2019-08-31 22:23:29.515107900 -05:00
+build/assets/images/projects/phpcompat-downloadsperday.gif: 2019-08-31 22:23:29.659742400
+  -05:00
+build/assets/images/projects/phpcompat-lp.jpg: 2019-08-31 22:23:29.784568100 -05:00
+build/assets/images/projects/phpcompat-ui-results-v02.png: 2019-08-31 22:23:49.466351000
+  -05:00
+build/assets/images/projects/phpcompat-ui-scan-v02.png: 2019-08-31 22:23:54.241748300
+  -05:00
+build/assets/images/projects/pssurgery-home.jpg: 2019-08-31 22:23:31.431196100 -05:00
+build/assets/images/projects/responsive-dorignacs.jpg: 2019-08-31 22:23:31.736344600
+  -05:00
+build/assets/images/projects/responsive-mowtell.jpg: 2019-08-31 22:23:31.743326600
+  -05:00
+build/assets/images/projects/responsive-ngstech.jpg: 2019-08-31 22:23:31.989265100
+  -05:00
+build/assets/images/projects/responsive-pssurgery.jpg: 2019-08-31 22:23:32.026366300
+  -05:00
+build/assets/images/projects/responsive-rotolos.jpg: 2019-08-31 22:23:32.259611800
+  -05:00
+build/assets/images/projects/rotolos-menu.jpg: 2019-08-31 22:23:32.429157700 -05:00
+build/assets/images/projects/simple-simon-services.jpg: 2019-08-31 22:23:32.675542700
+  -05:00
+build/assets/images/projects/speedtool-email.png: 2019-08-31 22:23:53.035748600 -05:00
+build/assets/images/projects/speedtool-index.jpg: 2019-08-31 22:23:32.997298600 -05:00
+build/assets/images/projects/speedtool-results.jpg: 2019-08-31 22:23:33.391244600
+  -05:00
+build/assets/images/projects/sweets-blog-home.jpg: 2019-08-31 22:23:33.906865100 -05:00
+build/assets/images/projects/sweets-store-home.jpg: 2019-08-31 22:23:34.100408500
+  -05:00
+build/assets/images/projects/sweets-wholesale-cupcake-liners.jpg: 2019-08-31 22:23:34.218031600
+  -05:00
+build/assets/images/projects/tool-tracker/fluidui-vs-mockups.jpg: 2019-08-31 22:23:34.314815700
+  -05:00
+build/assets/images/projects/tool-tracker/full-tooltracker-fluidui.jpg: 2019-08-31
+  22:23:34.444372700 -05:00
+build/assets/images/projects/tool-tracker/hero-tool-tracker.jpg: 2019-08-31 22:23:34.563634200
+  -05:00
+build/assets/images/projects/tool-tracker/hud-beaumont.jpg: 2019-08-31 22:23:34.678302300
+  -05:00
+build/assets/images/projects/tool-tracker/ios-tooltracker-pinscreens.jpg: 2019-08-31
+  22:23:34.797982500 -05:00
+build/assets/images/projects/tool-tracker/ios-tooltracker-splash.jpg: 2019-08-31 22:23:34.877769500
+  -05:00
+build/assets/images/projects/tool-tracker/logo-tool-tracker.jpg: 2019-08-31 22:23:35.072762000
+  -05:00
+build/assets/images/projects/tool-tracker/person-christopher-mcknight.jpg: 2019-08-31
+  22:21:49.895704800 -05:00
+build/assets/images/projects/tool-tracker/tool-tracker-batch-transfer.jpg: 2019-08-31
+  22:23:35.276241000 -05:00
+build/assets/images/projects/tool-tracker/tool-tracker-linea-pro.png: 2019-08-31 22:23:36.160389000
+  -05:00
+build/assets/images/projects/tool-tracker/tool-tracker-logo-and-appicon.png: 2019-08-31
+  22:23:39.500016600 -05:00
+build/assets/images/projects/tool-tracker/tool-tracker-signin-registration.jpg: 2019-08-31
+  22:23:36.112518500 -05:00
+build/assets/images/projects/tool-tracker/viewpoint-logo.png: 2019-08-31 22:23:37.457430800
+  -05:00
+build/assets/images/projects/tp3d-home.jpg: 2019-08-31 22:23:38.779891900 -05:00
+build/assets/images/projects/velocitize-home.jpg: 2019-08-31 22:23:39.201764000 -05:00
+build/assets/images/projects/velocitize-logo-slide.gif: 2019-08-31 22:23:40.591096200
+  -05:00
+build/assets/images/projects/velocitize-newsletter.png: 2019-08-31 22:24:22.985528600
+  -05:00
+build/assets/images/projects/velocitize-singlepost.jpg: 2019-08-31 22:23:42.063104800
+  -05:00
+build/assets/images/projects/WP-TOOL-EmailSignatureGenerator-Tutorial-v01-compressor.gif: 2019-08-31
+  22:21:50.006408800 -05:00
+build/assets/images/projects/wpemisc-austin-capitol.jpg: 2019-08-31 22:23:47.027287500
+  -05:00
+build/assets/images/projects/wpemisc-come-together.jpg: 2019-08-31 22:23:47.100547700
+  -05:00
+build/assets/images/projects/wpemisc-gatsby.jpg: 2019-08-31 22:23:47.314596900 -05:00
+build/assets/images/projects/wpemisc-marchitecture.jpg: 2019-08-31 22:23:47.343518100
+  -05:00
+build/assets/images/projects/wpemisc-movember.jpg: 2019-08-31 22:23:47.586344700 -05:00
+build/assets/images/projects/wpengine-dxp/component-plans-table.gif: 2019-08-31 22:21:50.008404100
+  -05:00
+build/assets/images/projects/wpengine-dxp/documentation-bbdemo.gif: 2019-08-31 22:23:49.578014900
+  -05:00
+build/assets/images/projects/wpengine-dxp/documentation-components.gif: 2019-08-31
+  22:23:47.891994800 -05:00
+build/assets/images/projects/wpengine-dxp/documentation-guide.gif: 2019-08-31 22:23:48.061540500
+  -05:00
+build/assets/images/projects/wpengine-dxp/dxp-AlanGarcia.jpg: 2019-08-31 22:23:48.197177400
+  -05:00
+build/assets/images/projects/wpengine-dxp/dxp-ChristopherGarza.jpg: 2019-08-31 22:23:48.436537000
+  -05:00
+build/assets/images/projects/wpengine-dxp/dxp-DavidFossas.jpg: 2019-08-31 22:23:48.649005200
+  -05:00
+build/assets/images/projects/wpengine-dxp/dxp-DavidVogelpohl.jpg: 2019-08-31 22:23:48.856413700
+  -05:00
+build/assets/images/projects/wpengine-dxp/dxp-ElanaWeinberg.jpg: 2019-08-31 22:23:49.079883500
+  -05:00
+build/assets/images/projects/wpengine-dxp/dxp-hero.jpg: 2019-08-31 22:23:49.383535600
+  -05:00
+build/assets/images/projects/wpengine-dxp/dxp-JasonCross.jpg: 2019-08-31 22:23:49.641055100
+  -05:00
+build/assets/images/projects/wpengine-dxp/dxp-KatCox.jpg: 2019-08-31 22:23:49.699344800
+  -05:00
+build/assets/images/projects/wpengine-dxp/dxp-KillianHagen.jpg: 2019-08-31 22:23:49.836759900
+  -05:00
+build/assets/images/projects/wpengine-dxp/dxp-MaryEllenDugan.jpg: 2019-08-31 22:23:49.905447200
+  -05:00
+build/assets/images/projects/wpengine-dxp/dxp-RyanHoover.jpg: 2019-08-31 22:23:50.051956200
+  -05:00
+build/assets/images/projects/wpengine-dxp/dxp-StaceyLane.jpg: 2019-08-31 22:23:50.102883100
+  -05:00
+build/assets/images/projects/wpengine-dxp/dxp-ZackRothauser.jpg: 2019-08-31 22:23:50.243506800
+  -05:00
+build/assets/images/projects/wpengine-dxp/nav-chat-notification.gif: 2019-08-31 22:21:50.012392900
+  -05:00
+build/assets/images/projects/wpengine-dxp/nav-exploration.jpg: 2019-08-31 22:23:50.511847400
+  -05:00
+build/assets/images/projects/wpengine-dxp/p13n-form.gif: 2019-08-31 22:23:51.434058500
+  -05:00
+build/assets/images/projects/wpengine-dxp/powder-plotagraph.jpg: 2019-08-31 22:23:50.516834100
+  -05:00
+build/assets/images/projects/wpengine-dxp/specialist-popup.gif: 2019-08-31 22:23:50.764328200
+  -05:00
+build/assets/images/projects/zorbit-howworks-diagram.jpg: 2019-08-31 22:23:50.777293500
+  -05:00
+build/assets/images/projects/zorbit-logo.jpg: 2019-08-31 22:23:50.946364100 -05:00
+build/assets/images/projects/zorbit-product.jpg: 2019-08-31 22:23:51.136854600 -05:00
+build/assets/images/thumbnails/thumbnail-contact-mover.jpg: 2019-08-31 22:23:51.184726600
+  -05:00
+build/assets/images/thumbnails/thumbnail-dorignacs.jpg: 2019-08-31 22:23:51.352278300
+  -05:00
+build/assets/images/thumbnails/thumbnail-email-signature-generator.jpg: 2019-08-31
+  22:23:51.436054500 -05:00
+build/assets/images/thumbnails/thumbnail-email-template-generator.jpg: 2019-08-31
+  22:23:51.588669900 -05:00
+build/assets/images/thumbnails/thumbnail-gatormillworks.jpg: 2019-08-31 22:23:51.587672200
+  -05:00
+build/assets/images/thumbnails/thumbnail-gtrax.jpg: 2019-08-31 22:23:51.664467500
+  -05:00
+build/assets/images/thumbnails/thumbnail-hnj-church.jpg: 2019-08-31 22:23:51.827591100
+  -05:00
+build/assets/images/thumbnails/thumbnail-immense-networks.jpg: 2019-08-31 22:23:51.857511300
+  -05:00
+build/assets/images/thumbnails/thumbnail-isc.jpg: 2019-08-31 22:23:51.907378500 -05:00
+build/assets/images/thumbnails/thumbnail-lighting-choice.jpg: 2019-08-31 22:23:52.067947900
+  -05:00
+build/assets/images/thumbnails/thumbnail-lsu-club.jpg: 2019-08-31 22:23:52.108838300
+  -05:00
+build/assets/images/thumbnails/thumbnail-mow-tell.jpg: 2019-08-31 22:23:52.136233400
+  -05:00
+build/assets/images/thumbnails/thumbnail-ngs-tech.jpg: 2019-08-31 22:23:52.293364900
+  -05:00
+build/assets/images/thumbnails/thumbnail-pfsync.jpg: 2019-08-31 22:23:52.332260300
+  -05:00
+build/assets/images/thumbnails/thumbnail-ps-surgery.jpg: 2019-08-31 22:23:52.370712100
+  -05:00
+build/assets/images/thumbnails/thumbnail-rotolos.jpg: 2019-08-31 22:23:52.508970700
+  -05:00
+build/assets/images/thumbnails/thumbnail-serverexec.jpg: 2019-08-31 22:23:52.570179000
+  -05:00
+build/assets/images/thumbnails/thumbnail-simple-simon.jpg: 2019-08-31 22:23:52.614061600
+  -05:00
+build/assets/images/thumbnails/thumbnail-sweets-and-treats.jpg: 2019-08-31 22:23:52.748517200
+  -05:00
+build/assets/images/thumbnails/thumbnail-thinkprint3d.jpg: 2019-08-31 22:23:52.799381500
+  -05:00
+build/assets/images/thumbnails/thumbnail-tool-tracker.jpg: 2019-08-31 22:23:52.833289300
+  -05:00
+build/assets/images/thumbnails/thumbnail-velocitize.png: 2019-08-31 22:24:17.381378200
+  -05:00
+build/assets/images/thumbnails/thumbnail-wpe-misc.jpg: 2019-08-31 22:23:53.020787500
+  -05:00
+build/assets/images/thumbnails/thumbnail-wpe-phpcompat.gif: 2019-08-31 22:23:53.036745300
+  -05:00
+build/assets/images/thumbnails/thumbnail-wpe-speedtool.png: 2019-08-31 22:24:16.522675800
+  -05:00
+build/assets/images/thumbnails/thumbnail-wpengine-dxp.jpg: 2019-08-31 22:23:53.249553200
+  -05:00
+build/assets/images/thumbnails/thumbnail-wpengine-livechat.jpg: 2019-08-31 22:23:53.470976900
+  -05:00
+build/assets/images/thumbnails/thumbnail-zorbit-packet.jpg: 2019-08-31 22:23:53.709302800
+  -05:00
+build/assets/videos/logo-poof.jpg: 2019-08-31 22:23:53.981574600 -05:00
+build/favicon-16x16.png: 2019-08-31 22:23:54.387354400 -05:00
+build/favicon-32x32.png: 2019-08-31 22:23:54.783860000 -05:00
+build/mstile-150x150.png: 2019-08-31 22:23:55.900890900 -05:00
+build/safari-pinned-tab.svg: 2020-06-12 23:32:39.177369000 -05:00
