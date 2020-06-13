@@ -9,12 +9,13 @@ var gzip = require('gulp-gzip'); // gzip compression
 gulp.task('stylesheets', function () {
   var plugins = [
     uncss({
-      html: ['./build/**/*.html']
+      html: ['./build/**/*.html'],
+      ignore: []
     }),
   ];
   return gulp.src('./build/assets/stylesheets/**/*.css')
     // uncss
-    .pipe(postcss(plugins))
+    // .pipe(postcss(plugins))
     // minify
     .pipe(csso())
     .pipe(gulp.dest('./build/assets/stylesheets'))
@@ -24,4 +25,4 @@ gulp.task('stylesheets', function () {
 });
 
 // // Scan site, remove unused css, minifiy css, gzip css
-gulp.task('buildcss', ['stylesheets']);
+gulp.task('buildcss', gulp.series('stylesheets'));
