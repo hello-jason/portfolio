@@ -69,6 +69,7 @@ a[href*="//"]:not([href*="hellojason.net"]) {
   }
   h2 {
     text-transform: uppercase;
+    // font-size: $font-size-h1;
     @media (max-width: $screen-sm-min) {
       font-size: $font-size-h3;
     }
