@@ -75,3 +75,17 @@ a[href*="//"]:not([href*="hellojason.net"]) {
     }
   }
 }
+
+.dropcap {
+  color: $brand-primary;
+  font-weight: bold;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 5em;
+  float: left;
+  line-height: 1;
+  margin: -0.135em 0.1em 0 0;
+  position: relative;
+  text-indent: 0;
+}
