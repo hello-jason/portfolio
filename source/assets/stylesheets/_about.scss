@@ -6,11 +6,10 @@ body.about_index {
     }
   }
   .job__role {
-    font-size: $font-size-small;
     margin-top: ($jason-space / 2);
     margin-bottom: 0;
     color: darken($brand-primary, 25%);
-    font-style: italic;
+    font-weight: bold;
     & + p {
       // color: red;
     }
