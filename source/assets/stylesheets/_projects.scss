@@ -294,6 +294,7 @@ body.projects_index .container {
       @extend .btn-primary;
       @extend .btn-lg;
       @extend .btn-block;
+      padding-bottom: 14px;
       @media (max-width: $screen-md-min) {
         margin-bottom: 15px;
       }

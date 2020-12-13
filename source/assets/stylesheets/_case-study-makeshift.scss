@@ -1,4 +1,5 @@
 $color-sunset: #FF6C29;
+$color-polar:  #f4f7fa;
 
 .projects_makeshift {
   section.hero {
@@ -9,13 +10,11 @@ $color-sunset: #FF6C29;
     .categories {
       span {
         background: none;
-        background: rgba(255,255,255,0.4);
       }
     }
     .content {
       position: relative;
       z-index: 1;
-      max-width: 100%;
     }
     &::after{
       display: block;
@@ -29,15 +28,21 @@ $color-sunset: #FF6C29;
       z-index: 0;
     }
     h1 {
+      line-height: 1.05em;
       span {
         // background: rgba($color-sunset, 0.7);
         color: $color-sunset;
       }
     }
   }
-}
-
-.my-notable-parts {
-  background: #000;
-  color: #fff;
+  section.odd {
+    background: $color-polar;
+    hr {
+      border-color: darken($color-polar, 10%);
+    }
+  }
+  section.my-notable-parts {
+    background: #000;
+    color: #fff;
+  }
 }
