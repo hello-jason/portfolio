@@ -1,6 +1,6 @@
 ---
 title: make|SHIFT Documentary
-meta_description: How the advertising industry pioneered the early internet.
+meta_description: A docoument about how the advertising industry pioneered the early internet.
 layout: case-study
 body_class: case-study
 ---
@@ -16,7 +16,7 @@ section.business-case
     h2.section__title Business case
     p WP Engine has prioritized and cultivated an <a href="https://wpengine.com/agency-partner-program/">Agency Partner Program</a> in an effort to support a massive customer base with exponential revenue growth attached to it.
     
-    p The make|SHIFT documentary caters to that audience, tells their story, and celebrates how their contributions shape and respond to consumers in realtime through the internet. Interviews with the creative minds who helped shift internet advertising from banner ads and popups to interactive experiences like Burger&nbsp;King's <a href="https://en.wikipedia.org/wiki/The_Subservient_Chicken">Subservient Chicken</a> and TD Ameritrade's <a href="https://adage.com/creativity/work/td-ameritrade-first-ad-blockchain/2208286">blockchain ad</a>.
+    p The make|SHIFT documentary caters to that agency audience, tells their story, and celebrates how their contributions shape and respond to consumers in realtime through the internet. Interviews feature the creative minds who helped shift internet advertising from banner ads and popups to interactive experiences like Burger&nbsp;King's <a href="https://en.wikipedia.org/wiki/The_Subservient_Chicken">Subservient Chicken</a> and TD Ameritrade's <a href="https://adage.com/creativity/work/td-ameritrade-first-ad-blockchain/2208286">blockchain ad</a>.
 
 section.callout.odd
   .content
@@ -41,57 +41,60 @@ section.ideation-planning
       li <span class="number">»</span> <span class="text">Users should be able to register and watch the movie as effortlessly as possible.</span>
 
 section.odd
-  .content
+  .content.no-bottom
     h2.section__title Seamless registration and video access
     p A primary goal of the documentary site was lead generation. Users would have to provide some contact information via a web form, then we would email them a "magic link" to watch the video.
 
-    p This documentary site was built on WordPress, like most of our other marketing sites, and we already had a custom HubSpot integration that accepted form submissions.
+    p This documentary site was built on WordPress, like most of our other marketing sites. We already had a custom HubSpot integration that accepted our form submissions, so connecting into known workflows was beneficial.
 
-    ol.big-list
+    ol.big-list.no-bottom
       li <span class="number">»</span> <span class="text">Form submission &rarr; Email &rarr; <strong>Video access</strong></span>
+
+  = image_tag "projects/makeshift/ms-email-template-1200x750.jpg", :class => "media-responsive"
+    
 
 section.my-notable-parts
   .content
     p Some of the key components I worked on&hellip;
 
 section.odd
-  .content
+  .content.no-bottom
     h2.section__title Overall look and feel
+
+    p I was responsible for the design direction and UX of the entire website, working collaboratively with stakeholders and the developer. There were compromises with stakeholder desires for an engaging experience to support the excitement of the film while keeping the interface simple enough for maximum lead generation.
 
   = image_tag "projects/makeshift/ms-adobexd-artboards-997x887.jpg", :class => "media-responsive"
 
 section
-  .content
-    h2.section__title Intro animation
-    <a href="https://codepen.io/hellojason/pen/QWWebqW">Codepen</a>
+  .content.no-bottom
+    h2.section__title Intro animation prototype
 
-  p [screen capture of intro animation]
+    p We wanted to reveal the website after a full screen logo animation. I created a prototype to convey the idea, then provided a <a href="https://codepen.io/hellojason/pen/QWWebqW">Codepen</a> to our developer to fine-tune and implement.
+
+  = image_tag "projects/makeshift/ms-logo-animation.gif", :class => "media-responsive"
 
 section.odd
   .content
     h2.section__title Navigation animations
-    p Description
+    p I also prototyped menu hover/focus animations to bring some whimsy and color to the navigation component, which was implemented and honed by our developer.
 
     video.media-responsive loop="1" width="610" height="96" playsinline="1" autoplay="1" preload="none" poster="../../assets/videos/makeshift-nav-animations.png"
       source type="video/webm" src="../../assets/videos/makeshift-nav-animations.webm"
 
-section
-  .content
-    h2.section__title Mobile experience
-
-section.what-i-learned.odd
+section.what-i-learned
   .content
     h2.section__title What I learned
-    p It was energizing to work with external creatives and to play with a new brand that is different than WP Engine.
+    p It was energizing to work with external creatives and to play with a new brand that is different from WP Engine's core identity. I was able to explore new layout ideas and typography outside of our typical brand guidelines, and I tinkered with hand-coding SVG animations.
 
-section.awards
+section.awards.odd
   .content
-    h2.section__title Awards
+    h2.section__title Awards & accolades
     ol.big-list
       li  <span class="number">🏆</span> <span class="text">2020 Platinum Winner Hermes Creative Awards</span>
       li  <span class="number">🏆</span> <span class="text">2020 Excellence Winner Videographer Awards</span>
+      li  <span class="number">📺</span> <span class="text">Wide release via streaming services coming soon</span>
       
-section.check-it-out.odd
+section.check-it-out
   .content
     h2.section__title Check it out
     .col-md-4
@@ -100,3 +103,7 @@ section.check-it-out.odd
       a.btn href="https://wpengine.com/blog/wp-engine-releases-makeshift-documentary-highlighting-creative-technology-in-advertising/" Press release
     .col-md-4
       a.btn href="https://www.imdb.com/title/tt12432964/" IMDB
+
+a.back-to-articles href="#{config.url_projects}" &#8617; All projects
+br
+br

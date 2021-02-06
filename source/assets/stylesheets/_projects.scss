@@ -129,6 +129,9 @@ body.projects_index .container {
     max-width: 790px;
     margin: 0 auto;
     padding: ($casestudy-section-padding / 2) 15px;
+    &.no-bottom {
+      padding-bottom: 0;
+    }
     @media (min-width: $screen-md-min) {
       padding-top: $casestudy-section-padding;
       padding-bottom: $casestudy-section-padding;
@@ -255,6 +258,9 @@ body.projects_index .container {
     list-style: none;
     padding: 0;
     margin-bottom: ($casestudy-section-padding / 2);
+    &.no-bottom {
+      margin-bottom: 0;
+    }
     li, .number {
       background: #b1b1b1;
     }
