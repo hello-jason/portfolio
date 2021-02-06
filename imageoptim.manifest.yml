@@ -300,6 +300,22 @@ build/assets/images/projects/logo-gator-millworks.jpg: 2019-08-31 22:23:22.18714
 build/assets/images/projects/logo-hnj-church.jpg: 2019-08-31 22:23:22.414546400 -05:00
 build/assets/images/projects/logo-serverexec.jpg: 2019-08-31 22:23:22.441461600 -05:00
 build/assets/images/projects/lsu-club-home.jpg: 2019-08-31 22:23:22.911583700 -05:00
+build/assets/images/projects/makeshift/ms-adobexd-artboards-997x887.jpg: 2021-02-06
+  13:36:08.642186900 -06:00
+build/assets/images/projects/makeshift/ms-CarleyThompson.jpg: 2021-02-06 13:36:08.888186800
+  -06:00
+build/assets/images/projects/makeshift/ms-DavidFossas.jpg: 2021-02-06 13:36:09.140188000
+  -06:00
+build/assets/images/projects/makeshift/ms-email-template-1200x750.jpg: 2021-02-06
+  13:36:09.452189200 -06:00
+build/assets/images/projects/makeshift/ms-GhostAvatar.jpg: 2021-02-06 13:36:09.702186300
+  -06:00
+build/assets/images/projects/makeshift/ms-hero.jpg: 2021-02-06 13:36:09.965186200
+  -06:00
+build/assets/images/projects/makeshift/ms-logo-animation.gif: 2021-02-06 13:36:11.232185400
+  -06:00
+build/assets/images/projects/makeshift/ms-SarahRicker.jpg: 2021-02-06 13:36:11.334186500
+  -06:00
 build/assets/images/projects/mockup-lightingchoice-home.jpg: 2019-08-31 22:23:23.007596500
   -05:00
 build/assets/images/projects/mockup-lightingchoice-product.jpg: 2019-08-31 22:23:23.382836100
@@ -543,6 +559,8 @@ build/assets/images/thumbnails/thumbnail-lighting-choice.jpg: 2019-08-31 22:23:5
   -05:00
 build/assets/images/thumbnails/thumbnail-lsu-club.jpg: 2019-08-31 22:23:52.108838300
   -05:00
+build/assets/images/thumbnails/thumbnail-makeshift.png: 2021-02-06 13:37:29.541580100
+  -06:00
 build/assets/images/thumbnails/thumbnail-mow-tell.jpg: 2019-08-31 22:23:52.136233400
   -05:00
 build/assets/images/thumbnails/thumbnail-ngs-tech.jpg: 2019-08-31 22:23:52.293364900
@@ -578,6 +596,7 @@ build/assets/images/thumbnails/thumbnail-wpengine-livechat.jpg: 2019-08-31 22:23
 build/assets/images/thumbnails/thumbnail-zorbit-packet.jpg: 2019-08-31 22:23:53.709302800
   -05:00
 build/assets/videos/logo-poof.jpg: 2019-08-31 22:23:53.981574600 -05:00
+build/assets/videos/makeshift-nav-animations.png: 2021-02-06 13:37:44.246731000 -06:00
 build/favicon-16x16.png: 2019-08-31 22:23:54.387354400 -05:00
 build/favicon-32x32.png: 2019-08-31 22:23:54.783860000 -05:00
 build/mstile-150x150.png: 2019-08-31 22:23:55.900890900 -05:00
