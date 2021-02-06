@@ -1,0 +1,48 @@
+$color-sunset: #FF6C29;
+$color-polar:  #f4f7fa;
+
+.projects_makeshift {
+  section.hero {
+    background: $color-mirage url(../images/projects/makeshift/ms-hero.jpg) no-repeat center center;
+    background-size: cover;
+    color: #fff;
+    position: relative;
+    .categories {
+      span {
+        background: none;
+      }
+    }
+    .content {
+      position: relative;
+      z-index: 1;
+    }
+    &::after{
+      display: block;
+      width: 100%;
+      height: 100%;
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: rgba(#000, 0.6);
+      z-index: 0;
+    }
+    h1 {
+      line-height: 1.05em;
+      span {
+        // background: rgba($color-sunset, 0.7);
+        color: $color-sunset;
+      }
+    }
+  }
+  section.odd {
+    background: $color-polar;
+    hr {
+      border-color: darken($color-polar, 10%);
+    }
+  }
+  section.my-notable-parts {
+    background: #000;
+    color: #fff;
+  }
+}
